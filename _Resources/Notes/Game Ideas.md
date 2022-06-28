@@ -1,3 +1,4 @@
 # Game Ideas:
-- #### VR Game
-- #### RPG Desktop Game
+- RPG Desktop game
+- Fantasy Medieval or Sci-Fi
+- Unity
