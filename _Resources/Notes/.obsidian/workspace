@@ -1,0 +1,106 @@
+{
+  "main": {
+    "id": "9b5e6477cae4d02a",
+    "type": "split",
+    "children": [
+      {
+        "id": "2d61591d8c7a0404",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Game Ideas.md",
+            "mode": "source"
+          }
+        },
+        "group": "f7877bcd05b33be5"
+      },
+      {
+        "id": "00994f10a2beef45",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Game Ideas.md",
+            "mode": "preview"
+          }
+        },
+        "group": "f7877bcd05b33be5"
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c2b9962095b2a491",
+    "type": "split",
+    "children": [
+      {
+        "id": "074db294c3d34f8f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d25cc90a811c6cb2",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "f3690b5057dce056",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "84c55b8ca271d2cf",
+    "type": "split",
+    "children": [
+      {
+        "id": "d305e37761d2bc4f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ac3c640dc506eb65",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Game Ideas.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "2d61591d8c7a0404",
+  "lastOpenFiles": [
+    "Game Ideas.md"
+  ]
+}
