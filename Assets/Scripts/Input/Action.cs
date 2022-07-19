@@ -9,6 +9,7 @@ namespace PC.Input
         public Action()
             : base()
 		{
+            ActionHandler.AddAction(this);
 		}
 
 		// Enables both the start an active flags unless the Action's active flag was already on

@@ -2,6 +2,7 @@
     "name": "PC.Entities",
     "rootNamespace": "PC.Entities",
     "references": [
+        "GUID:a25c13b308c040c48b0ba23ef986379a",
         "GUID:b173ab2a1c0d30644b06b00c37ddcbdf",
         "GUID:5ada33e38e6086a40ac3a1194f30c52c",
         "GUID:9edebc2b795ec1841a1b0406d755db72",

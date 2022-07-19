@@ -14,34 +14,48 @@ namespace PC.Entities
 
         // Components
 		private InputActions m_inputActions;
-		private CharacterController m_characterController;
+		
+        private Transform m_head;
+        private Transform m_body;
+        private CharacterController m_characterController;
 		[SerializeField] private Transform m_groundCheck;
+        [SerializeField] private LayerMask m_groundMask;
 
 		// Consts
 		private const float m_walkingSpeed = 3.5f;
-		private const float m_sprintingSpeed = 1.65f * m_walkingSpeed;
-		private const float m_accelerationOfGravity = -9.81f;
+        private const float m_sprintingToWalkingRatio = 1.65f;
+		private const float m_sprintingSpeed = m_sprintingToWalkingRatio * m_walkingSpeed;
 		private const float m_angularDragConst = 0.001f;
 		private const float m_groundCheckIdleRadius = 0.1f;
 		private const float m_groundCheckWalkingRadius = 0.25f;
 		private const float m_groundCheckSprintingRadius = 0.35f;
 		private const float m_jumpHeight = 1.0f;
-		private const float m_mouseSensitivity = 15.0f; // 38.8
+		
 		private const float m_minVerticalAngle = -90.0f; // Counterclockwise(upward) is negative
 		private const float m_maxVerticalAngle = 38.8f; // Clockwise(downward) is positive
-		private const float m_maxVerticalFreelookDeltaAngle = 45.0f;
-		private const float m_maxHorizontalFreelookDeltaAngle = 65.0f;
 
 		// Member vars
-		[SerializeField] private Vector2 m_movementInput;
-		[SerializeField] private Vector3 m_move;
-		[SerializeField] private Vector3 m_velocity;
+        [SerializeField] private Vector2 m_look
+        {
+            get
+            {
+                var input = m_inputActions.Player.Look.ReadValue<Vector2>() * PC.Settings.Mouse.SENSITIVTY * Time.deltaTime;
+                return input;
+            }
+        }
+        [SerializeField] private Vector3 _move = Vector3.zero;
+        [SerializeField] private Vector3 m_move
+        {
+            get
+            {
+                var input = m_inputActions.Player.Movement.ReadValue<Vector2>() * MovementSpeed * Time.deltaTime;
+                _move = transform.forward * input.y + transform.right * input.x;
+                return _move;
+            }
+        }
+		[SerializeField] private Vector3 m_velocity = Vector3.zero;
 		private float m_lastMovementSpeed = 0.0f;
-		[SerializeField] private LayerMask m_groundMask;
-		[SerializeField] private float m_xRotation = 0.0f;
-		[SerializeField] private float m_prevAngularVelocityX = 0.0f;
-		[SerializeField] private float m_xFreelookRotation = 0.0f;
-		[SerializeField] private float m_yFreelookRotation = 0.0f;
+		
 
 		// Jumping Drag Diagnostic Variables
 		private float m_startingJumpAngle = 0.0f;
@@ -53,16 +67,21 @@ namespace PC.Entities
 			get
 			{
 				float speed;
-				if (m_isWalking.Active)
-					speed = m_walkingSpeed;
-				else if (m_isSprinting.Active)
-					speed = m_sprintingSpeed;
-				else
-				{
-					print("ERROR with getting movement speed!");
-					speed = 0.0f;
-				}
-				m_lastMovementSpeed = speed;
+                if (m_isGrounded.Active)
+                {
+                    if (m_isWalking.Active)
+					    speed = m_walkingSpeed;
+                    else if (m_isSprinting.Active)
+                        speed = m_sprintingSpeed;
+                    else
+                        speed = m_walkingSpeed;
+                    m_lastMovementSpeed = speed;
+                }
+                else
+                {
+                    speed = m_lastMovementSpeed;
+                }
+				
 				return speed;
 			}
 		}
@@ -74,15 +93,26 @@ namespace PC.Entities
 		private readonly Action m_isJumping = new Action();
 		private readonly Action m_isWalking = new Action();
 		private readonly Action m_isSprinting = new Action();
-		private readonly Action m_isFreelooking = new Action();
 		private readonly Action m_isADSing = new Action();
 		private readonly Action m_isShooting = new Action();
 
 		private void Awake()
 		{
-			m_groundCheck = transform.Find("GroundCheck");
+            m_body = transform;
+            if (m_body == null)
+                Debug.LogError("PlayerController: Body transform is null!");
 
-			m_characterController = GetComponent<CharacterController>();
+            m_head = GetComponentInChildren<Camera>().transform;
+            if (m_head == null)
+                Debug.LogError("PlayerController: Head transform is null!");
+
+            m_characterController = GetComponent<CharacterController>();
+            if (m_characterController == null)
+                Debug.LogError("PlayerController: CharacterController not found!");
+
+			m_groundCheck = transform.Find("GroundCheck");
+            if (m_groundCheck == null)
+                Debug.LogError("PlayerController: Ground check Transform not found!");
 		}
 
 		private void Start()
@@ -95,72 +125,26 @@ namespace PC.Entities
 
 		private void Update()
 		{
-			//m_actions.PerformRuntimeChecks();
-
-			HandleGravityAndJumping();
-			HandleMovement();
-			HandleCamera();
+            Look();
+			Move();
 		}
 
-		private void HandleGravityAndJumping()
+		private void Move()
 		{
-			if (m_isGrounded.Active && m_velocity.y < 0.0f)
+            if (m_isGrounded.Active && m_velocity.y < 0.0f)
 				m_velocity.y = -2.0f;
 			else
-				m_velocity.y += m_accelerationOfGravity * Time.deltaTime;
+				m_velocity += Physics.gravity * Time.deltaTime;
 
-			m_characterController.Move(m_velocity * Time.deltaTime);
+			m_characterController.Move(m_move + m_velocity * Time.deltaTime);
 		}
 
-		private void HandleMovement()
+		private void Look()
 		{
-			m_movementInput = m_inputActions.Player.Movement.ReadValue<Vector2>();
-
-			if (m_isGrounded.Active)
-			{
-				if (m_movementInput != Vector2.zero)
-				{
-					m_move = transform.right * m_movementInput.x + transform.forward * m_movementInput.y;
-
-					m_characterController.Move(m_move * (MovementSpeed * Time.deltaTime));
-				}
-			}
-			else
-			{
-				m_characterController.Move(m_move * (m_lastMovementSpeed * Time.deltaTime));
-			}
-		}
-
-		private void HandleCamera()
-		{
-			Vector2 input = m_inputActions.Player.Look.ReadValue<Vector2>() * (m_mouseSensitivity * Time.deltaTime);
-
-			if (!m_isFreelooking.Active) // If NOT freelooking
-			{
-				m_xRotation -= input.y;
-
-				m_xRotation = Mathf.Clamp(m_xRotation, m_minVerticalAngle, m_maxVerticalAngle);
-				Quaternion verticalRotation = Quaternion.Euler(m_xRotation, 0.0f, 0.0f);
-				transform.localRotation = verticalRotation;
-
-				if (!m_isJumping.Active && m_isGrounded.Active)
-				{
-					m_prevAngularVelocityX = input.x;
-					
-					transform.Rotate(Vector3.up * input.x);
-					
-				}
-				else
-				{
-					//print($"{m_prevAngularVelocityX * Mathf.Exp(-Time.deltaTime / m_angularDragConst)} degrees lossed in {Time.deltaTime} seconds");
-					if (m_prevAngularVelocityX > 0)
-						m_prevAngularVelocityX = Mathf.Clamp(m_prevAngularVelocityX - (m_prevAngularVelocityX * Mathf.Exp(-Time.deltaTime / m_angularDragConst)), 0.0f, float.MaxValue);
-					else if (m_prevAngularVelocityX < 0)
-						m_prevAngularVelocityX = Mathf.Clamp(m_prevAngularVelocityX - (m_prevAngularVelocityX * Mathf.Exp(-Time.deltaTime / m_angularDragConst)), float.MinValue, 0.0f);
-					m_endingJumpAngle += m_prevAngularVelocityX;
-					transform.Rotate(Vector3.up * m_prevAngularVelocityX);
-				}
-			}
+            m_body.Rotate(Vector3.up, m_look.x);
+            m_head.Rotate(Vector3.left, m_look.y);
+            // var xAngle = Mathf.Clamp(m_head.rotation.x, m_minVerticalAngle, m_maxVerticalAngle);
+            // m_head.localRotation = Quaternion.Euler(new Vector3(xAngle, m_head.rotation.y, m_head.rotation.z));
 		}
 
 		private void SetupInput()
@@ -175,12 +159,6 @@ namespace PC.Entities
 
 			// m_inputActions.Player.Jump.started += delegate { m_isJumping.Enable(); };
 
-			// // Look
-			// m_inputActions.Player.FreelookHold.performed += delegate { m_isFreelooking.Enable(); };
-			// m_inputActions.Player.FreelookHold.canceled += delegate { m_isFreelooking.Disable(); };
-
-			// m_inputActions.Player.FreelookToggle.performed += delegate { m_isFreelooking.Toggle(); };
-
 			// // Weapon Handling
 			// m_inputActions.Player.ADSHold.performed += delegate { m_isADSing.Enable(); };
 			// m_inputActions.Player.ADSHold.canceled+= delegate { m_isADSing.Disable(); };
@@ -193,15 +171,16 @@ namespace PC.Entities
 
 		private void SetupActions()
 		{
-			//m_actions.AddAction(m_isGrounded);
 			m_isGrounded.OnStart = delegate
 			{
+                Debug.Log("PlayerController: Grounded");
 				// TODO: Set audio source to random audio clip
                 // TODO: Play autio source
 				m_isJumping.Disable();
 			};
 			m_isGrounded.OnCancel = delegate
 			{
+                Debug.Log("PlayerController: Not Grounded");
 				m_isWalking.Disable();
 				m_isSprinting.Disable();
 				m_isADSing.Disable();
@@ -209,28 +188,28 @@ namespace PC.Entities
 			};
 			m_isGrounded.RuntimeConditionCheck = delegate
 			{
-				if (m_isWalking.Active)
-					return m_velocity.y <= 0.0f && Physics.CheckSphere(m_groundCheck.position, m_groundCheckWalkingRadius, m_groundMask);
-				if (m_isSprinting.Active)
-					return m_velocity.y <= 0.0f && Physics.CheckSphere(m_groundCheck.position, m_groundCheckSprintingRadius, m_groundMask);
-				return m_velocity.y <= 0.0f && Physics.CheckSphere(m_groundCheck.position, m_groundCheckIdleRadius, m_groundMask);
+				// if (m_isWalking.Active)
+				// 	return m_velocity.y <= 0.0f && Physics.CheckSphere(m_groundCheck.position, m_groundCheckWalkingRadius, m_groundMask);
+				// if (m_isSprinting.Active)
+				// 	return m_velocity.y <= 0.0f && Physics.CheckSphere(m_groundCheck.position, m_groundCheckSprintingRadius, m_groundMask);
+				// return m_velocity.y <= 0.0f && Physics.CheckSphere(m_groundCheck.position, m_groundCheckIdleRadius, m_groundMask);
+
+                return Physics.CheckSphere(m_groundCheck.position, 1f, m_groundMask);
 			};
 			m_isGrounded.OnDelta = delegate
 			{
 				//m_animator.SetBool("isGrounded", m_isGrounded.Active);
 			};
 
-			// m_actions.AddAction(m_isMoving);
 			m_isMoving.RuntimeConditionCheck = delegate
 			{
-				return (m_velocity != new Vector3(0.0f, -2.0f, 0.0f) || m_movementInput != Vector2.zero);
+				return (m_velocity != new Vector3(0.0f, -2.0f, 0.0f) || m_move != Vector3.zero);
 			};
 			m_isMoving.OnDelta = delegate
 			{
 				//m_animator.SetBool("isMoving", m_isMoving.Active);
 			};
 
-			// m_actions.AddAction(m_isJumping);
 			m_isJumping.OnStart = delegate
 			{
 				print("JUMPING");
@@ -240,10 +219,9 @@ namespace PC.Entities
 				//stopwatch.Start();
 				//m_startingJumpAngle = m_endingJumpAngle = transform.rotation.eulerAngles.y;
 
-				m_move = transform.right * m_movementInput.x + transform.forward * m_movementInput.y;
 				// TODO: Set audio source to random audio clip
-                // TODO: Play autio source
-				m_velocity.y = Mathf.Sqrt(m_jumpHeight * -2 * m_accelerationOfGravity);
+                // TODO: Play audio source
+				m_velocity.y = Mathf.Sqrt(m_jumpHeight * -2 * Physics.gravity.y);
 				m_isWalking.Disable();
 				m_isSprinting.Disable();
 				m_isGrounded.Disable();
@@ -259,7 +237,6 @@ namespace PC.Entities
 				//m_animator.SetBool("isJumping", m_isJumping.Active);
 			};
 
-			// m_actions.AddAction(m_isWalking);
 			m_isWalking.OnStart = delegate
 			{
 				//m_animator.SetBool("isWalking", m_isWalking.Active);
@@ -281,7 +258,6 @@ namespace PC.Entities
 				// }
 			};
 
-			// m_actions.AddAction(m_isSprinting);
 			m_isSprinting.OnStart = delegate
 			{
 				m_isWalking.Disable();
@@ -301,24 +277,12 @@ namespace PC.Entities
 				// }
 			};
 
-			// m_actions.AddAction(m_isFreelooking);
-			m_isFreelooking.OnStart = delegate
-			{
-				m_xFreelookRotation = m_xRotation;
-				m_yFreelookRotation = 0.0f;
-			};
-			m_isFreelooking.OnDelta = delegate
-			{
-				// m_animator.SetBool("isFreelooking", m_isFreelooking.Active);
-			};
 
-			// m_actions.AddAction(m_isADSing);
 			m_isADSing.OnDelta = delegate
 			{
 				// m_animator.SetBool("isADSing", m_isADSing.Active);
 			};
 
-			// m_actions.AddAction(m_isShooting);
 			m_isShooting.OnStart = delegate
 			{
                 // if (firemode == Firemode.SEMI_AUTOMATIC)
