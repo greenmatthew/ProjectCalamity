@@ -9,8 +9,9 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Game Ideas.md",
-            "mode": "source"
+            "file": "Ideas.md",
+            "mode": "source",
+            "source": true
           }
         },
         "group": "f7877bcd05b33be5"
@@ -21,8 +22,9 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Game Ideas.md",
-            "mode": "preview"
+            "file": "Ideas.md",
+            "mode": "preview",
+            "source": true
           }
         },
         "group": "f7877bcd05b33be5"
@@ -81,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Game Ideas.md",
+                "file": "Ideas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,6 +103,9 @@
   },
   "active": "2d61591d8c7a0404",
   "lastOpenFiles": [
+    "IdeaReferenceImages/swat4_magazines.png",
+    "Ideas.md",
+    "Pasted image 20220719161702.png",
     "Game Ideas.md"
   ]
 }
