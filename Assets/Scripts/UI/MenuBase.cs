@@ -7,40 +7,40 @@ namespace PC.UI
     [RequireComponent(typeof(RectTransform))]
     public abstract class MenuBase : MonoBehaviour
     {
-        private bool m_awakeCalledFlag = false;
-        private InputActions _inputActions = null;
-        protected InputActions m_inputActions
+        private bool _awakeCalledFlag = false;
+        private InputActions h_inputActions = null;
+        protected InputActions _inputActions
         {
             get
             {
-                if (!m_awakeCalledFlag)
+                if (!_awakeCalledFlag)
                 {
-                    Debug.LogError("MenuBase: m_inputActions is not initialized yet. Please do not access m_inputActions till after Awake() is called. If you are overriding MenuBase.Awake(), please call \"base.Awake()\" as first instruction inside \"private void override Awake()\".");
+                    Debug.LogError("MenuBase: _inputActions is not initialized yet. Please do not access _inputActions till after Awake() is called. If you are overriding MenuBase.Awake(), please call \"base.Awake()\" as first instruction inside \"private void override Awake()\".");
                 }
 
-                return _inputActions;
+                return h_inputActions;
             }
         }
 
         protected virtual void Awake()
         {
-            _inputActions = InputModule.instance.InputActions;
+            h_inputActions = InputModule.instance.InputActions;
 
-            m_awakeCalledFlag = true;
+            _awakeCalledFlag = true;
         }
 
         public virtual void Open()
         {
             transform.gameObject.SetActive(true);
-            m_inputActions.Disable();
+            _inputActions.Disable();
             Cursor.lockState = CursorLockMode.None;
         }
 
         public virtual void Close()
         {
             transform.gameObject.SetActive(false);
-            m_inputActions.Disable();
-            m_inputActions.Player.Enable();
+            _inputActions.Disable();
+            _inputActions.Player.Enable();
             Cursor.lockState = CursorLockMode.Locked;
         }
     }

@@ -399,14 +399,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6143d38e5d468843800cb2fb7ebf1e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_head: {fileID: 8540954257672987675}
-  m_feet: {fileID: 8540954258379274408}
-  m_groundCheck: {fileID: 8540954257863962382}
-  m_groundMask:
+  _head: {fileID: 8540954257672987675}
+  _feet: {fileID: 8540954258379274408}
+  _groundCheck: {fileID: 8540954257863962382}
+  _groundMask:
     serializedVersion: 2
     m_Bits: 64
-  m_audioClips: {fileID: 11400000, guid: 43615f8ae0fa0ac4b80b6d4596857db0, type: 2}
-  m_menuesController: {fileID: 0}
+  _audioClips: {fileID: 11400000, guid: 43615f8ae0fa0ac4b80b6d4596857db0, type: 2}
+  _menuesController: {fileID: 0}
 --- !u!1 &8540954258379274415
 GameObject:
   m_ObjectHideFlags: 0

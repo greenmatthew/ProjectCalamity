@@ -4,7 +4,7 @@ using PC.Input;
 
 namespace PC.UI
 {
-    public class MenuesController : MonoBehaviour
+    public class MenusController : MonoBehaviour
     {
         [SerializeField] public PauseMenu PauseMenu = null;
         [SerializeField] public InventoryMenu InventoryMenu = null;

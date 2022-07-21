@@ -14,48 +14,48 @@ namespace PC.Entities
     public abstract class PlayerControllerBase : MonoBehaviour
     {
         // Components
-        protected CharacterController m_characterController;
-		protected InputActions m_inputActions;
-        protected Camera m_camera;
-        protected Transform m_body;
+        protected CharacterController _characterController;
+		protected InputActions _inputActions;
+        protected Camera _camera;
+        protected Transform _body;
         
-        protected AudioSource m_feetAudioSource;
+        protected AudioSource _feetAudioSource;
 
         [Header("Body")]
-        [SerializeField] protected Transform m_head;
-        [SerializeField] protected Transform m_feet;
-        [SerializeField] protected Transform m_groundCheck;
-        [SerializeField] protected LayerMask m_groundMask;
+        [SerializeField] protected Transform _head;
+        [SerializeField] protected Transform _feet;
+        [SerializeField] protected Transform _groundCheck;
+        [SerializeField] protected LayerMask _groundMask;
 
         // Scriptable Objects containg audio clips
         [Header("Audio")]
-        [SerializeField] protected HumanoidSounds m_audioClips = null;
+        [SerializeField] protected HumanoidSounds _audioClips = null;
 
         [Header("UI")]
-        [SerializeField] protected MenuesController m_menuesController = null;
+        [SerializeField] protected MenusController _menuesController = null;
 
 		// Consts
-        protected const float m_minVerticalAngle = -90f; // Counterclockwise(upward) is negative
-		protected const float m_maxVerticalAngle = 90f; // Clockwise(downward) is positive
+        protected const float _minVerticalAngle = -90f; // Counterclockwise(upward) is negative
+		protected const float _maxVerticalAngle = 90f; // Clockwise(downward) is positive
 
-        protected static readonly Vector3 m_idleVelocity = new Vector3(0f, -2f, 0f);
-		protected const float m_walkingSpeed = 3.5f;
-        protected const float m_sprintingToWalkingRatio = 1.65f;
-		protected const float m_sprintingSpeed = m_sprintingToWalkingRatio * m_walkingSpeed;
-		protected const float m_angularDragConst = 0.001f;
-		protected const float m_groundCheckIdleRadius = 0.1f;
-		protected const float m_groundCheckWalkingRadius = 0.25f;
-		protected const float m_groundCheckSprintingRadius = 0.35f;
-		protected const float m_jumpHeight = 1f;
+        protected static readonly Vector3 _idleVelocity = new Vector3(0f, -2f, 0f);
+		protected const float _walkingSpeed = 3.5f;
+        protected const float _sprintingToWalkingRatio = 1.65f;
+		protected const float _sprintingSpeed = _sprintingToWalkingRatio * _walkingSpeed;
+		protected const float _angularDragConst = 0.001f;
+		protected const float _groundCheckIdleRadius = 0.1f;
+		protected const float _groundCheckWalkingRadius = 0.25f;
+		protected const float _groundCheckSprintingRadius = 0.35f;
+		protected const float _jumpHeight = 1f;
 
 		// Member vars
-        protected Vector2 m_look;
-        protected float m_xRotation = 0f;
-        protected Vector3 m_move;
+        protected Vector2 _look;
+        protected float _xRotation = 0f;
+        protected Vector3 _move;
         
-        protected float m_lastMovementSpeed = 0f;
-        protected Vector3 m_lastGroundedMove = Vector3.zero;
-		protected Vector3 m_velocity = Vector3.zero;
+        protected float _lastMovementSpeed = 0f;
+        protected Vector3 _lastGroundedMove = Vector3.zero;
+		protected Vector3 _velocity = Vector3.zero;
 
         protected bool Performed (InputActionPhase phase) => phase == InputActionPhase.Performed;
 
@@ -64,8 +64,8 @@ namespace PC.Entities
         
 
 		// Jumping Drag Diagnostic Variables
-		protected float m_startingJumpAngle = 0f;
-		protected float m_endingJumpAngle = 0f;
+		protected float _startingJumpAngle = 0f;
+		protected float _endingJumpAngle = 0f;
 
 		// Member var flags
 		protected float MovementSpeed
@@ -73,17 +73,17 @@ namespace PC.Entities
 			get
 			{
 				float speed;
-                if (m_isGrounded)
+                if (_isGrounded)
                 {
-                    if (m_inputActions.Player.Sprint.phase == InputActionPhase.Performed)
-                        speed = m_sprintingSpeed;
+                    if (_inputActions.Player.Sprint.phase == InputActionPhase.Performed)
+                        speed = _sprintingSpeed;
                     else
-                        speed = m_walkingSpeed;
-                    m_lastMovementSpeed = speed;
+                        speed = _walkingSpeed;
+                    _lastMovementSpeed = speed;
                 }
                 else
                 {
-                    speed = m_lastMovementSpeed;
+                    speed = _lastMovementSpeed;
                 }
 				
 				return speed;
@@ -91,35 +91,35 @@ namespace PC.Entities
 		}
 
         // Conditions
-        private bool _isGrounded = false;
-        protected bool m_isGrounded;
-        protected bool m_isMoving;
+        private bool h_isGrounded = false;
+        protected bool _isGrounded;
+        protected bool _isMoving;
 
         private void Awake()
 		{
-            m_characterController = GetComponent<CharacterController>();
-            if (m_characterController == null)
+            _characterController = GetComponent<CharacterController>();
+            if (_characterController == null)
                 Debug.LogError("PlayerController: CharacterController not found!");
 
-            if (m_head == null)
+            if (_head == null)
                 Debug.LogError("PlayerController: Head transform is null!");
             
-            m_camera = m_head.GetComponentInChildren<Camera>();
-            if (m_camera == null)
+            _camera = _head.GetComponentInChildren<Camera>();
+            if (_camera == null)
                 Debug.LogError("PlayerController: Camera is null!");
 
-            m_body = transform;
-            if (m_body == null)
+            _body = transform;
+            if (_body == null)
                 Debug.LogError("PlayerController: Body transform is null!");
             
-            if (m_feet == null)
+            if (_feet == null)
                 Debug.LogError("PlayerController: Feet transform is null!");
 
-            if (m_groundCheck == null)
+            if (_groundCheck == null)
                 Debug.LogError("PlayerController: Ground check Transform not found!");
             
-            m_feetAudioSource = m_feet.GetComponent<AudioSource>();
-            if (m_feetAudioSource == null)
+            _feetAudioSource = _feet.GetComponent<AudioSource>();
+            if (_feetAudioSource == null)
                 Debug.LogError("PlayerController: Feet AudioSource is null!");
 		}
 
@@ -127,16 +127,16 @@ namespace PC.Entities
 		{
 			Cursor.lockState = CursorLockMode.Locked;
 
-            m_inputActions = InputModule.instance.InputActions;
+            _inputActions = InputModule.instance.InputActions;
             SetupInput();
 		}
 
 		private void Update()
 		{
-            m_look = m_inputActions.Player.Look.ReadValue<Vector2>() * PC.Settings.Mouse.SENSITIVTY * Time.deltaTime;
-            m_move = GetMovement();
-            m_isMoving = m_move != Vector3.zero && m_velocity != m_idleVelocity;
-            m_isGrounded = GroundedCheck();
+            _look = _inputActions.Player.Look.ReadValue<Vector2>() * PC.Settings.Mouse.SENSITIVTY * Time.deltaTime;
+            _move = GetMovement();
+            _isMoving = _move != Vector3.zero && _velocity != _idleVelocity;
+            _isGrounded = GroundedCheck();
 
             Look();
 			Move();
@@ -144,62 +144,62 @@ namespace PC.Entities
 
         private Vector3 GetMovement()
         {
-            var input = m_inputActions.Player.Movement.ReadValue<Vector2>() * MovementSpeed * Time.deltaTime;
+            var input = _inputActions.Player.Movement.ReadValue<Vector2>() * MovementSpeed * Time.deltaTime;
             return transform.forward * input.y + transform.right * input.x;
         }
 
         private bool GroundedCheck()
         {
             // Check if the player's y velocity is at idle velocity
-            bool cond = m_velocity.y <= 0f;
+            bool cond = _velocity.y <= 0f;
             
-            if (Performed(m_inputActions.Player.Movement.phase))
+            if (Performed(_inputActions.Player.Movement.phase))
             {
-                if (Performed(m_inputActions.Player.Sprint.phase))
+                if (Performed(_inputActions.Player.Sprint.phase))
                 {
-                    cond = cond && Physics.CheckSphere(m_groundCheck.position, m_groundCheckSprintingRadius, m_groundMask);
+                    cond = cond && Physics.CheckSphere(_groundCheck.position, _groundCheckSprintingRadius, _groundMask);
                 }
                 else
                 {
-                    cond = cond && Physics.CheckSphere(m_groundCheck.position, m_groundCheckWalkingRadius, m_groundMask);
+                    cond = cond && Physics.CheckSphere(_groundCheck.position, _groundCheckWalkingRadius, _groundMask);
                 }
             }
             else
             {
-                cond = cond && Physics.CheckSphere(m_groundCheck.position, m_groundCheckIdleRadius, m_groundMask);
+                cond = cond && Physics.CheckSphere(_groundCheck.position, _groundCheckIdleRadius, _groundMask);
             }
 
-            bool prevCond = _isGrounded;
-            _isGrounded = cond;
+            bool prevCond = h_isGrounded;
+            h_isGrounded = cond;
 
-            if (_isGrounded != prevCond)
+            if (h_isGrounded != prevCond)
             {
-                if (_isGrounded)
+                if (h_isGrounded)
                 {
-                    m_inputActions.Player.Movement.Enable();
-                    m_inputActions.Player.Sprint.Enable();
-                    m_inputActions.Player.Jump.Enable();
+                    _inputActions.Player.Movement.Enable();
+                    _inputActions.Player.Sprint.Enable();
+                    _inputActions.Player.Jump.Enable();
 
-                    m_feetAudioSource.clip = m_audioClips.landing.GetRandom();
-                    m_feetAudioSource.Play();
+                    _feetAudioSource.clip = _audioClips.landing.GetRandom();
+                    _feetAudioSource.Play();
                 }
                 else
                 {
-                    m_inputActions.Player.Movement.Disable();
-                    m_inputActions.Player.Sprint.Disable();
-                    m_inputActions.Player.Jump.Disable();
+                    _inputActions.Player.Movement.Disable();
+                    _inputActions.Player.Sprint.Disable();
+                    _inputActions.Player.Jump.Disable();
 
-                    m_feetAudioSource.clip = m_audioClips.jumping.GetRandom();
-                    m_feetAudioSource.Play();
+                    _feetAudioSource.clip = _audioClips.jumping.GetRandom();
+                    _feetAudioSource.Play();
                 }
             }
 
-            if (_isGrounded)
+            if (h_isGrounded)
             {
-                m_lastGroundedMove = m_move;
+                _lastGroundedMove = _move;
             }
 
-            return _isGrounded;
+            return h_isGrounded;
         }
 
         protected abstract void SetupInput();

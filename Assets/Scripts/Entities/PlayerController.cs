@@ -11,11 +11,11 @@ namespace PC.Entities
         /// </summary>
         protected override void Look()
 		{
-            m_body.Rotate(Vector3.up, m_look.x);
+            _body.Rotate(Vector3.up, _look.x);
 
-            m_xRotation -= m_look.y;
-            m_xRotation = Mathf.Clamp(m_xRotation, m_minVerticalAngle, m_maxVerticalAngle);
-            m_head.localRotation = Quaternion.Euler(m_xRotation, 0f, 0f);
+            _xRotation -= _look.y;
+            _xRotation = Mathf.Clamp(_xRotation, _minVerticalAngle, _maxVerticalAngle);
+            _head.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
 		}
 
         /// <summary>
@@ -24,29 +24,29 @@ namespace PC.Entities
 		protected override void Move()
 		{
             // Handle gravity
-            if (m_isGrounded && m_velocity.y < 0.0f)
+            if (_isGrounded && _velocity.y < 0.0f)
                 // Check if I should use Vector3 instead of float for the y component
-				m_velocity.y = m_idleVelocity.y;
+				_velocity.y = _idleVelocity.y;
 			else
-				m_velocity += Physics.gravity * Time.deltaTime;
+				_velocity += Physics.gravity * Time.deltaTime;
 
-            if (m_isGrounded)
+            if (_isGrounded)
             {
-                m_characterController.Move(m_move + m_velocity * Time.deltaTime);
+                _characterController.Move(_move + _velocity * Time.deltaTime);
 
-                if (m_move != Vector3.zero && !m_feetAudioSource.isPlaying)
+                if (_move != Vector3.zero && !_feetAudioSource.isPlaying)
                 {
-                    if (Performed(m_inputActions.Player.Sprint.phase))
-                        m_feetAudioSource.clip = m_audioClips.sprinting.GetRandom();
+                    if (Performed(_inputActions.Player.Sprint.phase))
+                        _feetAudioSource.clip = _audioClips.sprinting.GetRandom();
                     else
-                        m_feetAudioSource.clip = m_audioClips.walking.GetRandom();
+                        _feetAudioSource.clip = _audioClips.walking.GetRandom();
                     
-                    m_feetAudioSource.Play();
+                    _feetAudioSource.Play();
                 }
             }
             else
             {
-                m_characterController.Move(m_lastGroundedMove + m_velocity * Time.deltaTime);
+                _characterController.Move(_lastGroundedMove + _velocity * Time.deltaTime);
             }
 		}
 
@@ -55,15 +55,15 @@ namespace PC.Entities
         /// </summary>
 		protected override void SetupInput()
 		{
-			m_inputActions.Player.Enable();
+			_inputActions.Player.Enable();
 
-			m_inputActions.Player.Jump.performed += ctx =>
+			_inputActions.Player.Jump.performed += ctx =>
             {
-                m_velocity.y = Mathf.Sqrt(m_jumpHeight * -2 * Physics.gravity.y);
+                _velocity.y = Mathf.Sqrt(_jumpHeight * -2 * Physics.gravity.y);
             };
-            m_inputActions.Player.OpenPauseMenu.performed += ctx => { Debug.Log("Menu"); m_menuesController.PauseMenu.Open(); };
-            m_inputActions.Player.OpenDevConsoleMenu.performed += ctx => { Debug.Log("Developer Console"); m_menuesController.DevConsoleMenu.Open(); };
-            m_inputActions.Player.OpenInventoryMenu.performed += ctx => { Debug.Log("Inventory"); m_menuesController.InventoryMenu.Open(); };
+            _inputActions.Player.OpenPauseMenu.performed += ctx => { Debug.Log("Menu"); _menuesController.PauseMenu.Open(); };
+            _inputActions.Player.OpenDevConsoleMenu.performed += ctx => { Debug.Log("Developer Console"); _menuesController.DevConsoleMenu.Open(); };
+            _inputActions.Player.OpenInventoryMenu.performed += ctx => { Debug.Log("Inventory"); _menuesController.InventoryMenu.Open(); };
 		}
     }
 }

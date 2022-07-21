@@ -7,23 +7,23 @@ namespace PC.UI
 {
     public class PauseMenu : MenuBase
     {
-        [SerializeField] private Button m_closePauseMenuButton = null;
-        [SerializeField] private Button m_exitGameButton = null;
+        [SerializeField] private Button _closePauseMenuButton = null;
+        [SerializeField] private Button _exitGameButton = null;
 
         private void Start()
         {
             // Controls initialization
-            m_inputActions.PauseMenu.ClosePauseMenu.performed += ctx => Close();
+            _inputActions.PauseMenu.ClosePauseMenu.performed += ctx => Close();
 
             // UI initialization
-            m_closePauseMenuButton.onClick.AddListener(() => Close());
-            m_exitGameButton.onClick.AddListener(() => ExitGame());
+            _closePauseMenuButton.onClick.AddListener(() => Close());
+            _exitGameButton.onClick.AddListener(() => ExitGame());
         }
 
         public override void Open()
         {
             base.Open();
-            m_inputActions.PauseMenu.Enable();
+            _inputActions.PauseMenu.Enable();
         }
 
         public void ExitGame()

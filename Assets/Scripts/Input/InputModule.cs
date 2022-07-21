@@ -7,7 +7,7 @@ namespace PC.Input
     [RequireComponent(typeof(EventSystem), typeof(InputSystemUIInputModule))]
     public class InputModule : BaseInputModule
     {
-        private static bool m_awakeCalledFlag = false;
+        private static bool _awakeCalledFlag = false;
         private static InputModule _instance = null;
         public static InputModule instance
         {
@@ -15,7 +15,7 @@ namespace PC.Input
             {
                 if (_instance == null)
                 {
-                    if (!m_awakeCalledFlag)
+                    if (!_awakeCalledFlag)
                     {
                         Debug.LogError("InputModule instance is null. InputModule.Awake() has not been called yet.");
                     }
@@ -46,7 +46,7 @@ namespace PC.Input
 
             InputActions = new InputActions();
 
-            m_awakeCalledFlag = true;
+            _awakeCalledFlag = true;
         }
 
         public override void Process()

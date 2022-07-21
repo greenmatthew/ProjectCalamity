@@ -6,13 +6,13 @@ namespace PC.UI
     {
         private void Start()
         {
-            m_inputActions.InventoryMenu.CloseInventoryMenu.performed += ctx => Close();
+            _inputActions.InventoryMenu.CloseInventoryMenu.performed += ctx => Close();
         }
 
         public override void Open()
         {
             base.Open();
-            m_inputActions.InventoryMenu.Enable();
+            _inputActions.InventoryMenu.Enable();
         }
     }
 }

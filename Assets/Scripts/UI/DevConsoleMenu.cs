@@ -6,13 +6,13 @@ namespace PC.UI
     {
         private void Start()
         {
-            m_inputActions.DevConsoleMenu.CloseDevConsoleMenu.performed += ctx => Close();
+            _inputActions.DevConsoleMenu.CloseDevConsoleMenu.performed += ctx => Close();
         }
 
         public override void Open()
         {
             base.Open();
-            m_inputActions.DevConsoleMenu.Enable();
+            _inputActions.DevConsoleMenu.Enable();
         }
     }
 }
