@@ -30,12 +30,39 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Jump",
                     "type": "Button",
                     "id": "4b3c59f4-937d-4618-bed2-323ab44e7594",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "OpenPauseMenu",
+                    "type": "Button",
+                    "id": "ab9abb51-07be-4be2-8f63-493a42a59b0d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "OpenInventoryMenu",
+                    "type": "Button",
+                    "id": "5d81c006-25a8-440b-8168-662f72030334",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "OpenDevConsoleMenu",
+                    "type": "Button",
+                    "id": "ce09c07a-016e-4af2-ad28-98f3e29d1ae9",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -130,15 +157,48 @@
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "56e8eb12-31a1-49bf-bf7f-2ab479b4357e",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenPauseMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "96865297-f034-4bc6-bb21-aab141e85ba0",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenInventoryMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9bd34fe3-8b43-4151-b2ae-dd454b8e5706",
+                    "path": "<Keyboard>/backquote",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenDevConsoleMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
         {
-            "name": "UI",
+            "name": "PauseMenu",
             "id": "e2b60fce-e92a-480a-ac1f-f48524daf6ef",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "ClosePauseMenu",
                     "type": "Button",
                     "id": "cd275f5f-f0f8-4822-8bf8-d5677694febf",
                     "expectedControlType": "Button",
@@ -151,11 +211,89 @@
                 {
                     "name": "",
                     "id": "918a49d1-de1c-42ab-a4cf-1c165356c24f",
-                    "path": "",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "ClosePauseMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "InventoryMenu",
+            "id": "ea8ae7ed-f370-4d7b-bbe7-463a18b67dfc",
+            "actions": [
+                {
+                    "name": "CloseInventoryMenu",
+                    "type": "Button",
+                    "id": "b54b3ea8-57b5-4986-8778-326b3df729bb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "4b7020eb-2327-444b-833c-722029e6fabd",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CloseInventoryMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "79f05f55-ddbd-439b-9527-f9b975422462",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CloseInventoryMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "DevConsoleMenu",
+            "id": "d1f46b76-1801-4cc4-ae2e-079b947710d9",
+            "actions": [
+                {
+                    "name": "CloseDevConsoleMenu",
+                    "type": "Button",
+                    "id": "083114cb-cb03-4440-aa60-eed2a9b63a8c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a7efa499-d0b3-4230-874f-d6e868341dd4",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CloseDevConsoleMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "253404ca-0539-47da-a096-faadda8de373",
+                    "path": "<Keyboard>/backquote",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CloseDevConsoleMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

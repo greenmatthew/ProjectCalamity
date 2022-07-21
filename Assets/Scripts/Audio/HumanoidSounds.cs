@@ -3,12 +3,12 @@ using UnityEngine;
 
 namespace PC.Audio
 {
-    [CreateAssetMenu(fileName = "HumanoidSounds", menuName = "Custom/HumanoidSounds", order = 0)]
+    [CreateAssetMenu(fileName = "HumanoidSounds", menuName = "Audio Scriptable Objects/Humanoid Sounds", order = 0)]
     public class HumanoidSounds : ScriptableObject
     {
-        [SerializeField] private List<AudioClip> walkingSounds = new List<AudioClip>();
-        [SerializeField] private List<AudioClip> sprintingSounds = new List<AudioClip>();
-        [SerializeField] private List<AudioClip> jumpingSounds = new List<AudioClip>();
-        [SerializeField] private List<AudioClip> landingSounds = new List<AudioClip>();
+        [SerializeField] public List<AudioClip> walking = new List<AudioClip>();
+        [SerializeField] public List<AudioClip> sprinting = new List<AudioClip>();
+        [SerializeField] public List<AudioClip> jumping = new List<AudioClip>();
+        [SerializeField] public List<AudioClip> landing = new List<AudioClip>();
     }
 }
