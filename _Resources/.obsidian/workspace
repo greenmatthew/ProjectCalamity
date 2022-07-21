@@ -1,0 +1,109 @@
+{
+  "main": {
+    "id": "48ccb2ae9367f28e",
+    "type": "split",
+    "children": [
+      {
+        "id": "fd974a3e27dc41ae",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Useful Links.md",
+            "mode": "source"
+          }
+        },
+        "group": "efe9d53adf78729f"
+      },
+      {
+        "id": "30a69810710b29f1",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Useful Links.md",
+            "mode": "source"
+          }
+        },
+        "group": "efe9d53adf78729f"
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "89f3af17d886c433",
+    "type": "split",
+    "children": [
+      {
+        "id": "bef1381aba2522fc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0e42e01ede20ca64",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "a3f45d298edd0c12",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "119e81a56b68c01f",
+    "type": "split",
+    "children": [
+      {
+        "id": "7eb407b9d75b071d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0fc057694ac6d646",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Useful Links.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "fd974a3e27dc41ae",
+  "lastOpenFiles": [
+    "Useful Links.md",
+    "www.youtube.com/c/GameDevGuide.md",
+    "Notes/Ideas.pdf",
+    "Notes/Ideas.md"
+  ]
+}
