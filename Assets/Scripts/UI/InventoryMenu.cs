@@ -4,15 +4,18 @@ namespace PC.UI
 {
     public class InventoryMenu : MenuBase
     {
-        private void Start()
+        protected override void AwakeExtension()
         {
-            _inputActions.InventoryMenu.CloseInventoryMenu.performed += ctx => Close();
+            _inputActions.InventoryMenu.CloseMenu.performed += ctx => Close();
         }
 
-        public override void Open()
+        public override void OpenExtension()
         {
-            base.Open();
             _inputActions.InventoryMenu.Enable();
+        }
+
+        public override void CloseExtension()
+        {
         }
     }
 }

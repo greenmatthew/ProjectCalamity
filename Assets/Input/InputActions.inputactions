@@ -194,13 +194,13 @@
             ]
         },
         {
-            "name": "PauseMenu",
-            "id": "e2b60fce-e92a-480a-ac1f-f48524daf6ef",
+            "name": "Menu",
+            "id": "a54bcc28-1929-42c6-8df7-8b4d8738f91b",
             "actions": [
                 {
-                    "name": "ClosePauseMenu",
+                    "name": "CloseMenu",
                     "type": "Button",
-                    "id": "cd275f5f-f0f8-4822-8bf8-d5677694febf",
+                    "id": "8746b97b-7ca4-4a44-a41a-986fc3e943db",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -210,12 +210,12 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "918a49d1-de1c-42ab-a4cf-1c165356c24f",
+                    "id": "355c69de-8c5a-49eb-ab94-daca181d93a4",
                     "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "ClosePauseMenu",
+                    "action": "CloseMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -226,7 +226,7 @@
             "id": "ea8ae7ed-f370-4d7b-bbe7-463a18b67dfc",
             "actions": [
                 {
-                    "name": "CloseInventoryMenu",
+                    "name": "CloseMenu",
                     "type": "Button",
                     "id": "b54b3ea8-57b5-4986-8778-326b3df729bb",
                     "expectedControlType": "Button",
@@ -238,23 +238,12 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "4b7020eb-2327-444b-833c-722029e6fabd",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "CloseInventoryMenu",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "79f05f55-ddbd-439b-9527-f9b975422462",
                     "path": "<Keyboard>/tab",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "CloseInventoryMenu",
+                    "action": "CloseMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -265,7 +254,7 @@
             "id": "d1f46b76-1801-4cc4-ae2e-079b947710d9",
             "actions": [
                 {
-                    "name": "CloseDevConsoleMenu",
+                    "name": "CloseMenu",
                     "type": "Button",
                     "id": "083114cb-cb03-4440-aa60-eed2a9b63a8c",
                     "expectedControlType": "Button",
@@ -277,23 +266,12 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "a7efa499-d0b3-4230-874f-d6e868341dd4",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "CloseDevConsoleMenu",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "253404ca-0539-47da-a096-faadda8de373",
                     "path": "<Keyboard>/backquote",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "CloseDevConsoleMenu",
+                    "action": "CloseMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

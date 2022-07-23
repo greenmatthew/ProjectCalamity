@@ -4,15 +4,18 @@ namespace PC.UI
 {
     public class DevConsoleMenu : MenuBase
     {
-        private void Start()
+        protected override void AwakeExtension()
         {
-            _inputActions.DevConsoleMenu.CloseDevConsoleMenu.performed += ctx => Close();
+            _inputActions.DevConsoleMenu.CloseMenu.performed += ctx => Close();
         }
 
-        public override void Open()
+        public override void OpenExtension()
         {
-            base.Open();
             _inputActions.DevConsoleMenu.Enable();
+        }
+
+        public override void CloseExtension()
+        {
         }
     }
 }

@@ -15,7 +15,7 @@ namespace PC.Entities
     {
         // Components
         protected CharacterController _characterController;
-		protected InputActions _inputActions;
+		protected InputActions _inputActions => InputModule.InputActions;
         protected Camera _camera;
         protected Transform _body;
         
@@ -127,7 +127,6 @@ namespace PC.Entities
 		{
 			Cursor.lockState = CursorLockMode.Locked;
 
-            _inputActions = InputModule.instance.InputActions;
             SetupInput();
 		}
 

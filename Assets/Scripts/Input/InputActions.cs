@@ -218,13 +218,13 @@ namespace PC.Input
             ]
         },
         {
-            ""name"": ""PauseMenu"",
-            ""id"": ""e2b60fce-e92a-480a-ac1f-f48524daf6ef"",
+            ""name"": ""Menu"",
+            ""id"": ""a54bcc28-1929-42c6-8df7-8b4d8738f91b"",
             ""actions"": [
                 {
-                    ""name"": ""ClosePauseMenu"",
+                    ""name"": ""CloseMenu"",
                     ""type"": ""Button"",
-                    ""id"": ""cd275f5f-f0f8-4822-8bf8-d5677694febf"",
+                    ""id"": ""8746b97b-7ca4-4a44-a41a-986fc3e943db"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -234,12 +234,12 @@ namespace PC.Input
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""918a49d1-de1c-42ab-a4cf-1c165356c24f"",
+                    ""id"": ""355c69de-8c5a-49eb-ab94-daca181d93a4"",
                     ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""ClosePauseMenu"",
+                    ""action"": ""CloseMenu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -250,7 +250,7 @@ namespace PC.Input
             ""id"": ""ea8ae7ed-f370-4d7b-bbe7-463a18b67dfc"",
             ""actions"": [
                 {
-                    ""name"": ""CloseInventoryMenu"",
+                    ""name"": ""CloseMenu"",
                     ""type"": ""Button"",
                     ""id"": ""b54b3ea8-57b5-4986-8778-326b3df729bb"",
                     ""expectedControlType"": ""Button"",
@@ -262,23 +262,12 @@ namespace PC.Input
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""4b7020eb-2327-444b-833c-722029e6fabd"",
-                    ""path"": ""<Keyboard>/escape"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""CloseInventoryMenu"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""79f05f55-ddbd-439b-9527-f9b975422462"",
                     ""path"": ""<Keyboard>/tab"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""CloseInventoryMenu"",
+                    ""action"": ""CloseMenu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -289,7 +278,7 @@ namespace PC.Input
             ""id"": ""d1f46b76-1801-4cc4-ae2e-079b947710d9"",
             ""actions"": [
                 {
-                    ""name"": ""CloseDevConsoleMenu"",
+                    ""name"": ""CloseMenu"",
                     ""type"": ""Button"",
                     ""id"": ""083114cb-cb03-4440-aa60-eed2a9b63a8c"",
                     ""expectedControlType"": ""Button"",
@@ -301,23 +290,12 @@ namespace PC.Input
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""a7efa499-d0b3-4230-874f-d6e868341dd4"",
-                    ""path"": ""<Keyboard>/escape"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""CloseDevConsoleMenu"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""253404ca-0539-47da-a096-faadda8de373"",
                     ""path"": ""<Keyboard>/backquote"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""CloseDevConsoleMenu"",
+                    ""action"": ""CloseMenu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -335,15 +313,15 @@ namespace PC.Input
             m_Player_OpenPauseMenu = m_Player.FindAction("OpenPauseMenu", throwIfNotFound: true);
             m_Player_OpenInventoryMenu = m_Player.FindAction("OpenInventoryMenu", throwIfNotFound: true);
             m_Player_OpenDevConsoleMenu = m_Player.FindAction("OpenDevConsoleMenu", throwIfNotFound: true);
-            // PauseMenu
-            m_PauseMenu = asset.FindActionMap("PauseMenu", throwIfNotFound: true);
-            m_PauseMenu_ClosePauseMenu = m_PauseMenu.FindAction("ClosePauseMenu", throwIfNotFound: true);
+            // Menu
+            m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
+            m_Menu_CloseMenu = m_Menu.FindAction("CloseMenu", throwIfNotFound: true);
             // InventoryMenu
             m_InventoryMenu = asset.FindActionMap("InventoryMenu", throwIfNotFound: true);
-            m_InventoryMenu_CloseInventoryMenu = m_InventoryMenu.FindAction("CloseInventoryMenu", throwIfNotFound: true);
+            m_InventoryMenu_CloseMenu = m_InventoryMenu.FindAction("CloseMenu", throwIfNotFound: true);
             // DevConsoleMenu
             m_DevConsoleMenu = asset.FindActionMap("DevConsoleMenu", throwIfNotFound: true);
-            m_DevConsoleMenu_CloseDevConsoleMenu = m_DevConsoleMenu.FindAction("CloseDevConsoleMenu", throwIfNotFound: true);
+            m_DevConsoleMenu_CloseMenu = m_DevConsoleMenu.FindAction("CloseMenu", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -481,48 +459,48 @@ namespace PC.Input
         }
         public PlayerActions @Player => new PlayerActions(this);
 
-        // PauseMenu
-        private readonly InputActionMap m_PauseMenu;
-        private IPauseMenuActions m_PauseMenuActionsCallbackInterface;
-        private readonly InputAction m_PauseMenu_ClosePauseMenu;
-        public struct PauseMenuActions
+        // Menu
+        private readonly InputActionMap m_Menu;
+        private IMenuActions m_MenuActionsCallbackInterface;
+        private readonly InputAction m_Menu_CloseMenu;
+        public struct MenuActions
         {
             private @InputActions m_Wrapper;
-            public PauseMenuActions(@InputActions wrapper) { m_Wrapper = wrapper; }
-            public InputAction @ClosePauseMenu => m_Wrapper.m_PauseMenu_ClosePauseMenu;
-            public InputActionMap Get() { return m_Wrapper.m_PauseMenu; }
+            public MenuActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+            public InputAction @CloseMenu => m_Wrapper.m_Menu_CloseMenu;
+            public InputActionMap Get() { return m_Wrapper.m_Menu; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
             public bool enabled => Get().enabled;
-            public static implicit operator InputActionMap(PauseMenuActions set) { return set.Get(); }
-            public void SetCallbacks(IPauseMenuActions instance)
+            public static implicit operator InputActionMap(MenuActions set) { return set.Get(); }
+            public void SetCallbacks(IMenuActions instance)
             {
-                if (m_Wrapper.m_PauseMenuActionsCallbackInterface != null)
+                if (m_Wrapper.m_MenuActionsCallbackInterface != null)
                 {
-                    @ClosePauseMenu.started -= m_Wrapper.m_PauseMenuActionsCallbackInterface.OnClosePauseMenu;
-                    @ClosePauseMenu.performed -= m_Wrapper.m_PauseMenuActionsCallbackInterface.OnClosePauseMenu;
-                    @ClosePauseMenu.canceled -= m_Wrapper.m_PauseMenuActionsCallbackInterface.OnClosePauseMenu;
+                    @CloseMenu.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnCloseMenu;
+                    @CloseMenu.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnCloseMenu;
+                    @CloseMenu.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnCloseMenu;
                 }
-                m_Wrapper.m_PauseMenuActionsCallbackInterface = instance;
+                m_Wrapper.m_MenuActionsCallbackInterface = instance;
                 if (instance != null)
                 {
-                    @ClosePauseMenu.started += instance.OnClosePauseMenu;
-                    @ClosePauseMenu.performed += instance.OnClosePauseMenu;
-                    @ClosePauseMenu.canceled += instance.OnClosePauseMenu;
+                    @CloseMenu.started += instance.OnCloseMenu;
+                    @CloseMenu.performed += instance.OnCloseMenu;
+                    @CloseMenu.canceled += instance.OnCloseMenu;
                 }
             }
         }
-        public PauseMenuActions @PauseMenu => new PauseMenuActions(this);
+        public MenuActions @Menu => new MenuActions(this);
 
         // InventoryMenu
         private readonly InputActionMap m_InventoryMenu;
         private IInventoryMenuActions m_InventoryMenuActionsCallbackInterface;
-        private readonly InputAction m_InventoryMenu_CloseInventoryMenu;
+        private readonly InputAction m_InventoryMenu_CloseMenu;
         public struct InventoryMenuActions
         {
             private @InputActions m_Wrapper;
             public InventoryMenuActions(@InputActions wrapper) { m_Wrapper = wrapper; }
-            public InputAction @CloseInventoryMenu => m_Wrapper.m_InventoryMenu_CloseInventoryMenu;
+            public InputAction @CloseMenu => m_Wrapper.m_InventoryMenu_CloseMenu;
             public InputActionMap Get() { return m_Wrapper.m_InventoryMenu; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -532,16 +510,16 @@ namespace PC.Input
             {
                 if (m_Wrapper.m_InventoryMenuActionsCallbackInterface != null)
                 {
-                    @CloseInventoryMenu.started -= m_Wrapper.m_InventoryMenuActionsCallbackInterface.OnCloseInventoryMenu;
-                    @CloseInventoryMenu.performed -= m_Wrapper.m_InventoryMenuActionsCallbackInterface.OnCloseInventoryMenu;
-                    @CloseInventoryMenu.canceled -= m_Wrapper.m_InventoryMenuActionsCallbackInterface.OnCloseInventoryMenu;
+                    @CloseMenu.started -= m_Wrapper.m_InventoryMenuActionsCallbackInterface.OnCloseMenu;
+                    @CloseMenu.performed -= m_Wrapper.m_InventoryMenuActionsCallbackInterface.OnCloseMenu;
+                    @CloseMenu.canceled -= m_Wrapper.m_InventoryMenuActionsCallbackInterface.OnCloseMenu;
                 }
                 m_Wrapper.m_InventoryMenuActionsCallbackInterface = instance;
                 if (instance != null)
                 {
-                    @CloseInventoryMenu.started += instance.OnCloseInventoryMenu;
-                    @CloseInventoryMenu.performed += instance.OnCloseInventoryMenu;
-                    @CloseInventoryMenu.canceled += instance.OnCloseInventoryMenu;
+                    @CloseMenu.started += instance.OnCloseMenu;
+                    @CloseMenu.performed += instance.OnCloseMenu;
+                    @CloseMenu.canceled += instance.OnCloseMenu;
                 }
             }
         }
@@ -550,12 +528,12 @@ namespace PC.Input
         // DevConsoleMenu
         private readonly InputActionMap m_DevConsoleMenu;
         private IDevConsoleMenuActions m_DevConsoleMenuActionsCallbackInterface;
-        private readonly InputAction m_DevConsoleMenu_CloseDevConsoleMenu;
+        private readonly InputAction m_DevConsoleMenu_CloseMenu;
         public struct DevConsoleMenuActions
         {
             private @InputActions m_Wrapper;
             public DevConsoleMenuActions(@InputActions wrapper) { m_Wrapper = wrapper; }
-            public InputAction @CloseDevConsoleMenu => m_Wrapper.m_DevConsoleMenu_CloseDevConsoleMenu;
+            public InputAction @CloseMenu => m_Wrapper.m_DevConsoleMenu_CloseMenu;
             public InputActionMap Get() { return m_Wrapper.m_DevConsoleMenu; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -565,16 +543,16 @@ namespace PC.Input
             {
                 if (m_Wrapper.m_DevConsoleMenuActionsCallbackInterface != null)
                 {
-                    @CloseDevConsoleMenu.started -= m_Wrapper.m_DevConsoleMenuActionsCallbackInterface.OnCloseDevConsoleMenu;
-                    @CloseDevConsoleMenu.performed -= m_Wrapper.m_DevConsoleMenuActionsCallbackInterface.OnCloseDevConsoleMenu;
-                    @CloseDevConsoleMenu.canceled -= m_Wrapper.m_DevConsoleMenuActionsCallbackInterface.OnCloseDevConsoleMenu;
+                    @CloseMenu.started -= m_Wrapper.m_DevConsoleMenuActionsCallbackInterface.OnCloseMenu;
+                    @CloseMenu.performed -= m_Wrapper.m_DevConsoleMenuActionsCallbackInterface.OnCloseMenu;
+                    @CloseMenu.canceled -= m_Wrapper.m_DevConsoleMenuActionsCallbackInterface.OnCloseMenu;
                 }
                 m_Wrapper.m_DevConsoleMenuActionsCallbackInterface = instance;
                 if (instance != null)
                 {
-                    @CloseDevConsoleMenu.started += instance.OnCloseDevConsoleMenu;
-                    @CloseDevConsoleMenu.performed += instance.OnCloseDevConsoleMenu;
-                    @CloseDevConsoleMenu.canceled += instance.OnCloseDevConsoleMenu;
+                    @CloseMenu.started += instance.OnCloseMenu;
+                    @CloseMenu.performed += instance.OnCloseMenu;
+                    @CloseMenu.canceled += instance.OnCloseMenu;
                 }
             }
         }
@@ -589,17 +567,17 @@ namespace PC.Input
             void OnOpenInventoryMenu(InputAction.CallbackContext context);
             void OnOpenDevConsoleMenu(InputAction.CallbackContext context);
         }
-        public interface IPauseMenuActions
+        public interface IMenuActions
         {
-            void OnClosePauseMenu(InputAction.CallbackContext context);
+            void OnCloseMenu(InputAction.CallbackContext context);
         }
         public interface IInventoryMenuActions
         {
-            void OnCloseInventoryMenu(InputAction.CallbackContext context);
+            void OnCloseMenu(InputAction.CallbackContext context);
         }
         public interface IDevConsoleMenuActions
         {
-            void OnCloseDevConsoleMenu(InputAction.CallbackContext context);
+            void OnCloseMenu(InputAction.CallbackContext context);
         }
     }
 }
