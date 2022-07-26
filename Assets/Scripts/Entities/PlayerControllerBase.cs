@@ -132,7 +132,7 @@ namespace PC.Entities
 
 		private void Update()
 		{
-            _look = _inputActions.Player.Look.ReadValue<Vector2>() * PC.Settings.Mouse.SENSITIVTY * Time.deltaTime;
+            _look = _inputActions.Player.Look.ReadValue<Vector2>() * PC.Settings.Mouse.Sensitivity * Time.deltaTime;
             _move = GetMovement();
             _isMoving = _move != Vector3.zero && _velocity != _idleVelocity;
             _isGrounded = GroundedCheck();

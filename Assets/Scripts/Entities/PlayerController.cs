@@ -64,6 +64,7 @@ namespace PC.Entities
             _inputActions.Player.OpenPauseMenu.performed += ctx => { Debug.Log("Menu"); _menuesController.PauseMenu.Open(); };
             _inputActions.Player.OpenDevConsoleMenu.performed += ctx => { Debug.Log("Developer Console"); _menuesController.DevConsoleMenu.Open(); };
             _inputActions.Player.OpenInventoryMenu.performed += ctx => { Debug.Log("Inventory"); _menuesController.InventoryMenu.Open(); };
+            _inputActions.Player.OpenMapMenu.performed += ctx => { Debug.Log("Map"); _menuesController.MapMenu.Open(); };
 		}
     }
 }

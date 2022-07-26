@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 using PC.Input;
@@ -7,7 +8,8 @@ namespace PC.UI
     [RequireComponent(typeof(RectTransform))]
     public abstract class MenuBase : MonoBehaviour
     {
-        protected InputActions _inputActions => InputModule.InputActions;
+        protected static InputActions _inputActions => InputModule.InputActions;
+        private static readonly List<MenuBase> menus = new List<MenuBase>();
 
         /// <summary>
         /// DO NOT HIDE/OVERRIDE THIS FUNCTION USING THE NEW OR OVERRIDE KEYWORDS!!!
@@ -15,6 +17,8 @@ namespace PC.UI
         /// </summary>
         protected void Awake()
         {
+            menus.Add(this);
+
             _inputActions.Menu.CloseMenu.performed += ctx => Close();
 
             AwakeExtension();
@@ -26,28 +30,64 @@ namespace PC.UI
         /// </summary>
         protected abstract void AwakeExtension();
 
+        /// <summary>
+        /// Hides the menu from the scene.
+        /// </summary>
+        private void Disable()
+        {
+            gameObject.SetActive(false);
+        }
+
+        /// <summary>
+        /// Hides ALL menus from the scene.
+        /// </summary>
+        private static void DisableAll()
+        {
+            foreach (var menu in menus)
+            {
+                menu.Disable();
+            }
+            _inputActions.Disable();
+        }
+
+        /// <summary>
+        /// DO NOT OVERRIDE/HIDE MenuBase.Open() USING THE NEW OR OVERRIDE KEYWORDS!!!
+        /// Override the OpenExtension() function instead.
+        /// Opens the menu. Closes all other menus. Enables base menu input while disabling all others. Unlocks the cursor.
+        /// Calls OpenExtension() at end end of this function. OpenExtension() by default does nothing. Needs to be overriden if you want to add to the functionality of Open().
+        /// </summary>
         public void Open()
         {
+            DisableAll();
             transform.gameObject.SetActive(true);
-            _inputActions.Disable();
             _inputActions.Menu.Enable();
             Cursor.lockState = CursorLockMode.None;
 
             OpenExtension();
         }
 
-        public abstract void OpenExtension();
+        /// <summary>
+        /// Gets called at the end of Open().
+        /// </summary>
+        protected abstract void OpenExtension();
 
+        /// <summary>
+        /// DO NOT OVERRIDE/HIDE MenuBase.Close() USING THE NEW OR OVERRIDE KEYWORDS!!!
+        /// Override the CloseExtension() function instead.
+        /// Closes the menu. Locks the cursor.
+        /// Calls CloseExtension() at end end of this function. CloseExtension() by default does nothing. Needs to be overriden if you want to add to the functionality of Close().
         public void Close()
         {
-            transform.gameObject.SetActive(false);
-            _inputActions.Disable();
+            DisableAll();
             _inputActions.Player.Enable();
             Cursor.lockState = CursorLockMode.Locked;
 
             CloseExtension();
         }
 
-        public abstract void CloseExtension();
+        /// <summary>
+        /// Gets called at the end of Close().
+        /// </summary>
+        protected abstract void CloseExtension();
     }
 }

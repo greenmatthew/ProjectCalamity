@@ -16,11 +16,11 @@ namespace PC.UI
             _exitGameButton.onClick.AddListener(() => ExitGame());
         }
 
-        public override void OpenExtension()
+        protected override void OpenExtension()
         {
         }
 
-        public override void CloseExtension()
+        protected override void CloseExtension()
         {
         }
 

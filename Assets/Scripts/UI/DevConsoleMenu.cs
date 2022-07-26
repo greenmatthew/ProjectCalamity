@@ -9,12 +9,12 @@ namespace PC.UI
             _inputActions.DevConsoleMenu.CloseMenu.performed += ctx => Close();
         }
 
-        public override void OpenExtension()
+        protected override void OpenExtension()
         {
             _inputActions.DevConsoleMenu.Enable();
         }
 
-        public override void CloseExtension()
+        protected override void CloseExtension()
         {
         }
     }

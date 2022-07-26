@@ -123,6 +123,24 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &98493074 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5989712044949686086, guid: 2b19d59aeea26d542916cfb3be09f15a,
+    type: 3}
+  m_PrefabInstance: {fileID: 5989712044892015890}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &98493079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98493074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a98b8dbbe74f71c4dad8dac866d7a670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &104820589
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,16 +268,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f73f1a6750bf2af4f9654e73e01f0d4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &728588733 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5989712044474477743, guid: 2b19d59aeea26d542916cfb3be09f15a,
+--- !u!1 &905580459 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5989712045371429377, guid: 2b19d59aeea26d542916cfb3be09f15a,
     type: 3}
   m_PrefabInstance: {fileID: 5989712044892015890}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+--- !u!114 &905580464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905580459}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 10fb64a94cb2bc145bb08bd85c10e9c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1669825525
@@ -359,18 +383,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2055944209 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5989712045252146435, guid: 2b19d59aeea26d542916cfb3be09f15a,
-    type: 3}
-  m_PrefabInstance: {fileID: 5989712044892015890}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &5989712044892015890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -483,21 +495,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5989712044340937543, guid: 2b19d59aeea26d542916cfb3be09f15a,
+        type: 3}
+      propertyPath: MapMenu
+      value: 
+      objectReference: {fileID: 98493079}
+    - target: {fileID: 5989712044340937543, guid: 2b19d59aeea26d542916cfb3be09f15a,
+        type: 3}
+      propertyPath: PMSMenu
+      value: 
+      objectReference: {fileID: 905580464}
     - target: {fileID: 5989712044340937565, guid: 2b19d59aeea26d542916cfb3be09f15a,
         type: 3}
       propertyPath: m_Name
       value: Menu
       objectReference: {fileID: 0}
-    - target: {fileID: 5989712045109792439, guid: 2b19d59aeea26d542916cfb3be09f15a,
-        type: 3}
-      propertyPath: _exitGameButton
-      value: 
-      objectReference: {fileID: 728588733}
-    - target: {fileID: 5989712045109792439, guid: 2b19d59aeea26d542916cfb3be09f15a,
-        type: 3}
-      propertyPath: _closePauseMenuButton
-      value: 
-      objectReference: {fileID: 2055944209}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b19d59aeea26d542916cfb3be09f15a, type: 3}
 --- !u!1001 &8540954257553157388

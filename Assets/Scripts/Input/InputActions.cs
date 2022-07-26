@@ -91,6 +91,78 @@ namespace PC.Input
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""OpenMapMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""bc7a715b-ae7f-4a88-8b41-b4b9a1eb5c6d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""8acc7099-83b2-4e9e-885a-44766af47ab9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Crouch(Hold)"",
+                    ""type"": ""Button"",
+                    ""id"": ""522f9b94-8741-4209-83e8-c23041dc78dc"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Crouch(Toggle)"",
+                    ""type"": ""Button"",
+                    ""id"": ""7bd077a1-cc05-449a-a58a-0e1e2f4292ba"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Prone"",
+                    ""type"": ""Button"",
+                    ""id"": ""9193f79b-8d89-48b9-add9-175378f68f0f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Firemode"",
+                    ""type"": ""Button"",
+                    ""id"": ""e8812e56-57c4-44dd-b2de-e97ecb521e9d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ADS(Hold)"",
+                    ""type"": ""Button"",
+                    ""id"": ""270834c6-6351-44a8-a1eb-45bf40855d60"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ADS(Toggle)"",
+                    ""type"": ""Button"",
+                    ""id"": ""668f951b-40eb-4150-b44c-a5484edf2ff7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -206,12 +278,111 @@ namespace PC.Input
                 },
                 {
                     ""name"": """",
+                    ""id"": ""2579adce-7667-4238-941d-5cf49a18c134"",
+                    ""path"": ""<Keyboard>/i"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""OpenInventoryMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""9bd34fe3-8b43-4151-b2ae-dd454b8e5706"",
                     ""path"": ""<Keyboard>/backquote"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""OpenDevConsoleMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5d00631d-55c7-4435-9659-fce59d634a1a"",
+                    ""path"": ""<Keyboard>/m"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""OpenMapMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c988d7e8-e51a-4f0b-9e2e-32527833993f"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2ad406b7-1b7c-4de4-a3d5-31085d6da28d"",
+                    ""path"": ""<Keyboard>/leftCtrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Crouch(Hold)"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""21013922-64a6-4f94-acee-2bfd7de5c82f"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Crouch(Toggle)"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""249becd4-e86a-40aa-b200-876200db103e"",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Prone"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e71baecf-abab-4130-a6d5-c558f6f832ae"",
+                    ""path"": ""<Keyboard>/b"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Firemode"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""83e344b0-8c60-401e-99ad-eb3771543363"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ADS(Hold)"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""448d61c6-aac0-4cf9-9d2b-1571cad51784"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ADS(Toggle)"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -270,6 +441,17 @@ namespace PC.Input
                     ""action"": ""CloseMenu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""577b6c43-0a64-4e88-8c36-622a22393c43"",
+                    ""path"": ""<Keyboard>/i"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CloseMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -300,6 +482,34 @@ namespace PC.Input
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""MapMenu"",
+            ""id"": ""1e467826-a97a-47a6-a40e-a0ebaf1e567e"",
+            ""actions"": [
+                {
+                    ""name"": ""CloseMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""45e1faf6-8358-4a6d-a289-20e1b10e11a0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""43d5d49a-ea43-43fa-8d29-475589e5f747"",
+                    ""path"": ""<Keyboard>/m"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CloseMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -313,6 +523,14 @@ namespace PC.Input
             m_Player_OpenPauseMenu = m_Player.FindAction("OpenPauseMenu", throwIfNotFound: true);
             m_Player_OpenInventoryMenu = m_Player.FindAction("OpenInventoryMenu", throwIfNotFound: true);
             m_Player_OpenDevConsoleMenu = m_Player.FindAction("OpenDevConsoleMenu", throwIfNotFound: true);
+            m_Player_OpenMapMenu = m_Player.FindAction("OpenMapMenu", throwIfNotFound: true);
+            m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
+            m_Player_CrouchHold = m_Player.FindAction("Crouch(Hold)", throwIfNotFound: true);
+            m_Player_CrouchToggle = m_Player.FindAction("Crouch(Toggle)", throwIfNotFound: true);
+            m_Player_Prone = m_Player.FindAction("Prone", throwIfNotFound: true);
+            m_Player_Firemode = m_Player.FindAction("Firemode", throwIfNotFound: true);
+            m_Player_ADSHold = m_Player.FindAction("ADS(Hold)", throwIfNotFound: true);
+            m_Player_ADSToggle = m_Player.FindAction("ADS(Toggle)", throwIfNotFound: true);
             // Menu
             m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
             m_Menu_CloseMenu = m_Menu.FindAction("CloseMenu", throwIfNotFound: true);
@@ -322,6 +540,9 @@ namespace PC.Input
             // DevConsoleMenu
             m_DevConsoleMenu = asset.FindActionMap("DevConsoleMenu", throwIfNotFound: true);
             m_DevConsoleMenu_CloseMenu = m_DevConsoleMenu.FindAction("CloseMenu", throwIfNotFound: true);
+            // MapMenu
+            m_MapMenu = asset.FindActionMap("MapMenu", throwIfNotFound: true);
+            m_MapMenu_CloseMenu = m_MapMenu.FindAction("CloseMenu", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -388,6 +609,14 @@ namespace PC.Input
         private readonly InputAction m_Player_OpenPauseMenu;
         private readonly InputAction m_Player_OpenInventoryMenu;
         private readonly InputAction m_Player_OpenDevConsoleMenu;
+        private readonly InputAction m_Player_OpenMapMenu;
+        private readonly InputAction m_Player_Interact;
+        private readonly InputAction m_Player_CrouchHold;
+        private readonly InputAction m_Player_CrouchToggle;
+        private readonly InputAction m_Player_Prone;
+        private readonly InputAction m_Player_Firemode;
+        private readonly InputAction m_Player_ADSHold;
+        private readonly InputAction m_Player_ADSToggle;
         public struct PlayerActions
         {
             private @InputActions m_Wrapper;
@@ -399,6 +628,14 @@ namespace PC.Input
             public InputAction @OpenPauseMenu => m_Wrapper.m_Player_OpenPauseMenu;
             public InputAction @OpenInventoryMenu => m_Wrapper.m_Player_OpenInventoryMenu;
             public InputAction @OpenDevConsoleMenu => m_Wrapper.m_Player_OpenDevConsoleMenu;
+            public InputAction @OpenMapMenu => m_Wrapper.m_Player_OpenMapMenu;
+            public InputAction @Interact => m_Wrapper.m_Player_Interact;
+            public InputAction @CrouchHold => m_Wrapper.m_Player_CrouchHold;
+            public InputAction @CrouchToggle => m_Wrapper.m_Player_CrouchToggle;
+            public InputAction @Prone => m_Wrapper.m_Player_Prone;
+            public InputAction @Firemode => m_Wrapper.m_Player_Firemode;
+            public InputAction @ADSHold => m_Wrapper.m_Player_ADSHold;
+            public InputAction @ADSToggle => m_Wrapper.m_Player_ADSToggle;
             public InputActionMap Get() { return m_Wrapper.m_Player; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -429,6 +666,30 @@ namespace PC.Input
                     @OpenDevConsoleMenu.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOpenDevConsoleMenu;
                     @OpenDevConsoleMenu.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOpenDevConsoleMenu;
                     @OpenDevConsoleMenu.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOpenDevConsoleMenu;
+                    @OpenMapMenu.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOpenMapMenu;
+                    @OpenMapMenu.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOpenMapMenu;
+                    @OpenMapMenu.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOpenMapMenu;
+                    @Interact.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
+                    @Interact.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
+                    @Interact.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
+                    @CrouchHold.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCrouchHold;
+                    @CrouchHold.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCrouchHold;
+                    @CrouchHold.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCrouchHold;
+                    @CrouchToggle.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCrouchToggle;
+                    @CrouchToggle.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCrouchToggle;
+                    @CrouchToggle.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCrouchToggle;
+                    @Prone.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnProne;
+                    @Prone.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnProne;
+                    @Prone.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnProne;
+                    @Firemode.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFiremode;
+                    @Firemode.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFiremode;
+                    @Firemode.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFiremode;
+                    @ADSHold.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnADSHold;
+                    @ADSHold.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnADSHold;
+                    @ADSHold.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnADSHold;
+                    @ADSToggle.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnADSToggle;
+                    @ADSToggle.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnADSToggle;
+                    @ADSToggle.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnADSToggle;
                 }
                 m_Wrapper.m_PlayerActionsCallbackInterface = instance;
                 if (instance != null)
@@ -454,6 +715,30 @@ namespace PC.Input
                     @OpenDevConsoleMenu.started += instance.OnOpenDevConsoleMenu;
                     @OpenDevConsoleMenu.performed += instance.OnOpenDevConsoleMenu;
                     @OpenDevConsoleMenu.canceled += instance.OnOpenDevConsoleMenu;
+                    @OpenMapMenu.started += instance.OnOpenMapMenu;
+                    @OpenMapMenu.performed += instance.OnOpenMapMenu;
+                    @OpenMapMenu.canceled += instance.OnOpenMapMenu;
+                    @Interact.started += instance.OnInteract;
+                    @Interact.performed += instance.OnInteract;
+                    @Interact.canceled += instance.OnInteract;
+                    @CrouchHold.started += instance.OnCrouchHold;
+                    @CrouchHold.performed += instance.OnCrouchHold;
+                    @CrouchHold.canceled += instance.OnCrouchHold;
+                    @CrouchToggle.started += instance.OnCrouchToggle;
+                    @CrouchToggle.performed += instance.OnCrouchToggle;
+                    @CrouchToggle.canceled += instance.OnCrouchToggle;
+                    @Prone.started += instance.OnProne;
+                    @Prone.performed += instance.OnProne;
+                    @Prone.canceled += instance.OnProne;
+                    @Firemode.started += instance.OnFiremode;
+                    @Firemode.performed += instance.OnFiremode;
+                    @Firemode.canceled += instance.OnFiremode;
+                    @ADSHold.started += instance.OnADSHold;
+                    @ADSHold.performed += instance.OnADSHold;
+                    @ADSHold.canceled += instance.OnADSHold;
+                    @ADSToggle.started += instance.OnADSToggle;
+                    @ADSToggle.performed += instance.OnADSToggle;
+                    @ADSToggle.canceled += instance.OnADSToggle;
                 }
             }
         }
@@ -557,6 +842,39 @@ namespace PC.Input
             }
         }
         public DevConsoleMenuActions @DevConsoleMenu => new DevConsoleMenuActions(this);
+
+        // MapMenu
+        private readonly InputActionMap m_MapMenu;
+        private IMapMenuActions m_MapMenuActionsCallbackInterface;
+        private readonly InputAction m_MapMenu_CloseMenu;
+        public struct MapMenuActions
+        {
+            private @InputActions m_Wrapper;
+            public MapMenuActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+            public InputAction @CloseMenu => m_Wrapper.m_MapMenu_CloseMenu;
+            public InputActionMap Get() { return m_Wrapper.m_MapMenu; }
+            public void Enable() { Get().Enable(); }
+            public void Disable() { Get().Disable(); }
+            public bool enabled => Get().enabled;
+            public static implicit operator InputActionMap(MapMenuActions set) { return set.Get(); }
+            public void SetCallbacks(IMapMenuActions instance)
+            {
+                if (m_Wrapper.m_MapMenuActionsCallbackInterface != null)
+                {
+                    @CloseMenu.started -= m_Wrapper.m_MapMenuActionsCallbackInterface.OnCloseMenu;
+                    @CloseMenu.performed -= m_Wrapper.m_MapMenuActionsCallbackInterface.OnCloseMenu;
+                    @CloseMenu.canceled -= m_Wrapper.m_MapMenuActionsCallbackInterface.OnCloseMenu;
+                }
+                m_Wrapper.m_MapMenuActionsCallbackInterface = instance;
+                if (instance != null)
+                {
+                    @CloseMenu.started += instance.OnCloseMenu;
+                    @CloseMenu.performed += instance.OnCloseMenu;
+                    @CloseMenu.canceled += instance.OnCloseMenu;
+                }
+            }
+        }
+        public MapMenuActions @MapMenu => new MapMenuActions(this);
         public interface IPlayerActions
         {
             void OnMovement(InputAction.CallbackContext context);
@@ -566,6 +884,14 @@ namespace PC.Input
             void OnOpenPauseMenu(InputAction.CallbackContext context);
             void OnOpenInventoryMenu(InputAction.CallbackContext context);
             void OnOpenDevConsoleMenu(InputAction.CallbackContext context);
+            void OnOpenMapMenu(InputAction.CallbackContext context);
+            void OnInteract(InputAction.CallbackContext context);
+            void OnCrouchHold(InputAction.CallbackContext context);
+            void OnCrouchToggle(InputAction.CallbackContext context);
+            void OnProne(InputAction.CallbackContext context);
+            void OnFiremode(InputAction.CallbackContext context);
+            void OnADSHold(InputAction.CallbackContext context);
+            void OnADSToggle(InputAction.CallbackContext context);
         }
         public interface IMenuActions
         {
@@ -576,6 +902,10 @@ namespace PC.Input
             void OnCloseMenu(InputAction.CallbackContext context);
         }
         public interface IDevConsoleMenuActions
+        {
+            void OnCloseMenu(InputAction.CallbackContext context);
+        }
+        public interface IMapMenuActions
         {
             void OnCloseMenu(InputAction.CallbackContext context);
         }

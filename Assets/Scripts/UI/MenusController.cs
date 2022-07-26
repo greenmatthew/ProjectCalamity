@@ -9,6 +9,8 @@ namespace PC.UI
         [SerializeField] public PauseMenu PauseMenu = null;
         [SerializeField] public InventoryMenu InventoryMenu = null;
         [SerializeField] public DevConsoleMenu DevConsoleMenu = null;
+        [SerializeField] public MapMenu MapMenu = null;
+        [SerializeField] public PlayerManagementStationMenu PMSMenu = null;
 
         private void Awake()
         {
@@ -20,6 +22,12 @@ namespace PC.UI
 
             if (DevConsoleMenu.gameObject.activeSelf)
                 Debug.LogWarning("MenuesController: DevConsoleMenu is enabled on application start. Please disable it in the inspector, otherwise input handling will not work.");
+            
+            if (MapMenu.gameObject.activeSelf)
+                Debug.LogWarning("MenuesController: MapMenu is enabled on application start. Please disable it in the inspector, otherwise input handling will not work.");
+            
+            if (PMSMenu.gameObject.activeSelf)
+                Debug.LogWarning("MenuesController: PMSMenu is enabled on application start. Please disable it in the inspector, otherwise input handling will not work.");
         }
     }
 }

@@ -28,7 +28,7 @@ namespace PC.Input
             }
         }
 
-        public static InputActions InputActions = null;
+        public static InputActions InputActions { get; private set; }
 
         protected override void Awake()
         {

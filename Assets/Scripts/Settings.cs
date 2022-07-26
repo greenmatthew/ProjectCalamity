@@ -6,6 +6,6 @@ namespace PC.Settings
 {
     public static class Mouse
     {
-        public const float SENSITIVTY = 15.0f; // 38.8
+        public const float Sensitivity = 15.0f;
     }
 }
