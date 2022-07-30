@@ -11,7 +11,7 @@
           "state": {
             "file": "Ideas.md",
             "mode": "source",
-            "source": true
+            "source": false
           }
         },
         "group": "f7877bcd05b33be5"
@@ -23,8 +23,8 @@
           "type": "markdown",
           "state": {
             "file": "Ideas.md",
-            "mode": "preview",
-            "source": true
+            "mode": "source",
+            "source": false
           }
         },
         "group": "f7877bcd05b33be5"
@@ -103,6 +103,8 @@
   },
   "active": "2d61591d8c7a0404",
   "lastOpenFiles": [
+    "Ideas.pdf",
+    "IdeaReferenceImages/Bench.webp",
     "IdeaReferenceImages/swat4_magazines.png",
     "Ideas.md",
     "Pasted image 20220719161702.png",
