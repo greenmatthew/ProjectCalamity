@@ -1,6 +1,6 @@
 using UnityEngine;
 
-    #ROOTNAMESPACEBEGIN#
+#ROOTNAMESPACEBEGIN#
 public class #SCRIPTNAME# : MonoBehaviour
 {
     #region Fields
@@ -47,7 +47,7 @@ public class #SCRIPTNAME# : MonoBehaviour
 
 //----------------------------------------------------------------------------------------------------------------------
 
-    #region Enums, Structs, Classes, Interfaces
-    #endregion Enums, Structs, Classes, Interfaces
+    #region Enums, Structs, Classes
+    #endregion Enums, Structs, Classes
 }
 #ROOTNAMESPACEEND#
