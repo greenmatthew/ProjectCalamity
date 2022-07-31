@@ -233,7 +233,7 @@ namespace PC.Entities
 
 //----------------------------------------------------------------------------------------------------------------------
 
-        #region Enums, Structs, Classes, Interfaces
-        #endregion Enums, Structs, Classes, Interfaces
+        #region Enums, Structs, Classes
+        #endregion Enums, Structs, Classes
     }
 }
