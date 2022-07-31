@@ -11,5 +11,6 @@
 - [SebastianLague](https://www.youtube.com/c/SebastianLague)
 - [GameDevGuide](https://www.youtube.com/c/GameDevGuide)
 - [SylizedStation](https://www.youtube.com/c/StylizedStation)
+- [Tarodev](https://www.youtube.com/c/tarodev)
 
 ---
