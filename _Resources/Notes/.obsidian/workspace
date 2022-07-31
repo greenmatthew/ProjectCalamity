@@ -11,7 +11,7 @@
           "state": {
             "file": "Useful Links.md",
             "mode": "source",
-            "source": true
+            "source": false
           }
         },
         "group": "f7877bcd05b33be5"
@@ -22,9 +22,15 @@
         "state": {
           "type": "markdown",
           "state": {
+<<<<<<< HEAD
             "file": "Useful Links.md",
             "mode": "preview",
             "source": true
+=======
+            "file": "Ideas.md",
+            "mode": "source",
+            "source": false
+>>>>>>> 1b08ce87444cb86bcc2401b6de2b8d6176896fb3
           }
         },
         "group": "f7877bcd05b33be5"
@@ -103,6 +109,12 @@
   },
   "active": "2d61591d8c7a0404",
   "lastOpenFiles": [
+<<<<<<< HEAD
+=======
+    "Ideas.pdf",
+    "IdeaReferenceImages/Bench.webp",
+    "IdeaReferenceImages/swat4_magazines.png",
+>>>>>>> 1b08ce87444cb86bcc2401b6de2b8d6176896fb3
     "Ideas.md",
     "IdeaReferenceImages/swat4_magazines.png",
     "Pasted image 20220719161702.png",
