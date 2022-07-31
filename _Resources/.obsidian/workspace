@@ -9,8 +9,9 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Useful Links.md",
-            "mode": "source"
+            "file": "Notes/Ideas.md",
+            "mode": "source",
+            "source": false
           }
         },
         "group": "efe9d53adf78729f"
@@ -21,8 +22,9 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Useful Links.md",
-            "mode": "source"
+            "file": "Notes/Ideas.md",
+            "mode": "source",
+            "source": false
           }
         },
         "group": "efe9d53adf78729f"
@@ -81,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Useful Links.md",
+                "file": "Notes/Ideas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",

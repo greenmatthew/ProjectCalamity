@@ -13,7 +13,17 @@ namespace PC.UI
         protected override void AwakeExtension()
         {
             _closePauseMenuButton.onClick.AddListener(() => Close());
-            _exitGameButton.onClick.AddListener(() => ExitGame());
+            _exitGameButton.onClick.AddListener( delegate
+            {
+                PopupWindow.Create
+                (
+                    gameObject,
+                    "Exit Game",
+                    "Are you sure you want to exit the game?",
+                    new ButtonAction("Yes", ExitGame),
+                    new ButtonAction("No")
+                );
+            } );
         }
 
         protected override void OpenExtension()
