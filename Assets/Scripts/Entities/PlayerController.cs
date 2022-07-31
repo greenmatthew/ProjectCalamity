@@ -6,6 +6,31 @@ namespace PC.Entities
 {
     public class PlayerController : PlayerControllerBase
     {
+        #region Fields
+
+        #region Consts Fields
+        #endregion Consts Fields
+
+        #region Public Fields
+        #endregion Public Fields
+
+        #region Protected Fields
+        #endregion Protected Fields
+
+        #region Private Fields
+        #endregion Private Fields
+
+        #endregion Fields
+
+    //----------------------------------------------------------------------------------------------------------------------
+
+        #region Methods
+    
+        #region Public Methods
+        #endregion Public Methods
+
+        #region Protected Methods
+
         /// <summary>
         /// Turns the Player object along x mouse input and turns camera along y mouse input.
         /// </summary>
@@ -66,5 +91,18 @@ namespace PC.Entities
             _inputActions.Player.OpenInventoryMenu.performed += ctx => { Debug.Log("Inventory"); _menuesController.InventoryMenu.Open(); };
             _inputActions.Player.OpenMapMenu.performed += ctx => { Debug.Log("Map"); _menuesController.MapMenu.Open(); };
 		}
+
+        #endregion Protected Methods
+
+        #region Private Methods
+        #endregion Private Methods
+
+        #endregion Methods
+
+    //----------------------------------------------------------------------------------------------------------------------
+
+        #region Enums, Structs, Classes, Interfaces
+        #endregion Enums, Structs, Classes, Interfaces
+        
     }
 }
