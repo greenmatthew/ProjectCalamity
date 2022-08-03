@@ -163,6 +163,15 @@ namespace PC.Input
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Shoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""e114ac4f-2441-46c2-8f24-a535ea511cb5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -385,6 +394,17 @@ namespace PC.Input
                     ""action"": ""ADS(Toggle)"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6285f8c2-741d-462c-b3ec-56adc676a5b2"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -531,6 +551,7 @@ namespace PC.Input
             m_Player_Firemode = m_Player.FindAction("Firemode", throwIfNotFound: true);
             m_Player_ADSHold = m_Player.FindAction("ADS(Hold)", throwIfNotFound: true);
             m_Player_ADSToggle = m_Player.FindAction("ADS(Toggle)", throwIfNotFound: true);
+            m_Player_Shoot = m_Player.FindAction("Shoot", throwIfNotFound: true);
             // Menu
             m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
             m_Menu_CloseMenu = m_Menu.FindAction("CloseMenu", throwIfNotFound: true);
@@ -617,6 +638,7 @@ namespace PC.Input
         private readonly InputAction m_Player_Firemode;
         private readonly InputAction m_Player_ADSHold;
         private readonly InputAction m_Player_ADSToggle;
+        private readonly InputAction m_Player_Shoot;
         public struct PlayerActions
         {
             private @InputActions m_Wrapper;
@@ -636,6 +658,7 @@ namespace PC.Input
             public InputAction @Firemode => m_Wrapper.m_Player_Firemode;
             public InputAction @ADSHold => m_Wrapper.m_Player_ADSHold;
             public InputAction @ADSToggle => m_Wrapper.m_Player_ADSToggle;
+            public InputAction @Shoot => m_Wrapper.m_Player_Shoot;
             public InputActionMap Get() { return m_Wrapper.m_Player; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -690,6 +713,9 @@ namespace PC.Input
                     @ADSToggle.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnADSToggle;
                     @ADSToggle.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnADSToggle;
                     @ADSToggle.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnADSToggle;
+                    @Shoot.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShoot;
+                    @Shoot.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShoot;
+                    @Shoot.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShoot;
                 }
                 m_Wrapper.m_PlayerActionsCallbackInterface = instance;
                 if (instance != null)
@@ -739,6 +765,9 @@ namespace PC.Input
                     @ADSToggle.started += instance.OnADSToggle;
                     @ADSToggle.performed += instance.OnADSToggle;
                     @ADSToggle.canceled += instance.OnADSToggle;
+                    @Shoot.started += instance.OnShoot;
+                    @Shoot.performed += instance.OnShoot;
+                    @Shoot.canceled += instance.OnShoot;
                 }
             }
         }
@@ -892,6 +921,7 @@ namespace PC.Input
             void OnFiremode(InputAction.CallbackContext context);
             void OnADSHold(InputAction.CallbackContext context);
             void OnADSToggle(InputAction.CallbackContext context);
+            void OnShoot(InputAction.CallbackContext context);
         }
         public interface IMenuActions
         {
