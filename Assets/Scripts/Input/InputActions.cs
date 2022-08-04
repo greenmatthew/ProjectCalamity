@@ -399,7 +399,7 @@ namespace PC.Input
                     ""name"": """",
                     ""id"": ""6285f8c2-741d-462c-b3ec-56adc676a5b2"",
                     ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": ""Press"",
+                    ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Shoot"",
