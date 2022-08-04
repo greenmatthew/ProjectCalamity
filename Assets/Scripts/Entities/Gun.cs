@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using PC.Input;
+using PC.Audio;
+using PC.UI;
 
 public class Gun : MonoBehaviour
 {
@@ -18,10 +20,17 @@ public class Gun : MonoBehaviour
     #region Private Fields
     [SerializeField]
     private GameObject muzzleFlash;
+
     [SerializeField]
     private new Camera camera;
+
     [SerializeField]
     private float range = 100f;
+
+    [SerializeField]
+    protected ScifiRifleSounds audioClips = null;
+    private AudioSource gunAudioSource = null;
+
     private InputActions inputActions; 
     #endregion Private Fields
 
@@ -57,6 +66,11 @@ public class Gun : MonoBehaviour
     {
         // gain access to user inputs
         this.inputActions = new InputActions();
+
+        // audio source component
+        gunAudioSource = this.GetComponent<AudioSource>();
+        if (gunAudioSource == null)
+            Debug.LogError("Gun: AudioSource is null!");
     }
 
     /// <summary>
@@ -85,6 +99,19 @@ public class Gun : MonoBehaviour
     /// <param name="obj"></param>
     private void Shoot(InputAction.CallbackContext obj)
     {
+        // do not shoot if game is paused
+        if (PauseMenu.activated)
+        {
+            return;
+        }
+
+        // play gun sound
+        gunAudioSource.clip = audioClips.shoot;
+        gunAudioSource.Play();
+
+        // activate muzzle flash 
+
+
         // shoot raycast in direction of camera
         Ray ray = new Ray(camera.transform.position, camera.transform.forward);
         if (Physics.Raycast(ray, out RaycastHit hit, this.range))
@@ -96,7 +123,6 @@ public class Gun : MonoBehaviour
             }
         }
 
-        // activate muzzle flash at gun muzzle
 
     }
 

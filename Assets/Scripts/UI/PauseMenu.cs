@@ -13,6 +13,7 @@ namespace PC.UI
         #endregion Consts Fields
 
         #region Public Fields
+        public static bool activated = false;
         #endregion Public Fields
 
         #region Protected Fields
@@ -64,10 +65,12 @@ namespace PC.UI
 
         protected override void OpenExtension()
         {
+            activated = true;
         }
 
         protected override void CloseExtension()
         {
+            activated = false;
         }
 
         #endregion Protected Methods
