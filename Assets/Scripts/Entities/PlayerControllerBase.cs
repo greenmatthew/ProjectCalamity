@@ -48,7 +48,7 @@ namespace PC.Entities
         [SerializeField] protected Transform _groundCheck;
         [SerializeField] protected LayerMask _groundMask;
 
-        // Scriptable Objects containg audio clips
+        // Scriptable Objects containing audio clips
         [Header("Audio")]
         [SerializeField] protected HumanoidSounds _audioClips = null;
 

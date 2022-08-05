@@ -33,7 +33,8 @@ namespace PC.Input
             }
         }
 
-        public static InputActions InputActions { get; private set; }
+        private static InputActions h_inputActions;
+        public static InputActions InputActions => h_inputActions;
 
         #endregion Public Fields
 
@@ -77,7 +78,7 @@ namespace PC.Input
                 Destroy(this);
             }
 
-            InputActions = new InputActions();
+            h_inputActions = new InputActions();
 
             _awakeCalledFlag = true;
         }

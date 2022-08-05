@@ -14,6 +14,9 @@ public class Target : MonoBehaviour
     #endregion Protected Fields
 
     #region Private Fields
+
+    private Rigidbody _rigidbody;
+
     #endregion Private Fields
 
     #endregion Fields
@@ -23,11 +26,12 @@ public class Target : MonoBehaviour
     #region Methods
     
     #region Public Methods
+    
     /// <summary>
     /// Defines how the target reacts to getting shot by projectile
     /// </summary>
     /// <param name="direction">
-    /// the direction the impacting projectile is traveling
+    /// The direction the impacting projectile is travelling
     /// </param>
     public void GetShot(Vector3 direction)
     {
@@ -35,9 +39,10 @@ public class Target : MonoBehaviour
         Vector3 impactForce = direction * 5 + Vector3.up * 10;
 
         // add force to target's rigid body
-        GetComponent<Rigidbody>().AddForce(impactForce, ForceMode.Impulse);
+        _rigidbody.AddForce(impactForce, ForceMode.Impulse);
 
     }
+
     #endregion Public Methods
 
     #region Protected Methods
@@ -45,16 +50,11 @@ public class Target : MonoBehaviour
 
     #region Private Methods
 
-    private void Start()
+    private void Awake()
     {
-        
+        _rigidbody = GetComponent<Rigidbody>();
     }
 
-    private void Update()
-    {
-        
-    }
-    
     #endregion Private Methods
 
     #endregion Methods
