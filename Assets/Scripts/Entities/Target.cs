@@ -31,7 +31,7 @@ public class Target : MonoBehaviour
     /// Defines how the target reacts to getting shot by projectile
     /// </summary>
     /// <param name="direction">
-    /// The direction the impacting projectile is travelling
+    /// The direction the impacting projectile is traveling
     /// </param>
     public void GetShot(Vector3 direction)
     {
