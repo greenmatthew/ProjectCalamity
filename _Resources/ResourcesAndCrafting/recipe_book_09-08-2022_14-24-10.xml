@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RecipeBook xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <recipes>
+    <Recipe>
+      <result xsi:type="ItemStack">
+        <item>
+          <name>Brass</name>
+          <description>A brass ingot an alloy metal made from copper and zinc.</description>
+        </item>
+        <quantity>3</quantity>
+      </result>
+      <ingredients>
+        <ItemBase xsi:type="ItemStack">
+          <item>
+            <name>Copper</name>
+            <description>A piece of copper (Cu) ore.</description>
+          </item>
+          <quantity>2</quantity>
+        </ItemBase>
+        <ItemBase xsi:type="ItemStack">
+          <item>
+            <name>Zinc</name>
+            <description>A piece of zinc (Zn) ore.</description>
+          </item>
+          <quantity>1</quantity>
+        </ItemBase>
+      </ingredients>
+    </Recipe>
+    <Recipe>
+      <result xsi:type="ItemStack">
+        <item>
+          <name>Smokeless Powder</name>
+          <description>A single base smokeless powder made of nitrocellulose (C6H7(ONO2)3O2) made from nitric and sulfuric acid as well as cellulose (3 HNO3 + C6H7(OH)3O2 (→ H2SO4 →) C6H7(ONO2)3O2 + 3 H2O).</description>
+        </item>
+        <quantity>5</quantity>
+      </result>
+      <ingredients>
+        <ItemBase xsi:type="ItemStack">
+          <item>
+            <name>Cellulose</name>
+            <description>A pile of cellulose (C6H7(OH)3O2).</description>
+          </item>
+          <quantity>1</quantity>
+        </ItemBase>
+        <ItemBase xsi:type="ItemStack">
+          <item>
+            <name>Nitric Acid</name>
+            <description>A glass container of nitric acid (HNO3).</description>
+          </item>
+          <quantity>3</quantity>
+        </ItemBase>
+        <ItemBase xsi:type="ItemStack">
+          <item>
+            <name>Sulfuric Acid</name>
+            <description>A glass container of sulfuric acid (H2SO4).</description>
+          </item>
+          <quantity>1</quantity>
+        </ItemBase>
+      </ingredients>
+    </Recipe>
+    <Recipe>
+      <result xsi:type="ItemStack">
+        <item>
+          <name>Copper Wire</name>
+          <description>A spool of copper wire.</description>
+        </item>
+        <quantity>1</quantity>
+      </result>
+      <ingredients>
+        <ItemBase xsi:type="ItemStack">
+          <item>
+            <name>Copper</name>
+            <description>A piece of copper (Cu) ore.</description>
+          </item>
+          <quantity>3</quantity>
+        </ItemBase>
+      </ingredients>
+    </Recipe>
+    <Recipe>
+      <result xsi:type="ItemStack">
+        <item>
+          <name>Solenoid</name>
+          <description>A solenoid made from coils of copper wire.</description>
+        </item>
+        <quantity>1</quantity>
+      </result>
+      <ingredients>
+        <ItemBase xsi:type="ItemStack">
+          <item>
+            <name>Copper Wire</name>
+            <description>A spool of copper wire.</description>
+          </item>
+          <quantity>2</quantity>
+        </ItemBase>
+      </ingredients>
+    </Recipe>
+    <Recipe>
+      <result xsi:type="ItemStack">
+        <item>
+          <name>Rifle Magazine</name>
+          <description>A magazine for a rifle.</description>
+        </item>
+        <quantity>1</quantity>
+      </result>
+      <ingredients>
+        <ItemBase xsi:type="ItemStack">
+          <item>
+            <name>Titanium</name>
+            <description>A piece of titanium (Ti) ore.</description>
+          </item>
+          <quantity>2</quantity>
+        </ItemBase>
+      </ingredients>
+    </Recipe>
+    <Recipe>
+      <result xsi:type="ItemStack">
+        <item>
+          <name>Rifle Cartridge</name>
+          <description>A cartridge for a rifle.</description>
+        </item>
+        <quantity>10</quantity>
+      </result>
+      <ingredients>
+        <ItemBase xsi:type="ItemStack">
+          <item>
+            <name>Smokeless Powder</name>
+            <description>A single base smokeless powder made of nitrocellulose (C6H7(ONO2)3O2) made from nitric and sulfuric acid as well as cellulose (3 HNO3 + C6H7(OH)3O2 (→ H2SO4 →) C6H7(ONO2)3O2 + 3 H2O).</description>
+          </item>
+          <quantity>1</quantity>
+        </ItemBase>
+        <ItemBase xsi:type="ItemStack">
+          <item>
+            <name>Copper</name>
+            <description>A piece of copper (Cu) ore.</description>
+          </item>
+          <quantity>1</quantity>
+        </ItemBase>
+        <ItemBase xsi:type="ItemStack">
+          <item>
+            <name>Lead</name>
+            <description>A piece of lead (Pb) ore.</description>
+          </item>
+          <quantity>1</quantity>
+        </ItemBase>
+      </ingredients>
+    </Recipe>
+    <Recipe xsi:type="LimitedRecipe">
+      <result xsi:type="Item">
+        <name>Rifle</name>
+        <description>A basic rifle.</description>
+      </result>
+      <ingredients>
+        <ItemBase xsi:type="ItemStack">
+          <item>
+            <name>Titanium</name>
+            <description>A piece of titanium (Ti) ore.</description>
+          </item>
+          <quantity>12</quantity>
+        </ItemBase>
+        <ItemBase xsi:type="ItemStack">
+          <item>
+            <name>Copper</name>
+            <description>A piece of copper (Cu) ore.</description>
+          </item>
+          <quantity>2</quantity>
+        </ItemBase>
+      </ingredients>
+      <uses>1</uses>
+    </Recipe>
+  </recipes>
+</RecipeBook>
