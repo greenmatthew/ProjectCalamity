@@ -1194,6 +1194,12 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!4 &132588610 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4008946969185322639, guid: 9a425c7c43b39a14cb3328d9da2d2969,
+    type: 3}
+  m_PrefabInstance: {fileID: 8540954257553157388}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &151943455
 GameObject:
   m_ObjectHideFlags: 0
@@ -13987,10 +13993,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55a7e1723a5de3e4ba703efffeb61469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _recoil: {fileID: 132588610}
   _muzzleFlash: {fileID: 0}
   _camera: {fileID: 1225257795}
-  _range: 100
+  _gun: {fileID: 11400000, guid: 5ce61f8c63968d94b9e70f8639a24306, type: 2}
   _audioClips: {fileID: 11400000, guid: 19ec9c1da5cb6604393832ec959660ff, type: 2}
+  _snappiness: 6
+  _returnSpeed: 2
 --- !u!82 &2115623999
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14460,6 +14469,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4008946969185322639, guid: 9a425c7c43b39a14cb3328d9da2d2969,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8540954256901946512, guid: 9a425c7c43b39a14cb3328d9da2d2969,
         type: 3}
       propertyPath: m_LocalPosition.y
