@@ -121,6 +121,17 @@ namespace PC.Entities
                 _muzzleFlashParticles = _muzzleFlash.GetComponent<ParticleSystem>();
                 _muzzleFlashParticles.Play();
 
+                // Flicker light
+                Transform light = _muzzleFlash.transform.Find("Light");
+                if (light != null)
+                {
+                    if (light.TryGetComponent<WFX_LightFlicker>(out WFX_LightFlicker flicker))
+                        flicker.StartCoroutine("Flicker");
+                    else
+                        Debug.LogError("Muzzle flash: Flicker script is missing!");
+                }
+                else
+                    Debug.LogError("Gun: Light is null!");
 
 
                 // shoot raycast in direction of camera
