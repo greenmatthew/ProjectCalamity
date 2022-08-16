@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -34,6 +35,7 @@ namespace PC.Entities
         [SerializeField] private Transform _recoil = null;
         [SerializeField] private Camera _camera = null;
         [SerializeField] private GunSO _gun = null;
+        private int _currentAmmo = 0;
 
         [SerializeField] private ScifiRifleSounds _audioClips = null;
         private AudioSource _gunAudioSource = null;
@@ -81,24 +83,25 @@ namespace PC.Entities
             inputActions.Player.Shoot.performed += Shoot;
             inputActions.Player.Shoot.canceled += (ctx) => _isShooting = false;
 
+            inputActions.Player.Reload.performed += Reload;
+
             inputActions.Player.Shoot.Enable();
+            inputActions.Player.Reload.Enable();
+
+            _currentAmmo = _gun.MagazineSize;
+
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         private void OnEnable()
         {
             inputActions.Player.Shoot.Enable();
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         private void OnDisable()
         {
             // disconnect gun functionality from shoot input
             inputActions.Player.Shoot.Disable();
+            inputActions.Player.Reload.Disable();
         }
 
         private void Update()
@@ -109,7 +112,27 @@ namespace PC.Entities
         }
 
         /// <summary>
-        /// Activates muzzle flash and shoots a raycast in the direction the camera is facing
+        /// Reloads the gun's magazine
+        /// </summary>
+        /// <returns></returns>
+        private void Reload(InputAction.CallbackContext obj)
+        {
+            // may need to disable shooting here
+            
+            // play reload sound
+            //_gunAudioSource.clip = _audioClips.reload;
+            //_gunAudioSource.Play();
+            
+            // play reload animation 
+            // sth like this:
+            //      yield return new WaitForSeconds(_audioClips.Reload.length);
+
+            //yield return new WaitForSeconds(_gun.ReloadTime);
+            _currentAmmo = _gun.MagazineSize;
+        }
+
+        /// <summary>
+        /// Activates muzzle flash, shoots targets via raycast, one bullet is expended
         /// If target has GetShot method, it is executed here
         /// </summary>
         /// <param name="obj"></param>
@@ -117,6 +140,17 @@ namespace PC.Entities
         {
             while (_isShooting)
             {
+                // empty audio plays when ammo is expended
+                if (_currentAmmo == 0)
+                {
+                    //_gunAudioSource.clip = _audioClips.Empty;
+                    //_gunAudioSource.Play();
+                    return; 
+                }
+
+                // expend one bullet
+                _currentAmmo--;
+                
                 // play gun sound
                 _gunAudioSource.clip = _audioClips.shoot;
                 _gunAudioSource.Play();

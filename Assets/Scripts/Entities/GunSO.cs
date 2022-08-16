@@ -9,6 +9,7 @@ namespace PC.Entities
 
         [SerializeField] public float Range = 100f;
         [SerializeField] public float Damage = 20f;
+        [SerializeField] public int MagazineSize = 30;
         [SerializeField] private float _fireRate = 500f; // Rounds per minute
         private float h_fireRate = float.MinValue;
         public float FireRate

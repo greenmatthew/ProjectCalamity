@@ -26,7 +26,7 @@ namespace PC.VFX
         /// Flickers the light component of this object. 
         /// Object is meant to be a background light to muzzle flash
         /// </summary>
-        /// <returns> Iterator interface. Function is a coroutine. </returns>
+        /// <returns></returns>
         IEnumerator Flicker()
         {
             GetComponent<Light>().enabled = !GetComponent<Light>().enabled;
