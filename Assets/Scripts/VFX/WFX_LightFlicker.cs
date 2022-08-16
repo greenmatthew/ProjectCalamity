@@ -22,6 +22,11 @@ namespace PC.VFX
             //StartCoroutine("Flicker");
         }
         
+        /// <summary>
+        /// Flickers the light component of this object. 
+        /// Object is meant to be a background light to muzzle flash
+        /// </summary>
+        /// <returns> ?? </returns>
         public IEnumerator Flicker()
         {
             GetComponent<Light>().enabled = !GetComponent<Light>().enabled;

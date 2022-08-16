@@ -27,8 +27,11 @@ namespace PC.Entities
 
         #region Private Fields
 
-        [SerializeField] private Transform _recoil = null;
         [SerializeField] private GameObject _muzzleFlash = null;
+        [SerializeField] private GameObject _muzzleFlashLight = null;
+        private ParticleSystem _muzzleFlashParticles = null;
+
+        [SerializeField] private Transform _recoil = null;
         [SerializeField] private Camera _camera = null;
         [SerializeField] private GunSO _gun = null;
 
@@ -38,7 +41,7 @@ namespace PC.Entities
         private bool _isShooting = false;
         private Vector3 _currentRotation = Vector3.zero;
         private Vector3 _targetRotation = Vector3.zero;
-        private ParticleSystem _muzzleFlashParticles = null;
+
 
         [SerializeField] private float _snappiness = 6f;
         [SerializeField] private float _returnSpeed = 2f;
@@ -122,17 +125,16 @@ namespace PC.Entities
                 _muzzleFlashParticles = _muzzleFlash.GetComponent<ParticleSystem>();
                 _muzzleFlashParticles.Play();
 
-                // Flicker light
-                Transform light = _muzzleFlash.transform.Find("Light");
-                if (light != null)
+                // flicker muzzle flash background light
+                if (_muzzleFlashLight != null)
                 {
-                    if (light.TryGetComponent<WFX_LightFlicker>(out WFX_LightFlicker flicker))
+                    if (_muzzleFlashLight.transform.TryGetComponent<WFX_LightFlicker>(out WFX_LightFlicker flicker))
                         flicker.StartCoroutine("Flicker");
                     else
                         Debug.LogError("Muzzle flash: Flicker script is missing!");
                 }
                 else
-                    Debug.LogError("Gun: Light is null!");
+                    Debug.LogError("Muzzle flash: background light is null!");
 
 
                 // shoot raycast in direction of camera
