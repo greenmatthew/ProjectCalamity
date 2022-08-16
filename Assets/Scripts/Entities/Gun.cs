@@ -37,6 +37,7 @@ namespace PC.Entities
         private bool _isShooting = false;
         private Vector3 _currentRotation = Vector3.zero;
         private Vector3 _targetRotation = Vector3.zero;
+        private ParticleSystem _muzzleFlashParticles = null;
 
         [SerializeField] private float _snappiness = 6f;
         [SerializeField] private float _returnSpeed = 2f;
@@ -116,7 +117,10 @@ namespace PC.Entities
                 _gunAudioSource.clip = _audioClips.shoot;
                 _gunAudioSource.Play();
 
-                // activate muzzle flash 
+                // play muzzle flash
+                _muzzleFlashParticles = _muzzleFlash.GetComponent<ParticleSystem>();
+                _muzzleFlashParticles.Play();
+
 
 
                 // shoot raycast in direction of camera
