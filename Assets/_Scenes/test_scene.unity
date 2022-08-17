@@ -14310,8 +14310,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55a7e1723a5de3e4ba703efffeb61469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _recoil: {fileID: 132588610}
   _muzzleFlash: {fileID: 1958470180}
+  _muzzleFlashLight: {fileID: 1592816766}
+  _recoil: {fileID: 132588610}
   _camera: {fileID: 1225257795}
   _gun: {fileID: 11400000, guid: 5ce61f8c63968d94b9e70f8639a24306, type: 2}
   _audioClips: {fileID: 11400000, guid: 19ec9c1da5cb6604393832ec959660ff, type: 2}

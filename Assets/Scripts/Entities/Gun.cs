@@ -120,12 +120,10 @@ namespace PC.Entities
             // may need to disable shooting here
             
             // play reload sound
-            //_gunAudioSource.clip = _audioClips.reload;
-            //_gunAudioSource.Play();
+            _gunAudioSource.clip = _audioClips.reload;
+            _gunAudioSource.Play();
             
             // play reload animation 
-            // sth like this:
-            //      yield return new WaitForSeconds(_audioClips.Reload.length);
 
             //yield return new WaitForSeconds(_gun.ReloadTime);
             _currentAmmo = _gun.MagazineSize;
