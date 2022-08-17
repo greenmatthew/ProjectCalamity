@@ -40,7 +40,8 @@ namespace PC.Entities
         [SerializeField] private ScifiRifleSounds _audioClips = null;
         private AudioSource _gunAudioSource = null;
 
-        private bool _isShooting = false;
+        private bool _isTriggerPulled = false;
+        private bool _isReloading = false;
         private Vector3 _currentRotation = Vector3.zero;
         private Vector3 _targetRotation = Vector3.zero;
 
@@ -79,10 +80,11 @@ namespace PC.Entities
 
         private void Start()
         {
-            inputActions.Player.Shoot.started += (ctx) => _isShooting = true;
+            inputActions.Player.Shoot.started += (ctx) => _isTriggerPulled = true;
             inputActions.Player.Shoot.performed += Shoot;
-            inputActions.Player.Shoot.canceled += (ctx) => _isShooting = false;
+            inputActions.Player.Shoot.canceled += (ctx) => _isTriggerPulled = false;
 
+            inputActions.Player.Reload.started += (ctx) => _isReloading = true;
             inputActions.Player.Reload.performed += Reload;
 
             inputActions.Player.Shoot.Enable();
@@ -115,18 +117,25 @@ namespace PC.Entities
         /// Reloads the gun's magazine
         /// </summary>
         /// <returns></returns>
-        private void Reload(InputAction.CallbackContext obj)
+        private async void Reload(InputAction.CallbackContext obj)
         {
-            // may need to disable shooting here
+            if (_isReloading)
+            {
+                // may need to disable shooting here
             
-            // play reload sound
-            _gunAudioSource.clip = _audioClips.reload;
-            _gunAudioSource.Play();
-            
-            // play reload animation 
+                // play reload sound
+                _gunAudioSource.clip = _audioClips.reload;
+                _gunAudioSource.Play();
+                
+                // play reload animation 
 
-            //yield return new WaitForSeconds(_gun.ReloadTime);
-            _currentAmmo = _gun.MagazineSize;
+                //yield return new WaitForSeconds(_gun.ReloadTime);
+                _currentAmmo = _gun.MagazineSize;
+
+                await Task.Delay(TimeSpan.FromSeconds(_gun.ReloadTime));
+            }
+
+            _isReloading = false;
         }
 
         /// <summary>
@@ -136,7 +145,7 @@ namespace PC.Entities
         /// <param name="obj"></param>
         private async void Shoot(InputAction.CallbackContext obj)
         {
-            while (_isShooting)
+            while (_isTriggerPulled && !_isReloading)
             {
                 // empty audio plays when ammo is expended
                 if (_currentAmmo == 0)
