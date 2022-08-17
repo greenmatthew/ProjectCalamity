@@ -141,8 +141,8 @@ namespace PC.Entities
                 // empty audio plays when ammo is expended
                 if (_currentAmmo == 0)
                 {
-                    //_gunAudioSource.clip = _audioClips.Empty;
-                    //_gunAudioSource.Play();
+                    _gunAudioSource.clip = _audioClips.dryFire;
+                    _gunAudioSource.Play();
                     return; 
                 }
 

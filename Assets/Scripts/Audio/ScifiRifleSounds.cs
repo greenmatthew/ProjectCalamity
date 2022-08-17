@@ -8,6 +8,7 @@ namespace PC.Audio
     {
         [SerializeField] public AudioClip shoot;
         [SerializeField] public AudioClip reload;
+        [SerializeField] public AudioClip dryFire;
         [SerializeField] public AudioClip handle;
     }
 }
