@@ -12,15 +12,7 @@ namespace PC.VFX
     [RequireComponent(typeof(Light))]
     public class WFX_LightFlicker : MonoBehaviour
     {
-        public float time = 0.05f;
-        
-        private float _timer;
-
-        void OnEnable ()
-        {
-            _timer = time;
-            //StartCoroutine("Flicker");
-        }
+        [SerializeField] private float _flickerTime = 0.05f;
         
         /// <summary>
         /// Flickers the light component of this object. 
@@ -31,7 +23,7 @@ namespace PC.VFX
         {
             GetComponent<Light>().enabled = !GetComponent<Light>().enabled;
 
-            yield return new WaitForSeconds(time);
+            yield return new WaitForSeconds(_flickerTime);
 
             GetComponent<Light>().enabled = !GetComponent<Light>().enabled;
         }

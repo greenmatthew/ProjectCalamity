@@ -163,7 +163,7 @@ namespace PC.Entities
                     if (_muzzleFlashLight.transform.TryGetComponent<WFX_LightFlicker>(out WFX_LightFlicker flicker))
                         flicker.StartCoroutine("Flicker");
                     else
-                        Debug.LogError("Muzzle flash: Flicker script is missing!");
+                        Debug.LogError("Muzzle flash: flicker script is missing!");
                 }
                 else
                     Debug.LogError("Muzzle flash: background light is null!");
