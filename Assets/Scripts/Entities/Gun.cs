@@ -67,9 +67,6 @@ namespace PC.Entities
 
         #region Private Methods
 
-        /// <summary>
-        /// 
-        /// </summary>
         private void Awake()
         {
             // audio source component
