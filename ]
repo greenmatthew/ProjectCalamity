@@ -39,6 +39,7 @@ namespace PC.Entities
         [SerializeField] private Transform _recoil = null;
         [SerializeField] private GunSO _gun = null;
         private int _currentAmmo = 0;
+        private float _nextTimeToFire = 0f;
 
         // audio
         [SerializeField] private ScifiRifleSounds _audioClips = null;
@@ -150,6 +151,12 @@ namespace PC.Entities
         {
             while (_isTriggerPulled && !_isReloading)
             {
+                // control fire rate
+                //if (Time.time < _nextTimeToFire)
+                //    return;
+                //else
+                //    _nextTimeToFire = Time.time + 1f / _gun.FireRate;
+
 
                 // empty audio plays when ammo is expended
                 if (_currentAmmo == 0)

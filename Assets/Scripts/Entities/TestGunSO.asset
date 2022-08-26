@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Range: 100
   Damage: 20
-  MagazineSize: 5
+  MagazineSize: 10
   _fireRate: 45
-  ReloadTime: 3
+  ReloadTime: 1
   VerticalRecoil: 15
   HorizontalRecoil: 1.2
