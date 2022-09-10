@@ -545,6 +545,8 @@ MonoBehaviour:
   PauseMenu: {fileID: 5989712045109792439}
   InventoryMenu: {fileID: 5989712044425554006}
   DevConsoleMenu: {fileID: 5989712045346677275}
+  MapMenu: {fileID: 0}
+  PMSMenu: {fileID: 0}
 --- !u!1 &5989712044425554000
 GameObject:
   m_ObjectHideFlags: 0
