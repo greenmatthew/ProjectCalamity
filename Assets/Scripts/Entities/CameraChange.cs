@@ -19,7 +19,7 @@ namespace PC.Entities
         #endregion Private Fields
         [SerializeField] private GameObject _mainCam = null;
         [SerializeField] private GameObject _rifleCam = null;
-        [SerializeField] private GameObject _reticle = null;
+        //[SerializeField] private GameObject _reticle = null;
 
 
         #endregion Fields
@@ -55,14 +55,14 @@ namespace PC.Entities
         private void Update()
         {
             // turn off reticle when main cam is active
-            if (_mainCam.activeSelf)
-            {
-                _reticle.SetActive(false);
-            }
-            else
-            {
-                _reticle.SetActive(true);
-            }
+//            if (_mainCam.activeSelf)
+//            {
+//                _reticle.SetActive(false);
+//            }
+//            else
+//            {
+//                _reticle.SetActive(true);
+//            }
         }
 
         #endregion Private Methods
