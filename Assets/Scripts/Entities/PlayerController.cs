@@ -27,6 +27,12 @@ namespace PC.Entities
         #region Methods
     
         #region Public Methods
+        //public void Start()
+        //{
+        //    // set the cursor to be invisible
+        //    Cursor.lockState = CursorLockMode.Locked;
+        //    Cursor.visible = false;
+        //}
         #endregion Public Methods
 
         #region Protected Methods
