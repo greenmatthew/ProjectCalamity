@@ -16,6 +16,9 @@ namespace PC.UI
         #endregion Protected Fields
 
         #region Private Fields
+
+        private New_Container _currentContainer = null;
+
         #endregion Private Fields
 
         #endregion Fields
@@ -46,6 +49,14 @@ namespace PC.UI
         #endregion Protected Methods
 
         #region Private Methods
+
+        private void Update()
+        {
+            if (_currentContainer != null) return;
+
+            _currentContainer.GetGridPosition(UnityEngine.Input.mousePosition);
+        }
+        
         #endregion Private Methods
 
         #endregion Methods

@@ -18,6 +18,8 @@ namespace PC.UI
             _containerSO = _container._containerSO;
             _gridLayoutGroup = GetComponent<GridLayoutGroup>();
 
+            // Load prefab from resources dir
+            _backgroundSlot = Resources.Load<RectTransform>("Prefabs/UI/PR_InventorySlotTemplate");
             _backgroundSlot.sizeDelta = new Vector2(_containerSO.Width, _containerSO.Height);
         }
 
