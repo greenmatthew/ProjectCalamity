@@ -28,8 +28,8 @@ namespace PC.UI
         [SerializeField] private RectTransform _slotBackgroundPrefab = null;
         [SerializeField] private RectTransform _slotBackgroundParent = null;
         private Vector2 _mousePos = Vector2.zero;
-        private Vector2 _slotPositionRaw = Vector2.zero;
-        private Vector2Int _gridPosition = Vector2Int.zero;
+        private Vector2 _containerPositionRaw = Vector2.zero;
+        private Vector2Int _currentCellIndex = Vector2Int.zero;
 
         #endregion Private Fields
 
@@ -53,11 +53,11 @@ namespace PC.UI
 
         public Vector2Int GetGridPosition(Vector2 mousePos)
         {
-            _slotPositionRaw = new Vector2(mousePos.x - _anchor.position.x, _anchor.position.y - mousePos.y);
+            _containerPositionRaw = new Vector2(mousePos.x - _anchor.position.x, _anchor.position.y - mousePos.y);
             
-            _gridPosition = new Vector2Int((int)(_slotPositionRaw.x / SlotSideLength), (int)(_slotPositionRaw.y / SlotSideLength));
+            _currentCellIndex = new Vector2Int((int)(_containerPositionRaw.x / SlotSideLength), (int)(_containerPositionRaw.y / SlotSideLength));
 
-            return _gridPosition;
+            return _currentCellIndex;
         }
 
         #endregion Public Methods
