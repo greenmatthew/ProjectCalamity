@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace PC.UI
 {
-    public class InventoryMenu : MenuBase
+    [RequireComponent(typeof(RectTransform))]
+    public class LayoutMaintainPreferredHeight : MonoBehaviour
     {
         #region Fields
 
@@ -17,7 +19,9 @@ namespace PC.UI
 
         #region Private Fields
 
-        private New_Container _currentContainer = null;
+        private RectTransform _rectTransform;
+        private HorizontalOrVerticalLayoutGroup _layoutGroup;
+        private float _preferredHeight = 0f;
 
         #endregion Private Fields
 
@@ -26,37 +30,30 @@ namespace PC.UI
     //----------------------------------------------------------------------------------------------------------------------
 
         #region Methods
-
+    
         #region Public Methods
         #endregion Public Methods
 
         #region Protected Methods
-
-        protected override void AwakeExtension()
-        {
-            _inputActions.InventoryMenu.CloseMenu.performed += ctx => Close();
-        }
-
-        protected override void OpenExtension()
-        {
-            _inputActions.InventoryMenu.Enable();
-        }
-
-        protected override void CloseExtension()
-        {
-        }
-
         #endregion Protected Methods
 
         #region Private Methods
 
+        private void Awake()
+        {
+            _rectTransform = GetComponent<RectTransform>();
+            _layoutGroup = GetComponent<HorizontalOrVerticalLayoutGroup>();
+        }
+
         private void Update()
         {
-            if (_currentContainer != null) return;
-
-            _currentContainer.GetGridPosition(UnityEngine.Input.mousePosition);
+            if (_preferredHeight != _layoutGroup.preferredHeight)
+            {
+                _preferredHeight = _layoutGroup.preferredHeight;
+                _rectTransform.sizeDelta = new Vector2(_rectTransform.sizeDelta.x, _preferredHeight);
+            }
         }
-        
+    
         #endregion Private Methods
 
         #endregion Methods
