@@ -52,7 +52,7 @@ namespace PC.UI
 
         private void Update()
         {
-            if (_currentContainer != null) return;
+            if (_currentContainer == null) return;
 
             _currentContainer.GetGridPosition(UnityEngine.Input.mousePosition);
         }
