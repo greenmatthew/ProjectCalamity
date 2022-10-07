@@ -91,8 +91,6 @@ namespace PC.Entities
             _inputActions.Player.OpenInventoryMenu.performed += ctx => { Debug.Log("Inventory"); _menuesController.InventoryMenu.Open(); };
             _inputActions.Player.OpenMapMenu.performed += ctx => { Debug.Log("Map"); _menuesController.MapMenu.Open(); };
 
-            // lock cursor to center and make it invisible
-            //Cursor.visible = false;
 		}
 
         #endregion Protected Methods
