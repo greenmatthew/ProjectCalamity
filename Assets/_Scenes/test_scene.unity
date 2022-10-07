@@ -2217,7 +2217,7 @@ MonoBehaviour:
   _camera: {fileID: 1087047362}
   _muzzleFlash: {fileID: 34541161}
   _muzzleFlashLight: {fileID: 938310917}
-  _recoil: {fileID: 978134153}
+  _recoil: {fileID: 820432868}
   _gun: {fileID: 11400000, guid: 5ce61f8c63968d94b9e70f8639a24306, type: 2}
   _audioClips: {fileID: 11400000, guid: 19ec9c1da5cb6604393832ec959660ff, type: 2}
   _snappiness: 6
@@ -6866,6 +6866,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 819075186}
   m_CullTransparentMesh: 1
+--- !u!4 &820432868 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2600871906088170863, guid: 311efb3e6003e5b428e82dd75ccc0dac,
+    type: 3}
+  m_PrefabInstance: {fileID: 612793877}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &824228801
 GameObject:
   m_ObjectHideFlags: 0
@@ -7522,12 +7528,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!4 &978134153 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1176626028160679196, guid: 311efb3e6003e5b428e82dd75ccc0dac,
-    type: 3}
-  m_PrefabInstance: {fileID: 612793877}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &978328598
 GameObject:
   m_ObjectHideFlags: 0
