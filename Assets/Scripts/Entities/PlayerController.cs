@@ -30,8 +30,8 @@ namespace PC.Entities
         //public void Start()
         //{
         //    // set the cursor to be invisible
-        //    Cursor.lockState = CursorLockMode.Locked;
-        //    Cursor.visible = false;
+        //    //Cursor.lockState = CursorLockMode.Locked;
+        //    //Cursor.visible = false;
         //}
         #endregion Public Methods
 
@@ -96,6 +96,10 @@ namespace PC.Entities
             _inputActions.Player.OpenDevConsoleMenu.performed += ctx => { Debug.Log("Developer Console"); _menuesController.DevConsoleMenu.Open(); };
             _inputActions.Player.OpenInventoryMenu.performed += ctx => { Debug.Log("Inventory"); _menuesController.InventoryMenu.Open(); };
             _inputActions.Player.OpenMapMenu.performed += ctx => { Debug.Log("Map"); _menuesController.MapMenu.Open(); };
+
+            // lock cursor to center and make it invisible
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
 		}
 
         #endregion Protected Methods
