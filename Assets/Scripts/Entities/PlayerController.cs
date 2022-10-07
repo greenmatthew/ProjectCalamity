@@ -27,12 +27,6 @@ namespace PC.Entities
         #region Methods
     
         #region Public Methods
-        //public void Start()
-        //{
-        //    // set the cursor to be invisible
-        //    //Cursor.lockState = CursorLockMode.Locked;
-        //    //Cursor.visible = false;
-        //}
         #endregion Public Methods
 
         #region Protected Methods
@@ -98,8 +92,7 @@ namespace PC.Entities
             _inputActions.Player.OpenMapMenu.performed += ctx => { Debug.Log("Map"); _menuesController.MapMenu.Open(); };
 
             // lock cursor to center and make it invisible
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            //Cursor.visible = false;
 		}
 
         #endregion Protected Methods

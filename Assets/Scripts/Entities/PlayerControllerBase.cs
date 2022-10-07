@@ -152,6 +152,7 @@ namespace PC.Entities
 		private void Start()
 		{
 			Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
 
             SetupInput();
 		}
