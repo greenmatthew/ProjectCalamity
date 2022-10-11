@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace PC.UI
 {
-    public class ContainerItems : MonoBehaviour
+    public class OLD_ContainerItems : MonoBehaviour
     {
         // Start is called before the first frame update
         void Start()

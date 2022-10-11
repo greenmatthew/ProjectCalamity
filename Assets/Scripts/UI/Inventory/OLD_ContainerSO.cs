@@ -4,8 +4,8 @@ using UnityEngine;
 
 namespace PC.UI
 {
-    [CreateAssetMenu(fileName = "ContainerSO", menuName = "SeniorDesignProject/ContainerSO", order = 0)]
-    public class ContainerSO : ScriptableObject
+    [CreateAssetMenu(fileName = "OLD_ContainerSO", menuName = "SeniorDesignProject/OLD_ContainerSO", order = 0)]
+    public class OLD_ContainerSO : ScriptableObject
     {
         public string Name;
         [Range(1, 100)] public int Width;

@@ -3,18 +3,18 @@ using UnityEngine.UI;
 
 namespace PC.UI
 {
-    public class ContainerBackground : MonoBehaviour
+    public class OLD_ContainerBackground : MonoBehaviour
     {
         private Transform _transform;
-        private Container _container;
-        private ContainerSO _containerSO;
+        private OLD_Container _container;
+        private OLD_ContainerSO _containerSO;
         [SerializeField] private RectTransform _backgroundSlot;
         private GridLayoutGroup _gridLayoutGroup;
 
         private void Awake()
         {
             _transform = transform;
-            _container = _transform.parent.GetComponent<Container>();
+            _container = _transform.parent.GetComponent<OLD_Container>();
             _containerSO = _container._containerSO;
             _gridLayoutGroup = GetComponent<GridLayoutGroup>();
 
@@ -31,7 +31,7 @@ namespace PC.UI
 
         private void InitGridLayoutGroup()
         {
-            _gridLayoutGroup.cellSize = new Vector2(Container.SlotSideLength, Container.SlotSideLength);
+            _gridLayoutGroup.cellSize = new Vector2(OLD_Container.SlotSideLength, OLD_Container.SlotSideLength);
             // _gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
             // _gridLayoutGroup.constraintCount = _containerSO.Width;
             //_gridLayoutGroup.padding.left = _gridLayoutGroup.padding.right = _gridLayoutGroup.padding.top = _gridLayoutGroup.padding.bottom = 0;
