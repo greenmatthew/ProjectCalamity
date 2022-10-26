@@ -15,4 +15,4 @@ MonoBehaviour:
   cellWidth: 1
   cellHeight: 1
   backgroundColor: {r: 0.94509804, g: 0.13725491, b: 0.13725491, a: 1}
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}

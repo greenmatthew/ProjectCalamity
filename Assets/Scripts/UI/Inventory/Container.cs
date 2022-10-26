@@ -141,8 +141,9 @@ namespace PC.UI
                 return false;
             }
 
-
-            _contents[cellIndex.x, cellIndex.y] = item;
+            for (int r = 0; r < item.cellHeight; ++r)
+                for (int c = 0; c < item.cellWidth; ++c)
+                    _contents[cellIndex.x + c, cellIndex.y + r] = item;
             item.SetContainer(this);
             var rectTransform = item.GetComponent<RectTransform>();
             rectTransform.SetParent(_contentsParent);
@@ -185,16 +186,16 @@ namespace PC.UI
             InitContents(size);
 
             for (int i = 0; i < _items.Length; ++i)
-                PlaceItemAt(Instantiate(_itemPrefab).Init(_items[i]), _itemPositions[i]);
+                PlaceItemAt(Instantiate(_itemPrefab, _contentsParent).Init(_items[i]), _itemPositions[i]);
         }
 
         private void InitBackground(Vector2 size)
         {
             _rectTransform.sizeDelta = size;
             _cellBackgroundParent.sizeDelta = size;
-            for (int i = 0; i < cellWidth; ++i)
+            for (int r = 0; r < cellWidth; ++r)
             {
-                for (int j = 0; j < cellHeight; ++j)
+                for (int c = 0; c < cellHeight; ++c)
                 {
                     RectTransform slotBackground = Instantiate(_cellBackgroundPrefab, _cellBackgroundParent);
                 }

@@ -118,33 +118,21 @@ namespace PC.UI
 
             if (_currentContainer == null) return;
 
+            var cellIndex = _currentContainer.GetCellIndex(UnityEngine.Input.mousePosition);
+
             if (UnityEngine.Input.GetMouseButtonDown(0))
             {
-                var cellIndex = _currentContainer.GetCellIndex(UnityEngine.Input.mousePosition);
-
-                if (_currentItem == null)
-                {
-                    _currentItem = ItemContainerInfo.Create(_currentContainer, cellIndex);
-                    if (_currentItem == null) return;
-                    _currentItem.rectTransform.SetAsLastSibling();
-                }
-                else
-                {
-                    if (!_currentContainer.PlaceItemAt(_currentItem.item, cellIndex))
-                    {
-                        if (_currentItem.item.isRotated != _currentItem.wasRotated)
-                            _currentItem.item.Rotate();
-                        _currentItem.sourceContainer.PlaceItemAt(_currentItem.item, _currentItem.sourceIndex);
-                    }
-                        
-                    _currentItem = null;
-                } 
-                    
+                TryPickingUpItem(cellIndex);
             }
 
-            if (UnityEngine.Input.GetKeyDown(KeyCode.R) && _currentItem != null)
+            if (UnityEngine.Input.GetMouseButtonUp(0))
             {
-                _currentItem.item.Rotate();
+                TryReleasingItem(cellIndex);
+            }
+
+            if (UnityEngine.Input.GetKeyDown(KeyCode.R))
+            {
+                TryRotatingItem();
             }
         }
 
@@ -156,12 +144,43 @@ namespace PC.UI
 
         private void TryPickingUpItem(Vector2Int cellIndex)
         {
-
+            if (_currentItem == null)
+            {
+                _currentItem = ItemContainerInfo.Create(_currentContainer, cellIndex);
+                if (_currentItem == null) return;
+                _currentItem.rectTransform.SetAsLastSibling();
+            }
+            else
+            {
+                Debug.LogError("TryPickingUpItem() called but _currentItem is not null");
+            }
         }
 
-        private void TryReleasingItem()
+        private void TryReleasingItem(Vector2Int cellIndex)
         {
+            if (_currentItem != null)
+            {
+                if (!_currentContainer.PlaceItemAt(_currentItem.item, cellIndex))
+                {
+                    if (_currentItem.item.isRotated != _currentItem.wasRotated)
+                        _currentItem.item.Rotate();
+                    _currentItem.sourceContainer.PlaceItemAt(_currentItem.item, _currentItem.sourceIndex);
+                }
+                    
+                _currentItem = null;
+            }
+            else
+            {
+                Debug.LogError("TryReleasingItem() called but _currentItem is null");
+            }
+        }
 
+        private void TryRotatingItem()
+        {
+            if (_currentItem != null)
+            {
+                _currentItem.item.Rotate();
+            }
         }
         
         #endregion Private Methods

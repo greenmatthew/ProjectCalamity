@@ -14,6 +14,8 @@ namespace PC.UI
         #region Public Fields
 
         [HideInInspector] public bool isRotated = false;
+        public uint cellWidth => _itemSO.cellWidth;
+        public uint cellHeight => _itemSO.cellHeight;
 
         #endregion Public Fields
 
@@ -112,7 +114,15 @@ namespace PC.UI
         private void SetImages()
         {
             _backgoundImage.color = _itemSO.backgroundColor;
-            //_contentImage.sprite = ItemSO.itemIcon;
+            if (_itemSO.itemIcon != null)
+            {
+                _contentImage.sprite = _itemSO.itemIcon;
+            }
+            else
+            {
+                _contentImage.color = new Color(1, 1, 1, 0);
+            }
+                
         }
 
         #endregion Private Methods
