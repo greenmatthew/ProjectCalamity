@@ -406,7 +406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRotated: 0
-  _backgoundImage: {fileID: 7183931281176295535}
+  _backgroundImage: {fileID: 7183931281176295535}
   _contentImage: {fileID: 5273466574545410333}
 --- !u!1 &4957265961311099200
 GameObject:

@@ -27,8 +27,9 @@ namespace PC.UI
         private ItemSO _itemSO = null;
         private Container _currentContainer = null;
         private RectTransform _rectTransform = null;
-        [SerializeField] private Image _backgoundImage;
+        [SerializeField] private Image _backgroundImage;
         [SerializeField] private Image _contentImage;
+        private Vector2Int _originCellIndex = Vector2Int.zero;
 
         #endregion Private Fields
 
@@ -51,6 +52,16 @@ namespace PC.UI
         public void SetContainer(Container container)
         {
             _currentContainer = container;
+        }
+
+        public void SetOriginCellIndex(Vector2Int originCellIndex)
+        {
+            _originCellIndex = originCellIndex;
+        }
+
+        public Vector2Int GetOriginCellIndex()
+        {
+            return _originCellIndex;
         }
 
         /// <summary>
@@ -113,7 +124,7 @@ namespace PC.UI
 
         private void SetImages()
         {
-            _backgoundImage.color = _itemSO.backgroundColor;
+            _backgroundImage.color = _itemSO.backgroundColor;
             if (_itemSO.itemIcon != null)
             {
                 _contentImage.sprite = _itemSO.itemIcon;

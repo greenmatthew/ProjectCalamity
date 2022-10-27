@@ -3,16 +3,11 @@ using UnityEngine.EventSystems;
 
 namespace PC.UI
 {
-    public class Container : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+    public class Container : ContainerBase
     {
         #region Fields
 
         #region Consts Fields
-
-        private const int cellWidth = 10;
-        private const int cellHeight = 10;
-        public const float CellSideLength = 64f;
-
         #endregion Consts Fields
 
         #region Public Fields
@@ -37,23 +32,7 @@ namespace PC.UI
 
         // Contents of the container
         [SerializeField] private RectTransform _contentsParent = null;
-        private Item[,] h_contents = null;
-        private Item[,] _contents
-        {
-            get
-            {
-                return h_contents;
-            }
-            set
-            {
-                if (h_contents != null)
-                {
-                    Debug.LogError("Container contents can only be set once.");
-                    return;
-                }
-                h_contents = value;
-            }
-        }
+        
         
         // Init items
         [SerializeField] private Item _itemPrefab = null;
@@ -70,18 +49,23 @@ namespace PC.UI
     
         #region Public Methods
 
-        public void OnPointerEnter(PointerEventData eventData)
+        public override void OnPointerEnter(PointerEventData eventData)
         {
             InventoryMenu.CurrentContainer = this;
             Debug.Log($"Entered container {gameObject.name}");
         }
 
-        public void OnPointerExit(PointerEventData eventData)
+        public override void OnPointerExit(PointerEventData eventData)
         {
             InventoryMenu.CurrentContainer = null;
             Debug.Log($"Exit container {gameObject.name}");
         }
 
+        /// <summary>
+        /// Gets the cell index relative to the container using the given mouse position.
+        /// </summary>
+        /// <param name="mousePos">Position of the mouse.</param>
+        /// <returns>Cell index relative to the container.</returns>
         public Vector2Int GetCellIndex(Vector2 mousePos)
         {
             _mousePos = mousePos;
@@ -91,33 +75,60 @@ namespace PC.UI
             return _currentCellIndex;
         }
 
+        /// <summary>
+        /// Gets the item at the given cell index.
+        /// </summary>
+        /// <param name="cellIndex">The cell index you want to check.</param>
+        /// <returns>The item at the given cell index if an item was present or null if there was no item.</returns>
         public Item GetItemAt(Vector2Int cellIndex)
         {
-            if (cellIndex.x < 0 || cellIndex.x >= cellWidth || cellIndex.y < 0 || cellIndex.y >= cellHeight)
+            if (IsCellOutOfRange(cellIndex))
             {
                 Debug.LogError("Cell index is out of range.");
                 return null;
             }
 
-            return _contents[cellIndex.x, cellIndex.y];
+            return GetCell(cellIndex);
         }
 
         public bool RemoveItemAt(Vector2Int cellIndex)
         {
-            if (cellIndex.x < 0 || cellIndex.x >= cellWidth || cellIndex.y < 0 || cellIndex.y >= cellHeight)
+            Item item = GetItemAt(cellIndex);
+            cellIndex = item.GetOriginCellIndex();
+
+            for (int r = 0; r < item.cellHeight; ++r)
             {
-                Debug.LogError("Cell index is out of range.");
-                return false;
+                for (int c = 0; c < item.cellWidth; ++c)
+                {
+                    Vector2Int offset = new Vector2Int(c, r);
+                    Vector2Int newCellIndex = cellIndex + offset;
+
+                    if (IsCellOutOfRange(newCellIndex))
+                    {
+                        Debug.LogError($"Removing item @ {cellIndex} w/ size ({item.cellWidth}, {item.cellHeight}) would result in part or all of the item's removal to be out of range of the container's internal contents array. Out of range cell index relative to container origin @ {newCellIndex} (and relative to item origin {offset}). THIS SHOULD NEVER HAPPEN AND MEANS A BUG IS PRESENT.");
+                        return false;
+                    }
+
+                    if (IsCellOccupiedNotBySelf(item, newCellIndex))
+                    {
+                        Debug.LogError($"Removing item @ {cellIndex} w/ size ({item.cellWidth}, {item.cellHeight}) where the item never existed at. Null cell index relative to container origin @ {newCellIndex} (and relative to item origin {offset}). THIS SHOULD NEVER HAPPEN AND MEANS A BUG IS PRESENT.");
+                        return false;
+                    }
+                }
             }
 
-            if (_contents[cellIndex.x, cellIndex.y] == null)
+            for (int r = 0; r < item.cellHeight; ++r)
             {
-                Debug.LogError("No item at cell index.");
-                return false;
-            }
+                for (int c = 0; c < item.cellWidth; ++c)
+                {
+                    Vector2Int offset = new Vector2Int(c, r);
+                    Vector2Int newCellIndex = cellIndex + offset;
 
-            _contents[cellIndex.x, cellIndex.y].SetContainer(null);
-            _contents[cellIndex.x, cellIndex.y] = null;
+                    EmptyCell(newCellIndex);
+                }
+            }
+            item.SetOriginCellIndex(new Vector2Int(-1, -1));
+            item.SetContainer(null);
             return true;
         }
 
@@ -129,21 +140,39 @@ namespace PC.UI
                 return false;
             }
 
-            if (cellIndex.x < 0 || cellIndex.x >= cellWidth || cellIndex.y < 0 || cellIndex.y >= cellHeight)
+            for (int r = 0; r < item.cellHeight; ++r)
             {
-                Debug.LogError("Cell index is out of range.");
-                return false;
-            }
+                for (int c = 0; c < item.cellWidth; ++c)
+                {
+                    Vector2Int offset = new Vector2Int(c, r);
+                    Vector2Int newCellIndex = cellIndex + offset;
 
-            if (_contents[cellIndex.x, cellIndex.y] != null)
-            {
-                Debug.LogError("Cell is already occupied.");
-                return false;
+                    if (IsCellOutOfRange(newCellIndex))
+                    {
+                        Debug.LogError($"Placing item @ {cellIndex} w/ size ({item.cellWidth}, {item.cellHeight}) would result in part or all of the item to be out of range of the container's internal contents array. Out of range cell index relative to container origin @ {newCellIndex} (and relative to item origin {offset}).");
+                        return false;
+                    }
+
+                    if (IsCellOccupiedExcludingSelf(item, newCellIndex))
+                    {
+                        Debug.LogError($"Placing item @ {cellIndex} w/ size ({item.cellWidth}, {item.cellHeight}) would intersect with another item's occupied cells in the internal contents array. Intersection cell index relative to container origin @ {newCellIndex} (and relative to item origin {offset}).");
+                        return false;
+                    }
+                }
             }
 
             for (int r = 0; r < item.cellHeight; ++r)
+            {
                 for (int c = 0; c < item.cellWidth; ++c)
-                    _contents[cellIndex.x + c, cellIndex.y + r] = item;
+                {
+                    Vector2Int offset = new Vector2Int(c, r);
+                    Vector2Int newCellIndex = cellIndex + offset;
+
+                    SetCell(newCellIndex, item);
+                }
+            }
+            item.SetOriginCellIndex(new Vector2Int(cellIndex.x, cellIndex.y));
+            
             item.SetContainer(this);
             var rectTransform = item.GetComponent<RectTransform>();
             rectTransform.SetParent(_contentsParent);
@@ -160,6 +189,10 @@ namespace PC.UI
             return item;
         }
 
+        /// <summary>
+        /// Sets the parent of an item to the content parent object of this container.
+        /// </summary>
+        /// <param name="itemRectTransform">The given item you want to set the parent of.</param>
         public void SetItemParent(RectTransform itemRectTransform)
         {
             itemRectTransform.SetParent(_contentsParent);
@@ -202,14 +235,22 @@ namespace PC.UI
             }
         }
 
-        private void InitContents(Vector2 size)
+        protected override void InitContents(Vector2 size)
         {
+            base.InitContents(size);
+
             _rectTransform.sizeDelta = size;
             _contentsParent.sizeDelta = size;
-
-            _contents = new Item[cellWidth, cellHeight];
         }
-    
+
+        private bool IsCellOutOfRange(Vector2Int cellIndex) => cellIndex.x < 0 || cellIndex.x >= cellWidth || cellIndex.y < 0 || cellIndex.y >= cellHeight;
+        private bool IsCellEmpty(Vector2Int cellIndex) => GetCell(cellIndex) == null;
+        private bool IsCellEmptyExcludingSelf(Item item, Vector2Int cellIndex) => IsCellEmpty(cellIndex) || GetCell(cellIndex) == item;
+        private bool IsCellOccupied(Vector2Int cellIndex) => !IsCellEmpty(cellIndex);
+        private bool IsCellOccupiedExcludingSelf(Item item, Vector2Int cellIndex) => !IsCellEmptyExcludingSelf(item, cellIndex);
+        private bool IsCellOccupiedBySelf(Item item, Vector2Int cellIndex) => GetCell(cellIndex) == item;
+        private bool IsCellOccupiedNotBySelf(Item item, Vector2Int cellIndex) => GetCell(cellIndex) != item;
+
         #endregion Private Methods
 
         #endregion Methods
