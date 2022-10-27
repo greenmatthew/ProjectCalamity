@@ -11343,14 +11343,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1438854673}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.005, y: 0.049, z: 0.433}
+  m_LocalRotation: {x: 0.07330601, y: 0.26504484, z: 0.85942125, w: 0.43101332}
+  m_LocalPosition: {x: -0.0365, y: -0.0741, z: 0.2437}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 820432868}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -23.103, y: 22.668, z: 122.039}
 --- !u!1 &1440024075 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3393849842375344462, guid: 311efb3e6003e5b428e82dd75ccc0dac,
@@ -11377,6 +11377,8 @@ MonoBehaviour:
     m_Bits: 64
   _audioClips: {fileID: 11400000, guid: 43615f8ae0fa0ac4b80b6d4596857db0, type: 2}
   _menuesController: {fileID: 595119701}
+  _animator: {fileID: 612793878}
+  _leftHandIKTransform: {fileID: 1438854674}
 --- !u!143 &1440024077
 CharacterController:
   m_ObjectHideFlags: 0
@@ -11495,7 +11497,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1440024075}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fff0960ef4ea6e04eac66b4a7fd2189d, type: 3}
   m_Name: 

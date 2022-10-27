@@ -18,14 +18,17 @@ namespace PC.Entities
         #endregion Protected Fields
 
         #region Private Fields
+        [Header("IK")]
+        [SerializeField] private Animator _animator = null;
+        [SerializeField] private Transform _leftHandIKTransform = null;
         #endregion Private Fields
 
         #endregion Fields
 
-    //----------------------------------------------------------------------------------------------------------------------
+        //----------------------------------------------------------------------------------------------------------------------
 
         #region Methods
-    
+
         #region Public Methods
         #endregion Public Methods
 
@@ -92,6 +95,19 @@ namespace PC.Entities
             _inputActions.Player.OpenMapMenu.performed += ctx => { Debug.Log("Map"); _menuesController.MapMenu.Open(); };
 
 		}
+
+        protected void OnAnimatorIK(int layerIndex)
+        {
+            if (_animator)
+            {
+                _animator.SetIKPositionWeight(AvatarIKGoal.LeftHand, 1);
+                _animator.SetIKPosition(AvatarIKGoal.LeftHand, _leftHandIKTransform.position);
+
+                _animator.SetIKRotationWeight(AvatarIKGoal.LeftHand, 1);
+                _animator.SetIKRotation(AvatarIKGoal.LeftHand, _leftHandIKTransform.rotation);
+            }
+            else Debug.LogError("Animator is null");
+        }
 
         #endregion Protected Methods
 
