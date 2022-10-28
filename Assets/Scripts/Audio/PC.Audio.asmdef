@@ -1,7 +1,9 @@
 {
     "name": "PC.Audio",
     "rootNamespace": "PC.Audio",
-    "references": [],
+    "references": [
+        "GUID:a25c13b308c040c48b0ba23ef986379a"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
