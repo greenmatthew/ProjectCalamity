@@ -163,6 +163,24 @@ namespace PC.Input
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Shoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""e114ac4f-2441-46c2-8f24-a535ea511cb5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Reload"",
+                    ""type"": ""Button"",
+                    ""id"": ""e994bb0e-d70d-48fc-a8d1-a7cd6cb6eb7d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -385,6 +403,28 @@ namespace PC.Input
                     ""action"": ""ADS(Toggle)"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6285f8c2-741d-462c-b3ec-56adc676a5b2"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""863e4029-e536-4af2-9bae-e2357d89059e"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Reload"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -531,6 +571,8 @@ namespace PC.Input
             m_Player_Firemode = m_Player.FindAction("Firemode", throwIfNotFound: true);
             m_Player_ADSHold = m_Player.FindAction("ADS(Hold)", throwIfNotFound: true);
             m_Player_ADSToggle = m_Player.FindAction("ADS(Toggle)", throwIfNotFound: true);
+            m_Player_Shoot = m_Player.FindAction("Shoot", throwIfNotFound: true);
+            m_Player_Reload = m_Player.FindAction("Reload", throwIfNotFound: true);
             // Menu
             m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
             m_Menu_CloseMenu = m_Menu.FindAction("CloseMenu", throwIfNotFound: true);
@@ -617,6 +659,8 @@ namespace PC.Input
         private readonly InputAction m_Player_Firemode;
         private readonly InputAction m_Player_ADSHold;
         private readonly InputAction m_Player_ADSToggle;
+        private readonly InputAction m_Player_Shoot;
+        private readonly InputAction m_Player_Reload;
         public struct PlayerActions
         {
             private @InputActions m_Wrapper;
@@ -636,6 +680,8 @@ namespace PC.Input
             public InputAction @Firemode => m_Wrapper.m_Player_Firemode;
             public InputAction @ADSHold => m_Wrapper.m_Player_ADSHold;
             public InputAction @ADSToggle => m_Wrapper.m_Player_ADSToggle;
+            public InputAction @Shoot => m_Wrapper.m_Player_Shoot;
+            public InputAction @Reload => m_Wrapper.m_Player_Reload;
             public InputActionMap Get() { return m_Wrapper.m_Player; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -690,6 +736,12 @@ namespace PC.Input
                     @ADSToggle.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnADSToggle;
                     @ADSToggle.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnADSToggle;
                     @ADSToggle.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnADSToggle;
+                    @Shoot.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShoot;
+                    @Shoot.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShoot;
+                    @Shoot.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShoot;
+                    @Reload.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReload;
+                    @Reload.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReload;
+                    @Reload.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReload;
                 }
                 m_Wrapper.m_PlayerActionsCallbackInterface = instance;
                 if (instance != null)
@@ -739,6 +791,12 @@ namespace PC.Input
                     @ADSToggle.started += instance.OnADSToggle;
                     @ADSToggle.performed += instance.OnADSToggle;
                     @ADSToggle.canceled += instance.OnADSToggle;
+                    @Shoot.started += instance.OnShoot;
+                    @Shoot.performed += instance.OnShoot;
+                    @Shoot.canceled += instance.OnShoot;
+                    @Reload.started += instance.OnReload;
+                    @Reload.performed += instance.OnReload;
+                    @Reload.canceled += instance.OnReload;
                 }
             }
         }
@@ -892,6 +950,8 @@ namespace PC.Input
             void OnFiremode(InputAction.CallbackContext context);
             void OnADSHold(InputAction.CallbackContext context);
             void OnADSToggle(InputAction.CallbackContext context);
+            void OnShoot(InputAction.CallbackContext context);
+            void OnReload(InputAction.CallbackContext context);
         }
         public interface IMenuActions
         {

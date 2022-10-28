@@ -7,8 +7,13 @@ namespace PC.Input
     [RequireComponent(typeof(EventSystem), typeof(InputSystemUIInputModule))]
     public class InputModule : BaseInputModule
     {
-        private static bool _awakeCalledFlag = false;
-        private static InputModule _instance = null;
+        #region Fields
+
+        #region Consts Fields
+        #endregion Consts Fields
+
+        #region Public Fields
+
         public static InputModule instance
         {
             get
@@ -28,7 +33,36 @@ namespace PC.Input
             }
         }
 
-        public static InputActions InputActions { get; private set; }
+        private static InputActions h_inputActions;
+        public static InputActions InputActions => h_inputActions;
+
+        #endregion Public Fields
+
+        #region Protected Fields
+        #endregion Protected Fields
+
+        #region Private Fields
+
+        private static bool _awakeCalledFlag = false;
+        private static InputModule _instance = null;
+
+        #endregion Private Fields
+
+        #endregion Fields
+
+    //----------------------------------------------------------------------------------------------------------------------
+
+        #region Methods
+    
+        #region Public Methods
+
+        public override void Process()
+        {
+        }
+
+        #endregion Public Methods
+
+        #region Protected Methods
 
         protected override void Awake()
         {
@@ -44,13 +78,21 @@ namespace PC.Input
                 Destroy(this);
             }
 
-            InputActions = new InputActions();
+            h_inputActions = new InputActions();
 
             _awakeCalledFlag = true;
         }
 
-        public override void Process()
-        {
-        }
+        #endregion Protected Methods
+
+        #region Private Methods
+        #endregion Private Methods
+
+        #endregion Methods
+
+    //----------------------------------------------------------------------------------------------------------------------
+
+        #region Enums, Structs, Classes
+        #endregion Enums, Structs, Classes
     }
 }

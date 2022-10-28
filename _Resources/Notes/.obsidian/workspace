@@ -1,23 +1,10 @@
 {
   "main": {
-    "id": "9b5e6477cae4d02a",
+    "id": "0c1f1aa171eba28d",
     "type": "split",
     "children": [
       {
-        "id": "2d61591d8c7a0404",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Ideas.md",
-            "mode": "source",
-            "source": true
-          }
-        },
-        "group": "f7877bcd05b33be5"
-      },
-      {
-        "id": "00994f10a2beef45",
+        "id": "b0ccbb16086b8f60",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -26,22 +13,21 @@
             "mode": "preview",
             "source": true
           }
-        },
-        "group": "f7877bcd05b33be5"
+        }
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "c2b9962095b2a491",
+    "id": "8cba69d3a6f1810b",
     "type": "split",
     "children": [
       {
-        "id": "074db294c3d34f8f",
+        "id": "c0c46b7a02aea310",
         "type": "tabs",
         "children": [
           {
-            "id": "d25cc90a811c6cb2",
+            "id": "3794427bbce2a469",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -49,7 +35,7 @@
             }
           },
           {
-            "id": "f3690b5057dce056",
+            "id": "97d9107d51ef6161",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -70,15 +56,15 @@
     "width": 300
   },
   "right": {
-    "id": "84c55b8ca271d2cf",
+    "id": "9858d2be1195a56d",
     "type": "split",
     "children": [
       {
-        "id": "d305e37761d2bc4f",
+        "id": "822a888a6a81bf89",
         "type": "tabs",
         "children": [
           {
-            "id": "ac3c640dc506eb65",
+            "id": "544689de70e37985",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -101,11 +87,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "2d61591d8c7a0404",
+  "active": "b0ccbb16086b8f60",
   "lastOpenFiles": [
-    "IdeaReferenceImages/swat4_magazines.png",
+    "Ideas.pdf",
     "Ideas.md",
-    "Pasted image 20220719161702.png",
-    "Game Ideas.md"
+    "Resources & Crafting.md"
   ]
 }

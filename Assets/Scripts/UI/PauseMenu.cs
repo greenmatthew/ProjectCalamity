@@ -7,8 +7,45 @@ namespace PC.UI
 {
     public class PauseMenu : MenuBase
     {
+        #region Fields
+
+        #region Consts Fields
+        #endregion Consts Fields
+
+        #region Public Fields
+        public static bool activated = false;
+        #endregion Public Fields
+
+        #region Protected Fields
+        #endregion Protected Fields
+
+        #region Private Fields
+
         [SerializeField] private Button _closePauseMenuButton = null;
         [SerializeField] private Button _exitGameButton = null;
+
+        #endregion Private Fields
+
+        #endregion Fields
+
+    //----------------------------------------------------------------------------------------------------------------------
+
+        #region Methods
+
+        #region Public Methods
+
+        public void ExitGame()
+        {
+            #if UNITY_EDITOR
+                EditorApplication.ExitPlaymode();
+            #else
+                Application.Quit();
+            #endif
+        }
+
+        #endregion Public Methods
+
+        #region Protected Methods
 
         protected override void AwakeExtension()
         {
@@ -28,19 +65,24 @@ namespace PC.UI
 
         protected override void OpenExtension()
         {
+            activated = true;
         }
 
         protected override void CloseExtension()
         {
+            activated = false;
         }
 
-        public void ExitGame()
-        {
-            #if UNITY_EDITOR
-                EditorApplication.ExitPlaymode();
-            #else
-                Application.Quit();
-            #endif
-        }
+        #endregion Protected Methods
+
+        #region Private Methods
+        #endregion Private Methods
+
+        #endregion Methods
+
+    //----------------------------------------------------------------------------------------------------------------------
+
+        #region Enums, Structs, Classes
+        #endregion Enums, Structs, Classes
     }
 }

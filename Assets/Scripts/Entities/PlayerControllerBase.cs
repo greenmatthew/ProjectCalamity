@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.UI;
 
 using PC.Input;
 using PC.UI;
@@ -13,12 +12,34 @@ namespace PC.Entities
     [RequireComponent(typeof(CharacterController))]
     public abstract class PlayerControllerBase : MonoBehaviour
     {
-        // Components
+        #region Fields
+
+        #region Consts Fields
+
+        protected const float _minVerticalAngle = -90f; // Counterclockwise(upward) is negative
+        protected const float _maxVerticalAngle = 90f; // Clockwise(downward) is positive
+
+        protected static readonly Vector3 _idleVelocity = new Vector3(0f, -2f, 0f);
+        protected const float _walkingSpeed = 3.5f;
+        protected const float _sprintingToWalkingRatio = 1.65f;
+        protected const float _sprintingSpeed = _sprintingToWalkingRatio * _walkingSpeed;
+        protected const float _angularDragConst = 0.001f;
+        protected const float _groundCheckIdleRadius = 0.1f;
+        protected const float _groundCheckWalkingRadius = 0.25f;
+        protected const float _groundCheckSprintingRadius = 0.35f;
+        protected const float _jumpHeight = 1f;
+
+        #endregion Consts Fields
+
+        #region Public Fields
+        #endregion Public Fields
+
+        #region Protected Fields
+
         protected CharacterController _characterController;
-		protected InputActions _inputActions => InputModule.InputActions;
+        protected InputActions _inputActions => InputModule.InputActions;
         protected Camera _camera;
         protected Transform _body;
-        
         protected AudioSource _feetAudioSource;
 
         [Header("Body")]
@@ -27,28 +48,13 @@ namespace PC.Entities
         [SerializeField] protected Transform _groundCheck;
         [SerializeField] protected LayerMask _groundMask;
 
-        // Scriptable Objects containg audio clips
+        // Scriptable Objects containing audio clips
         [Header("Audio")]
         [SerializeField] protected HumanoidSounds _audioClips = null;
 
         [Header("UI")]
         [SerializeField] protected MenusController _menuesController = null;
 
-		// Consts
-        protected const float _minVerticalAngle = -90f; // Counterclockwise(upward) is negative
-		protected const float _maxVerticalAngle = 90f; // Clockwise(downward) is positive
-
-        protected static readonly Vector3 _idleVelocity = new Vector3(0f, -2f, 0f);
-		protected const float _walkingSpeed = 3.5f;
-        protected const float _sprintingToWalkingRatio = 1.65f;
-		protected const float _sprintingSpeed = _sprintingToWalkingRatio * _walkingSpeed;
-		protected const float _angularDragConst = 0.001f;
-		protected const float _groundCheckIdleRadius = 0.1f;
-		protected const float _groundCheckWalkingRadius = 0.25f;
-		protected const float _groundCheckSprintingRadius = 0.35f;
-		protected const float _jumpHeight = 1f;
-
-		// Member vars
         protected Vector2 _look;
         protected float _xRotation = 0f;
         protected Vector3 _move;
@@ -57,18 +63,7 @@ namespace PC.Entities
         protected Vector3 _lastGroundedMove = Vector3.zero;
 		protected Vector3 _velocity = Vector3.zero;
 
-        protected bool Performed (InputActionPhase phase) => phase == InputActionPhase.Performed;
-
-        // Conditions
-        
-        
-
-		// Jumping Drag Diagnostic Variables
-		protected float _startingJumpAngle = 0f;
-		protected float _endingJumpAngle = 0f;
-
-		// Member var flags
-		protected float MovementSpeed
+        protected float MovementSpeed
 		{
 			get
 			{
@@ -90,10 +85,41 @@ namespace PC.Entities
 			}
 		}
 
-        // Conditions
-        private bool h_isGrounded = false;
+        // Jumping Drag Diagnostic Variables
+		protected float _startingJumpAngle = 0f;
+		protected float _endingJumpAngle = 0f;
+
         protected bool _isGrounded;
         protected bool _isMoving;
+
+        #endregion Protected Fields
+
+        #region Private Fields
+
+        private bool h_isGrounded = false;
+
+        #endregion Private Fields
+
+        #endregion Fields
+
+//----------------------------------------------------------------------------------------------------------------------
+
+        #region Methods
+    
+        #region Public Methods
+        #endregion public Methods
+
+        #region Protected Methods
+
+        protected bool Performed (InputActionPhase phase) => phase == InputActionPhase.Performed;
+
+        protected abstract void SetupInput();
+        protected abstract void Look();
+        protected abstract void Move();
+
+        #endregion Protected Methods
+
+        #region Private Methods
 
         private void Awake()
 		{
@@ -200,9 +226,14 @@ namespace PC.Entities
 
             return h_isGrounded;
         }
+    
+        #endregion Private Methods
 
-        protected abstract void SetupInput();
-        protected abstract void Look();
-        protected abstract void Move();
+        #endregion Methods
+
+//----------------------------------------------------------------------------------------------------------------------
+
+        #region Enums, Structs, Classes
+        #endregion Enums, Structs, Classes
     }
 }
