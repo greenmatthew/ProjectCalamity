@@ -1,12 +1,11 @@
-using System.Threading;
 using System.Collections.Generic;
 using UnityEngine;
-
-using PC.Extensions;
+using UnityEngine.UI;
 
 namespace PC.UI
 {
-    public class DevConsoleMenu : MenuBase
+    [RequireComponent(typeof(RectTransform), typeof(HorizontalLayoutGroup))]
+    public class HorizontalLayoutGroupHandler : MonoBehaviour
     {
         #region Fields
 
@@ -21,8 +20,8 @@ namespace PC.UI
 
         #region Private Fields
 
-        [SerializeField] private RectTransform _content = null;
-        [SerializeField] private RectTransform _logItemPrefab = null;
+        private RectTransform _rectTransform;
+        private List<RectTransform> _children = new List<RectTransform>();
 
         #endregion Private Fields
 
@@ -31,42 +30,34 @@ namespace PC.UI
     //----------------------------------------------------------------------------------------------------------------------
 
         #region Methods
-
+        
         #region Public Methods
         #endregion Public Methods
 
         #region Protected Methods
-
-        protected override void AwakeExtension()
-        {
-            _inputActions.DevConsoleMenu.CloseMenu.performed += ctx => Close();
-        }
-
-        protected override void OpenExtension()
-        {
-            _inputActions.DevConsoleMenu.Enable();
-        }
-
-        protected override void CloseExtension()
-        {
-        }
-
         #endregion Protected Methods
 
         #region Private Methods
 
-        private void Update()
+        private void Awake()
         {
-            if (Debug.Backlog.Count > 0)
+            _rectTransform = GetComponent<RectTransform>();
+
+            foreach (RectTransform child in _rectTransform)
             {
-                string message = Debug.Backlog.Dequeue();
-                RectTransform logItem = Instantiate(_logItemPrefab, _content);
-                var text = logItem.GetComponentInChildren<TMPro.TextMeshProUGUI>();
-                text.text = message;
-                logItem.sizeDelta = new Vector2(logItem.sizeDelta.x, text.preferredHeight);
+                _children.Add(child);
             }
         }
 
+        private void Update()
+        {
+            float height = _rectTransform.sizeDelta.y;
+            foreach (RectTransform child in _children)
+                height = Mathf.Max(height, child.sizeDelta.y);
+                
+            _rectTransform.sizeDelta = new Vector2(_rectTransform.sizeDelta.x, height);
+        }
+        
         #endregion Private Methods
 
         #endregion Methods
