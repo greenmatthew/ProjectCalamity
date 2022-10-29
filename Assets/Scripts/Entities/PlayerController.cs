@@ -21,6 +21,8 @@ namespace PC.Entities
         [Header("IK")]
         [SerializeField] private Animator _animator = null;
         [SerializeField] private Transform _leftHandIKTransform = null;
+        [SerializeField] private Transform _spineTransform = null;
+        private float spineRotation = 0f;
         #endregion Private Fields
 
         #endregion Fields
