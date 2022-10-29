@@ -14,8 +14,8 @@ namespace PC.UI
         #region Public Fields
 
         [HideInInspector] public bool isRotated = false;
-        public uint cellWidth => _itemSO.cellWidth;
-        public uint cellHeight => _itemSO.cellHeight;
+        public uint cellWidth;
+        public uint cellHeight;
 
         #endregion Public Fields
 
@@ -29,6 +29,7 @@ namespace PC.UI
         private RectTransform _rectTransform = null;
         [SerializeField] private Image _backgroundImage;
         [SerializeField] private Image _contentImage;
+        private RectTransform _contentRectTransform = null;
         private Vector2Int _originCellIndex = Vector2Int.zero;
 
         #endregion Private Fields
@@ -44,6 +45,8 @@ namespace PC.UI
         public Item Init(ItemSO itemSO)
         {
             _itemSO = itemSO;
+            cellWidth = _itemSO.cellWidth;
+            cellHeight = _itemSO.cellHeight;
             SetSize();
             SetImages();
             return this;
@@ -71,31 +74,24 @@ namespace PC.UI
         public void Rotate()
         {
             // If the item is square no need to rotate, bc it provides no packing benefit
-            if (_itemSO.cellWidth == _itemSO.cellHeight) return;
+            if (cellWidth == cellHeight) return;
 
-            // If the item is not within a container, always allow rotation, bc you can't possibly have items' cell overlaps or out of bounds
-            if (_currentContainer == null)
-            {
-                var temp = _itemSO.cellWidth;
-                _itemSO.cellWidth = _itemSO.cellHeight;
-                _itemSO.cellHeight = temp;
-                isRotated = !isRotated;
-                SetSize();
-            }
-            // If the item is withing a container, allow rotation if there are no items' cell overlaps or out of bounds would occur
-            else
-            {
-                // ADD CHECK HERE
-                // if (_currentContainer.CanRotate(this))
-                // {
-                    var temp = _itemSO.cellWidth;
-                    _itemSO.cellWidth = _itemSO.cellHeight;
-                    _itemSO.cellHeight = temp;
-                    isRotated = !isRotated;
-                    SetSize();
-                // }
-                Debug.LogWarning("Need to handle whether the item can be rotated or not. Currently rotates regardless.");
-            }
+            var temp = cellWidth;
+            cellWidth = cellHeight;
+            cellHeight = temp;
+            isRotated = !isRotated;
+            // var rect = GetComponent<RectTransform>();
+            // if (isRotated)
+            // {
+            //     // Rotate _contentImage.sprite by 90 degrees
+            //     _contentImage.sprite
+            // }
+            // else
+            // {
+            //     _contentImage.sprite.rect.Set(_contentImage.sprite.rect.x, _contentImage.sprite.rect.y, _contentImage.sprite.rect.width, _contentImage.sprite.rect.height);
+            // }
+            
+            SetSize();
         }
 
         #endregion Public Methods
@@ -108,6 +104,7 @@ namespace PC.UI
         private void Awake()
         {
             _rectTransform = GetComponent<RectTransform>();
+            _contentRectTransform = _contentImage.GetComponent<RectTransform>();
         }
 
         /// <summary>
@@ -115,11 +112,34 @@ namespace PC.UI
         /// </summary>
         private void SetSize()
         {
-            _rectTransform.sizeDelta = new Vector2
-            (
-                _itemSO.cellWidth * Container.CellSideLength - _itemSO.cellWidth + 1,
-                _itemSO.cellHeight * Container.CellSideLength - _itemSO.cellHeight + 1
-            );
+            if (!isRotated)
+            {
+                _rectTransform.sizeDelta = new Vector2
+                (
+                    cellWidth * Container.CellSideLength - cellWidth + 1,
+                    cellHeight * Container.CellSideLength - cellHeight + 1
+                );
+                _contentRectTransform.sizeDelta = new Vector2
+                (
+                    cellWidth * Container.CellSideLength - cellWidth - 1,
+                    cellHeight * Container.CellSideLength - cellHeight - 1
+                );
+                _contentRectTransform.localEulerAngles = new Vector3(0, 0, 0);
+            }
+            else
+            {
+                _rectTransform.sizeDelta = new Vector2
+                (
+                    cellWidth * Container.CellSideLength - cellWidth + 1,
+                    cellHeight * Container.CellSideLength - cellHeight + 1
+                );
+                _contentRectTransform.sizeDelta = new Vector2
+                (
+                    cellHeight * Container.CellSideLength - cellHeight - 1,
+                    cellWidth * Container.CellSideLength - cellWidth - 1
+                );
+                _contentRectTransform.localEulerAngles = new Vector3(0, 0, 90);
+            }
         }
 
         private void SetImages()
@@ -133,7 +153,6 @@ namespace PC.UI
             {
                 _contentImage.color = new Color(1, 1, 1, 0);
             }
-                
         }
 
         #endregion Private Methods
