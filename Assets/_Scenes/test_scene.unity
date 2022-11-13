@@ -5175,17 +5175,17 @@ PrefabInstance:
     - target: {fileID: 1963301032629578195, guid: 311efb3e6003e5b428e82dd75ccc0dac,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.513
+      value: -0.067
       objectReference: {fileID: 0}
     - target: {fileID: 1963301032629578195, guid: 311efb3e6003e5b428e82dd75ccc0dac,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.314
+      value: 0.044
       objectReference: {fileID: 0}
     - target: {fileID: 1963301032629578195, guid: 311efb3e6003e5b428e82dd75ccc0dac,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.724
+      value: -0.078
       objectReference: {fileID: 0}
     - target: {fileID: 1963301032629578195, guid: 311efb3e6003e5b428e82dd75ccc0dac,
         type: 3}
@@ -5261,6 +5261,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3393849842363846108, guid: 311efb3e6003e5b428e82dd75ccc0dac,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3393849842363846108, guid: 311efb3e6003e5b428e82dd75ccc0dac,
         type: 3}
@@ -5611,6 +5616,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3393849842375344456, guid: 311efb3e6003e5b428e82dd75ccc0dac,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3393849842375344460, guid: 311efb3e6003e5b428e82dd75ccc0dac,
         type: 3}
@@ -12055,6 +12065,7 @@ MonoBehaviour:
   _menuesController: {fileID: 595119701}
   _animator: {fileID: 612793878}
   _leftHandIKTransform: {fileID: 1438854674}
+  _gun: {fileID: 269148532}
 --- !u!143 &1440024077
 CharacterController:
   m_ObjectHideFlags: 0
@@ -12173,7 +12184,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1440024075}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fff0960ef4ea6e04eac66b4a7fd2189d, type: 3}
   m_Name: 
@@ -13667,7 +13678,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1660115900
 MonoBehaviour:
   m_ObjectHideFlags: 0
