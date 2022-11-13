@@ -39,6 +39,7 @@ namespace PC.Entities
         [SerializeField] private Transform _recoil = null;
         [SerializeField] private GunSO _gun = null;
         private int _currentAmmo = 0;
+        private int count = 0;
 
         // audio
         [SerializeField] private ScifiRifleSounds _audioClips = null;
@@ -114,6 +115,17 @@ namespace PC.Entities
             _targetRotation = Vector3.Lerp(_targetRotation, Vector3.zero, _returnSpeed * Time.deltaTime);
             _currentRotation = Vector3.Slerp(_currentRotation, _targetRotation, _snappiness * Time.fixedDeltaTime);
             _recoil.localRotation = Quaternion.Euler(_currentRotation);
+        }
+
+        private void LateUpdate()
+        {
+            // adjust gun rotation for realistic aiming
+            if(count == 0)
+            {
+                transform.Rotate(Vector3.up, -15f);
+                transform.Rotate(Vector3.right, 5f);
+                count++;
+            }
         }
 
         /// <summary>

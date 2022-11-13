@@ -40,7 +40,7 @@ public class CameraAim : MonoBehaviour
     {
         //Ray ray = new Ray(_camera.transform.position, _camera.transform.forward);
         Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out RaycastHit hit))
+        if (Physics.Raycast(ray, out RaycastHit hit, 100f))
         {
             // move transform to hit point
             transform.position = hit.point;

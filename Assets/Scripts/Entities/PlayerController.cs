@@ -41,8 +41,8 @@ namespace PC.Entities
 		{
             _body.Rotate(Vector3.up, _look.x);
 
-            _xRotation -= _look.y;
-            _xRotation = Mathf.Clamp(_xRotation, _minVerticalAngle, _maxVerticalAngle);
+            //_xRotation -= _look.y;
+            //_xRotation = Mathf.Clamp(_xRotation, _minVerticalAngle, _maxVerticalAngle);
             //_head.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
 		}
 
