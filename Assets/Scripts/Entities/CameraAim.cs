@@ -38,17 +38,12 @@ public class CameraAim : MonoBehaviour
 
     private void Update()
     {
-        Ray ray = new Ray(_camera.transform.position, _camera.transform.forward);
+        //Ray ray = new Ray(_camera.transform.position, _camera.transform.forward);
+        Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
             // move transform to hit point
             transform.position = hit.point;
-
-            //  // if hit object has a Target script component, execute GetShot
-            //  if (hit.transform.TryGetComponent<Target>(out Target ts))
-            //  {
-            //      ts.GetShot(ray.direction);
-            //  }
         }
     }
     

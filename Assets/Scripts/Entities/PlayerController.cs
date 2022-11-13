@@ -43,7 +43,7 @@ namespace PC.Entities
 
             _xRotation -= _look.y;
             _xRotation = Mathf.Clamp(_xRotation, _minVerticalAngle, _maxVerticalAngle);
-            _head.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
+            //_head.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
 		}
 
         /// <summary>
