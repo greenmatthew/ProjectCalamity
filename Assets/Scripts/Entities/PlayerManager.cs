@@ -30,6 +30,13 @@ namespace PC.Entities
         #region Methods
 
         #region Public Methods
+        public void KillPlayer()
+        {
+            // play death animation
+
+            // Kill the player
+            Destroy(player);
+        }
         #endregion Public Methods
 
         #region Protected Methods

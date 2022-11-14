@@ -1,6 +1,7 @@
 using UnityEngine;
+using PC.Entities;
 
-public class CharacterStats : MonoBehaviour
+public class PlayerStats : CharacterStats
 {
     #region Fields
 
@@ -14,9 +15,6 @@ public class CharacterStats : MonoBehaviour
     #endregion Protected Fields
 
     #region Private Fields
-    [SerializeField] private int _maxHealth;
-    [SerializeField] private int _currentHealth { get; set; }
-    [SerializeField] private Stat _damage;
     #endregion Private Fields
 
     #endregion Fields
@@ -26,21 +24,11 @@ public class CharacterStats : MonoBehaviour
     #region Methods
 
     #region Public Methods
-    public void TakeDamage()
+    public override void Die()
     {
-        _currentHealth -= _damage.GetValue();
-        Debug.Log(transform.name + " takes " + _damage.GetValue() + " damage.");
-        if (_currentHealth <= 0)
-        {
-            Die();
-        }
-    }
-
-    public virtual void Die()
-    {
-        // Die in some way
-        // This method is meant to be overwritten
-        Debug.Log(transform.name + " died.");
+        base.Die();
+        // Kill the player
+        PlayerManager.instance.KillPlayer();
     }
     #endregion Public Methods
 
@@ -48,16 +36,17 @@ public class CharacterStats : MonoBehaviour
     #endregion Protected Methods
 
     #region Private Methods
-    private void Awake()
-    {
-        _currentHealth = _maxHealth;
-    }
 
     private void Start()
     {
         
     }
 
+    private void Update()
+    {
+        
+    }
+    
     #endregion Private Methods
 
     #endregion Methods

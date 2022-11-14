@@ -14,6 +14,7 @@ namespace PC.Entities
 
         #region Public Fields
         Transform target;
+        NavMeshAgent agent;
         #endregion Public Fields
 
         #region Protected Fields
@@ -40,6 +41,7 @@ namespace PC.Entities
 
         private void Start()
         {
+            agent = GetComponent<NavMeshAgent>();
             target = PlayerManager.instance.player.transform;
         }
 
@@ -49,10 +51,31 @@ namespace PC.Entities
 
             if (distance <= _lookRadius)
             {
-                // move towards the player
-                transform.position = Vector3.MoveTowards(transform.position, target.position, 1f * Time.deltaTime);
+                agent.SetDestination(target.position);
+
+                // rotate towards target
+                FaceTarget();
+
+                if (distance <= agent.stoppingDistance)
+                {
+                    // attack target
+
+                }
+                // move towards the player -----OLD!!!!!
+                //transform.position = Vector3.MoveTowards(transform.position, target.position, 1f * Time.deltaTime);
             }
+
+        void FaceTarget()
+        {
+            // play rotation animation    
+
+            // rotate towards target
+            Vector3 direction = (target.position - transform.position).normalized;
+            Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+            // smooth rotation
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
         }
+    }
 
         private void OnDrawGizmosSelected()
         {

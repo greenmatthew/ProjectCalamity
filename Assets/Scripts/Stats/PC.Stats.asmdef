@@ -1,3 +1,16 @@
 {
-	"name": "PC.Stats"
+    "name": "PC.Stats",
+    "rootNamespace": "",
+    "references": [
+        "GUID:c757595a9c0742f4d828a16c41f9bba8"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
