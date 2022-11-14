@@ -6840,6 +6840,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0a0491e37fded447b3c474966788dce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackSpeed:
+    _baseValue: 2
   _maxHealth: 10
   _damage:
     _baseValue: 5
@@ -12505,6 +12507,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd0bcd52fc80c7a479d7cb825786602a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackSpeed:
+    _baseValue: 0
   _maxHealth: 100
   _damage:
     _baseValue: 5

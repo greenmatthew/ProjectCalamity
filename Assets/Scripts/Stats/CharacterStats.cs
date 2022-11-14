@@ -10,6 +10,7 @@ namespace PC
         #endregion Consts Fields
 
         #region Public Fields
+        public Stat attackSpeed;
         #endregion Public Fields
 
         #region Protected Fields
