@@ -1,20 +1,15 @@
 using UnityEngine;
 
-namespace PC.Entities
+namespace PC.Combat
 {
-    public class PlayerManager : MonoBehaviour
+    public class EnemyCombat : CharacterCombat
     {
-        #region Singleton
-        public static PlayerManager instance;
-        #endregion
-
         #region Fields
 
         #region Consts Fields
         #endregion Consts Fields
 
         #region Public Fields
-        public GameObject player;
         #endregion Public Fields
 
         #region Protected Fields
@@ -25,27 +20,34 @@ namespace PC.Entities
 
         #endregion Fields
 
-        //----------------------------------------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------------------------------------
 
         #region Methods
-
+        
         #region Public Methods
+        public void AttackTarget(Transform target)
+        {
+            // play animation 
+
+            // damage target
+            if (target.TryGetComponent<CharacterStats>(out CharacterStats cs))
+            {
+                Attack(cs);
+            }
+        }
         #endregion Public Methods
 
         #region Protected Methods
         #endregion Protected Methods
 
         #region Private Methods
-        private void Awake()
-        {
-            instance = this;
-        }
 
+        
         #endregion Private Methods
 
         #endregion Methods
 
-        //----------------------------------------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------------------------------------
 
         #region Enums, Structs, Classes
         #endregion Enums, Structs, Classes

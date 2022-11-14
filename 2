@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.AI;
 using PC.Combat;
+using PC.Stats;
 
 namespace PC.Entities
 {
@@ -63,7 +64,7 @@ namespace PC.Entities
                     // play attack animation
 
                     // attack target
-                    if (this.TryGetComponent<EnemyCombat>(out EnemyCombat ec) && target != null)
+                    if (this.TryGetComponent<EnemyCombat>(out EnemyCombat ec))
                     {
                         ec.AttackTarget(target);
                     }

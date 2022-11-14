@@ -1,26 +1,24 @@
 using UnityEngine;
+using PC.Stats;
 
-namespace PC.Entities
+namespace PC.Combat
 {
-    public class PlayerManager : MonoBehaviour
+    [RequireComponent(typeof(CharacterStats))]
+    public class CharacterCombat : MonoBehaviour
     {
-        #region Singleton
-        public static PlayerManager instance;
-        #endregion
-
         #region Fields
 
         #region Consts Fields
         #endregion Consts Fields
 
         #region Public Fields
-        public GameObject player;
         #endregion Public Fields
 
         #region Protected Fields
         #endregion Protected Fields
 
         #region Private Fields
+        private CharacterStats mystats;
         #endregion Private Fields
 
         #endregion Fields
@@ -30,22 +28,32 @@ namespace PC.Entities
         #region Methods
 
         #region Public Methods
+        public void Attack(CharacterStats targetStats)
+        {
+            targetStats.TakeDamage();
+        }
         #endregion Public Methods
 
         #region Protected Methods
         #endregion Protected Methods
 
         #region Private Methods
-        private void Awake()
+
+        private void Start()
         {
-            instance = this;
+            mystats = GetComponent<CharacterStats>();
         }
 
+        private void Update()
+        {
+        
+        }
+    
         #endregion Private Methods
 
         #endregion Methods
 
-        //----------------------------------------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------------------------------------
 
         #region Enums, Structs, Classes
         #endregion Enums, Structs, Classes

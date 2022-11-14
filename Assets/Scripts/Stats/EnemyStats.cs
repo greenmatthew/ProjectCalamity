@@ -1,63 +1,66 @@
 using UnityEngine;
 
-public class EnemyStats : CharacterStats
+namespace PC.Stats
 {
-    #region Fields
-
-    #region Consts Fields
-    #endregion Consts Fields
-
-    #region Public Fields
-    #endregion Public Fields
-
-    #region Protected Fields
-    #endregion Protected Fields
-
-    #region Private Fields
-    #endregion Private Fields
-
-    #endregion Fields
-
-//----------------------------------------------------------------------------------------------------------------------
-
-    #region Methods
-    
-    #region Public Methods
-    public override void Die()
+    public class EnemyStats : CharacterStats
     {
-        base.Die();
+        #region Fields
 
-        // play animation
+        #region Consts Fields
+        #endregion Consts Fields
 
-        // Kill the enemy
-        Destroy(gameObject);
-    }
-    #endregion Public Methods
+        #region Public Fields
+        #endregion Public Fields
 
-    #region Protected Methods
-    #endregion Protected Methods
+        #region Protected Fields
+        #endregion Protected Fields
 
-    #region Private Methods
+        #region Private Fields
+        #endregion Private Fields
 
-    private void Start()
-    {
+        #endregion Fields
+
+    //----------------------------------------------------------------------------------------------------------------------
+
+        #region Methods
         
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.T))
+        #region Public Methods
+        public override void Die()
         {
-            TakeDamage();
+            base.Die();
+
+            // play animation
+
+            // Kill the enemy
+            Destroy(gameObject);
         }
+        #endregion Public Methods
+
+        #region Protected Methods
+        #endregion Protected Methods
+
+        #region Private Methods
+
+        private void Start()
+        {
+            
+        }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.T))
+            {
+                TakeDamage();
+            }
+        }
+        
+        #endregion Private Methods
+
+        #endregion Methods
+
+    //----------------------------------------------------------------------------------------------------------------------
+
+        #region Enums, Structs, Classes
+        #endregion Enums, Structs, Classes
     }
-    
-    #endregion Private Methods
-
-    #endregion Methods
-
-//----------------------------------------------------------------------------------------------------------------------
-
-    #region Enums, Structs, Classes
-    #endregion Enums, Structs, Classes
 }

@@ -6820,7 +6820,7 @@ NavMeshAgent:
   m_Acceleration: 20
   avoidancePriority: 50
   m_AngularSpeed: 100
-  m_StoppingDistance: 2
+  m_StoppingDistance: 8
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -6843,6 +6843,18 @@ MonoBehaviour:
   _maxHealth: 10
   _damage:
     _baseValue: 5
+--- !u!114 &682186945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682186936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6df5888110f1364d8f7594344710ee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &682852628
 GameObject:
   m_ObjectHideFlags: 0
@@ -12490,10 +12502,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1440024075}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62dbaa47665fe6044a0cea6aa6f82b97, type: 3}
+  m_Script: {fileID: 11500000, guid: dd0bcd52fc80c7a479d7cb825786602a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 50
+  _maxHealth: 100
   _damage:
     _baseValue: 5
 --- !u!1 &1445914762
