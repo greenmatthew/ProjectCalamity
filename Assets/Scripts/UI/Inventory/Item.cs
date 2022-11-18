@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+using static PC.UI.Constants;
+
 namespace PC.UI
 {
     [RequireComponent(typeof(RectTransform))]
@@ -31,6 +33,7 @@ namespace PC.UI
         [SerializeField] private Image _contentImage;
         private RectTransform _contentRectTransform = null;
         private Vector2Int _originCellIndex = Vector2Int.zero;
+        public Vector2Int OriginCellIndex => _originCellIndex;
 
         #endregion Private Fields
 
@@ -52,14 +55,25 @@ namespace PC.UI
             return this;
         }
 
-        public void SetContainer(Container container)
+        /// <summary>
+        /// Caches the container the item is currently in.
+        /// Sets the item's parent to the given container's content GameObject.
+        /// Sets the item's position to the given cell index relative to the container's content GameObject.
+        /// </summary>
+        public void SetContainer(Container container, Vector2Int originCellIndex)
         {
+            if (container == null) return;
             _currentContainer = container;
+            _originCellIndex = originCellIndex;
+            _rectTransform.SetParent(container.ContentsParent);
+            Vector2 position = new Vector2(originCellIndex.x * (CellSideLength - 1), -1 * originCellIndex.y * (CellSideLength - 1));
+            _rectTransform.localPosition = position;
         }
 
-        public void SetOriginCellIndex(Vector2Int originCellIndex)
+        public void RemoveContainer()
         {
-            _originCellIndex = originCellIndex;
+            _currentContainer = null;
+            _rectTransform.SetParent(null);
         }
 
         public Vector2Int GetOriginCellIndex()
@@ -116,13 +130,13 @@ namespace PC.UI
             {
                 _rectTransform.sizeDelta = new Vector2
                 (
-                    cellWidth * Container.CellSideLength - cellWidth + 1,
-                    cellHeight * Container.CellSideLength - cellHeight + 1
+                    cellWidth * CellSideLength - cellWidth + 1,
+                    cellHeight * CellSideLength - cellHeight + 1
                 );
                 _contentRectTransform.sizeDelta = new Vector2
                 (
-                    cellWidth * Container.CellSideLength - cellWidth - 1,
-                    cellHeight * Container.CellSideLength - cellHeight - 1
+                    cellWidth * CellSideLength - cellWidth - 1,
+                    cellHeight * CellSideLength - cellHeight - 1
                 );
                 _contentRectTransform.localEulerAngles = new Vector3(0, 0, 0);
             }
@@ -130,13 +144,13 @@ namespace PC.UI
             {
                 _rectTransform.sizeDelta = new Vector2
                 (
-                    cellWidth * Container.CellSideLength - cellWidth + 1,
-                    cellHeight * Container.CellSideLength - cellHeight + 1
+                    cellWidth * CellSideLength - cellWidth + 1,
+                    cellHeight * CellSideLength - cellHeight + 1
                 );
                 _contentRectTransform.sizeDelta = new Vector2
                 (
-                    cellHeight * Container.CellSideLength - cellHeight - 1,
-                    cellWidth * Container.CellSideLength - cellWidth - 1
+                    cellHeight * CellSideLength - cellHeight - 1,
+                    cellWidth * CellSideLength - cellWidth - 1
                 );
                 _contentRectTransform.localEulerAngles = new Vector3(0, 0, 90);
             }

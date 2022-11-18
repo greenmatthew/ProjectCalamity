@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+using static PC.UI.Constants;
+
 namespace PC.UI
 {
     public class Container : ContainerBase
@@ -32,6 +34,7 @@ namespace PC.UI
 
         // Contents of the container
         [SerializeField] private RectTransform _contentsParent = null;
+        public RectTransform ContentsParent => _contentsParent;
         
         
         // Init items
@@ -91,11 +94,17 @@ namespace PC.UI
             return GetCell(cellIndex);
         }
 
+        /// <summary>
+        /// Removes the item at a given cellIndex from the container.
+        /// </summary>
+        /// <param name="cellIndex">The cell index of the item you want to remove.</param>
+        /// <returns>Returns true if the operation was successful, otherwise false.</returns>
         public bool RemoveItemAt(Vector2Int cellIndex)
         {
             Item item = GetItemAt(cellIndex);
-            cellIndex = item.GetOriginCellIndex();
+            cellIndex = item.OriginCellIndex;
 
+            // Checks if the different cells that makes up the item are within the range of the container's area and if they are occupied by another item instead.
             for (int r = 0; r < item.cellHeight; ++r)
             {
                 for (int c = 0; c < item.cellWidth; ++c)
@@ -117,6 +126,7 @@ namespace PC.UI
                 }
             }
 
+            // Sets each cell the item takes up to null
             for (int r = 0; r < item.cellHeight; ++r)
             {
                 for (int c = 0; c < item.cellWidth; ++c)
@@ -127,8 +137,9 @@ namespace PC.UI
                     EmptyCell(newCellIndex);
                 }
             }
-            item.SetOriginCellIndex(new Vector2Int(-1, -1));
-            item.SetContainer(null);
+            // Sets the item's container to null to indicate that it is no longer in a container.
+            item.RemoveContainer();
+            // Successfully removed the item.
             return true;
         }
 
@@ -140,6 +151,7 @@ namespace PC.UI
                 return false;
             }
 
+            // Checks if the different cells that makes up the item are within the range of the container's area and if they are occupied by another item instead.
             for (int r = 0; r < item.cellHeight; ++r)
             {
                 for (int c = 0; c < item.cellWidth; ++c)
@@ -161,6 +173,7 @@ namespace PC.UI
                 }
             }
 
+            // Sets each cell the item takes up inside this container to the item.
             for (int r = 0; r < item.cellHeight; ++r)
             {
                 for (int c = 0; c < item.cellWidth; ++c)
@@ -171,16 +184,16 @@ namespace PC.UI
                     SetCell(newCellIndex, item);
                 }
             }
-            item.SetOriginCellIndex(new Vector2Int(cellIndex.x, cellIndex.y));
-            
-            item.SetContainer(this);
-            var rectTransform = item.GetComponent<RectTransform>();
-            rectTransform.SetParent(_contentsParent);
-            Vector2 position = new Vector2(cellIndex.x * (CellSideLength - 1), -1 * cellIndex.y * (CellSideLength - 1));
-            rectTransform.localPosition = position;
+            // Update the container of the item.
+            item.SetContainer(this, cellIndex);
             return true;
         }
 
+        /// <summary>
+        /// Takes an item from a container
+        /// </summary>
+        /// <param name="cellIndex">The cell index of the item you want to take from the container.</param>
+        /// <returns>The item taken from the container</returns>
         public Item TakeItemAt(Vector2Int cellIndex)
         {
             var item = GetItemAt(cellIndex);
@@ -222,6 +235,10 @@ namespace PC.UI
                 PlaceItemAt(Instantiate(_itemPrefab, _contentsParent).Init(_items[i]), _itemPositions[i]);
         }
 
+        /// <summary>
+        /// Initializes the background of the container.
+        /// </summary>
+        /// <param name="size">The area of the background.</param>
         private void InitBackground(Vector2 size)
         {
             _rectTransform.sizeDelta = size;
@@ -235,6 +252,10 @@ namespace PC.UI
             }
         }
 
+        /// <summary>
+        /// Initializes the contents of the container.
+        /// </summary>
+        /// <param name="size">The area of the contents.</param>
         protected override void InitContents(Vector2 size)
         {
             base.InitContents(size);

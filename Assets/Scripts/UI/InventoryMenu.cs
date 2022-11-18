@@ -77,7 +77,11 @@ namespace PC.UI
             }
         }
         private ItemContainerInfo _currentItem = null;
-        [SerializeField] private RectTransform _tempItemParent = null;
+        // private ItemContainerInfo _currentItem = null;
+
+        // private Item _currItemSource = null;
+        // private Item _currItemCopy = null;
+        
 
         #endregion Private Fields
 
