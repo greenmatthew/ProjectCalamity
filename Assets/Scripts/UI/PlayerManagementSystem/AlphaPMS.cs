@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace PC.UI
 {
-    public class PlayerManagementStationMenu : MenuBase
+    public class AlphaPMS : MonoBehaviour
     {
         #region Fields
 
@@ -18,6 +16,9 @@ namespace PC.UI
         #endregion Protected Fields
 
         #region Private Fields
+
+        private StashModule _stashModule;
+        
         #endregion Private Fields
 
         #endregion Fields
@@ -25,27 +26,25 @@ namespace PC.UI
     //----------------------------------------------------------------------------------------------------------------------
 
         #region Methods
-
+    
         #region Public Methods
         #endregion Public Methods
 
         #region Protected Methods
-
-        protected override void AwakeExtension()
-        {
-        }
-
-        protected override void OpenExtension()
-        {
-        }
-
-        protected override void CloseExtension()
-        {
-        }
-
         #endregion Protected Methods
 
         #region Private Methods
+
+        private void Start()
+        {
+        
+        }
+
+        private void Update()
+        {
+        
+        }
+    
         #endregion Private Methods
 
         #endregion Methods
