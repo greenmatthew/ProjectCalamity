@@ -18,6 +18,10 @@ namespace PC.UI
         [HideInInspector] public bool isRotated = false;
         public uint cellWidth;
         public uint cellHeight;
+        public RectTransform RectTransform = null;
+        public Vector2Int OriginCellIndex => _originCellIndex;
+        public Item Copy => _copy;
+        public Item Source => _source;
 
         #endregion Public Fields
 
@@ -28,12 +32,13 @@ namespace PC.UI
 
         private ItemSO _itemSO = null;
         private Container _currentContainer = null;
-        private RectTransform _rectTransform = null;
+        
         [SerializeField] private Image _backgroundImage;
         [SerializeField] private Image _contentImage;
         private RectTransform _contentRectTransform = null;
         private Vector2Int _originCellIndex = Vector2Int.zero;
-        public Vector2Int OriginCellIndex => _originCellIndex;
+        private Item _copy = null;
+        private Item _source = null;
 
         #endregion Private Fields
 
@@ -65,15 +70,15 @@ namespace PC.UI
             if (container == null) return;
             _currentContainer = container;
             _originCellIndex = originCellIndex;
-            _rectTransform.SetParent(container.ContentsParent);
+            RectTransform.SetParent(container.ContentsParent);
             Vector2 position = new Vector2(originCellIndex.x * (CellSideLength - 1), -1 * originCellIndex.y * (CellSideLength - 1));
-            _rectTransform.localPosition = position;
+            RectTransform.localPosition = position;
         }
 
         public void RemoveContainer()
         {
             _currentContainer = null;
-            _rectTransform.SetParent(null);
+            RectTransform.SetParent(null);
         }
 
         public Vector2Int GetOriginCellIndex()
@@ -108,6 +113,38 @@ namespace PC.UI
             SetSize();
         }
 
+        public Item MakeCopy()
+        {
+            if (_copy != null)
+            {
+                Debug.LogError($"Item {name} already has a copy. There should never be more than one copy of an item at a time.");
+                return null;
+            }
+
+            _copy = Instantiate(this, RectTransform.parent);
+            _copy._source = this;
+            Debug.Log($"Made source of {_copy._source.name}.");
+            Debug.Log($"Made source of 2 {this.name}.");
+            return _copy;
+        }
+
+        public bool TransferTo(Container container, Vector2Int cellIndex)
+        {
+            if (container == null) return false;
+            return container.PlaceItemAt(this, cellIndex);
+        }
+
+        public void Destroy()
+        {
+            Debug.Log("Destroying " + name);
+            if (_source != null)
+            {
+                _source._copy = null;
+                _source = null;
+            }
+            Destroy(gameObject);
+        }
+
         #endregion Public Methods
 
         #region Protected Methods
@@ -117,7 +154,7 @@ namespace PC.UI
 
         private void Awake()
         {
-            _rectTransform = GetComponent<RectTransform>();
+            RectTransform = GetComponent<RectTransform>();
             _contentRectTransform = _contentImage.GetComponent<RectTransform>();
         }
 
@@ -128,7 +165,7 @@ namespace PC.UI
         {
             if (!isRotated)
             {
-                _rectTransform.sizeDelta = new Vector2
+                RectTransform.sizeDelta = new Vector2
                 (
                     cellWidth * CellSideLength - cellWidth + 1,
                     cellHeight * CellSideLength - cellHeight + 1
@@ -142,7 +179,7 @@ namespace PC.UI
             }
             else
             {
-                _rectTransform.sizeDelta = new Vector2
+                RectTransform.sizeDelta = new Vector2
                 (
                     cellWidth * CellSideLength - cellWidth + 1,
                     cellHeight * CellSideLength - cellHeight + 1

@@ -118,7 +118,7 @@ namespace PC.UI
                         return false;
                     }
 
-                    if (IsCellOccupiedNotBySelf(item, newCellIndex))
+                    if (IsCellOccupiedNotBySelfOrCopy(item, newCellIndex))
                     {
                         Debug.LogError($"Removing item @ {cellIndex} w/ size ({item.cellWidth}, {item.cellHeight}) where the item never existed at. Null cell index relative to container origin @ {newCellIndex} (and relative to item origin {offset}). THIS SHOULD NEVER HAPPEN AND MEANS A BUG IS PRESENT.");
                         return false;
@@ -165,7 +165,7 @@ namespace PC.UI
                         return false;
                     }
 
-                    if (IsCellOccupiedExcludingSelf(item, newCellIndex))
+                    if (IsCellOccupiedExcludingSelfOrCopy(item, newCellIndex))
                     {
                         Debug.LogError($"Placing item @ {cellIndex} w/ size ({item.cellWidth}, {item.cellHeight}) would intersect with another item's occupied cells in the internal contents array. Intersection cell index relative to container origin @ {newCellIndex} (and relative to item origin {offset}).");
                         return false;
@@ -200,6 +200,19 @@ namespace PC.UI
             if (item != null)
                 RemoveItemAt(cellIndex);
             return item;
+        }
+
+        public void TransferItem(Vector2Int sourceCellIndex, Container targetContainer, Vector2Int targetCellIndex)
+        {
+            if (targetContainer == null)
+            {
+                Debug.LogError("Target container is null.");
+                return;
+            }
+
+            Item item = TakeItemAt(sourceCellIndex);
+            if (item != null)
+                targetContainer.PlaceItemAt(item, targetCellIndex);
         }
 
         /// <summary>
@@ -266,11 +279,11 @@ namespace PC.UI
 
         private bool IsCellOutOfRange(Vector2Int cellIndex) => cellIndex.x < 0 || cellIndex.x >= cellWidth || cellIndex.y < 0 || cellIndex.y >= cellHeight;
         private bool IsCellEmpty(Vector2Int cellIndex) => GetCell(cellIndex) == null;
-        private bool IsCellEmptyExcludingSelf(Item item, Vector2Int cellIndex) => IsCellEmpty(cellIndex) || GetCell(cellIndex) == item;
+        private bool IsCellEmptyExcludingSelfOrCopy(Item item, Vector2Int cellIndex) => IsCellEmpty(cellIndex) || GetCell(cellIndex) == item || GetCell(cellIndex) == item.Source;
         private bool IsCellOccupied(Vector2Int cellIndex) => !IsCellEmpty(cellIndex);
-        private bool IsCellOccupiedExcludingSelf(Item item, Vector2Int cellIndex) => !IsCellEmptyExcludingSelf(item, cellIndex);
-        private bool IsCellOccupiedBySelf(Item item, Vector2Int cellIndex) => GetCell(cellIndex) == item;
-        private bool IsCellOccupiedNotBySelf(Item item, Vector2Int cellIndex) => GetCell(cellIndex) != item;
+        private bool IsCellOccupiedExcludingSelfOrCopy(Item item, Vector2Int cellIndex) => !IsCellEmptyExcludingSelfOrCopy(item, cellIndex);
+        private bool IsCellOccupiedBySelfOrCopy(Item item, Vector2Int cellIndex) => GetCell(cellIndex) == item || GetCell(cellIndex) == item.Source;
+        private bool IsCellOccupiedNotBySelfOrCopy(Item item, Vector2Int cellIndex) => GetCell(cellIndex) != item && GetCell(cellIndex) == item.Source;
 
         #endregion Private Methods
 
