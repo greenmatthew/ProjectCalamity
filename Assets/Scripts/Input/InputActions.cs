@@ -550,6 +550,45 @@ namespace PC.Input
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""PMSMenu"",
+            ""id"": ""98b18293-391c-4361-833e-9b6fdb50c27a"",
+            ""actions"": [
+                {
+                    ""name"": ""CloseMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""c098e1bb-753a-4491-8df4-3117a87a82a0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""697d0e0d-7898-4abb-9aab-182176d13a5d"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CloseMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e31b521b-ab5a-4759-8508-182d220ca059"",
+                    ""path"": ""<Keyboard>/i"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CloseMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -585,6 +624,9 @@ namespace PC.Input
             // MapMenu
             m_MapMenu = asset.FindActionMap("MapMenu", throwIfNotFound: true);
             m_MapMenu_CloseMenu = m_MapMenu.FindAction("CloseMenu", throwIfNotFound: true);
+            // PMSMenu
+            m_PMSMenu = asset.FindActionMap("PMSMenu", throwIfNotFound: true);
+            m_PMSMenu_CloseMenu = m_PMSMenu.FindAction("CloseMenu", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -933,6 +975,39 @@ namespace PC.Input
             }
         }
         public MapMenuActions @MapMenu => new MapMenuActions(this);
+
+        // PMSMenu
+        private readonly InputActionMap m_PMSMenu;
+        private IPMSMenuActions m_PMSMenuActionsCallbackInterface;
+        private readonly InputAction m_PMSMenu_CloseMenu;
+        public struct PMSMenuActions
+        {
+            private @InputActions m_Wrapper;
+            public PMSMenuActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+            public InputAction @CloseMenu => m_Wrapper.m_PMSMenu_CloseMenu;
+            public InputActionMap Get() { return m_Wrapper.m_PMSMenu; }
+            public void Enable() { Get().Enable(); }
+            public void Disable() { Get().Disable(); }
+            public bool enabled => Get().enabled;
+            public static implicit operator InputActionMap(PMSMenuActions set) { return set.Get(); }
+            public void SetCallbacks(IPMSMenuActions instance)
+            {
+                if (m_Wrapper.m_PMSMenuActionsCallbackInterface != null)
+                {
+                    @CloseMenu.started -= m_Wrapper.m_PMSMenuActionsCallbackInterface.OnCloseMenu;
+                    @CloseMenu.performed -= m_Wrapper.m_PMSMenuActionsCallbackInterface.OnCloseMenu;
+                    @CloseMenu.canceled -= m_Wrapper.m_PMSMenuActionsCallbackInterface.OnCloseMenu;
+                }
+                m_Wrapper.m_PMSMenuActionsCallbackInterface = instance;
+                if (instance != null)
+                {
+                    @CloseMenu.started += instance.OnCloseMenu;
+                    @CloseMenu.performed += instance.OnCloseMenu;
+                    @CloseMenu.canceled += instance.OnCloseMenu;
+                }
+            }
+        }
+        public PMSMenuActions @PMSMenu => new PMSMenuActions(this);
         public interface IPlayerActions
         {
             void OnMovement(InputAction.CallbackContext context);
@@ -966,6 +1041,10 @@ namespace PC.Input
             void OnCloseMenu(InputAction.CallbackContext context);
         }
         public interface IMapMenuActions
+        {
+            void OnCloseMenu(InputAction.CallbackContext context);
+        }
+        public interface IPMSMenuActions
         {
             void OnCloseMenu(InputAction.CallbackContext context);
         }
