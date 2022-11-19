@@ -97,10 +97,10 @@ namespace PC.Entities
 
         }
 
-        private void OnEnable()
-        {
-            inputActions.Player.Shoot.Enable();
-        }
+        // private void OnEnable()
+        // {
+        //     inputActions.Player.Shoot.Enable();
+        // }
 
         private void OnDisable()
         {

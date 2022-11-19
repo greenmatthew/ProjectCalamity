@@ -116,6 +116,8 @@ namespace PC.UI
             instance = this;
 
             _inputActions.InventoryMenu.CloseMenu.performed += ctx => Close();
+
+            
         }
 
         protected override void OpenExtension()
