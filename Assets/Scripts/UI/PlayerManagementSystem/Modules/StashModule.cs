@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace PC.UI
 {
-    public class StashModule : MonoBehaviour
+    public class StashModule : ModuleBase
     {
         #region Fields
 
@@ -31,17 +31,6 @@ namespace PC.UI
         #endregion Protected Methods
 
         #region Private Methods
-
-        private void Start()
-        {
-        
-        }
-
-        private void Update()
-        {
-        
-        }
-    
         #endregion Private Methods
 
         #endregion Methods

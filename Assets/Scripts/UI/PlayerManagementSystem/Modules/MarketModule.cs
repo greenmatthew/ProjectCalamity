@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace PC.UI
 {
-    public class PMSBase : Interactable
+    public class MarketModule : ModuleBase
     {
         #region Fields
 
@@ -10,12 +10,6 @@ namespace PC.UI
         #endregion Consts Fields
 
         #region Public Fields
-
-        public QuestsModule QuestsModule = null;
-        public CraftingModule CraftingModule = null;
-        public SuitModule SuitModule = null;
-        public WeaponUpgradingModule WeaponUpgradingModule = null;
-
         #endregion Public Fields
 
         #region Protected Fields

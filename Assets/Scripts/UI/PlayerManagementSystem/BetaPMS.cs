@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace PC.UI
 {
-    public class BetaPMS : MonoBehaviour
+    public class BetaPMS : PMSBase
     {
         #region Fields
 
