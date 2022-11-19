@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace PC.UI
 {
-    public class PlayerManagementStationMenu : MenuBase
+    public class PMSBase : Interactable
     {
         #region Fields
 
@@ -12,6 +10,12 @@ namespace PC.UI
         #endregion Consts Fields
 
         #region Public Fields
+
+        public QuestsModule QuestsModule = null;
+        public CraftingModule CraftingModule = null;
+        public SuitModule SuitModule = null;
+        public WeaponUpgradingModule WeaponUpgradingModule = null;
+
         #endregion Public Fields
 
         #region Protected Fields
@@ -25,24 +29,11 @@ namespace PC.UI
     //----------------------------------------------------------------------------------------------------------------------
 
         #region Methods
-
+    
         #region Public Methods
         #endregion Public Methods
 
         #region Protected Methods
-
-        protected override void AwakeExtension()
-        {
-        }
-
-        protected override void OpenExtension()
-        {
-        }
-
-        protected override void CloseExtension()
-        {
-        }
-
         #endregion Protected Methods
 
         #region Private Methods
