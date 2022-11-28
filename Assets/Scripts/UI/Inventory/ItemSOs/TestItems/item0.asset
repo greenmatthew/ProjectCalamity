@@ -10,9 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f62cf24312b687e4e90e40013c62868c, type: 3}
-  m_Name: item5
+  m_Name: item0
   m_EditorClassIdentifier: 
-  cellWidth: 5
-  cellHeight: 2
-  backgroundColor: {r: 0.40392157, g: 0.40392157, b: 0.40392157, a: 1}
-  itemIcon: {fileID: 21300000, guid: 2f89db4fb52ac8846920dcfe882362c6, type: 3}
+  cellWidth: 1
+  cellHeight: 1
+  backgroundColor: {r: 0.94509804, g: 0.13725491, b: 0.13725491, a: 1}
+  itemIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  name: High Explosive Grenade
+  nickname: HEGrenade
+  description: 
+  mass: 0
+  value: 0

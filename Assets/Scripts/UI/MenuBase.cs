@@ -48,6 +48,7 @@ namespace PC.UI
             transform.gameObject.SetActive(true);
             _inputActions.Menu.Enable();
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
 
             OpenExtension();
         }
@@ -62,6 +63,7 @@ namespace PC.UI
             DisableAll();
             _inputActions.Player.Enable();
             Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
 
             CloseExtension();
         }

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 using static PC.UI.Constants;
 
@@ -35,6 +36,7 @@ namespace PC.UI
         
         [SerializeField] private Image _backgroundImage;
         [SerializeField] private Image _contentImage;
+        [SerializeField] private TMP_Text _nicknameLabel;
         private RectTransform _contentRectTransform = null;
         private Vector2Int _originCellIndex = Vector2Int.zero;
         private Item _copy = null;
@@ -57,6 +59,7 @@ namespace PC.UI
             cellHeight = _itemSO.cellHeight;
             SetSize();
             SetImages();
+            _nicknameLabel.text = _itemSO.nickname;
             return this;
         }
 
