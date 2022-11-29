@@ -2,6 +2,7 @@
     "name": "PC.Input",
     "rootNamespace": "PC.Input",
     "references": [
+        "GUID:a25c13b308c040c48b0ba23ef986379a",
         "GUID:75469ad4d38634e559750d17036d5f7c"
     ],
     "includePlatforms": [],

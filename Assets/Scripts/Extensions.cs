@@ -25,6 +25,12 @@ namespace PC.Extensions
             }
         }
 
+        public static void Enqueue<T>(this Queue<T> queue, IEnumerable<T> items)
+        {
+            foreach (T item in items)
+                queue.Enqueue(item);
+        }
+
         #endregion
 
         #region UnityEngine.Transform Extensions
@@ -33,8 +39,9 @@ namespace PC.Extensions
         /// Get hierarchy path.
         /// </summary>
         /// <param name="transform">The transform to get the path of</param>
+        /// <param name="includeSceneName">Include the scene name as the root of the path</param>
         /// <returns>The hierarchy path of the transform</returns>
-        public static string HierarchyPath(this Transform transform)
+        public static string HierarchyPath(this Transform transform, bool includeSceneName = false)
         {
             var path = new System.Text.StringBuilder();
             var current = transform;
@@ -44,10 +51,14 @@ namespace PC.Extensions
                 path.Insert(0, "/");
                 current = current.parent;
             }
+
+            if (includeSceneName)
+                path.Insert(0, UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+
             return path.ToString();
         }
 
-        #endregion
+        #endregion UnityEngine.Transform Extensions
 
         #region UnityEngine.GameObject Extensions
 
@@ -55,10 +66,11 @@ namespace PC.Extensions
         /// Get hierarchy path.
         /// </summary>
         /// <param name="gameObject">The GameObject to get the path of</param>
+        /// <param name="includeSceneName">Include the scene name as the root of the path</param>
         /// <returns>The hierarchy path of the transform</returns>
-        public static string HierarchyPath(this GameObject gameObject)
+        public static string HierarchyPath(this GameObject gameObject, bool includeSceneName = false)
         {
-            return gameObject.transform.HierarchyPath();
+            return gameObject.transform.HierarchyPath(includeSceneName);
         }
 
         #endregion

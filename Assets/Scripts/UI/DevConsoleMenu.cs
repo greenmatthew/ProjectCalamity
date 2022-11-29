@@ -1,4 +1,8 @@
+using System.Threading;
+using System.Collections.Generic;
 using UnityEngine;
+
+using PC.Extensions;
 
 namespace PC.UI
 {
@@ -16,6 +20,10 @@ namespace PC.UI
         #endregion Protected Fields
 
         #region Private Fields
+
+        [SerializeField] private RectTransform _content = null;
+        [SerializeField] private RectTransform _logItemPrefab = null;
+
         #endregion Private Fields
 
         #endregion Fields
@@ -46,6 +54,19 @@ namespace PC.UI
         #endregion Protected Methods
 
         #region Private Methods
+
+        private void Update()
+        {
+            if (Debug.Backlog.Count > 0)
+            {
+                string message = Debug.Backlog.Dequeue();
+                RectTransform logItem = Instantiate(_logItemPrefab, _content);
+                var text = logItem.GetComponentInChildren<TMPro.TextMeshProUGUI>();
+                text.text = message;
+                logItem.sizeDelta = new Vector2(logItem.sizeDelta.x, text.preferredHeight);
+            }
+        }
+
         #endregion Private Methods
 
         #endregion Methods

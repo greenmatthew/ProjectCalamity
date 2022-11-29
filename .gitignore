@@ -59,6 +59,7 @@ sysinfo.txt
 crashlytics-build.properties
 
 # Layout file
+UserSettings/
 *.dwlt
 
 # sci fi bosses

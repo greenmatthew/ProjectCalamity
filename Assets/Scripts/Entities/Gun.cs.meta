@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 55a7e1723a5de3e4ba703efffeb61469
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _muzzleFlash: {instanceID: 0}
+  - _camera: {instanceID: 0}
+  - _gun: {instanceID: 0}
+  - _audioClips: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
