@@ -1,4 +1,5 @@
 using UnityEngine;
+using PC.Stats;
 
 namespace PC.Combat
 {
@@ -25,15 +26,36 @@ namespace PC.Combat
         #region Methods
         
         #region Public Methods
+
+        // shooting enemy with gun, no cooldown
         public void AttackTarget(RaycastHit hit)
         {
             // play animation 
 
-            // damage target
-            if (hit.transform.TryGetComponent<CharacterStats>(out CharacterStats cs))
+            // find parent object
+            Debug.Log(hit.transform.name);
+            Transform parent = hit.transform.parent;
+            Transform temp = null;  // getting errors when not using temp var
+            while (parent != null)
             {
-                Attack(cs);
+               Debug.Log(parent.name);
+               temp = parent;
+               parent = parent.parent;
             }
+            parent = temp;
+
+            // damage target
+            if (parent.TryGetComponent<CharacterStats>(out CharacterStats cs))
+            {
+                cs.TakeDamage();
+            }
+            else
+            {
+                Debug.Log("No CharacterStats component found on target");
+            }
+
+            // not using this bc it includes a cooldown
+            //Attack(cs);
         }
         #endregion Public Methods
 

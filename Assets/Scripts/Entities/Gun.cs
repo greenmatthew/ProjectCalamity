@@ -41,6 +41,9 @@ namespace PC.Entities
         [SerializeField] private GunSO _gun = null;
         private int _currentAmmo = 0;
 
+        // damage
+        private PlayerCombat _playerCombat = null;
+
         // audio
         [SerializeField] private ScifiRifleSounds _audioClips = null;
         private AudioSource _gunAudioSource = null;
@@ -95,6 +98,11 @@ namespace PC.Entities
             inputActions.Player.Reload.Enable();
 
             _currentAmmo = _gun.MagazineSize;
+
+            if (PlayerManager.instance.player.transform.TryGetComponent<PlayerCombat>(out PlayerCombat playerCombat))
+                _playerCombat = playerCombat;
+            else
+                Debug.LogError("Gun: PlayerCombat is null!");
 
         }
 
@@ -194,10 +202,9 @@ namespace PC.Entities
                     }
 
                     // apply damage to hit object
-                    if (this.TryGetComponent<PlayerCombat>(out PlayerCombat pc))
-                    {
-                        pc.AttackTarget(hit);
-                    }
+                    if (_playerCombat)
+                        _playerCombat.AttackTarget(hit);
+
                 }
 
                 // Apply recoil

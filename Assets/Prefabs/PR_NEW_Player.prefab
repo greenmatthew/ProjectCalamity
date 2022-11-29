@@ -2775,6 +2775,8 @@ GameObject:
   - component: {fileID: 7566157971024703157}
   - component: {fileID: 7566157971024703160}
   - component: {fileID: 7566157971024703159}
+  - component: {fileID: 462098407827465766}
+  - component: {fileID: 5646260923990155820}
   m_Layer: 0
   m_Name: PR_NEW_Player
   m_TagString: Untagged
@@ -2928,7 +2930,7 @@ MonoBehaviour:
     m_Bits: 256
   _animator: {fileID: 1285461146384090053}
   _leftHandIKTransform: {fileID: 7566157970236856515}
-  _spineTransform: {fileID: 0}
+  _gun: {fileID: 0}
 --- !u!114 &7566157971024703158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3063,6 +3065,35 @@ MonoBehaviour:
   - m_Rig: {fileID: 0}
     m_Active: 1
   m_Effectors: []
+--- !u!114 &462098407827465766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285461146376810903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ca94c87a84b4504dbb29a995e6481e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5646260923990155820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285461146376810903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0bcd52fc80c7a479d7cb825786602a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSpeed:
+    _baseValue: 0
+  _maxHealth: 0
+  _damage:
+    _baseValue: 0
 --- !u!1 &1285461146376810913
 GameObject:
   m_ObjectHideFlags: 0
@@ -34752,6 +34783,7 @@ MonoBehaviour:
   _muzzleFlashLight: {fileID: 7088513177671049593}
   _recoil: {fileID: 1934198590053991862}
   _gun: {fileID: 11400000, guid: 5ce61f8c63968d94b9e70f8639a24306, type: 2}
+  _playerCombat: {fileID: 0}
   _audioClips: {fileID: 11400000, guid: 19ec9c1da5cb6604393832ec959660ff, type: 2}
   _snappiness: 6
   _returnSpeed: 2
