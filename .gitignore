@@ -61,3 +61,6 @@ crashlytics-build.properties
 # Layout file
 *.dwlt
 
+# sci fi bosses
+Assets/Protofactor/*
+Assets/Protofactor.meta
