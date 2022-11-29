@@ -33,25 +33,26 @@ namespace PC.Combat
             // play animation 
 
             // find parent object
-            Debug.Log(hit.transform.name);
             Transform parent = hit.transform.parent;
-            Transform temp = null;  // getting errors when not using temp var
-            while (parent != null)
+            if(parent)
             {
-               Debug.Log(parent.name);
-               temp = parent;
-               parent = parent.parent;
-            }
-            parent = temp;
+                Transform temp = null;  // getting errors when not using temp var
+                while (parent != null)
+                {
+                   temp = parent;
+                   parent = parent.parent;
+                }
+                parent = temp;
 
-            // damage target
-            if (parent.TryGetComponent<CharacterStats>(out CharacterStats cs))
-            {
-                cs.TakeDamage();
-            }
-            else
-            {
-                Debug.Log("No CharacterStats component found on target");
+                // damage target
+                if (parent.TryGetComponent<CharacterStats>(out CharacterStats cs))
+                {
+                    cs.TakeDamage();
+                }
+                else
+                {
+                    Debug.Log("No CharacterStats component found on target");
+                }
             }
 
             // not using this bc it includes a cooldown
