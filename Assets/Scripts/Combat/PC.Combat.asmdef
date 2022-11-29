@@ -1,0 +1,16 @@
+{
+    "name": "PC.Combat",
+    "rootNamespace": "",
+    "references": [
+        "GUID:e9f2a904eba866a4f83c457569b6d92e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
