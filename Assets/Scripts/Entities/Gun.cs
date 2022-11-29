@@ -8,6 +8,7 @@ using PC.Input;
 using PC.Audio;
 using PC.UI;
 using PC.VFX;
+using PC.Combat;
 
 using Random = UnityEngine.Random;
 
@@ -190,6 +191,12 @@ namespace PC.Entities
                     if (hit.transform.TryGetComponent<Target>(out Target ts))
                     {
                         ts.GetShot(ray.direction);
+                    }
+
+                    // apply damage to hit object
+                    if (this.TryGetComponent<PlayerCombat>(out PlayerCombat pc))
+                    {
+                        pc.AttackTarget(hit);
                     }
                 }
 
