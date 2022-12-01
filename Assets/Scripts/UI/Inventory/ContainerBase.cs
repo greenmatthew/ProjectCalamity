@@ -11,6 +11,7 @@ namespace PC.UI
 
         protected const int cellWidth = 10;
         protected const int cellHeight = 10;
+        public const float CellSideLength = 64f;
 
         #endregion Consts Fields
 

@@ -72,31 +72,12 @@ namespace PC.UI
             set
             {
                 h_currentContainer = value;
-                if (h_currentContainer != null && _currentItemCopy != null)
-                    h_currentContainer.SetItemParent(_currentItemCopy.RectTransform);
+                if (h_currentContainer != null && _currentItem != null)
+                    h_currentContainer.SetItemParent(_currentItem.rectTransform);
             }
         }
-
-        private Item h_currentItemSource = null;
-        private Item _currentItemSource
-        {
-            get { return h_currentItemSource; }
-            set
-            {
-                if (value != null)
-                {
-                    h_currentItemSource = value;
-                    _currentItemCopy = h_currentItemSource.MakeCopy();
-                }
-                else
-                {
-                    h_currentItemSource = value;
-                    _currentItemCopy = value;
-                }
-            }
-        }
-        private Item _currentItemCopy = null;
-        
+        private ItemContainerInfo _currentItem = null;
+        [SerializeField] private RectTransform _tempItemParent = null;
 
         #endregion Private Fields
 
@@ -116,8 +97,6 @@ namespace PC.UI
             instance = this;
 
             _inputActions.InventoryMenu.CloseMenu.performed += ctx => Close();
-
-            
         }
 
         protected override void OpenExtension()
@@ -159,17 +138,17 @@ namespace PC.UI
 
         private void ClampCurrentItemToCursor()
         {
-            if (_currentItemCopy != null)
-                _currentItemCopy.RectTransform.position = UnityEngine.Input.mousePosition;
+            if (_currentItem != null)
+                _currentItem.rectTransform.position = UnityEngine.Input.mousePosition;
         }
 
         private void TryPickingUpItem(Vector2Int cellIndex)
         {
-            if (_currentItemSource == null && _currentItemCopy == null)
+            if (_currentItem == null)
             {
-                _currentItemSource = _currentContainer.GetItemAt(cellIndex);
-                if (_currentItemSource == null && _currentItemCopy == null) return;
-                _currentItemCopy.RectTransform.SetAsLastSibling();
+                _currentItem = ItemContainerInfo.Create(_currentContainer, cellIndex);
+                if (_currentItem == null) return;
+                _currentItem.rectTransform.SetAsLastSibling();
             }
             else
             {
@@ -179,13 +158,16 @@ namespace PC.UI
 
         private void TryReleasingItem(Vector2Int cellIndex)
         {
-            if (_currentItemCopy != null)
+            if (_currentItem != null)
             {
-                if (_currentItemCopy.TransferTo(_currentContainer, cellIndex))
-                    _currentItemSource.Destroy();
-                else
-                    _currentItemCopy.Destroy();
-                _currentItemSource = null;
+                if (!_currentContainer.PlaceItemAt(_currentItem.item, cellIndex))
+                {
+                    if (_currentItem.item.isRotated != _currentItem.wasRotated)
+                        _currentItem.item.Rotate();
+                    _currentItem.sourceContainer.PlaceItemAt(_currentItem.item, _currentItem.sourceIndex);
+                }
+                    
+                _currentItem = null;
             }
             else
             {
@@ -195,9 +177,9 @@ namespace PC.UI
 
         private void TryRotatingItem()
         {
-            if (_currentItemCopy != null)
+            if (_currentItem != null)
             {
-                _currentItemCopy.Rotate();
+                _currentItem.item.Rotate();
             }
         }
         

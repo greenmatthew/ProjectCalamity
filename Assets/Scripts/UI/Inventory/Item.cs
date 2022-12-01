@@ -1,8 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-using static PC.UI.Constants;
-
 namespace PC.UI
 {
     [RequireComponent(typeof(RectTransform))]
@@ -16,12 +14,8 @@ namespace PC.UI
         #region Public Fields
 
         [HideInInspector] public bool isRotated = false;
-        public uint cellWidth;
-        public uint cellHeight;
-        public RectTransform RectTransform = null;
-        public Vector2Int OriginCellIndex => _originCellIndex;
-        public Item Copy => _copy;
-        public Item Source => _source;
+        public uint cellWidth => _itemSO.cellWidth;
+        public uint cellHeight => _itemSO.cellHeight;
 
         #endregion Public Fields
 
@@ -32,13 +26,10 @@ namespace PC.UI
 
         private ItemSO _itemSO = null;
         private Container _currentContainer = null;
-        
+        private RectTransform _rectTransform = null;
         [SerializeField] private Image _backgroundImage;
         [SerializeField] private Image _contentImage;
-        private RectTransform _contentRectTransform = null;
         private Vector2Int _originCellIndex = Vector2Int.zero;
-        private Item _copy = null;
-        private Item _source = null;
 
         #endregion Private Fields
 
@@ -53,32 +44,19 @@ namespace PC.UI
         public Item Init(ItemSO itemSO)
         {
             _itemSO = itemSO;
-            cellWidth = _itemSO.cellWidth;
-            cellHeight = _itemSO.cellHeight;
             SetSize();
             SetImages();
             return this;
         }
 
-        /// <summary>
-        /// Caches the container the item is currently in.
-        /// Sets the item's parent to the given container's content GameObject.
-        /// Sets the item's position to the given cell index relative to the container's content GameObject.
-        /// </summary>
-        public void SetContainer(Container container, Vector2Int originCellIndex)
+        public void SetContainer(Container container)
         {
-            if (container == null) return;
             _currentContainer = container;
-            _originCellIndex = originCellIndex;
-            RectTransform.SetParent(container.ContentsParent);
-            Vector2 position = new Vector2(originCellIndex.x * (CellSideLength - 1), -1 * originCellIndex.y * (CellSideLength - 1));
-            RectTransform.localPosition = position;
         }
 
-        public void RemoveContainer()
+        public void SetOriginCellIndex(Vector2Int originCellIndex)
         {
-            _currentContainer = null;
-            RectTransform.SetParent(null);
+            _originCellIndex = originCellIndex;
         }
 
         public Vector2Int GetOriginCellIndex()
@@ -93,56 +71,31 @@ namespace PC.UI
         public void Rotate()
         {
             // If the item is square no need to rotate, bc it provides no packing benefit
-            if (cellWidth == cellHeight) return;
+            if (_itemSO.cellWidth == _itemSO.cellHeight) return;
 
-            var temp = cellWidth;
-            cellWidth = cellHeight;
-            cellHeight = temp;
-            isRotated = !isRotated;
-            // var rect = GetComponent<RectTransform>();
-            // if (isRotated)
-            // {
-            //     // Rotate _contentImage.sprite by 90 degrees
-            //     _contentImage.sprite
-            // }
-            // else
-            // {
-            //     _contentImage.sprite.rect.Set(_contentImage.sprite.rect.x, _contentImage.sprite.rect.y, _contentImage.sprite.rect.width, _contentImage.sprite.rect.height);
-            // }
-            
-            SetSize();
-        }
-
-        public Item MakeCopy()
-        {
-            if (_copy != null)
+            // If the item is not within a container, always allow rotation, bc you can't possibly have items' cell overlaps or out of bounds
+            if (_currentContainer == null)
             {
-                Debug.LogError($"Item {name} already has a copy. There should never be more than one copy of an item at a time.");
-                return null;
+                var temp = _itemSO.cellWidth;
+                _itemSO.cellWidth = _itemSO.cellHeight;
+                _itemSO.cellHeight = temp;
+                isRotated = !isRotated;
+                SetSize();
             }
-
-            _copy = Instantiate(this, RectTransform.parent);
-            _copy._source = this;
-            Debug.Log($"Made source of {_copy._source.name}.");
-            Debug.Log($"Made source of 2 {this.name}.");
-            return _copy;
-        }
-
-        public bool TransferTo(Container container, Vector2Int cellIndex)
-        {
-            if (container == null) return false;
-            return container.PlaceItemAt(this, cellIndex);
-        }
-
-        public void Destroy()
-        {
-            Debug.Log("Destroying " + name);
-            if (_source != null)
+            // If the item is withing a container, allow rotation if there are no items' cell overlaps or out of bounds would occur
+            else
             {
-                _source._copy = null;
-                _source = null;
+                // ADD CHECK HERE
+                // if (_currentContainer.CanRotate(this))
+                // {
+                    var temp = _itemSO.cellWidth;
+                    _itemSO.cellWidth = _itemSO.cellHeight;
+                    _itemSO.cellHeight = temp;
+                    isRotated = !isRotated;
+                    SetSize();
+                // }
+                Debug.LogWarning("Need to handle whether the item can be rotated or not. Currently rotates regardless.");
             }
-            Destroy(gameObject);
         }
 
         #endregion Public Methods
@@ -154,8 +107,7 @@ namespace PC.UI
 
         private void Awake()
         {
-            RectTransform = GetComponent<RectTransform>();
-            _contentRectTransform = _contentImage.GetComponent<RectTransform>();
+            _rectTransform = GetComponent<RectTransform>();
         }
 
         /// <summary>
@@ -163,34 +115,11 @@ namespace PC.UI
         /// </summary>
         private void SetSize()
         {
-            if (!isRotated)
-            {
-                RectTransform.sizeDelta = new Vector2
-                (
-                    cellWidth * CellSideLength - cellWidth + 1,
-                    cellHeight * CellSideLength - cellHeight + 1
-                );
-                _contentRectTransform.sizeDelta = new Vector2
-                (
-                    cellWidth * CellSideLength - cellWidth - 1,
-                    cellHeight * CellSideLength - cellHeight - 1
-                );
-                _contentRectTransform.localEulerAngles = new Vector3(0, 0, 0);
-            }
-            else
-            {
-                RectTransform.sizeDelta = new Vector2
-                (
-                    cellWidth * CellSideLength - cellWidth + 1,
-                    cellHeight * CellSideLength - cellHeight + 1
-                );
-                _contentRectTransform.sizeDelta = new Vector2
-                (
-                    cellHeight * CellSideLength - cellHeight - 1,
-                    cellWidth * CellSideLength - cellWidth - 1
-                );
-                _contentRectTransform.localEulerAngles = new Vector3(0, 0, 90);
-            }
+            _rectTransform.sizeDelta = new Vector2
+            (
+                _itemSO.cellWidth * Container.CellSideLength - _itemSO.cellWidth + 1,
+                _itemSO.cellHeight * Container.CellSideLength - _itemSO.cellHeight + 1
+            );
         }
 
         private void SetImages()
@@ -204,6 +133,7 @@ namespace PC.UI
             {
                 _contentImage.color = new Color(1, 1, 1, 0);
             }
+                
         }
 
         #endregion Private Methods
