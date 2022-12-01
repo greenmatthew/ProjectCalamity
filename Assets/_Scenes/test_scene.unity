@@ -238,12 +238,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &169025786 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7553741013717148091, guid: c53285a0e5e7f254cba665a6121139fa,
+--- !u!4 &169025787 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7553741013717581211, guid: c53285a0e5e7f254cba665a6121139fa,
     type: 3}
   m_PrefabInstance: {fileID: 4525977339620047048}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &178719782 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5989712044340937543, guid: 2b19d59aeea26d542916cfb3be09f15a,
+    type: 3}
+  m_PrefabInstance: {fileID: 587666916}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73f1a6750bf2af4f9654e73e01f0d4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &188501489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -404,6 +416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _lookRadius: 15
+  _animator: {fileID: 0}
 --- !u!114 &260397223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1392,12 +1405,17 @@ PrefabInstance:
         type: 3}
       propertyPath: _gun
       value: 
-      objectReference: {fileID: 169025786}
+      objectReference: {fileID: 169025787}
     - target: {fileID: 7566157971024703153, guid: c53285a0e5e7f254cba665a6121139fa,
         type: 3}
       propertyPath: _interactionLabel
       value: 
       objectReference: {fileID: 1511356051}
+    - target: {fileID: 7566157971024703153, guid: c53285a0e5e7f254cba665a6121139fa,
+        type: 3}
+      propertyPath: _menuesController
+      value: 
+      objectReference: {fileID: 178719782}
     m_RemovedComponents:
     - {fileID: 0}
     - {fileID: 0}
