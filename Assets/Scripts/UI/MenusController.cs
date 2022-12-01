@@ -17,7 +17,7 @@ namespace PC.UI
         public InventoryMenu InventoryMenu = null;
         public DevConsoleMenu DevConsoleMenu = null;
         public MapMenu MapMenu = null;
-        public PlayerManagementStationMenu PMSMenu = null;
+        public PMSMenu PMSMenu = null;
 
         #endregion Public Fields
 
@@ -59,7 +59,7 @@ namespace PC.UI
             if (MapMenu.gameObject.activeSelf)
                 Debug.LogWarning("MenuesController: MapMenu is enabled on application start. Please disable it in the inspector, otherwise input handling will not work.");
             
-            PMSMenu = GetComponentInChildren<PlayerManagementStationMenu>(true);
+            PMSMenu = GetComponentInChildren<PMSMenu>(true);
             if (PMSMenu.gameObject.activeSelf)
                 Debug.LogWarning("MenuesController: PMSMenu is enabled on application start. Please disable it in the inspector, otherwise input handling will not work.");
         }
