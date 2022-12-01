@@ -553,12 +553,12 @@ namespace PC.Input
         },
         {
             ""name"": ""PMSMenu"",
-            ""id"": ""98b18293-391c-4361-833e-9b6fdb50c27a"",
+            ""id"": ""ff8e44c2-afed-407c-917b-936cdaee7682"",
             ""actions"": [
                 {
                     ""name"": ""CloseMenu"",
                     ""type"": ""Button"",
-                    ""id"": ""c098e1bb-753a-4491-8df4-3117a87a82a0"",
+                    ""id"": ""7f7885d1-2b3a-43c6-94f3-f1fbb80a8a9f"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -568,7 +568,7 @@ namespace PC.Input
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""697d0e0d-7898-4abb-9aab-182176d13a5d"",
+                    ""id"": ""f8135caa-a76d-4dd1-a97a-d67165b6963d"",
                     ""path"": ""<Keyboard>/tab"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -579,7 +579,7 @@ namespace PC.Input
                 },
                 {
                     ""name"": """",
-                    ""id"": ""e31b521b-ab5a-4759-8508-182d220ca059"",
+                    ""id"": ""5065c6b5-f114-4d59-9465-d0b35564161f"",
                     ""path"": ""<Keyboard>/i"",
                     ""interactions"": """",
                     ""processors"": """",

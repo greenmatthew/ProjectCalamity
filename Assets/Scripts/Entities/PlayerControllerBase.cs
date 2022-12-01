@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using TMPro;
 
 using PC.Input;
 using PC.UI;
@@ -30,9 +29,6 @@ namespace PC.Entities
         protected const float _groundCheckSprintingRadius = 0.35f;
         protected const float _jumpHeight = 1f;
 
-        protected const float _interactionDistance = 2f;
-        
-
         #endregion Consts Fields
 
         #region Public Fields
@@ -57,9 +53,7 @@ namespace PC.Entities
         [SerializeField] protected HumanoidSounds _audioClips = null;
 
         [Header("UI")]
-        [SerializeField] protected TMP_Text _interactionLabel = null;
-        [SerializeField] protected LayerMask _interactionLayerMask;
-        protected Interactable _currentInteractable = null;
+        [SerializeField] protected MenusController _menuesController = null;
 
         protected Vector2 _look;
         protected float _xRotation = 0f;
@@ -122,8 +116,6 @@ namespace PC.Entities
         protected abstract void SetupInput();
         protected abstract void Look();
         protected abstract void Move();
-        protected abstract void CheckForInteractions();
-        protected abstract void Interact();
 
         #endregion Protected Methods
 
@@ -174,8 +166,6 @@ namespace PC.Entities
 
             Look();
 			Move();
-
-            CheckForInteractions();
 		}
 
         private Vector3 GetMovement()
