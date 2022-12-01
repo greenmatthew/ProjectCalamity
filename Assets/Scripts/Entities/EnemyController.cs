@@ -24,6 +24,7 @@ namespace PC.Entities
         #region Private Fields
         // radius within which the enemy will chase the player
         [SerializeField] private float _lookRadius = 10f;
+        [SerializeField] private Animator _animator;
         
         #endregion Private Fields
 
@@ -53,10 +54,11 @@ namespace PC.Entities
 
             if (distance <= _lookRadius)
             {
-                agent.SetDestination(target.position);
-
                 // rotate towards target
                 FaceTarget();
+
+                agent.SetDestination(target.position);
+                //_animator.SetBool("isWalking", true);
 
                 if (distance <= agent.stoppingDistance)
                 {
@@ -66,6 +68,7 @@ namespace PC.Entities
                     if (this.TryGetComponent<EnemyCombat>(out EnemyCombat ec) && target != null)
                     {
                         ec.AttackTarget(target);
+                        //_animator.SetBool("isAttacking", true);
                     }
                 }
 
@@ -77,6 +80,8 @@ namespace PC.Entities
         void FaceTarget()
         {
             // play rotation animation    
+            //_animator.SetBool("isTurningLeft", true);
+            //_animator.SetBool("isTurningRight", true);
 
             // rotate towards target
             Vector3 direction = (target.position - transform.position).normalized;
