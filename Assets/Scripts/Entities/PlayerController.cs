@@ -21,8 +21,9 @@ namespace PC.Entities
         [Header("IK")]
         [SerializeField] private Animator _animator = null;
         [SerializeField] private Transform _leftHandIKTransform = null;
-        [SerializeField] private Transform _spineTransform = null;
-        private float spineRotation = 0f;
+        [SerializeField] private Transform _gun = null;
+        //[SerializeField] private Transform _spineTransform = null;
+        //private float spineRotation = 0f;
         #endregion Private Fields
 
         #endregion Fields
@@ -46,6 +47,8 @@ namespace PC.Entities
             _xRotation -= _look.y;
             _xRotation = Mathf.Clamp(_xRotation, _minVerticalAngle, _maxVerticalAngle);
             _head.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
+
+            _gun.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
 		}
 
         /// <summary>
