@@ -9,9 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e990da6c68c4f36479b48557449ee225, type: 3}
-  m_Name: 1x1_container
+  m_Script: {fileID: 11500000, guid: f62cf24312b687e4e90e40013c62868c, type: 3}
+  m_Name: item2
   m_EditorClassIdentifier: 
-  Name: 
-  Width: 1
-  Height: 1
+  cellWidth: 2
+  cellHeight: 1
+  backgroundColor: {r: 0.49019608, g: 0, b: 0.32156864, a: 1}
+  itemIcon: {fileID: 0}
+  name: 
+  nickname: 
+  description: 
+  mass: 0
+  value: 0
+  type: 83886080

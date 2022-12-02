@@ -10,9 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f62cf24312b687e4e90e40013c62868c, type: 3}
-  m_Name: item1
+  m_Name: 10RdARMk1Mag
   m_EditorClassIdentifier: 
-  cellWidth: 1
-  cellHeight: 2
-  backgroundColor: {r: 0.28235295, g: 1, b: 0, a: 1}
+  cellWidth: 2
+  cellHeight: 1
+  backgroundColor: {r: 0.40392157, g: 0.40392157, b: 0.40392157, a: 1}
   itemIcon: {fileID: 0}
+  name: 10 Round Assault Rifle Mk.1 Magazine
+  nickname: MagARMk1
+  description: 
+  mass: 0
+  value: 25
+  type: 50331648

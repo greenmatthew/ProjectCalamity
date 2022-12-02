@@ -245,6 +245,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7327778780914570669, guid: d96930bf3ca32644c93d3a51b6db3ca9,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7327778781355205050, guid: d96930bf3ca32644c93d3a51b6db3ca9,
         type: 3}
       propertyPath: m_Pivot.x
@@ -426,13 +431,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 552000dbfb340704c820ae59261d7c8c, type: 3}
---- !u!1001 &587666916
+--- !u!1001 &895519650
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1409698174, guid: 2b19d59aeea26d542916cfb3be09f15a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3816846627854814772, guid: 2b19d59aeea26d542916cfb3be09f15a,
+        type: 3}
+      propertyPath: i_allowedType
+      value: 16973824
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644501823690373762, guid: 2b19d59aeea26d542916cfb3be09f15a,
+        type: 3}
+      propertyPath: i_allowedType
+      value: 33554432
+      objectReference: {fileID: 0}
+    - target: {fileID: 5909232770244164316, guid: 2b19d59aeea26d542916cfb3be09f15a,
+        type: 3}
+      propertyPath: i_allowedType
+      value: 16973824
+      objectReference: {fileID: 0}
     - target: {fileID: 5989712044340937542, guid: 2b19d59aeea26d542916cfb3be09f15a,
         type: 3}
       propertyPath: m_Pivot.x
@@ -542,6 +566,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6017756955368043996, guid: 2b19d59aeea26d542916cfb3be09f15a,
+        type: 3}
+      propertyPath: i_allowedType
+      value: 33554432
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b19d59aeea26d542916cfb3be09f15a, type: 3}
@@ -917,10 +946,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3731205193965827687, guid: c53285a0e5e7f254cba665a6121139fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7566157971024703153, guid: c53285a0e5e7f254cba665a6121139fa,
         type: 3}
       propertyPath: _interactionLabel
       value: 
       objectReference: {fileID: 1511356051}
+    - target: {fileID: 8404629471221925530, guid: c53285a0e5e7f254cba665a6121139fa,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c53285a0e5e7f254cba665a6121139fa, type: 3}

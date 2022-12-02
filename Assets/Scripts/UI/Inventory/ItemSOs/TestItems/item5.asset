@@ -10,9 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f62cf24312b687e4e90e40013c62868c, type: 3}
-  m_Name: item3
+  m_Name: item5
   m_EditorClassIdentifier: 
-  cellWidth: 2
+  cellWidth: 5
   cellHeight: 2
-  backgroundColor: {r: 0, g: 0.101960786, b: 0.62352943, a: 1}
-  itemIcon: {fileID: 0}
+  backgroundColor: {r: 0.40392157, g: 0.40392157, b: 0.40392157, a: 1}
+  itemIcon: {fileID: 21300000, guid: 2f89db4fb52ac8846920dcfe882362c6, type: 3}
+  name: Assault Rifle Mk.1
+  nickname: ARMk1
+  description: 
+  mass: 0
+  value: 0
+  type: 83886080

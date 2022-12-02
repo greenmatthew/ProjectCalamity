@@ -16,3 +16,9 @@ MonoBehaviour:
   cellHeight: 1
   backgroundColor: {r: 0.94509804, g: 0.13725491, b: 0.13725491, a: 1}
   itemIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  name: High Explosive Grenade
+  nickname: HEGrenade
+  description: 
+  mass: 0
+  value: 0
+  type: 83886080

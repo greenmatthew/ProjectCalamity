@@ -16,7 +16,7 @@ namespace PC.UI
         #region Public Fields
 
         // The current container that the player is interacting with
-        public static Container CurrentContainer
+        public static ContainerBase CurrentContainer
         {
             set
             {
@@ -62,8 +62,8 @@ namespace PC.UI
                 h_instance = value;
             }
         }
-        private Container h_currentContainer = null;
-        private Container _currentContainer
+        private ContainerBase h_currentContainer = null;
+        private ContainerBase _currentContainer
         {
             get
             {
@@ -182,9 +182,15 @@ namespace PC.UI
             if (_currentItemCopy != null)
             {
                 if (_currentItemCopy.TransferTo(_currentContainer, cellIndex))
+                {
+                    var name = _currentItemSource.transform.name;
                     _currentItemSource.Destroy();
+                    _currentItemCopy.transform.name = name;
+                }
                 else
+                {
                     _currentItemCopy.Destroy();
+                }
                 _currentItemSource = null;
             }
             else

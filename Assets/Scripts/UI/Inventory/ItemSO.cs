@@ -10,5 +10,12 @@ namespace PC.UI
 
         public Color backgroundColor = Color.white;
         public Sprite itemIcon = null;
+
+        public new string name;
+        public string nickname;
+        public string description;
+        public float mass;
+        public uint value;
+        public ItemType.Value type;
     }
 }
