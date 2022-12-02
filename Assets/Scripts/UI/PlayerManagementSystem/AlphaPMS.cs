@@ -12,7 +12,7 @@ namespace PC.UI
         #region Public Fields
 
         public MarketModule MarketModule = null;
-        public StashModule StashModule = null;
+        public StashModule StashModule = new StashModule();
         public TransportationModule TransportationModule = null;
         public MemoryModule MemoryModule = null;
 

@@ -96,6 +96,8 @@ namespace PC.UI
             }
         }
         private Item _currentItemCopy = null;
+
+        [SerializeField] private GameObject _stash = null;
         
 
         #endregion Private Fields
@@ -108,9 +110,9 @@ namespace PC.UI
 
         #region Public Methods
 
-        public void OpenWithContainer(Container container)
+        public void OpenWithStash()
         {
-            _currentContainer = container;
+            _stash.SetActive(true);
             Open();
         }
 
@@ -132,6 +134,7 @@ namespace PC.UI
 
         protected override void CloseExtension()
         {
+            _stash.SetActive(false);
         }
 
         #endregion Protected Methods

@@ -45,6 +45,8 @@ namespace PC.UI
         protected override void AwakeExtension()
         {
             _inputActions.PMSMenu.CloseMenu.performed += ctx => Close();
+
+            _stashModuleButton.onClick.AddListener(() => MenusController.InventoryMenu.OpenWithStash());
         }
 
         protected override void OpenExtension()
