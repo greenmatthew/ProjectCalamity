@@ -8,6 +8,7 @@ using PC.Input;
 using PC.Audio;
 using PC.UI;
 using PC.VFX;
+using PC.Combat;
 
 using Random = UnityEngine.Random;
 
@@ -39,6 +40,9 @@ namespace PC.Entities
         [SerializeField] private Transform _recoil = null;
         [SerializeField] private GunSO _gun = null;
         private int _currentAmmo = 0;
+
+        // damage
+        private PlayerCombat _playerCombat = null;
 
         // audio
         [SerializeField] private ScifiRifleSounds _audioClips = null;
@@ -95,12 +99,17 @@ namespace PC.Entities
 
             _currentAmmo = _gun.MagazineSize;
 
+            if (PlayerManager.instance.player.transform.TryGetComponent<PlayerCombat>(out PlayerCombat playerCombat))
+                _playerCombat = playerCombat;
+            else
+                Debug.LogError("Gun: PlayerCombat is null!");
+
         }
 
-        private void OnEnable()
-        {
-            inputActions.Player.Shoot.Enable();
-        }
+        // private void OnEnable()
+        // {
+        //     inputActions.Player.Shoot.Enable();
+        // }
 
         private void OnDisable()
         {
@@ -191,6 +200,13 @@ namespace PC.Entities
                     {
                         ts.GetShot(ray.direction);
                     }
+
+                    // apply damage to hit object
+                    if (_playerCombat)
+                        _playerCombat.AttackTarget(hit);
+                    else
+                        Debug.LogError("Gun: PlayerCombat is null!");
+
                 }
 
                 // Apply recoil
