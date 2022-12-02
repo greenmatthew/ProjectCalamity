@@ -106,10 +106,11 @@ namespace PC.Entities
 
         }
 
-        // private void OnEnable()
-        // {
-        //     inputActions.Player.Shoot.Enable();
-        // }
+        private void OnEnable()
+        {
+            inputActions.Player.Shoot.Enable();
+            inputActions.Player.Reload.Enable();
+        }
 
         private void OnDisable()
         {

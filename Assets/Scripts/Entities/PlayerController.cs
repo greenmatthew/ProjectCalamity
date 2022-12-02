@@ -171,17 +171,17 @@ namespace PC.Entities
         {
             base.Start();
 
-            _gunHolder.gameObject.SetActive(false);
+            _gun.gameObject.SetActive(false);
         }
 
         private void EquipPrimaryFirearm()
         {
             if (_primaryFirearmSlot.GetItem() != null)
             {
-                if (_gunHolder.activeSelf)
-                    _gunHolder.gameObject.SetActive(false);
+                if (_gun.gameObject.activeSelf)
+                    _gun.gameObject.SetActive(false);
                 else
-                    _gunHolder.gameObject.SetActive(true);
+                    _gun.gameObject.SetActive(true);
             }
         }
 
@@ -189,10 +189,10 @@ namespace PC.Entities
         {
             if (_secondaryFirearmSlot.GetItem() != null)
             {
-                if (_gunHolder.activeSelf)
-                    _gunHolder.gameObject.SetActive(false);
+                if (_gun.gameObject.activeSelf)
+                    _gun.gameObject.SetActive(false);
                 else
-                    _gunHolder.gameObject.SetActive(true);
+                    _gun.gameObject.SetActive(true);
             }
         }
         #endregion Private Methods
