@@ -18,6 +18,7 @@ namespace PC.Combat
         #region Private Fields
         [SerializeField] private Animator _animator;
         [SerializeField] private Rigidbody _enemyRB;
+        [SerializeField] private UnityEngine.AI.NavMeshAgent _navMeshAgent;
         #endregion Private Fields
 
         #endregion Fields
@@ -49,8 +50,11 @@ namespace PC.Combat
         private void Update()
         {
             // track the enemy's velocity and angular velocity
-            Debug.Log("Enemy's velocity: " + _enemyRB.velocity);
-            Debug.Log("Enemy's angular velocity: " + _enemyRB.angularVelocity.x);
+            //Debug.Log("Enemy's velocity: " + _enemyRB.velocity.magnitude);
+            //Debug.Log("Enemy's angular velocity: " + _enemyRB.angularVelocity.x);
+            Debug.Log("Enemy's velocity: " + _navMeshAgent.velocity.magnitude);
+            Debug.Log("Enemy's angular velocity: " + _enemyRB.angularVelocity.y * 100);
+            // set angular velocity of rigid body
             if (_animator)
             {
                 _animator.SetFloat("LinearVelocity", _enemyRB.velocity.magnitude);
