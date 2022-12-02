@@ -111,6 +111,11 @@ namespace PC.UI
             return true;
         }
 
+        public Item GetItem()
+        {
+            return GetItemAt(Vector2Int.zero);
+        }
+
         #endregion Public Methods
 
         #region Protected Methods
@@ -126,11 +131,6 @@ namespace PC.UI
             InitContents();
             _contentsParent.sizeDelta = _rectTransform.sizeDelta - new Vector2(2, 2);
             _allowedType = ItemType.Lookup(i_allowedType);
-        }
-
-        private void Update()
-        {
-        
         }
     
         #endregion Private Methods

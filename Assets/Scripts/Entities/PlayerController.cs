@@ -19,6 +19,14 @@ namespace PC.Entities
         #endregion Protected Fields
 
         #region Private Fields
+        [Header("Equipment")]
+        [SerializeField] private Slot _armorSlot;
+        [SerializeField] private Slot _shieldSlot;
+        [SerializeField] private Slot _primaryFirearmSlot;
+        [SerializeField] private Slot _secondaryFirearmSlot;
+        
+        [SerializeField] private GameObject _gunHolder;
+
         [Header("IK")]
         [SerializeField] private Animator _animator = null;
         [SerializeField] private Transform _leftHandIKTransform = null;
@@ -100,6 +108,9 @@ namespace PC.Entities
             _inputActions.Player.OpenInventoryMenu.performed += ctx => { Debug.Log("Inventory"); MenusController.InventoryMenu.Open(); };
             _inputActions.Player.OpenMapMenu.performed += ctx => { Debug.Log("Map"); MenusController.MapMenu.Open(); };
             _inputActions.Player.Interact.performed += ctx => { Debug.Log("Interact"); Interact(); };
+
+            _inputActions.Player.EquipPrimaryFirearm.performed += ctx => { Debug.Log("Equip Primary Firearm"); EquipPrimaryFirearm(); };
+            _inputActions.Player.EquipSecondaryFirearm.performed += ctx => { Debug.Log("Equip Secondary Firearm"); EquipSecondaryFirearm(); };
         }
 
         protected override void CheckForInteractions()
@@ -155,6 +166,35 @@ namespace PC.Entities
         #endregion Protected Methods
 
         #region Private Methods
+
+        protected override void Start()
+        {
+            base.Start();
+
+            _gunHolder.gameObject.SetActive(false);
+        }
+
+        private void EquipPrimaryFirearm()
+        {
+            if (_primaryFirearmSlot.GetItem() != null)
+            {
+                if (_gunHolder.activeSelf)
+                    _gunHolder.gameObject.SetActive(false);
+                else
+                    _gunHolder.gameObject.SetActive(true);
+            }
+        }
+
+        private void EquipSecondaryFirearm()
+        {
+            if (_secondaryFirearmSlot.GetItem() != null)
+            {
+                if (_gunHolder.activeSelf)
+                    _gunHolder.gameObject.SetActive(false);
+                else
+                    _gunHolder.gameObject.SetActive(true);
+            }
+        }
         #endregion Private Methods
 
         #endregion Methods

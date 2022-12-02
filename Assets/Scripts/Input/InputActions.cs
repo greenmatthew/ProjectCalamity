@@ -181,6 +181,24 @@ namespace PC.Input
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""EquipPrimaryFirearm"",
+                    ""type"": ""Button"",
+                    ""id"": ""12604101-bbd8-469c-8b9c-f729f442ab29"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""EquipSecondaryFirearm"",
+                    ""type"": ""Button"",
+                    ""id"": ""7800a18a-9018-4984-9499-f72e6af5c5cd"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -425,6 +443,28 @@ namespace PC.Input
                     ""action"": ""Reload"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""230e7d79-5689-4f70-b2de-34dec863f4ba"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""EquipPrimaryFirearm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0c08708e-3936-4168-9ce2-47c310043ca5"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""EquipSecondaryFirearm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -612,6 +652,8 @@ namespace PC.Input
             m_Player_ADSToggle = m_Player.FindAction("ADS(Toggle)", throwIfNotFound: true);
             m_Player_Shoot = m_Player.FindAction("Shoot", throwIfNotFound: true);
             m_Player_Reload = m_Player.FindAction("Reload", throwIfNotFound: true);
+            m_Player_EquipPrimaryFirearm = m_Player.FindAction("EquipPrimaryFirearm", throwIfNotFound: true);
+            m_Player_EquipSecondaryFirearm = m_Player.FindAction("EquipSecondaryFirearm", throwIfNotFound: true);
             // Menu
             m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
             m_Menu_CloseMenu = m_Menu.FindAction("CloseMenu", throwIfNotFound: true);
@@ -703,6 +745,8 @@ namespace PC.Input
         private readonly InputAction m_Player_ADSToggle;
         private readonly InputAction m_Player_Shoot;
         private readonly InputAction m_Player_Reload;
+        private readonly InputAction m_Player_EquipPrimaryFirearm;
+        private readonly InputAction m_Player_EquipSecondaryFirearm;
         public struct PlayerActions
         {
             private @InputActions m_Wrapper;
@@ -724,6 +768,8 @@ namespace PC.Input
             public InputAction @ADSToggle => m_Wrapper.m_Player_ADSToggle;
             public InputAction @Shoot => m_Wrapper.m_Player_Shoot;
             public InputAction @Reload => m_Wrapper.m_Player_Reload;
+            public InputAction @EquipPrimaryFirearm => m_Wrapper.m_Player_EquipPrimaryFirearm;
+            public InputAction @EquipSecondaryFirearm => m_Wrapper.m_Player_EquipSecondaryFirearm;
             public InputActionMap Get() { return m_Wrapper.m_Player; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -784,6 +830,12 @@ namespace PC.Input
                     @Reload.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReload;
                     @Reload.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReload;
                     @Reload.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReload;
+                    @EquipPrimaryFirearm.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEquipPrimaryFirearm;
+                    @EquipPrimaryFirearm.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEquipPrimaryFirearm;
+                    @EquipPrimaryFirearm.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEquipPrimaryFirearm;
+                    @EquipSecondaryFirearm.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEquipSecondaryFirearm;
+                    @EquipSecondaryFirearm.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEquipSecondaryFirearm;
+                    @EquipSecondaryFirearm.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEquipSecondaryFirearm;
                 }
                 m_Wrapper.m_PlayerActionsCallbackInterface = instance;
                 if (instance != null)
@@ -839,6 +891,12 @@ namespace PC.Input
                     @Reload.started += instance.OnReload;
                     @Reload.performed += instance.OnReload;
                     @Reload.canceled += instance.OnReload;
+                    @EquipPrimaryFirearm.started += instance.OnEquipPrimaryFirearm;
+                    @EquipPrimaryFirearm.performed += instance.OnEquipPrimaryFirearm;
+                    @EquipPrimaryFirearm.canceled += instance.OnEquipPrimaryFirearm;
+                    @EquipSecondaryFirearm.started += instance.OnEquipSecondaryFirearm;
+                    @EquipSecondaryFirearm.performed += instance.OnEquipSecondaryFirearm;
+                    @EquipSecondaryFirearm.canceled += instance.OnEquipSecondaryFirearm;
                 }
             }
         }
@@ -1027,6 +1085,8 @@ namespace PC.Input
             void OnADSToggle(InputAction.CallbackContext context);
             void OnShoot(InputAction.CallbackContext context);
             void OnReload(InputAction.CallbackContext context);
+            void OnEquipPrimaryFirearm(InputAction.CallbackContext context);
+            void OnEquipSecondaryFirearm(InputAction.CallbackContext context);
         }
         public interface IMenuActions
         {

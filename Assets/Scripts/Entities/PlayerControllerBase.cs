@@ -117,6 +117,14 @@ namespace PC.Entities
 
         #region Protected Methods
 
+        protected virtual void Start()
+		{
+			Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+
+            SetupInput();
+		}
+
         protected bool Performed (InputActionPhase phase) => phase == InputActionPhase.Performed;
 
         protected abstract void SetupInput();
@@ -155,14 +163,6 @@ namespace PC.Entities
             _feetAudioSource = _feet.GetComponent<AudioSource>();
             if (_feetAudioSource == null)
                 Debug.LogError("PlayerController: Feet AudioSource is null!");
-		}
-
-		private void Start()
-		{
-			Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-
-            SetupInput();
 		}
 
 		private void Update()
