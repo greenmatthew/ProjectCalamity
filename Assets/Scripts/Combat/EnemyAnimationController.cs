@@ -37,10 +37,10 @@ namespace PC.Combat
         {
             if(_animator)
             {
-                _animator.SetBool("isWalking", false);
-                _animator.SetBool("isTurningLeft", false);
-                _animator.SetBool("isTurningRight", false);
-                _animator.SetBool("isAttacking", false);
+                _animator.SetBool("IsWalking", false);
+                _animator.SetBool("IsTurningLeft", false);
+                _animator.SetBool("IsTurningRight", false);
+                _animator.SetBool("IsAttacking", false);
             }
 
         }
@@ -48,32 +48,32 @@ namespace PC.Combat
         private void Update()
         {
             // turning animation
-            if (_animator.GetBool("isTurningRight"))
-            {
-                _animator.Play("Turn45Right");
-                _animator.SetBool("isTurningRight", false);
-            }
-            if (_animator.GetBool("isTurningLeft"))
-            {
-                _animator.Play("Turn45Left");
-                _animator.SetBool("isTurningLeft", false);
-            }
+            //if (_animator.GetBool("IsTurningRight"))
+            //{
+            //    _animator.Play("Turn45Right");
+            //    _animator.SetBool("IsTurningRight", false);
+            //}
+            //if (_animator.GetBool("IsTurningLeft"))
+            //{
+            //    _animator.Play("Turn45Left");
+            //    _animator.SetBool("IsTurningLeft", false);
+            //}
 
 
-            // walking animation
-            if (_animator.GetBool("isWalking"))
-            {
-                _animator.Play("Crawl");
-                _animator.SetBool("isWalking", false);
-            }
+            //// walking animation
+            //if (_animator.GetBool("IsWalking"))
+            //{
+            //    _animator.Play("Crawl");
+            //    _animator.SetBool("IsWalking", false);
+            //}
 
 
-            // attacking animation
-            if (_animator.GetBool("isAttacking"))
-            {
-                _animator.Play("TongueAttack");
-                _animator.SetBool("isAttacking", false);
-            }
+            //// attacking animation
+            //if (_animator.GetBool("IsAttacking"))
+            //{
+            //    _animator.Play("TongueAttack");
+            //    _animator.SetBool("IsAttacking", false);
+            //}
         }
 
         #endregion Private Methods
