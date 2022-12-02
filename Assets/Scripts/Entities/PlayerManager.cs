@@ -1,4 +1,6 @@
 using UnityEngine;
+using PC.Stats;
+using TMPro;
 
 namespace PC.Entities
 {
@@ -14,7 +16,8 @@ namespace PC.Entities
         #endregion Consts Fields
 
         #region Public Fields
-        public GameObject player;
+        public GameObject player = null;
+        public GameObject healthCount = null;
         #endregion Public Fields
 
         #region Protected Fields
@@ -39,6 +42,25 @@ namespace PC.Entities
         private void Awake()
         {
             instance = this;
+        }
+
+        private void Update()
+        {
+            // update health count
+            if (player && healthCount)
+            {
+                TextMeshProUGUI tmp = healthCount.GetComponent<TextMeshProUGUI>();
+
+                if (tmp)
+                {
+                    tmp.text = "Health: " + player.GetComponent<CharacterStats>()._currentHealth.ToString();
+                }
+                else
+                {
+                    Debug.Log("No text attribute found for health count");
+                }
+            }
+
         }
 
         #endregion Private Methods
