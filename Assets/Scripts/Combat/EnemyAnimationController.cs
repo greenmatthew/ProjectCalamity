@@ -17,6 +17,7 @@ namespace PC.Combat
 
         #region Private Fields
         [SerializeField] private Animator _animator;
+        [SerializeField] private Rigidbody _enemyRB;
         #endregion Private Fields
 
         #endregion Fields
@@ -47,6 +48,16 @@ namespace PC.Combat
 
         private void Update()
         {
+            // track the enemy's velocity and angular velocity
+            Debug.Log("Enemy's velocity: " + _enemyRB.velocity);
+            Debug.Log("Enemy's angular velocity: " + _enemyRB.angularVelocity.x);
+            if (_animator)
+            {
+                _animator.SetFloat("LinearVelocity", _enemyRB.velocity.magnitude);
+                _animator.SetFloat("AngularVelocity", _enemyRB.angularVelocity.magnitude);
+            }
+
+
             // turning animation
             //if (_animator.GetBool("IsTurningRight"))
             //{
