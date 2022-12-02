@@ -42,7 +42,7 @@ namespace PC.Combat
 
             // place touch sensors on all child colliders
             // allows damage to be dealt to player
-            SetTouchSensors(this.transform);
+            SetTags(this.transform);
         }
         
         public void Update()
@@ -63,15 +63,16 @@ namespace PC.Combat
             }
         }
 
-        public void SetTouchSensors(Transform curr)
+        public void SetTags(Transform curr)
         {
             foreach (Transform child in curr)
             {
                 // set sensor
-                child.gameObject.AddComponent<TouchSensor>();
+                //child.gameObject.AddComponent<TouchSensor>();
+                child.gameObject.tag = "Enemy";
 
                 // dfs
-                SetTouchSensors(child);
+                SetTags(child);
             }
         }
         #endregion Public Methods

@@ -33,11 +33,11 @@ namespace PC.Combat
         #region Private Methods
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.CompareTag("Player"))
+            if (other.gameObject.CompareTag("Enemy"))
             {
                 // Find top parent
-                Transform temp = this.transform;
-                Transform parent = this.transform;
+                Transform temp = other.gameObject.transform;
+                Transform parent = other.gameObject.transform; 
                 while (parent != null)
                 {
                     temp = parent;
