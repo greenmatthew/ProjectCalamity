@@ -58,7 +58,6 @@ namespace PC.Entities
                 FaceTarget();
 
                 agent.SetDestination(target.position);
-                //_animator.SetBool("isWalking", true);
 
                 if (distance <= agent.stoppingDistance)
                 {
@@ -68,8 +67,12 @@ namespace PC.Entities
                     if (this.TryGetComponent<EnemyCombat>(out EnemyCombat ec) && target != null)
                     {
                         ec.AttackTarget(target);
-                        //_animator.SetBool("isAttacking", true);
+                        _animator.SetBool("IsAttacking", true);
                     }
+                }
+                else
+                {
+                        _animator.SetBool("IsAttacking", false);
                 }
 
             }
@@ -79,13 +82,10 @@ namespace PC.Entities
 
         void FaceTarget()
         {
-            // play rotation animation    
-            //_animator.SetBool("isTurningLeft", true);
-            //_animator.SetBool("isTurningRight", true);
-
             // rotate towards target
             Vector3 direction = (target.position - transform.position).normalized;
             Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+
             // smooth rotation
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 1f);
         }
