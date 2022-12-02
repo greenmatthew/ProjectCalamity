@@ -59,10 +59,11 @@ namespace PC.Entities
                 FaceTarget();
 
                 agent.SetDestination(target.position);
+                _animator.SetBool("IsWalking", true);
 
                 if (distance <= agent.stoppingDistance)
                 {
-                    // play attack animation
+                    _animator.SetBool("IsWalking", false);
 
                     // attack target
                     if (this.TryGetComponent<EnemyCombat>(out EnemyCombat ec) && target != null)
