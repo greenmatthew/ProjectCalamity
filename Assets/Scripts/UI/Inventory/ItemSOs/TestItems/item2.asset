@@ -16,3 +16,9 @@ MonoBehaviour:
   cellHeight: 1
   backgroundColor: {r: 0.49019608, g: 0, b: 0.32156864, a: 1}
   itemIcon: {fileID: 0}
+  name: 
+  nickname: 
+  description: 
+  mass: 0
+  value: 0
+  type: 83886080

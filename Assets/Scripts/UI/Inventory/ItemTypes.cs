@@ -1,11 +1,9 @@
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
-
-using static PC.UI.Constants;
 
 namespace PC.UI
 {
-    public class Container : ContainerBase
+    public class ItemTypes : MonoBehaviour
     {
         #region Fields
 
@@ -19,11 +17,8 @@ namespace PC.UI
         #endregion Protected Fields
 
         #region Private Fields
-        
-        // Init items
-        [SerializeField] private Item _itemPrefab = null;
-        [SerializeField] private ItemSO[] _items = null;
-        [SerializeField] private Vector2Int[] _itemPositions = null;
+
+        private List<ItemType> types = new List<ItemType>();
 
         #endregion Private Fields
 
@@ -34,27 +29,30 @@ namespace PC.UI
         #region Methods
     
         #region Public Methods
+
+        /// <summary>
+        /// Checks if a type belongs to a list of types.
+        /// </summary>
+        /// <param name="item">The type to check.</param>
+        /// <returns>True if the type belongs to the list of types, else false.</returns>
+        public bool belongsTo(ItemType item)
+        {
+            foreach (var type in types)
+            {
+                if (type.belongsTo(item))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         #endregion Public Methods
 
         #region Protected Methods
         #endregion Protected Methods
 
         #region Private Methods
-
-        protected override void Start()
-        {
-            cellWidth = 10;
-            cellHeight = 10;
-
-            var size = new Vector2(cellWidth * CellSideLength, cellHeight * CellSideLength);
-
-            InitBackground(size);
-            InitContents(size);
-
-            for (int i = 0; i < _items.Length; ++i)
-                PlaceItemAt(Instantiate(_itemPrefab, _contentsParent).Init(_items[i]), _itemPositions[i]);
-        }
-        
         #endregion Private Methods
 
         #endregion Methods

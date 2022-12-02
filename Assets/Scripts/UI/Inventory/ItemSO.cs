@@ -16,5 +16,6 @@ namespace PC.UI
         public string description;
         public float mass;
         public uint value;
+        public ItemType.Value type;
     }
 }

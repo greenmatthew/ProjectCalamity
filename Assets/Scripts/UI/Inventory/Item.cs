@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+using PC.Extensions;
 using static PC.UI.Constants;
 
 namespace PC.UI
@@ -23,6 +24,7 @@ namespace PC.UI
         public Vector2Int OriginCellIndex => _originCellIndex;
         public Item Copy => _copy;
         public Item Source => _source;
+        public ItemType type;
 
         #endregion Public Fields
 
@@ -32,7 +34,7 @@ namespace PC.UI
         #region Private Fields
 
         private ItemSO _itemSO = null;
-        private Container _currentContainer = null;
+        private ContainerBase _currentContainer = null;
         
         [SerializeField] private Image _backgroundImage;
         [SerializeField] private Image _contentImage;
@@ -60,6 +62,17 @@ namespace PC.UI
             SetSize();
             SetImages();
             _nicknameLabel.text = _itemSO.nickname;
+            transform.name = _itemSO.name;
+            print($"_itemSO.type: {_itemSO.type}");
+            
+            type = ItemType.Lookup(_itemSO.type);
+            print($"ItemType.Lookup[_itemSO.type]: {ItemType.Lookup(_itemSO.type)}");
+            print($"type: 0x{((uint)type).ToString("X8")}");
+            if (type == ItemType.Value.NONE)
+            {
+                Debug.LogError($"Item {name} type is not set @ {transform.HierarchyPath()}.");
+            }
+
             return this;
         }
 
@@ -68,14 +81,18 @@ namespace PC.UI
         /// Sets the item's parent to the given container's content GameObject.
         /// Sets the item's position to the given cell index relative to the container's content GameObject.
         /// </summary>
-        public void SetContainer(Container container, Vector2Int originCellIndex)
+        public void SetContainer(ContainerBase container, Vector2Int originCellIndex)
         {
             if (container == null) return;
             _currentContainer = container;
             _originCellIndex = originCellIndex;
             RectTransform.SetParent(container.ContentsParent);
             Vector2 position = new Vector2(originCellIndex.x * (CellSideLength - 1), -1 * originCellIndex.y * (CellSideLength - 1));
+            print($"Item.SetContainer(): position = {position}");
+            
             RectTransform.localPosition = position;
+            print($"Item.SetContainer(): RectTransform.localPosition = {RectTransform.localPosition}");
+            print($"Item.SetContainer(): RectTransform.position = {RectTransform.position}");
         }
 
         public void RemoveContainer()
@@ -125,13 +142,12 @@ namespace PC.UI
             }
 
             _copy = Instantiate(this, RectTransform.parent);
+            _copy.type = type;
             _copy._source = this;
-            Debug.Log($"Made source of {_copy._source.name}.");
-            Debug.Log($"Made source of 2 {this.name}.");
             return _copy;
         }
 
-        public bool TransferTo(Container container, Vector2Int cellIndex)
+        public bool TransferTo(ContainerBase container, Vector2Int cellIndex)
         {
             if (container == null) return false;
             return container.PlaceItemAt(this, cellIndex);
