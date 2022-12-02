@@ -15,10 +15,10 @@ namespace PC.Combat
         #endregion Public Fields
 
         #region Protected Fields
+        protected CharacterStats mystats;
         #endregion Protected Fields
 
         #region Private Fields
-        private CharacterStats mystats;
         private float attackCooldown = 0f;
         #endregion Private Fields
 

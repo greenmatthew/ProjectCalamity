@@ -29,10 +29,8 @@ namespace PC.Stats
         {
             base.Die();
 
-            // play animation
-
             // Kill the enemy
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
         #endregion Public Methods
 

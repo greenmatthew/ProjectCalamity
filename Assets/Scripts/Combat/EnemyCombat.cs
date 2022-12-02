@@ -27,12 +27,28 @@ namespace PC.Combat
         #region Public Methods
         public void AttackTarget(Transform target)
         {
-            // play animation 
-
             // damage target
             if (target.TryGetComponent<CharacterStats>(out CharacterStats cs))
             {
                 Attack(cs);
+            }
+        }
+        
+        public void Update()
+        {
+            // check if dead
+            if (mystats._currentHealth <= 0)
+            {
+                // play death animation
+                if (this.TryGetComponent<EnemyAnimationController>(out EnemyAnimationController eac))
+                {
+                    eac.Die();
+                }
+                else
+                {
+                    Debug.Log("EnemyCombat: EnemyAnimationController not found");
+                }
+
             }
         }
         #endregion Public Methods

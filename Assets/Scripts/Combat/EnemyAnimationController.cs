@@ -29,6 +29,10 @@ namespace PC.Combat
         #region Methods
 
         #region Public Methods
+        public void Die()
+        {
+            _animator.SetBool("IsDead", true);
+        }
         #endregion Public Methods
 
         #region Protected Methods

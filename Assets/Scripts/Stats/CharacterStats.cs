@@ -11,6 +11,7 @@ namespace PC
 
         #region Public Fields
         public Stat attackSpeed;
+        public int _currentHealth { get; set; }
         #endregion Public Fields
 
         #region Protected Fields
@@ -18,7 +19,6 @@ namespace PC
 
         #region Private Fields
         [SerializeField] private int _maxHealth;
-        [SerializeField] private int _currentHealth { get; set; }
         [SerializeField] private Stat _damage;
         #endregion Private Fields
 

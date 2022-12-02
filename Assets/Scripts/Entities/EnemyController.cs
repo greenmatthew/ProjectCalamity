@@ -52,6 +52,7 @@ namespace PC.Entities
         {
             float distance = Vector3.Distance(target.position, transform.position);
 
+            // if the player is within the look radius, chase the player
             if (distance <= _lookRadius)
             {
                 // rotate towards target
@@ -76,8 +77,13 @@ namespace PC.Entities
                 }
 
             }
-                // move towards the player -----OLD!!!!!
-                //transform.position = Vector3.MoveTowards(transform.position, target.position, 1f * Time.deltaTime);
+
+            // disable if dead
+            if (_animator.GetBool("IsDead"))
+            {
+                agent.enabled = false;
+                this.enabled = false;
+            }
         }
 
         void FaceTarget()
