@@ -19,7 +19,7 @@ namespace PC.Combat
         #endregion Protected Fields
 
         #region Private Fields
-        private float attackCooldown = 0f;
+        //private float attackCooldown = 0f;
         #endregion Private Fields
 
         #endregion Fields
@@ -31,14 +31,11 @@ namespace PC.Combat
         #region Public Methods
         public void Attack(CharacterStats targetStats)
         {
-            if (attackCooldown <= 0f)
-            {
-                targetStats.TakeDamage();
-                if (mystats.attackSpeed.GetValue() != 0f)
-                {
-                    attackCooldown = 1f / mystats.attackSpeed.GetValue();
-                }
-            }
+            targetStats.TakeDamage();
+            //if (mystats.attackSpeed.GetValue() != 0f)
+            //{
+            //    attackCooldown = 1f / mystats.attackSpeed.GetValue();
+            //}
         }
         #endregion Public Methods
 
@@ -55,7 +52,7 @@ namespace PC.Combat
         private void Update()
         {
             // implement delay in character attacks
-            attackCooldown -= Time.deltaTime;
+            //attackCooldown -= Time.deltaTime;
         }
     
         #endregion Private Methods
