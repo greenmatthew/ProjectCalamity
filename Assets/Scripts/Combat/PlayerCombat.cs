@@ -33,19 +33,20 @@ namespace PC.Combat
             // play animation 
 
             // find parent object
-            Transform parent = hit.transform.parent;
-            if(parent)
+            Transform hit_obj = hit.transform;
+            Debug.Log("Hit Obj: " + hit_obj.name);
+            if (hit_obj)
             {
                 Transform temp = null;  // getting errors when not using temp var
-                while (parent != null)
+                while (hit_obj != null)
                 {
-                   temp = parent;
-                   parent = parent.parent;
+                    temp = hit_obj;
+                    hit_obj = hit_obj.parent;
                 }
-                parent = temp;
+                hit_obj = temp;
 
                 // damage target
-                if (parent.TryGetComponent<CharacterStats>(out CharacterStats cs))
+                if (hit_obj.TryGetComponent<CharacterStats>(out CharacterStats cs))
                 {
                     cs.TakeDamage();
                 }
