@@ -10,6 +10,7 @@ namespace PC.Combat
         #endregion Consts Fields
 
         #region Public Fields
+        public bool _touchingPlayer = false;
         #endregion Public Fields
 
         #region Protected Fields
@@ -28,10 +29,20 @@ namespace PC.Combat
         public void AttackTarget(Transform target)
         {
             // damage target
-            if (target.TryGetComponent<CharacterStats>(out CharacterStats cs))
+            if (_touchingPlayer && target.TryGetComponent<CharacterStats>(out CharacterStats cs))
             {
+                _touchingPlayer = false;
                 Attack(cs);
             }
+        }
+
+        public void Start()
+        {
+            mystats = GetComponent<CharacterStats>();
+
+            // place touch sensors on all child colliders
+            // allows damage to be dealt to player
+            SetTouchSensors(this.transform);
         }
         
         public void Update()
@@ -49,6 +60,18 @@ namespace PC.Combat
                     Debug.Log("EnemyCombat: EnemyAnimationController not found");
                 }
 
+            }
+        }
+
+        public void SetTouchSensors(Transform curr)
+        {
+            foreach (Transform child in curr)
+            {
+                // set sensor
+                child.gameObject.AddComponent<TouchSensor>();
+
+                // dfs
+                SetTouchSensors(child);
             }
         }
         #endregion Public Methods
