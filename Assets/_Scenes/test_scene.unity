@@ -1003,6 +1003,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gigalacertus
       objectReference: {fileID: 0}
+    - target: {fileID: 5274238539537472662, guid: 84e799cbded21504d8deffddbf0f8bcb,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: cc9063d732a9eac4da46bd155964080c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84e799cbded21504d8deffddbf0f8bcb, type: 3}
 --- !u!1 &1135282759 stripped

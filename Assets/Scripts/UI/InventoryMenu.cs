@@ -107,6 +107,13 @@ namespace PC.UI
         #region Methods
 
         #region Public Methods
+
+        public void OpenWithContainer(Container container)
+        {
+            _currentContainer = container;
+            Open();
+        }
+
         #endregion Public Methods
 
         #region Protected Methods
@@ -116,8 +123,6 @@ namespace PC.UI
             instance = this;
 
             _inputActions.InventoryMenu.CloseMenu.performed += ctx => Close();
-
-            
         }
 
         protected override void OpenExtension()
