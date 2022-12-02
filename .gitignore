@@ -57,4 +57,16 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
+
+# Layout file
 UserSettings/
+*.dwlt
+
+# sci fi bosses
+Assets/Protofactor/*
+Assets/Protofactor.meta
+
+# Sci fi enviroment
+Assets/_Creepy_Cat/*
+Assets/_Creepy_Cat.meta
+
