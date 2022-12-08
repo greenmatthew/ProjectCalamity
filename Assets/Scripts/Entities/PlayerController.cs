@@ -5,8 +5,12 @@ using PC.Extensions;
 
 namespace PC.Entities
 {
+    /// <summary>
+    /// Defines functionality and attributes specific to our player character.
+    /// </summary>
     public class PlayerController : PlayerControllerBase
     {
+        // \cond
         #region Fields
 
         #region Consts Fields
@@ -36,6 +40,7 @@ namespace PC.Entities
         #endregion Private Fields
 
         #endregion Fields
+        // \endcond
 
         //----------------------------------------------------------------------------------------------------------------------
 
@@ -113,6 +118,9 @@ namespace PC.Entities
             _inputActions.Player.EquipSecondaryFirearm.performed += ctx => { Debug.Log("Equip Secondary Firearm"); EquipSecondaryFirearm(); };
         }
 
+        /// <summary>
+        /// Displays interaction message if player is close enough to a terminal
+        /// </summary>
         protected override void CheckForInteractions()
         {
             if (_inputActions.Player.enabled && Physics.Raycast(_camera.transform.position, _camera.transform.forward, out RaycastHit hit, _interactionDistance, _interactionLayerMask))
@@ -134,6 +142,9 @@ namespace PC.Entities
             }
         }
 
+        /// <summary>
+        /// Triggers menu when interacting with player management stations
+        /// </summary>
         protected override void Interact()
         {
             if (_currentInteractable != null)
@@ -150,6 +161,10 @@ namespace PC.Entities
 
         }
 
+        /// <summary>
+        /// Modifies player animations to adjust hand position on weapon via inverse kinematics
+        /// </summary>
+        /// <param name="layerIndex">Index of layer on which the IK solver is called.</param>
         protected void OnAnimatorIK(int layerIndex)
         {
             if (_animator)
@@ -167,13 +182,18 @@ namespace PC.Entities
 
         #region Private Methods
 
+        // \cond
         protected override void Start()
         {
             base.Start();
 
             _gun.gameObject.SetActive(false);
         }
+        // \endcond
 
+        /// <summary>
+        /// Equips the player's primary firearm from their inventory
+        /// </summary>
         private void EquipPrimaryFirearm()
         {
             if (_primaryFirearmSlot.GetItem() != null)
@@ -185,6 +205,9 @@ namespace PC.Entities
             }
         }
 
+        /// <summary>
+        /// Equips the player's secondary firearm from their inventory
+        /// </summary>
         private void EquipSecondaryFirearm()
         {
             if (_secondaryFirearmSlot.GetItem() != null)

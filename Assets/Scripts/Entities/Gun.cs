@@ -14,8 +14,12 @@ using Random = UnityEngine.Random;
 
 namespace PC.Entities
 {
+    /// <summary>
+    /// Defines the general behavior of the player's gun.
+    /// </summary>
     public class Gun : MonoBehaviour
     {
+        // \cond
         #region Fields
 
         #region Consts Fields
@@ -64,6 +68,7 @@ namespace PC.Entities
         #endregion Private Fields
 
         #endregion Fields
+        // \endcond
 
     //----------------------------------------------------------------------------------------------------------------------
 
@@ -76,7 +81,7 @@ namespace PC.Entities
         #endregion Protected Methods
 
         #region Private Methods
-
+        // \cond
         private void Awake()
         {
             // audio source component
@@ -84,7 +89,9 @@ namespace PC.Entities
             if (_gunAudioSource == null)
                 Debug.LogError("Gun: AudioSource is null!");
         }
+        // \endcond
 
+        // \cond
         private void Start()
         {
             inputActions.Player.Shoot.started += (ctx) => _isTriggerPulled = true;
@@ -105,44 +112,50 @@ namespace PC.Entities
                 Debug.LogError("Gun: PlayerCombat is null!");
 
         }
+        // \endcond
 
+        // \cond
         private void OnEnable()
         {
             inputActions.Player.Shoot.Enable();
             inputActions.Player.Reload.Enable();
         }
+        // \endcond
 
+        // \cond
         private void OnDisable()
         {
             // disconnect gun functionality from shoot input
             inputActions.Player.Shoot.Disable();
             inputActions.Player.Reload.Disable();
         }
+        // \endcond
 
+        // \cond
         private void Update()
         {
             _targetRotation = Vector3.Lerp(_targetRotation, Vector3.zero, _returnSpeed * Time.deltaTime);
             _currentRotation = Vector3.Slerp(_currentRotation, _targetRotation, _snappiness * Time.fixedDeltaTime);
             _recoil.localRotation = Quaternion.Euler(_currentRotation);
         }
+        // \endcond
 
         /// <summary>
         /// Reloads the gun's magazine
         /// </summary>
-        /// <returns></returns>
+        /// <param name="obj">
+        /// Context for the InputActions asset. 
+        /// Passed automatically after Reload is subscribed to the relevant input.
+        /// </param>
         private async void Reload(InputAction.CallbackContext obj)
         {
             if (_isReloading)
             {
-                // may need to disable shooting here
-            
                 // play reload sound
                 _gunAudioSource.clip = _audioClips.reload;
                 _gunAudioSource.Play();
-                
-                // play reload animation 
 
-                //yield return new WaitForSeconds(_gun.ReloadTime);
+                // reload
                 _currentAmmo = _gun.MagazineSize;
 
                 await Task.Delay(TimeSpan.FromSeconds(_gun.ReloadTime));
@@ -152,10 +165,13 @@ namespace PC.Entities
         }
 
         /// <summary>
-        /// Activates muzzle flash, shoots targets via raycast, one bullet is expended
-        /// If target has GetShot method, it is executed here
+        /// Deals with all functionality related shooting. 
+        /// Includes audio, muzzle flash, recoil, raycast shooting and target damage.
         /// </summary>
-        /// <param name="obj"></param>
+        /// <param name="obj">
+        /// Context for the InputActions asset. 
+        /// Passed automatically after Shoot is subscribed to the relevant input.
+        /// </param>
         private async void Shoot(InputAction.CallbackContext obj)
         {
             while (_isTriggerPulled && !_isReloading)
@@ -196,12 +212,6 @@ namespace PC.Entities
                 Ray ray = new Ray(_camera.transform.position, _camera.transform.forward);
                 if (Physics.Raycast(ray, out RaycastHit hit, _gun.Range))
                 {
-                    // if hit object has a Target script component, execute GetShot
-                    if (hit.transform.TryGetComponent<Target>(out Target ts))
-                    {
-                        ts.GetShot(ray.direction);
-                    }
-
                     // apply damage to hit object
                     if (_playerCombat)
                         _playerCombat.AttackTarget(hit);

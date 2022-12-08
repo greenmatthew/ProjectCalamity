@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace PC
+namespace PC.Stats
 {
     public class CharacterStats : MonoBehaviour
     {
