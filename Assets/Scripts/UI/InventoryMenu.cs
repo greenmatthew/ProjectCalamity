@@ -110,6 +110,9 @@ namespace PC.UI
 
         #region Public Methods
 
+        /// <summary>
+        /// Opens the inventory with the stash on the right. So you can transfer items between the stash and the inventory.
+        /// </summary>
         public void OpenWithStash()
         {
             _stash.SetActive(true);
@@ -165,12 +168,19 @@ namespace PC.UI
             }
         }
 
+        /// <summary>
+        /// Clamps the current item to the cursor position.
+        /// </summary>
         private void ClampCurrentItemToCursor()
         {
             if (_currentItemCopy != null)
                 _currentItemCopy.RectTransform.position = UnityEngine.Input.mousePosition;
         }
 
+        /// <summary>
+        /// Tries to pick up an item from the current container.
+        /// </summary>
+        /// <param name="cellIndex">The cell index of the item to pick up.</param>
         private void TryPickingUpItem(Vector2Int cellIndex)
         {
             if (_currentItemSource == null && _currentItemCopy == null)
@@ -185,6 +195,10 @@ namespace PC.UI
             }
         }
 
+        /// <summary>
+        /// Tries to release the current item to the current container.
+        /// </summary>
+        /// <param name="cellIndex">The cell index to release the item to.</param>
         private void TryReleasingItem(Vector2Int cellIndex)
         {
             if (_currentItemCopy != null)
@@ -207,6 +221,9 @@ namespace PC.UI
             }
         }
 
+        /// <summary>
+        /// Tries to rotate the current item.
+        /// </summary>
         private void TryRotatingItem()
         {
             if (_currentItemCopy != null)

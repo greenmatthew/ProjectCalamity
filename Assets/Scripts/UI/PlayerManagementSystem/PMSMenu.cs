@@ -58,6 +58,10 @@ namespace PC.UI
         {
         }
 
+        /// <summary>
+        /// Initializes the menu with the given betaPMS.
+        /// </summary>
+        /// <param name="PMS">The betaPMS to initialize the menu with.</param>
         public void Init(BetaPMS PMS)
         {
             if (PMS == null)
@@ -78,6 +82,10 @@ namespace PC.UI
             _memoryModuleButton.interactable = false;
         }
 
+        /// <summary>
+        /// Initializes the menu with the given alphaPMS.
+        /// </summary>
+        /// <param name="PMS">The alphaPMS to initialize the menu with.</param>
         public void Init(AlphaPMS PMS)
         {
             if (PMS == null)

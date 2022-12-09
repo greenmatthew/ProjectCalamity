@@ -75,6 +75,12 @@ namespace PC.UI
             return true;
         }
 
+        /// <summary>
+        /// Places an item at a given cellIndex in the container.
+        /// </summary>
+        /// <param name="item">The item you want to place.</param>
+        /// <param name="cellIndex">The cell index you want to place the item at.</param>
+        /// <returns>Returns true if the operation was successful, otherwise false.</returns>
         public override bool PlaceItemAt(Item item, Vector2Int cellIndex)
         {
             if (item == null)
@@ -111,6 +117,10 @@ namespace PC.UI
             return true;
         }
 
+        /// <summary>
+        /// Retrieves the item inside the slot.
+        /// </summary>
+        /// <returns>Returns the item inside the slot.</returns>
         public Item GetItem()
         {
             return GetItemAt(Vector2Int.zero);

@@ -74,11 +74,19 @@ namespace PC.UI
             return true;
         }
 
+        /// <summary>
+        /// Implcitly converts an ItemType to a uint.
+        /// </summary>
         public static implicit operator uint(ItemType item)
         {
             return item.data;
         }
 
+        /// <summary>
+        /// Checks if an instance of an ItemType is equal to another instance of an ItemType.
+        /// </summary>
+        /// <param name="a">The first given instance of the ItemType.</param>
+        /// <param name="b">The second given instance of the ItemType.</param>
         public static bool operator==(ItemType a, ItemType b)
         {
             if (b is null)
@@ -86,26 +94,50 @@ namespace PC.UI
             return a.data == b.data;
         }
 
+        /// <summary>
+        /// Checks if an instance of an ItemType is equal to an enum Type.
+        /// </summary>
+        /// <param name="a">The given instance of the ItemType.</param>
+        /// <param name="b">The given enum type.</param>
         public static bool operator==(ItemType a, Value b)
         {
             return a.data == (uint)b;
         }
 
+        /// <summary>
+        /// Checks if an enum Type is equal to an instance of an ItemType.
+        /// </summary>
+        /// <param name="a">The value of the item.</param>
         public override bool Equals(object a)
         {
             return data == ((ItemType)a).data;
         }
 
+        /// <summary>
+        /// Checks if two instances of ItemType are equal.
+        /// </summary>
+        /// <param name="a">The first given instance of the ItemType.</param>
+        /// <param name="b">The second given instance of the ItemType.</param>
         public static bool operator!=(ItemType a, ItemType b)
         {
             return a.data != b.data;
         }
 
+        /// <summary>
+        /// Checks if a enum Type is not equal to a instance of an ItemType.
+        /// </summary>
+        /// <param name="a">The given enum type.</param>
+        /// <param name="b">The given instance of the ItemType.</param>
         public static bool operator!=(ItemType a, Value b)
         {
             return a.data != (uint)b;
         }
 
+        /// <summary>
+        /// Returns the type of an item.
+        /// </summary>
+        /// <param name="value">The value of the item.</param>
+        /// <returns>The type of the item.</returns>
         public static ItemType Lookup(Value value)
         {
             dict.TryGetValue(value, out ItemType item);
@@ -145,6 +177,9 @@ namespace PC.UI
 
         #region Enums, Structs, Classes
 
+        /// <summary>
+        /// The type of an item.
+        /// </summary>
         public enum Value : System.UInt32
         {
             NONE               = 0x00000000,

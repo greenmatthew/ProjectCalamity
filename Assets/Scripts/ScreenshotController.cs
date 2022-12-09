@@ -59,6 +59,10 @@ namespace PC
             }
         }
 
+        /// <summary>
+        /// Get the current time in filename safe format.
+        /// </summary>
+        /// <returns>Current time in filename safe format.</returns>
         private string GetTimeCode()
         {
             var datetime = System.DateTime.Now;
@@ -66,6 +70,10 @@ namespace PC
             return time;
         }
 
+        /// <summary>
+        /// Get the current date in filename safe format.
+        /// </summary>
+        /// <returns>Current date in filename safe format.</returns>
         private string GetDateCode()
         {
             var datetime = System.DateTime.Now;
@@ -73,11 +81,23 @@ namespace PC
             return date;
         }
 
+        /// <summary>
+        /// Get the filename for the screenshot.
+        /// </summary>
+        /// <returns>Filename for the screenshot.</returns>
         private string GetScreenshotFilename()
         {
             return $"Screenshot_{GetDateCode()}_{GetTimeCode()}.png";
         }
 
+        /// <summary>
+        /// Prevents overwriting of files by adding or modifying the ending of the filename with a "_N" before the file extension, where N is any integer from 1 to INT.MAX.
+        /// Example: "Screenshot.png" -> "Screenshot_1.png"
+        /// Example: "Screenshot_1.png" -> "Screenshot_2.png"
+        /// Example: "Screenshot_6.png" -> "Screenshot_7.png"
+        /// </summary>
+        /// <param name="path">Path to the file.</param>
+        /// <returns>Path to the file that does not exist.</returns>
         private string PreventFileOverwriting(string path)
         {
             var filepath = Path.GetDirectoryName(path);

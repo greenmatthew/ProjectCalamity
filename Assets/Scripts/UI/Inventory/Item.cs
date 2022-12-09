@@ -54,6 +54,11 @@ namespace PC.UI
     
         #region Public Methods
 
+        /// <summary>
+        /// Initializes the item.
+        /// </summary>
+        /// <param name="itemSO">The itemSO to set the item's details to.</param>
+        /// <returns>The item.</returns>
         public Item Init(ItemSO itemSO)
         {
             _itemSO = itemSO;
@@ -89,12 +94,19 @@ namespace PC.UI
             RectTransform.localPosition = position;
         }
 
+        /// <summary>
+        /// Removes the item's container reference and sets its parent to null.
+        /// </summary>
         public void RemoveContainer()
         {
             _currentContainer = null;
             RectTransform.SetParent(null);
         }
 
+        /// <summary>
+        /// Gets the origin cell index of the item, relative to its container's content 2D array.
+        /// </summary>
+        /// <returns>The origin cell index of the item.</returns>
         public Vector2Int GetOriginCellIndex()
         {
             return _originCellIndex;
@@ -127,6 +139,10 @@ namespace PC.UI
             SetSize();
         }
 
+        /// <summary>
+        /// Duplicates the item as another item.
+        /// </summary>
+        /// <returns>The duplicate item.</returns>
         public Item MakeCopy()
         {
             if (_copy != null)
@@ -141,12 +157,21 @@ namespace PC.UI
             return _copy;
         }
 
+        /// <summary>
+        /// Transfers the item to a given container at a given cell index.
+        /// </summary>
+        /// <param name="container">The container to transfer the item to.</param>
+        /// <param name="cellIndex">The cell index to transfer the item to.</param>
+        /// <returns>True if the transfer was successful, false otherwise.</returns>
         public bool TransferTo(ContainerBase container, Vector2Int cellIndex)
         {
             if (container == null) return false;
             return container.PlaceItemAt(this, cellIndex);
         }
 
+        /// <summary>
+        /// Destroys the item.
+        /// </summary>
         public void Destroy()
         {
             Debug.Log("Destroying " + name);
@@ -206,6 +231,9 @@ namespace PC.UI
             }
         }
 
+        /// <summary>
+        /// Sets the item's images based on the item's ItemSO.
+        /// </summary>
         private void SetImages()
         {
             _backgroundImage.color = _itemSO.backgroundColor;

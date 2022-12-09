@@ -71,12 +71,20 @@ namespace PC.UI
     
         #region Public Methods
 
+        /// <summary>
+        /// Is called upon a cursor entering the container's bounds.
+        /// </summary>
+        /// <param name="eventData">The event data of the pointer.</param>
         public void OnPointerEnter(PointerEventData eventData)
         {
             InventoryMenu.CurrentContainer = this;
             Debug.Log($"Entered container {gameObject.name}");
         }
 
+        /// <summary>
+        /// Is called upon a cursor exiting the container's bounds.
+        /// </summary>
+        /// <param name="eventData">The event data of the pointer.</param>
         public void OnPointerExit(PointerEventData eventData)
         {
             InventoryMenu.CurrentContainer = null;
@@ -172,6 +180,12 @@ namespace PC.UI
             return true;
         }
 
+        /// <summary>
+        /// Places an item at a given cellIndex in the container.
+        /// </summary>
+        /// <param name="item">The item you want to place.</param>
+        /// <param name="cellIndex">The cell index you want to place the item at.</param>
+        /// <returns>Returns true if the operation was successful, otherwise false.</returns>
         public virtual bool PlaceItemAt(Item item, Vector2Int cellIndex)
         {
             if (item == null)
@@ -231,6 +245,12 @@ namespace PC.UI
             return item;
         }
 
+        /// <summary>
+        /// Transfers an item from one container to another.
+        /// </summary>
+        /// <param name="sourceCellIndex">The cell index of the item you want to transfer.</param>
+        /// <param name="targetContainer">The container you want to transfer the item to.</param>
+        /// <param name="targetCellIndex">The cell index you want to transfer the item to.</param>
         public void TransferItem(Vector2Int sourceCellIndex, Container targetContainer, Vector2Int targetCellIndex)
         {
             if (targetContainer == null)

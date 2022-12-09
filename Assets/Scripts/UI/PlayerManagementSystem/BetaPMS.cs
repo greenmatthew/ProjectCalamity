@@ -31,17 +31,6 @@ namespace PC.UI
         #endregion Protected Methods
 
         #region Private Methods
-
-        private void Start()
-        {
-        
-        }
-
-        private void Update()
-        {
-        
-        }
-    
         #endregion Private Methods
 
         #endregion Methods
