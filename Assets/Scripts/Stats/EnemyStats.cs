@@ -2,6 +2,9 @@ using UnityEngine;
 
 namespace PC.Stats
 {
+    /// <summary>
+    /// This class is used to store the enemy's stats and log its death.
+    /// </summary>
     public class EnemyStats : CharacterStats
     {
         #region Fields
@@ -20,17 +23,19 @@ namespace PC.Stats
 
         #endregion Fields
 
-    //----------------------------------------------------------------------------------------------------------------------
+        //----------------------------------------------------------------------------------------------------------------------
 
         #region Methods
-        
+
         #region Public Methods
+        /// <summary>
+        /// Logs the enemy's death and can specify other death behavior not related to 
+        /// animations which are handled in the animation controller.
+        /// </summary>
         public override void Die()
         {
             base.Die();
 
-            // Kill the enemy
-            //Destroy(gameObject);
         }
         #endregion Public Methods
 
@@ -39,19 +44,6 @@ namespace PC.Stats
 
         #region Private Methods
 
-        private void Start()
-        {
-            
-        }
-
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.T))
-            {
-                TakeDamage();
-            }
-        }
-        
         #endregion Private Methods
 
         #endregion Methods

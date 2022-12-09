@@ -3,6 +3,9 @@ using PC.Stats;
 
 namespace PC.Combat
 {
+    /// <summary>
+    /// Defined the combat behavior specific to the player character.
+    /// </summary>
     [RequireComponent(typeof(CharacterStats))]
     public class CharacterCombat : MonoBehaviour
     {
@@ -15,7 +18,9 @@ namespace PC.Combat
         #endregion Public Fields
 
         #region Protected Fields
+        // \cond
         protected CharacterStats mystats;
+        // \endcond
         #endregion Protected Fields
 
         #region Private Fields
@@ -29,13 +34,13 @@ namespace PC.Combat
         #region Methods
 
         #region Public Methods
+        /// <summary>
+        /// Attack the target. This is called when the player's gun gets a hit on a damageable object.
+        /// </summary>
+        /// <param name="targetStats"> The stats object for the target being hit. This controls the amount of damage it recieves. </param>
         public void Attack(CharacterStats targetStats)
         {
             targetStats.TakeDamage();
-            //if (mystats.attackSpeed.GetValue() != 0f)
-            //{
-            //    attackCooldown = 1f / mystats.attackSpeed.GetValue();
-            //}
         }
         #endregion Public Methods
 
@@ -44,6 +49,7 @@ namespace PC.Combat
 
         #region Private Methods
 
+        // \cond
         private void Start()
         {
             mystats = GetComponent<CharacterStats>();
@@ -54,6 +60,7 @@ namespace PC.Combat
             // implement delay in character attacks
             //attackCooldown -= Time.deltaTime;
         }
+        // \endcond
     
         #endregion Private Methods
 

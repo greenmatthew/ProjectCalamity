@@ -2,6 +2,9 @@ using UnityEngine;
 
 namespace PC.Stats
 {
+    /// <summary>
+    /// This class is used to store general stats and damage behavior common to all game characters.
+    /// </summary>
     public class CharacterStats : MonoBehaviour
     {
         #region Fields
@@ -9,6 +12,7 @@ namespace PC.Stats
         #region Consts Fields
         #endregion Consts Fields
 
+        // \cond
         #region Public Fields
         public Stat attackSpeed;
         public int _currentHealth { get; set; }
@@ -23,12 +27,16 @@ namespace PC.Stats
         #endregion Private Fields
 
         #endregion Fields
+        // \endcond
 
         //----------------------------------------------------------------------------------------------------------------------
 
         #region Methods
 
         #region Public Methods
+        /// <summary>
+        /// The general damage function. This is called by other scripts any time the relevant entity needs to lose health points.
+        /// </summary>
         public void TakeDamage()
         {
             _currentHealth -= _damage.GetValue();
@@ -39,6 +47,10 @@ namespace PC.Stats
             }
         }
 
+        /// <summary>
+        /// Logs an entities death to the console. 
+        /// Specific death behavior and animations will be defined in scripts specific to a character.
+        /// </summary>
         public virtual void Die()
         {
             // Die in some way
@@ -51,15 +63,12 @@ namespace PC.Stats
         #endregion Protected Methods
 
         #region Private Methods
+        // \cond
         private void Awake()
         {
             _currentHealth = _maxHealth;
         }
-
-        private void Start()
-        {
-            
-        }
+        // \endcond
 
         #endregion Private Methods
 

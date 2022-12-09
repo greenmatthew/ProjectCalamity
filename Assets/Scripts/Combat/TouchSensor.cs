@@ -2,6 +2,10 @@ using UnityEngine;
 
 namespace PC.Combat
 {
+    /// <summary>
+    /// Records any contact between the player and the enemy. 
+    /// This allows the enemy to apply damage to the player on contact.
+    /// </summary>
     public class TouchSensor : MonoBehaviour
     {
         #region Fields
@@ -31,6 +35,7 @@ namespace PC.Combat
         #endregion Protected Methods
 
         #region Private Methods
+        // \cond
         private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.CompareTag("Enemy"))
@@ -52,6 +57,7 @@ namespace PC.Combat
                 Debug.Log("Touched Player");
             }
         }
+        // \endcond
 
         #endregion Private Methods
 

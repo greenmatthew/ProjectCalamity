@@ -10,7 +10,6 @@ namespace PC.Entities
     /// </summary>
     public class PlayerManager : MonoBehaviour
     {
-        // \cond
         #region Singleton
         public static PlayerManager instance;
         #endregion
@@ -21,7 +20,14 @@ namespace PC.Entities
         #endregion Consts Fields
 
         #region Public Fields
+        /// <summary>
+        /// The global instance of the player.
+        /// </summary>
         public GameObject player = null;
+
+        /// <summary>
+        /// The player's current health.
+        /// </summary>
         public GameObject healthCount = null;
         #endregion Public Fields
 
@@ -43,6 +49,7 @@ namespace PC.Entities
         #region Protected Methods
         #endregion Protected Methods
 
+        // \cond
         #region Private Methods
         private void Awake()
         {

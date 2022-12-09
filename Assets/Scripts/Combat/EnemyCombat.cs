@@ -1,8 +1,24 @@
 using UnityEngine;
 using PC.Stats;
 
+/*!
+ * \file index.html
+ * \brief This page introduces a new horror video game.
+ *
+ * The game is set in a dark and eerie abandoned hospital, where the player must
+ * navigate through twisted corridors and haunted rooms to uncover the secrets of
+ * the hospital and survive the night. With immersive graphics and intense gameplay,
+ * this game is sure to keep players on the edge of their seats.
+ *
+ * \warning This game is not suitable for children or those who are easily scared.
+ */
+
+
 namespace PC.Combat
 {
+    /// <summary>
+    /// Defines the combat behavior specific to our enemies.
+    /// </summary>
     public class EnemyCombat : CharacterCombat
     {
         #region Fields
@@ -11,6 +27,9 @@ namespace PC.Combat
         #endregion Consts Fields
 
         #region Public Fields
+        /// <summary>
+        /// Records whether or not the enemy and player colliders overlap.
+        /// </summary>
         public bool _touchingPlayer = false;
         #endregion Public Fields
 
@@ -27,6 +46,10 @@ namespace PC.Combat
         #region Methods
         
         #region Public Methods
+        /// <summary>
+        /// Activates the enemy's attack when the player is touched.
+        /// </summary>
+        /// <param name="target"></param>
         public void AttackTarget(Transform target)
         {
             // damage target
@@ -37,6 +60,7 @@ namespace PC.Combat
             }
         }
 
+        // \cond
         public void Start()
         {
             mystats = GetComponent<CharacterStats>();
@@ -63,7 +87,13 @@ namespace PC.Combat
 
             }
         }
+        // \endcond
 
+        /// <summary>
+        /// Sets the tag of all child objects to "Enemy" so that collisions with appendages can be identified.
+        /// Calls this recursively on all children.
+        /// </summary>
+        /// <param name="curr"> The transform of the object currently being expected. </param>
         public void SetTags(Transform curr)
         {
             foreach (Transform child in curr)

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['verticallayoutgrouphandler_0',['VerticalLayoutGroupHandler',['../class_p_c_1_1_u_i_1_1_vertical_layout_group_handler.html',1,'PC::UI']]]
+  ['wfx_5flightflicker_0',['WFX_LightFlicker',['../class_p_c_1_1_v_f_x_1_1_w_f_x___light_flicker.html',1,'PC::VFX']]]
 ];

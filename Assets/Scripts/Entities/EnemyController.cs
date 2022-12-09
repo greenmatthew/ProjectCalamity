@@ -6,8 +6,13 @@ using PC.Combat;
 
 namespace PC.Entities
 {
+    /// <summary>
+    /// EnemyController is a class that handles the enemy's AI.\n
+    /// The enemy is programmed with a navmeshagent to follow and attack the player when the player is in a specific range.
+    /// </summary>
     public class EnemyController : MonoBehaviour
     {
+        // \cond
         #region Fields
 
         #region Consts Fields
@@ -86,8 +91,12 @@ namespace PC.Entities
                 this.enabled = false;
             }
         }
+        // \endcond
 
-        void FaceTarget()
+        /// <summary>
+        /// FaceTarget is a method that rotates the enemy towards the player during a chase.
+        /// </summary>
+        private void FaceTarget()
         {
             // rotate towards target
             Vector3 direction = (target.position - transform.position).normalized;
@@ -97,12 +106,14 @@ namespace PC.Entities
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 1f);
         }
 
+        // \cond
         private void OnDrawGizmosSelected()
         {
             // visualize the look radius
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(transform.position, _lookRadius);
         }
+        // \endcond
 
         #endregion Private Methods
 

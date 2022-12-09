@@ -2,6 +2,9 @@ using UnityEngine;
 
 namespace PC.Combat
 { 
+    /// <summary>
+    /// Controls how the enemy animations react to information in the environment.
+    /// </summary>
     public class EnemyAnimationController : MonoBehaviour
     {
         #region Fields
@@ -16,10 +19,12 @@ namespace PC.Combat
         #endregion Protected Fields
 
         #region Private Fields
+        // \cond
         [SerializeField] private Animator _animator;
         [SerializeField] private UnityEngine.AI.NavMeshAgent _navMeshAgent;
         [SerializeField] private Transform _enemyTransform = null;
         private Vector3 lastFacing = new Vector3(0, 0, 0);
+        // \endcond
         #endregion Private Fields
 
         #endregion Fields
@@ -29,6 +34,10 @@ namespace PC.Combat
         #region Methods
 
         #region Public Methods
+        /// <summary>
+        /// Plays the enemy death animation when the animator has recorded the enemy as dead.
+        /// The animator gets this information from the enemy controller.
+        /// </summary>
         public void Die()
         {
             _animator.SetBool("IsDead", true);
@@ -40,6 +49,7 @@ namespace PC.Combat
 
         #region Private Methods
 
+        // \cond
         private void Start()
         {
             if(_animator)
@@ -66,6 +76,7 @@ namespace PC.Combat
             }
 
         }
+        // \endcond
 
         #endregion Private Methods
 

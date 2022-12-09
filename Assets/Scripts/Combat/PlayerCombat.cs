@@ -3,6 +3,9 @@ using PC.Stats;
 
 namespace PC.Combat
 {
+    /// <summary>
+    /// Defines the combat behavior specific to our player.
+    /// </summary>
     public class PlayerCombat : CharacterCombat
     {
         #region Fields
@@ -27,7 +30,11 @@ namespace PC.Combat
         
         #region Public Methods
 
-        // shooting enemy with gun, no cooldown
+        /// <summary>
+        /// Finds the stats component of the target object and uses it to apply damage.
+        /// This is called from Gun.cs
+        /// </summary>
+        /// <param name="hit"> The target object his by the gun's raycast. </param>
         public void AttackTarget(RaycastHit hit)
         {
             // play animation 
@@ -56,8 +63,6 @@ namespace PC.Combat
                 }
             }
 
-            // not using this bc it includes a cooldown
-            //Attack(cs);
         }
         #endregion Public Methods
 
@@ -66,16 +71,6 @@ namespace PC.Combat
 
         #region Private Methods
 
-        private void Start()
-        {
-            
-        }
-
-        private void Update()
-        {
-            
-        }
-        
         #endregion Private Methods
 
         #endregion Methods

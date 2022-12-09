@@ -3,6 +3,10 @@ using PC.Input;
 
 namespace PC.Entities
 {
+    /// <summary>
+    /// This class is responsible for controlling the player's animations.
+    /// For our purposes, it simply regularly updates the variables used by the animator to determine which animation to play.
+    /// </summary>
     public class PlayerAnimatorController : MonoBehaviour
     {
         #region Fields

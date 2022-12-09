@@ -5,6 +5,9 @@ using System.Collections.Generic;
 
 namespace PC.Stats
 {
+    /// <summary>
+    /// Base class for all stats used to track character parameters.
+    /// </summary>
     [System.Serializable]
     public class Stat
     {
@@ -20,6 +23,9 @@ namespace PC.Stats
         #endregion Protected Fields
 
         #region Private Fields
+        /// <summary>
+        /// The base value of the stat.
+        /// </summary>
         [SerializeField] private int _baseValue = 0;
         #endregion Private Fields
 
@@ -30,6 +36,10 @@ namespace PC.Stats
         #region Methods
 
         #region Public Methods
+        /// <summary>
+        /// Getter for the stat value.
+        /// </summary>
+        /// <returns> integer stat value </returns>
         public int GetValue()
         {
             return _baseValue;

@@ -3,6 +3,9 @@ using UnityEngine.SceneManagement;
 
 namespace PC.Stats
 {
+    /// <summary>
+    /// This class is used to store the player's stats and log its death to the console.
+    /// </summary>
     public class PlayerStats : CharacterStats
     {
         #region Fields
@@ -26,13 +29,13 @@ namespace PC.Stats
         #region Methods
 
         #region Public Methods
+        /// <summary>
+        /// Logs the enemy's death and can specify other death behavior not related to 
+        /// animations which are handled in the animation controller.
+        /// </summary>
         public override void Die()
         {
             base.Die();
-
-            // reload scene when player dies
-            // TODO: figure out why all the assets like audio seem to disappear when reloading the scene
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
         }
         #endregion Public Methods
@@ -42,16 +45,6 @@ namespace PC.Stats
 
         #region Private Methods
 
-        private void Start()
-        {
-            
-        }
-
-        private void Update()
-        {
-            
-        }
-        
         #endregion Private Methods
 
         #endregion Methods
