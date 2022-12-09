@@ -4,8 +4,13 @@ using TMPro;
 
 namespace PC.Entities
 {
+    /// <summary>
+    /// Creates a global instance of the player for easy reference by other scripts.
+    /// Handles interface between player health and UI.
+    /// </summary>
     public class PlayerManager : MonoBehaviour
     {
+        // \cond
         #region Singleton
         public static PlayerManager instance;
         #endregion
@@ -62,6 +67,7 @@ namespace PC.Entities
             }
 
         }
+        // \endcond
 
         #endregion Private Methods
 

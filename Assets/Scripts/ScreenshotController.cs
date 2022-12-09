@@ -39,22 +39,6 @@ namespace PC
 
         #region Private Methods
 
-        private void Start()
-        {
-            // if (_camera == null)
-            // {
-            //     _camera = GetComponent<Camera>();
-            // }
-
-            // _camera.enabled = true;
-
-            // _camera.orthographic = true;
-            // //_camera.orthographicSize = 1f;
-            // _camera.rect = new Rect(0, 0, _width, _height);
-            // _camera.aspect = _width / _height;
-
-        }
-
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.F1))

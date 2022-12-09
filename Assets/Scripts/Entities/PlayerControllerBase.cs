@@ -9,10 +9,15 @@ using PC.Extensions;
 
 namespace PC.Entities
 {
+    /// <summary>
+    /// Defined functionality and attributes common to all player controllers
+    /// such as ground checking and translating inputs to movement information.
+    /// </summary>
     [RequireComponent(typeof(InputModule))]
     [RequireComponent(typeof(CharacterController))]
     public abstract class PlayerControllerBase : MonoBehaviour
     {
+        // \cond
         #region Fields
 
         #region Consts Fields
@@ -177,13 +182,22 @@ namespace PC.Entities
 
             CheckForInteractions();
 		}
+        // \endcond
 
+        /// <summary>
+        /// Retrieves the player's current movement vector
+        /// </summary>
+        /// <returns> Movement vector already adjusted for speed </returns>
         private Vector3 GetMovement()
         {
             var input = _inputActions.Player.Movement.ReadValue<Vector2>() * MovementSpeed * Time.deltaTime;
             return transform.forward * input.y + transform.right * input.x;
         }
 
+        /// <summary>
+        /// Checks if the player is grounded
+        /// </summary>
+        /// <returns>True if the player is touching the ground, otherwise false.</returns>
         private bool GroundedCheck()
         {
             // Check if the player's y velocity is at idle velocity
