@@ -1,0 +1,45 @@
+.TH "PC.Entities" 3 "Fri Dec 9 2022" "Project Calamity" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PC.Entities
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBEnemyController\fP"
+.br
+.RI "\fBEnemyController\fP is a class that handles the enemy's AI\&.
+.br
+The enemy is programmed with a navmeshagent to follow and attack the player when the player is in a specific range\&.  "
+.ti -1c
+.RI "class \fBGun\fP"
+.br
+.RI "Defines the general behavior of the player's gun\&.  "
+.ti -1c
+.RI "class \fBGunSO\fP"
+.br
+.RI "This class defines various parameters that control the gun's functionality and behavior\&. For instance, the gun's damage, range, and fire rate default values are defined here\&.  "
+.ti -1c
+.RI "class \fBPlayerAnimatorController\fP"
+.br
+.RI "This class is responsible for controlling the player's animations\&. For our purposes, it simply regularly updates the variables used by the animator to determine which animation to play\&.  "
+.ti -1c
+.RI "class \fBPlayerController\fP"
+.br
+.RI "Defines functionality and attributes specific to our player character\&.  "
+.ti -1c
+.RI "class \fBPlayerControllerBase\fP"
+.br
+.RI "Defined functionality and attributes common to all player controllers such as ground checking and translating inputs to movement information\&.  "
+.ti -1c
+.RI "class \fBPlayerManager\fP"
+.br
+.RI "Creates a global instance of the player for easy reference by other scripts\&. Handles interface between player health and \fBUI\fP\&.  "
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Project Calamity from the source code\&.

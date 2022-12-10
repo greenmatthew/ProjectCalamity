@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_c_1_1_combat_1_1_enemy_combat" xml:lang="en-US">
+<title>PC.Combat.EnemyCombat Class Reference</title>
+<indexterm><primary>PC.Combat.EnemyCombat</primary></indexterm>
+<para>
+
+<para>Defines the combat behavior specific to our enemies.  </para>
+ 
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_p_c_1_1_combat_1_1_enemy_combat_1acd9b4e2498e93df861622d722d9ee021">AttackTarget</link> (Transform target)</para>
+
+<para>Activates the enemy&apos;s attack when the player is touched.  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_p_c_1_1_combat_1_1_enemy_combat_1af56dacc1a38d41696824788d50ed78c3">SetTags</link> (Transform curr)</para>
+
+<para>Sets the tag of all child objects to &quot;Enemy&quot; so that collisions with appendages can be identified. Calls this recursively on all children.  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_combat_1_1_enemy_combat_1a54973e27427edbe84592a63e2db4d009"/>bool <emphasis role="strong">_touchingPlayer</emphasis> = false</para>
+
+<para>Records whether or not the enemy and player colliders overlap.  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_p_c_1_1_combat_1_1_enemy_combat_1acd9b4e2498e93df861622d722d9ee021"/><section>
+    <title>AttackTarget()</title>
+<indexterm><primary>AttackTarget</primary><secondary>PC.Combat.EnemyCombat</secondary></indexterm>
+<indexterm><primary>PC.Combat.EnemyCombat</primary><secondary>AttackTarget</secondary></indexterm>
+<para><computeroutput>void PC.Combat.EnemyCombat.AttackTarget (Transform target)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>target</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_p_c_1_1_combat_1_1_enemy_combat_1af56dacc1a38d41696824788d50ed78c3"/><section>
+    <title>SetTags()</title>
+<indexterm><primary>SetTags</primary><secondary>PC.Combat.EnemyCombat</secondary></indexterm>
+<indexterm><primary>PC.Combat.EnemyCombat</primary><secondary>SetTags</secondary></indexterm>
+<para><computeroutput>void PC.Combat.EnemyCombat.SetTags (Transform curr)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>curr</entry><entry>
+<para>The transform of the object currently being expected. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

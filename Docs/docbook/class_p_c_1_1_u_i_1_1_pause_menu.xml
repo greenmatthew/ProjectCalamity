@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_c_1_1_u_i_1_1_pause_menu" xml:lang="en-US">
+<title>PC.UI.PauseMenu Class Reference</title>
+<indexterm><primary>PC.UI.PauseMenu</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_pause_menu_1a94ae581bd26f667f39fc67d727e7096e"/>void <emphasis role="strong">ExitGame</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_pause_menu_1afb8e07734945fe07abf15d3b5a9758e5"/>static bool <emphasis role="strong">activated</emphasis> = false</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>override void <link linkend="_class_p_c_1_1_u_i_1_1_pause_menu_1aaf2a805fbe59d5c005a6c0f92ce74b92">AwakeExtension</link> ()</para>
+
+<para>DO NOT HIDE/OVERRIDE <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1ab4ef75b27a80470f8857f4792cc8b4e3">MenuBase.Awake()</link> USING THE NEW OR OVERRIDE KEYWORDS!!! <link linkend="_class_p_c_1_1_u_i_1_1_pause_menu_1aaf2a805fbe59d5c005a6c0f92ce74b92">AwakeExtension()</link> is called at the end of <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1ab4ef75b27a80470f8857f4792cc8b4e3">MenuBase.Awake()</link>. If you need any code to run in MonoBehaviour.Awake() put it inside <link linkend="_class_p_c_1_1_u_i_1_1_pause_menu_1aaf2a805fbe59d5c005a6c0f92ce74b92">AwakeExtension()</link>.  </para>
+</listitem>
+            <listitem><para>override void <link linkend="_class_p_c_1_1_u_i_1_1_pause_menu_1aa6233b674054aac4fdebe96f0a3836c3">OpenExtension</link> ()</para>
+
+<para>Gets called at the end of <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1ab515ef592f62a554219fdd87bd1813da">Open()</link>.  </para>
+</listitem>
+            <listitem><para>override void <link linkend="_class_p_c_1_1_u_i_1_1_pause_menu_1a82d348bcc9f60d26c08591cc491a53a4">CloseExtension</link> ()</para>
+
+<para>Gets called at the end of <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1a740632961fbc2e3f0b5ca82006f097ba">Close()</link>.  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_pause_menu_1a1c83d62d71ef8848688ef74e775a07cd"/>Button <emphasis role="strong">_closePauseMenuButton</emphasis> = null</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_pause_menu_1a7c51d2d14207a86fba6b17ddc8bcc423"/>Button <emphasis role="strong">_exitGameButton</emphasis> = null</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_pause_menu_1aaf2a805fbe59d5c005a6c0f92ce74b92"/><section>
+    <title>AwakeExtension()</title>
+<indexterm><primary>AwakeExtension</primary><secondary>PC.UI.PauseMenu</secondary></indexterm>
+<indexterm><primary>PC.UI.PauseMenu</primary><secondary>AwakeExtension</secondary></indexterm>
+<para><computeroutput>override void PC.UI.PauseMenu.AwakeExtension ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1ae8a88ab2eceb67a6ceae7c473f662cc9">PC.UI.MenuBase</link>.</para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_pause_menu_1a82d348bcc9f60d26c08591cc491a53a4"/><section>
+    <title>CloseExtension()</title>
+<indexterm><primary>CloseExtension</primary><secondary>PC.UI.PauseMenu</secondary></indexterm>
+<indexterm><primary>PC.UI.PauseMenu</primary><secondary>CloseExtension</secondary></indexterm>
+<para><computeroutput>override void PC.UI.PauseMenu.CloseExtension ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1a44ec7793a3d577ebae49fb0de23894a4">PC.UI.MenuBase</link>.</para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_pause_menu_1aa6233b674054aac4fdebe96f0a3836c3"/><section>
+    <title>OpenExtension()</title>
+<indexterm><primary>OpenExtension</primary><secondary>PC.UI.PauseMenu</secondary></indexterm>
+<indexterm><primary>PC.UI.PauseMenu</primary><secondary>OpenExtension</secondary></indexterm>
+<para><computeroutput>override void PC.UI.PauseMenu.OpenExtension ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1a1c5968ebb647ea20f3f075f05b2ee166">PC.UI.MenuBase</link>.</para>
+</section>
+</section>
+</section>

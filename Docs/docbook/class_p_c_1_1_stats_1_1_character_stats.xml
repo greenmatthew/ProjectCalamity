@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_c_1_1_stats_1_1_character_stats" xml:lang="en-US">
+<title>PC.Stats.CharacterStats Class Reference</title>
+<indexterm><primary>PC.Stats.CharacterStats</primary></indexterm>
+<para>
+
+<para>This class is used to store general stats and damage behavior common to all game characters.  </para>
+ 
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_stats_1_1_character_stats_1adf381679b61e65aa1bc320d35f92e666"/>void <emphasis role="strong">TakeDamage</emphasis> ()</para>
+
+<para>The general damage function. This is called by other scripts any time the relevant entity needs to lose health points.  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_p_c_1_1_stats_1_1_character_stats_1a6c3192bd5552f52b8bb430c2f5c223b5">Die</link> ()</para>
+
+<para>Logs an entities death to the console. Specific death behavior and animations will be defined in scripts specific to a character.  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_p_c_1_1_stats_1_1_character_stats_1a6c3192bd5552f52b8bb430c2f5c223b5"/><section>
+    <title>Die()</title>
+<indexterm><primary>Die</primary><secondary>PC.Stats.CharacterStats</secondary></indexterm>
+<indexterm><primary>PC.Stats.CharacterStats</primary><secondary>Die</secondary></indexterm>
+<para><computeroutput>virtual void PC.Stats.CharacterStats.Die ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented in <link linkend="_class_p_c_1_1_stats_1_1_enemy_stats_1a16ad48d7c0ebfe63c3d5c905d5763ce6">PC.Stats.EnemyStats</link>, and <link linkend="_class_p_c_1_1_stats_1_1_player_stats_1a03f6ce675eff3b01dbca2cd6d13c0a7e">PC.Stats.PlayerStats</link>.</para>
+</section>
+</section>
+</section>

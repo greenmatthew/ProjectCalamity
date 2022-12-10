@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_p_c_1_1_combat" xml:lang="en-US">
+<title>PC.Combat Namespace Reference</title>
+<indexterm><primary>PC.Combat</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_p_c_1_1_combat_1_1_character_combat">CharacterCombat</link></para>
+
+<para>Defined the combat behavior specific to the player character.  </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_combat_1_1_enemy_animation_controller">EnemyAnimationController</link></para>
+
+<para>Controls how the enemy animations react to information in the environment.  </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_combat_1_1_enemy_combat">EnemyCombat</link></para>
+
+<para>Defines the combat behavior specific to our enemies.  </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_combat_1_1_player_combat">PlayerCombat</link></para>
+
+<para>Defines the combat behavior specific to our player.  </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_combat_1_1_touch_sensor">TouchSensor</link></para>
+
+<para>Records any contact between the player and the enemy. This allows the enemy to apply damage to the player on contact.  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

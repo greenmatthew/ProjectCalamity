@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_p_c_1_1_entities" xml:lang="en-US">
+<title>PC.Entities Namespace Reference</title>
+<indexterm><primary>PC.Entities</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_p_c_1_1_entities_1_1_enemy_controller">EnemyController</link></para>
+
+<para><link linkend="_class_p_c_1_1_entities_1_1_enemy_controller">EnemyController</link> is a class that handles the enemy&apos;s AI.<?linebreak?>The enemy is programmed with a navmeshagent to follow and attack the player when the player is in a specific range.  </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_entities_1_1_gun">Gun</link></para>
+
+<para>Defines the general behavior of the player&apos;s gun.  </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_entities_1_1_gun_s_o">GunSO</link></para>
+
+<para>This class defines various parameters that control the gun&apos;s functionality and behavior. For instance, the gun&apos;s damage, range, and fire rate default values are defined here.  </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_entities_1_1_player_animator_controller">PlayerAnimatorController</link></para>
+
+<para>This class is responsible for controlling the player&apos;s animations. For our purposes, it simply regularly updates the variables used by the animator to determine which animation to play.  </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_entities_1_1_player_controller">PlayerController</link></para>
+
+<para>Defines functionality and attributes specific to our player character.  </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_entities_1_1_player_controller_base">PlayerControllerBase</link></para>
+
+<para>Defined functionality and attributes common to all player controllers such as ground checking and translating inputs to movement information.  </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_entities_1_1_player_manager">PlayerManager</link></para>
+
+<para>Creates a global instance of the player for easy reference by other scripts. Handles interface between player health and <link linkend="_namespace_p_c_1_1_u_i">UI</link>.  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_c_1_1_v_f_x_1_1_w_f_x___light_flicker" xml:lang="en-US">
+<title>PC.VFX.WFX_LightFlicker Class Reference</title>
+<indexterm><primary>PC.VFX.WFX_LightFlicker</primary></indexterm>
+<para>
+
+<para>Controls the flickering of the light for the muzzle flash.  </para>
+ 
+</para>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>IEnumerator <link linkend="_class_p_c_1_1_v_f_x_1_1_w_f_x___light_flicker_1a3cc41475cf5c94dd700890b9f86b1290">Flicker</link> ()</para>
+
+<para>Flickers the light component of this object. Object is meant to be a background light to muzzle flash  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_v_f_x_1_1_w_f_x___light_flicker_1aa53a35f789034a1a262f9e7669c7fc8a"/>float <emphasis role="strong">_flickerTime</emphasis> = 0.05f</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_p_c_1_1_v_f_x_1_1_w_f_x___light_flicker_1a3cc41475cf5c94dd700890b9f86b1290"/><section>
+    <title>Flicker()</title>
+<indexterm><primary>Flicker</primary><secondary>PC.VFX.WFX_LightFlicker</secondary></indexterm>
+<indexterm><primary>PC.VFX.WFX_LightFlicker</primary><secondary>Flicker</secondary></indexterm>
+<para><computeroutput>IEnumerator PC.VFX.WFX_LightFlicker.Flicker ( )<computeroutput>[private]</computeroutput></computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+</section>
+</section>
+</section>

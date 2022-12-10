@@ -1,0 +1,45 @@
+\hypertarget{class_p_c_1_1_combat_1_1_enemy_combat}{}\doxysection{PC.\+Combat.\+Enemy\+Combat Class Reference}
+\label{class_p_c_1_1_combat_1_1_enemy_combat}\index{PC.Combat.EnemyCombat@{PC.Combat.EnemyCombat}}
+
+
+Defines the combat behavior specific to our enemies.   
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_p_c_1_1_combat_1_1_enemy_combat_acd9b4e2498e93df861622d722d9ee021}{Attack\+Target}} (Transform target)
+\begin{DoxyCompactList}\small\item\em Activates the enemy\textquotesingle{}s attack when the player is touched.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_c_1_1_combat_1_1_enemy_combat_af56dacc1a38d41696824788d50ed78c3}{Set\+Tags}} (Transform curr)
+\begin{DoxyCompactList}\small\item\em Sets the tag of all child objects to \char`\"{}\+Enemy\char`\"{} so that collisions with appendages can be identified. Calls this recursively on all children.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_combat_1_1_enemy_combat_a54973e27427edbe84592a63e2db4d009}\label{class_p_c_1_1_combat_1_1_enemy_combat_a54973e27427edbe84592a63e2db4d009}} 
+bool {\bfseries \+\_\+touching\+Player} = false
+\begin{DoxyCompactList}\small\item\em Records whether or not the enemy and player colliders overlap.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_p_c_1_1_combat_1_1_enemy_combat_acd9b4e2498e93df861622d722d9ee021}\label{class_p_c_1_1_combat_1_1_enemy_combat_acd9b4e2498e93df861622d722d9ee021}} 
+\index{PC.Combat.EnemyCombat@{PC.Combat.EnemyCombat}!AttackTarget@{AttackTarget}}
+\index{AttackTarget@{AttackTarget}!PC.Combat.EnemyCombat@{PC.Combat.EnemyCombat}}
+\doxysubsubsection{\texorpdfstring{AttackTarget()}{AttackTarget()}}
+{\footnotesize\ttfamily void PC.\+Combat.\+Enemy\+Combat.\+Attack\+Target (\begin{DoxyParamCaption}\item[{Transform}]{target }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_p_c_1_1_combat_1_1_enemy_combat_af56dacc1a38d41696824788d50ed78c3}\label{class_p_c_1_1_combat_1_1_enemy_combat_af56dacc1a38d41696824788d50ed78c3}} 
+\index{PC.Combat.EnemyCombat@{PC.Combat.EnemyCombat}!SetTags@{SetTags}}
+\index{SetTags@{SetTags}!PC.Combat.EnemyCombat@{PC.Combat.EnemyCombat}}
+\doxysubsubsection{\texorpdfstring{SetTags()}{SetTags()}}
+{\footnotesize\ttfamily void PC.\+Combat.\+Enemy\+Combat.\+Set\+Tags (\begin{DoxyParamCaption}\item[{Transform}]{curr }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em curr} & The transform of the object currently being expected. \\
+\hline
+\end{DoxyParams}

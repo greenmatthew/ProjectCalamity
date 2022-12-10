@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_c_1_1_u_i_1_1_player_management_station_menu" xml:lang="en-US">
+<title>PC.UI.PlayerManagementStationMenu Class Reference</title>
+<indexterm><primary>PC.UI.PlayerManagementStationMenu</primary></indexterm>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>override void <link linkend="_class_p_c_1_1_u_i_1_1_player_management_station_menu_1adb7b19e0d4d9360a050cc3548d225c9f">AwakeExtension</link> ()</para>
+
+<para>DO NOT HIDE/OVERRIDE <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1ab4ef75b27a80470f8857f4792cc8b4e3">MenuBase.Awake()</link> USING THE NEW OR OVERRIDE KEYWORDS!!! <link linkend="_class_p_c_1_1_u_i_1_1_player_management_station_menu_1adb7b19e0d4d9360a050cc3548d225c9f">AwakeExtension()</link> is called at the end of <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1ab4ef75b27a80470f8857f4792cc8b4e3">MenuBase.Awake()</link>. If you need any code to run in MonoBehaviour.Awake() put it inside <link linkend="_class_p_c_1_1_u_i_1_1_player_management_station_menu_1adb7b19e0d4d9360a050cc3548d225c9f">AwakeExtension()</link>.  </para>
+</listitem>
+            <listitem><para>override void <link linkend="_class_p_c_1_1_u_i_1_1_player_management_station_menu_1a60c1adeac28bb631468630c3b8efe001">OpenExtension</link> ()</para>
+
+<para>Gets called at the end of <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1ab515ef592f62a554219fdd87bd1813da">Open()</link>.  </para>
+</listitem>
+            <listitem><para>override void <link linkend="_class_p_c_1_1_u_i_1_1_player_management_station_menu_1af037e2f27519b7bffaa6d27d0110914d">CloseExtension</link> ()</para>
+
+<para>Gets called at the end of <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1a740632961fbc2e3f0b5ca82006f097ba">Close()</link>.  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_player_management_station_menu_1adb7b19e0d4d9360a050cc3548d225c9f"/><section>
+    <title>AwakeExtension()</title>
+<indexterm><primary>AwakeExtension</primary><secondary>PC.UI.PlayerManagementStationMenu</secondary></indexterm>
+<indexterm><primary>PC.UI.PlayerManagementStationMenu</primary><secondary>AwakeExtension</secondary></indexterm>
+<para><computeroutput>override void PC.UI.PlayerManagementStationMenu.AwakeExtension ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1ae8a88ab2eceb67a6ceae7c473f662cc9">PC.UI.MenuBase</link>.</para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_player_management_station_menu_1af037e2f27519b7bffaa6d27d0110914d"/><section>
+    <title>CloseExtension()</title>
+<indexterm><primary>CloseExtension</primary><secondary>PC.UI.PlayerManagementStationMenu</secondary></indexterm>
+<indexterm><primary>PC.UI.PlayerManagementStationMenu</primary><secondary>CloseExtension</secondary></indexterm>
+<para><computeroutput>override void PC.UI.PlayerManagementStationMenu.CloseExtension ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1a44ec7793a3d577ebae49fb0de23894a4">PC.UI.MenuBase</link>.</para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_player_management_station_menu_1a60c1adeac28bb631468630c3b8efe001"/><section>
+    <title>OpenExtension()</title>
+<indexterm><primary>OpenExtension</primary><secondary>PC.UI.PlayerManagementStationMenu</secondary></indexterm>
+<indexterm><primary>PC.UI.PlayerManagementStationMenu</primary><secondary>OpenExtension</secondary></indexterm>
+<para><computeroutput>override void PC.UI.PlayerManagementStationMenu.OpenExtension ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1a1c5968ebb647ea20f3f075f05b2ee166">PC.UI.MenuBase</link>.</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_c_1_1_u_i_1_1_vertical_layout_group_handler" xml:lang="en-US">
+<title>PC.UI.VerticalLayoutGroupHandler Class Reference</title>
+<indexterm><primary>PC.UI.VerticalLayoutGroupHandler</primary></indexterm>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_vertical_layout_group_handler_1a73574e8506afe93c8b521011d4a71c18"/>void <emphasis role="strong">Awake</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_vertical_layout_group_handler_1ace602bb2a610906f34693acfa98cb7b2"/>void <emphasis role="strong">Update</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_vertical_layout_group_handler_1a04ad1298017cb388ae1d297c96247da8"/>RectTransform <emphasis role="strong">_rectTransform</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_vertical_layout_group_handler_1a5cfba81ca03ae4d49e36bfaf62afe286"/>List&lt; RectTransform &gt; <emphasis role="strong">_children</emphasis> = new List&lt;RectTransform&gt;()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

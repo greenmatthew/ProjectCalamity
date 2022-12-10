@@ -1,0 +1,35 @@
+\hypertarget{class_p_c_1_1_entities_1_1_player_controller_base}{}\doxysection{PC.\+Entities.\+Player\+Controller\+Base Class Reference}
+\label{class_p_c_1_1_entities_1_1_player_controller_base}\index{PC.Entities.PlayerControllerBase@{PC.Entities.PlayerControllerBase}}
+
+
+Defined functionality and attributes common to all player controllers such as ground checking and translating inputs to movement information.   
+
+
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Vector3 \mbox{\hyperlink{class_p_c_1_1_entities_1_1_player_controller_base_aa6c6ccbb0a4e5363e198fe7078c3c46d}{Get\+Movement}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the player\textquotesingle{}s current movement vector  \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_p_c_1_1_entities_1_1_player_controller_base_a001497b418dd424bbaafbaeafbb7bcd4}{Grounded\+Check}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the player is grounded  \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_p_c_1_1_entities_1_1_player_controller_base_aa6c6ccbb0a4e5363e198fe7078c3c46d}\label{class_p_c_1_1_entities_1_1_player_controller_base_aa6c6ccbb0a4e5363e198fe7078c3c46d}} 
+\index{PC.Entities.PlayerControllerBase@{PC.Entities.PlayerControllerBase}!GetMovement@{GetMovement}}
+\index{GetMovement@{GetMovement}!PC.Entities.PlayerControllerBase@{PC.Entities.PlayerControllerBase}}
+\doxysubsubsection{\texorpdfstring{GetMovement()}{GetMovement()}}
+{\footnotesize\ttfamily Vector3 PC.\+Entities.\+Player\+Controller\+Base.\+Get\+Movement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\begin{DoxyReturn}{Returns}
+Movement vector already adjusted for speed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_p_c_1_1_entities_1_1_player_controller_base_a001497b418dd424bbaafbaeafbb7bcd4}\label{class_p_c_1_1_entities_1_1_player_controller_base_a001497b418dd424bbaafbaeafbb7bcd4}} 
+\index{PC.Entities.PlayerControllerBase@{PC.Entities.PlayerControllerBase}!GroundedCheck@{GroundedCheck}}
+\index{GroundedCheck@{GroundedCheck}!PC.Entities.PlayerControllerBase@{PC.Entities.PlayerControllerBase}}
+\doxysubsubsection{\texorpdfstring{GroundedCheck()}{GroundedCheck()}}
+{\footnotesize\ttfamily bool PC.\+Entities.\+Player\+Controller\+Base.\+Grounded\+Check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\begin{DoxyReturn}{Returns}
+True if the player is touching the ground, otherwise false.
+\end{DoxyReturn}

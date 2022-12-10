@@ -24,7 +24,7 @@
   <td id="projectalign">
    <div id="projectname">Project Calamity
    </div>
-   <div id="projectbrief">Test</div>
+   <div id="projectbrief">An original horror fps.</div>
   </td>
  </tr>
  </tbody>
@@ -77,72 +77,25 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="#properties">Properties</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_p_c_1_1_stats_1_1_character_stats-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">PC.Stats.CharacterStats Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>This class is used to store general stats and damage behavior common to all game characters.   
+</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:adf381679b61e65aa1bc320d35f92e666"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_c_1_1_stats_1_1_character_stats.html#adf381679b61e65aa1bc320d35f92e666">TakeDamage</a> ()</td></tr>
+<tr class="memitem:adf381679b61e65aa1bc320d35f92e666"><td class="memItemLeft" align="right" valign="top"><a id="adf381679b61e65aa1bc320d35f92e666" name="adf381679b61e65aa1bc320d35f92e666"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>TakeDamage</b> ()</td></tr>
+<tr class="memdesc:adf381679b61e65aa1bc320d35f92e666"><td class="mdescLeft">&#160;</td><td class="mdescRight">The general damage function. This is called by other scripts any time the relevant entity needs to lose health points.  <br /></td></tr>
 <tr class="separator:adf381679b61e65aa1bc320d35f92e666"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c3192bd5552f52b8bb430c2f5c223b5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_c_1_1_stats_1_1_character_stats.html#a6c3192bd5552f52b8bb430c2f5c223b5">Die</a> ()</td></tr>
+<tr class="memdesc:a6c3192bd5552f52b8bb430c2f5c223b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs an entities death to the console. Specific death behavior and animations will be defined in scripts specific to a character.   <a href="class_p_c_1_1_stats_1_1_character_stats.html#a6c3192bd5552f52b8bb430c2f5c223b5">More...</a><br /></td></tr>
 <tr class="separator:a6c3192bd5552f52b8bb430c2f5c223b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a93789fa7f82a797dbc009e56d7937368"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_p_c_1_1_stats_1_1_stat.html">Stat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_c_1_1_stats_1_1_character_stats.html#a93789fa7f82a797dbc009e56d7937368">attackSpeed</a></td></tr>
-<tr class="separator:a93789fa7f82a797dbc009e56d7937368"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
-Properties</h2></td></tr>
-<tr class="memitem:aa2ba0f244ccfd5eb5c0bf920b97bb9d5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_c_1_1_stats_1_1_character_stats.html#aa2ba0f244ccfd5eb5c0bf920b97bb9d5">_currentHealth</a><code> [get, set]</code></td></tr>
-<tr class="separator:aa2ba0f244ccfd5eb5c0bf920b97bb9d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a15e520943e3168c536c953fafda915a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_c_1_1_stats_1_1_character_stats.html#a15e520943e3168c536c953fafda915a9">Awake</a> ()</td></tr>
-<tr class="separator:a15e520943e3168c536c953fafda915a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85ffa4df5473151666e36a626937ccfe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_c_1_1_stats_1_1_character_stats.html#a85ffa4df5473151666e36a626937ccfe">Start</a> ()</td></tr>
-<tr class="separator:a85ffa4df5473151666e36a626937ccfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:aea887534d8d48e6a686b74685eeef615"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_c_1_1_stats_1_1_character_stats.html#aea887534d8d48e6a686b74685eeef615">_maxHealth</a></td></tr>
-<tr class="separator:aea887534d8d48e6a686b74685eeef615"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c559875b96248d48cd487f86361276d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_p_c_1_1_stats_1_1_stat.html">Stat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_c_1_1_stats_1_1_character_stats.html#a6c559875b96248d48cd487f86361276d">_damage</a></td></tr>
-<tr class="separator:a6c559875b96248d48cd487f86361276d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a15e520943e3168c536c953fafda915a9" name="a15e520943e3168c536c953fafda915a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15e520943e3168c536c953fafda915a9">&#9670;&#160;</a></span>Awake()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void PC.Stats.CharacterStats.Awake </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a6c3192bd5552f52b8bb430c2f5c223b5" name="a6c3192bd5552f52b8bb430c2f5c223b5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6c3192bd5552f52b8bb430c2f5c223b5">&#9670;&#160;</a></span>Die()</h2>
 
@@ -170,133 +123,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a85ffa4df5473151666e36a626937ccfe" name="a85ffa4df5473151666e36a626937ccfe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85ffa4df5473151666e36a626937ccfe">&#9670;&#160;</a></span>Start()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void PC.Stats.CharacterStats.Start </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="adf381679b61e65aa1bc320d35f92e666" name="adf381679b61e65aa1bc320d35f92e666"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf381679b61e65aa1bc320d35f92e666">&#9670;&#160;</a></span>TakeDamage()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void PC.Stats.CharacterStats.TakeDamage </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a6c559875b96248d48cd487f86361276d" name="a6c559875b96248d48cd487f86361276d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c559875b96248d48cd487f86361276d">&#9670;&#160;</a></span>_damage</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_p_c_1_1_stats_1_1_stat.html">Stat</a> PC.Stats.CharacterStats._damage</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aea887534d8d48e6a686b74685eeef615" name="aea887534d8d48e6a686b74685eeef615"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea887534d8d48e6a686b74685eeef615">&#9670;&#160;</a></span>_maxHealth</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int PC.Stats.CharacterStats._maxHealth</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a93789fa7f82a797dbc009e56d7937368" name="a93789fa7f82a797dbc009e56d7937368"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93789fa7f82a797dbc009e56d7937368">&#9670;&#160;</a></span>attackSpeed</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_p_c_1_1_stats_1_1_stat.html">Stat</a> PC.Stats.CharacterStats.attackSpeed</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Property Documentation</h2>
-<a id="aa2ba0f244ccfd5eb5c0bf920b97bb9d5" name="aa2ba0f244ccfd5eb5c0bf920b97bb9d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2ba0f244ccfd5eb5c0bf920b97bb9d5">&#9670;&#160;</a></span>_currentHealth</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int PC.Stats.CharacterStats._currentHealth</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/Will/SeniorDesignProject/Assets/Scripts/Stats/<a class="el" href="_character_stats_8cs.html">CharacterStats.cs</a></li>
-</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

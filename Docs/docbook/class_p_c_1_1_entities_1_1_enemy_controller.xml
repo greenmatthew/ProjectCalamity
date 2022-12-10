@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_c_1_1_entities_1_1_enemy_controller" xml:lang="en-US">
+<title>PC.Entities.EnemyController Class Reference</title>
+<indexterm><primary>PC.Entities.EnemyController</primary></indexterm>
+<para>
+
+<para><link linkend="_class_p_c_1_1_entities_1_1_enemy_controller">EnemyController</link> is a class that handles the enemy&apos;s AI.<?linebreak?>The enemy is programmed with a navmeshagent to follow and attack the player when the player is in a specific range.  </para>
+ 
+</para>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_entities_1_1_enemy_controller_1a748c1b07bce31b0822a0b3c7871e2143"/>void <emphasis role="strong">FaceTarget</emphasis> ()</para>
+
+<para>FaceTarget is a method that rotates the enemy towards the player during a chase.  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

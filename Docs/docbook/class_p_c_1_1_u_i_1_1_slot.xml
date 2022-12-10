@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_c_1_1_u_i_1_1_slot" xml:lang="en-US">
+<title>PC.UI.Slot Class Reference</title>
+<indexterm><primary>PC.UI.Slot</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>override Vector2Int <link linkend="_class_p_c_1_1_u_i_1_1_slot_1a3abc378767113733e274cfda6cc927a8">GetCellIndex</link> (Vector2 mousePos)</para>
+
+<para>Gets the cell index relative to the container using the given mouse position.  </para>
+</listitem>
+            <listitem><para>override bool <link linkend="_class_p_c_1_1_u_i_1_1_slot_1a0b81350b90c01ea52399ba9d488b828f">RemoveItemAt</link> (Vector2Int cellIndex)</para>
+
+<para>Removes the item at a given cellIndex from the container.  </para>
+</listitem>
+            <listitem><para>override bool <link linkend="_class_p_c_1_1_u_i_1_1_slot_1ab832866c460e2d656298c394ff41e7e6">PlaceItemAt</link> (<link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link> item, Vector2Int cellIndex)</para>
+
+<para>Places an item at a given cellIndex in the container.  </para>
+</listitem>
+            <listitem><para><link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link> <link linkend="_class_p_c_1_1_u_i_1_1_slot_1aec453f6ef3310b29ee788ffd82354c6b">GetItem</link> ()</para>
+
+<para>Retrieves the item inside the slot.  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>override void <link linkend="_class_p_c_1_1_u_i_1_1_slot_1a30a95af9a207749322d3000d79fa1c58">Start</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_slot_1a03e76c6f13875a444bd15b9f2c87ce1d"/><link linkend="_class_p_c_1_1_u_i_1_1_item_type_1af67a6245e6371310618ed7d7a0d96081">ItemType.Value</link> <emphasis role="strong">i_allowedType</emphasis> = ItemType.Value.NONE</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_slot_1a797039ddf42cf4d4e47ee582c607cd41"/><link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link> <emphasis role="strong">_allowedType</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_slot_1a3abc378767113733e274cfda6cc927a8"/><section>
+    <title>GetCellIndex()</title>
+<indexterm><primary>GetCellIndex</primary><secondary>PC.UI.Slot</secondary></indexterm>
+<indexterm><primary>PC.UI.Slot</primary><secondary>GetCellIndex</secondary></indexterm>
+<para><computeroutput>override Vector2Int PC.UI.Slot.GetCellIndex (Vector2 mousePos)<computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>mousePos</entry><entry>
+<para>Position of the mouse.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Cell index relative to the container.</para>
+</formalpara>
+</para>
+<para>
+Reimplemented from <link linkend="_class_p_c_1_1_u_i_1_1_container_base_1ad6bfe911d6a6200aa74f5c40977354f6">PC.UI.ContainerBase</link>.</para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_slot_1aec453f6ef3310b29ee788ffd82354c6b"/><section>
+    <title>GetItem()</title>
+<indexterm><primary>GetItem</primary><secondary>PC.UI.Slot</secondary></indexterm>
+<indexterm><primary>PC.UI.Slot</primary><secondary>GetItem</secondary></indexterm>
+<para><computeroutput><link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link> PC.UI.Slot.GetItem ( )</computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>Returns the item inside the slot.</para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_slot_1ab832866c460e2d656298c394ff41e7e6"/><section>
+    <title>PlaceItemAt()</title>
+<indexterm><primary>PlaceItemAt</primary><secondary>PC.UI.Slot</secondary></indexterm>
+<indexterm><primary>PC.UI.Slot</primary><secondary>PlaceItemAt</secondary></indexterm>
+<para><computeroutput>override bool PC.UI.Slot.PlaceItemAt (<link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link> item, Vector2Int cellIndex)<computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>item</entry><entry>
+<para>The item you want to place.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>cellIndex</entry><entry>
+<para>The cell index you want to place the item at.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Returns true if the operation was successful, otherwise false.</para>
+</formalpara>
+</para>
+<para>
+Reimplemented from <link linkend="_class_p_c_1_1_u_i_1_1_container_base_1a3082416b69c71572c22657058fc061e4">PC.UI.ContainerBase</link>.</para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_slot_1a0b81350b90c01ea52399ba9d488b828f"/><section>
+    <title>RemoveItemAt()</title>
+<indexterm><primary>RemoveItemAt</primary><secondary>PC.UI.Slot</secondary></indexterm>
+<indexterm><primary>PC.UI.Slot</primary><secondary>RemoveItemAt</secondary></indexterm>
+<para><computeroutput>override bool PC.UI.Slot.RemoveItemAt (Vector2Int cellIndex)<computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>cellIndex</entry><entry>
+<para>The cell index of the item you want to remove.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Returns true if the operation was successful, otherwise false.</para>
+</formalpara>
+</para>
+<para>
+Reimplemented from <link linkend="_class_p_c_1_1_u_i_1_1_container_base_1a1cfa23ad215e3238e552e9174501670e">PC.UI.ContainerBase</link>.</para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_slot_1a30a95af9a207749322d3000d79fa1c58"/><section>
+    <title>Start()</title>
+<indexterm><primary>Start</primary><secondary>PC.UI.Slot</secondary></indexterm>
+<indexterm><primary>PC.UI.Slot</primary><secondary>Start</secondary></indexterm>
+<para><computeroutput>override void PC.UI.Slot.Start ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented from <link linkend="_class_p_c_1_1_u_i_1_1_container_base">PC.UI.ContainerBase</link>.</para>
+</section>
+</section>
+</section>

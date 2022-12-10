@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_p_c_1_1_stats" xml:lang="en-US">
+<title>PC.Stats Namespace Reference</title>
+<indexterm><primary>PC.Stats</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_p_c_1_1_stats_1_1_character_stats">CharacterStats</link></para>
+
+<para>This class is used to store general stats and damage behavior common to all game characters.  </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_stats_1_1_enemy_stats">EnemyStats</link></para>
+
+<para>This class is used to store the enemy&apos;s stats and log its death.  </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_stats_1_1_player_stats">PlayerStats</link></para>
+
+<para>This class is used to store the player&apos;s stats and log its death to the console.  </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_stats_1_1_stat">Stat</link></para>
+
+<para>Base class for all stats used to track character parameters.  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

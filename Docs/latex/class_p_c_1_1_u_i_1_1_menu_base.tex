@@ -1,0 +1,80 @@
+\hypertarget{class_p_c_1_1_u_i_1_1_menu_base}{}\doxysection{PC.\+UI.\+Menu\+Base Class Reference}
+\label{class_p_c_1_1_u_i_1_1_menu_base}\index{PC.UI.MenuBase@{PC.UI.MenuBase}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_menu_base_ab515ef592f62a554219fdd87bd1813da}\label{class_p_c_1_1_u_i_1_1_menu_base_ab515ef592f62a554219fdd87bd1813da}} 
+void {\bfseries Open} ()
+\begin{DoxyCompactList}\small\item\em DO NOT OVERRIDE/\+HIDE \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_menu_base_ab515ef592f62a554219fdd87bd1813da}{Menu\+Base.\+Open()}} USING THE NEW OR OVERRIDE KEYWORDS!!! Override the \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_menu_base_a1c5968ebb647ea20f3f075f05b2ee166}{Open\+Extension()}} function instead. Opens the menu. Closes all other menus. Enables base menu input while disabling all others. Unlocks the cursor. Calls \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_menu_base_a1c5968ebb647ea20f3f075f05b2ee166}{Open\+Extension()}} at end end of this function. \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_menu_base_a1c5968ebb647ea20f3f075f05b2ee166}{Open\+Extension()}} by default does nothing. Needs to be overriden if you want to add to the functionality of \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_menu_base_ab515ef592f62a554219fdd87bd1813da}{Open()}}.  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_menu_base_a740632961fbc2e3f0b5ca82006f097ba}\label{class_p_c_1_1_u_i_1_1_menu_base_a740632961fbc2e3f0b5ca82006f097ba}} 
+void {\bfseries Close} ()
+\begin{DoxyCompactList}\small\item\em DO NOT OVERRIDE/\+HIDE \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_menu_base_a740632961fbc2e3f0b5ca82006f097ba}{Menu\+Base.\+Close()}} USING THE NEW OR OVERRIDE KEYWORDS!!! Override the \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_menu_base_a44ec7793a3d577ebae49fb0de23894a4}{Close\+Extension()}} function instead. Closes the menu. Locks the cursor. Calls \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_menu_base_a44ec7793a3d577ebae49fb0de23894a4}{Close\+Extension()}} at end end of this function. \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_menu_base_a44ec7793a3d577ebae49fb0de23894a4}{Close\+Extension()}} by default does nothing. Needs to be overriden if you want to add to the functionality of \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_menu_base_a740632961fbc2e3f0b5ca82006f097ba}{Close()}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_menu_base_ab4ef75b27a80470f8857f4792cc8b4e3}\label{class_p_c_1_1_u_i_1_1_menu_base_ab4ef75b27a80470f8857f4792cc8b4e3}} 
+void {\bfseries Awake} ()
+\begin{DoxyCompactList}\small\item\em DO NOT HIDE/\+OVERRIDE THIS FUNCTION USING THE NEW OR OVERRIDE KEYWORDS!!! Override the \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_menu_base_ae8a88ab2eceb67a6ceae7c473f662cc9}{Awake\+Extension()}} function instead.  \end{DoxyCompactList}\item 
+abstract void \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_menu_base_ae8a88ab2eceb67a6ceae7c473f662cc9}{Awake\+Extension}} ()
+\begin{DoxyCompactList}\small\item\em DO NOT HIDE/\+OVERRIDE \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_menu_base_ab4ef75b27a80470f8857f4792cc8b4e3}{Menu\+Base.\+Awake()}} USING THE NEW OR OVERRIDE KEYWORDS!!! \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_menu_base_ae8a88ab2eceb67a6ceae7c473f662cc9}{Awake\+Extension()}} is called at the end of \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_menu_base_ab4ef75b27a80470f8857f4792cc8b4e3}{Menu\+Base.\+Awake()}}. If you need any code to run in Mono\+Behaviour.\+Awake() put it inside \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_menu_base_ae8a88ab2eceb67a6ceae7c473f662cc9}{Awake\+Extension()}}.  \end{DoxyCompactList}\item 
+abstract void \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_menu_base_a1c5968ebb647ea20f3f075f05b2ee166}{Open\+Extension}} ()
+\begin{DoxyCompactList}\small\item\em Gets called at the end of \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_menu_base_ab515ef592f62a554219fdd87bd1813da}{Open()}}.  \end{DoxyCompactList}\item 
+abstract void \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_menu_base_a44ec7793a3d577ebae49fb0de23894a4}{Close\+Extension}} ()
+\begin{DoxyCompactList}\small\item\em Gets called at the end of \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_menu_base_a740632961fbc2e3f0b5ca82006f097ba}{Close()}}.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_menu_base_a21f72b1e300972c0e7058cab103c9814}\label{class_p_c_1_1_u_i_1_1_menu_base_a21f72b1e300972c0e7058cab103c9814}} 
+static Input\+Actions {\bfseries \+\_\+input\+Actions}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_menu_base_afa80ca615fd088b0b6b65de005ef7247}\label{class_p_c_1_1_u_i_1_1_menu_base_afa80ca615fd088b0b6b65de005ef7247}} 
+void {\bfseries Disable} ()
+\begin{DoxyCompactList}\small\item\em Hides the menu from the scene.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_menu_base_a96f7810ed8aed31b0843e3a726d90ad2}\label{class_p_c_1_1_u_i_1_1_menu_base_a96f7810ed8aed31b0843e3a726d90ad2}} 
+static void {\bfseries Disable\+All} ()
+\begin{DoxyCompactList}\small\item\em Hides ALL menus from the scene.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_menu_base_acf113921e285c7240e44bb5f01bdd8ca}\label{class_p_c_1_1_u_i_1_1_menu_base_acf113921e285c7240e44bb5f01bdd8ca}} 
+static readonly List$<$ \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_menu_base}{Menu\+Base}} $>$ {\bfseries menus} = new List$<$\mbox{\hyperlink{class_p_c_1_1_u_i_1_1_menu_base}{Menu\+Base}}$>$()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_menu_base_ae8a88ab2eceb67a6ceae7c473f662cc9}\label{class_p_c_1_1_u_i_1_1_menu_base_ae8a88ab2eceb67a6ceae7c473f662cc9}} 
+\index{PC.UI.MenuBase@{PC.UI.MenuBase}!AwakeExtension@{AwakeExtension}}
+\index{AwakeExtension@{AwakeExtension}!PC.UI.MenuBase@{PC.UI.MenuBase}}
+\doxysubsubsection{\texorpdfstring{AwakeExtension()}{AwakeExtension()}}
+{\footnotesize\ttfamily abstract void PC.\+UI.\+Menu\+Base.\+Awake\+Extension (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_dev_console_menu_a64cb2b95ef669ff2d9371cee3eb6f20f}{PC.\+UI.\+Dev\+Console\+Menu}}, \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_inventory_menu_a9abf1e8dc5ef949fc33ef6a4e1820aa9}{PC.\+UI.\+Inventory\+Menu}}, \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_map_menu_adac90afe0be8d6b850a0480a5d8cc82a}{PC.\+UI.\+Map\+Menu}}, \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_pause_menu_aaf2a805fbe59d5c005a6c0f92ce74b92}{PC.\+UI.\+Pause\+Menu}}, \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_player_management_station_menu_adb7b19e0d4d9360a050cc3548d225c9f}{PC.\+UI.\+Player\+Management\+Station\+Menu}}, and \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_p_m_s_menu_ae7402cf708a5a006429a825dc78cf1de}{PC.\+UI.\+PMSMenu}}.
+
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_menu_base_a44ec7793a3d577ebae49fb0de23894a4}\label{class_p_c_1_1_u_i_1_1_menu_base_a44ec7793a3d577ebae49fb0de23894a4}} 
+\index{PC.UI.MenuBase@{PC.UI.MenuBase}!CloseExtension@{CloseExtension}}
+\index{CloseExtension@{CloseExtension}!PC.UI.MenuBase@{PC.UI.MenuBase}}
+\doxysubsubsection{\texorpdfstring{CloseExtension()}{CloseExtension()}}
+{\footnotesize\ttfamily abstract void PC.\+UI.\+Menu\+Base.\+Close\+Extension (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_dev_console_menu_afb4d723b531f2393e287d38eb7d9dd8a}{PC.\+UI.\+Dev\+Console\+Menu}}, \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_inventory_menu_a09d9bfe472eb138ed63d30f53e8c1ac4}{PC.\+UI.\+Inventory\+Menu}}, \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_map_menu_ac60f83edc6f84d8c0fef4bf3628df1e1}{PC.\+UI.\+Map\+Menu}}, \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_pause_menu_a82d348bcc9f60d26c08591cc491a53a4}{PC.\+UI.\+Pause\+Menu}}, \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_player_management_station_menu_af037e2f27519b7bffaa6d27d0110914d}{PC.\+UI.\+Player\+Management\+Station\+Menu}}, and \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_p_m_s_menu_ade809c16fb3872e32294dde73d310022}{PC.\+UI.\+PMSMenu}}.
+
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_menu_base_a1c5968ebb647ea20f3f075f05b2ee166}\label{class_p_c_1_1_u_i_1_1_menu_base_a1c5968ebb647ea20f3f075f05b2ee166}} 
+\index{PC.UI.MenuBase@{PC.UI.MenuBase}!OpenExtension@{OpenExtension}}
+\index{OpenExtension@{OpenExtension}!PC.UI.MenuBase@{PC.UI.MenuBase}}
+\doxysubsubsection{\texorpdfstring{OpenExtension()}{OpenExtension()}}
+{\footnotesize\ttfamily abstract void PC.\+UI.\+Menu\+Base.\+Open\+Extension (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_dev_console_menu_acb8231396e05aff72885f01a3ad594c9}{PC.\+UI.\+Dev\+Console\+Menu}}, \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_inventory_menu_ae2732d10591f7b5be08a3c776456c111}{PC.\+UI.\+Inventory\+Menu}}, \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_map_menu_a902262f06d4b13f9cb5c9f6b3dd4e630}{PC.\+UI.\+Map\+Menu}}, \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_pause_menu_aa6233b674054aac4fdebe96f0a3836c3}{PC.\+UI.\+Pause\+Menu}}, \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_player_management_station_menu_a60c1adeac28bb631468630c3b8efe001}{PC.\+UI.\+Player\+Management\+Station\+Menu}}, and \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_p_m_s_menu_ab696a93cba0b783b63d650aed6fc84d4}{PC.\+UI.\+PMSMenu}}.
+

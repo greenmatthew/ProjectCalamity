@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_p_c_1_1_u_i_1_1_button_action" xml:lang="en-US">
+<title>PC.UI.ButtonAction Struct Reference</title>
+<indexterm><primary>PC.UI.ButtonAction</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_p_c_1_1_u_i_1_1_button_action_1a14da763597520666a21b62714017f008"/><emphasis role="strong">ButtonAction</emphasis> (string label, UnityEngine.Events.UnityAction action=null)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_p_c_1_1_u_i_1_1_button_action_1aff2b6381ceb88fe167f0972fc5f88993"/>string <emphasis role="strong">Label</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_p_c_1_1_u_i_1_1_button_action_1ac3085893661fab88be00349f6ec430ac"/>UnityEngine.Events.UnityAction <emphasis role="strong">Action</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

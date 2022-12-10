@@ -1,0 +1,53 @@
+.TH "PC.Combat.EnemyCombat" 3 "Fri Dec 9 2022" "Project Calamity" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PC.Combat.EnemyCombat \- Defines the combat behavior specific to our enemies\&.   
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBAttackTarget\fP (Transform target)"
+.br
+.RI "Activates the enemy's attack when the player is touched\&.  "
+.ti -1c
+.RI "void \fBSetTags\fP (Transform curr)"
+.br
+.RI "Sets the tag of all child objects to 'Enemy' so that collisions with appendages can be identified\&. Calls this recursively on all children\&.  "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fB_touchingPlayer\fP = false"
+.br
+.RI "Records whether or not the enemy and player colliders overlap\&.  "
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "void PC\&.Combat\&.EnemyCombat\&.AttackTarget (Transform target)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fItarget\fP 
+.RE
+.PP
+
+.SS "void PC\&.Combat\&.EnemyCombat\&.SetTags (Transform curr)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIcurr\fP The transform of the object currently being expected\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Project Calamity from the source code\&.

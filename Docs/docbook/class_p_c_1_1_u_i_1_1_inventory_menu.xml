@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_c_1_1_u_i_1_1_inventory_menu" xml:lang="en-US">
+<title>PC.UI.InventoryMenu Class Reference</title>
+<indexterm><primary>PC.UI.InventoryMenu</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_inventory_menu_1a609bd45f07deded16a901c809953d3ac"/>void <emphasis role="strong">OpenWithStash</emphasis> ()</para>
+
+<para>Opens the inventory with the stash on the right. So you can transfer items between the stash and the inventory.  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>override void <link linkend="_class_p_c_1_1_u_i_1_1_inventory_menu_1a9abf1e8dc5ef949fc33ef6a4e1820aa9">AwakeExtension</link> ()</para>
+
+<para>DO NOT HIDE/OVERRIDE <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1ab4ef75b27a80470f8857f4792cc8b4e3">MenuBase.Awake()</link> USING THE NEW OR OVERRIDE KEYWORDS!!! <link linkend="_class_p_c_1_1_u_i_1_1_inventory_menu_1a9abf1e8dc5ef949fc33ef6a4e1820aa9">AwakeExtension()</link> is called at the end of <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1ab4ef75b27a80470f8857f4792cc8b4e3">MenuBase.Awake()</link>. If you need any code to run in MonoBehaviour.Awake() put it inside <link linkend="_class_p_c_1_1_u_i_1_1_inventory_menu_1a9abf1e8dc5ef949fc33ef6a4e1820aa9">AwakeExtension()</link>.  </para>
+</listitem>
+            <listitem><para>override void <link linkend="_class_p_c_1_1_u_i_1_1_inventory_menu_1ae2732d10591f7b5be08a3c776456c111">OpenExtension</link> ()</para>
+
+<para>Gets called at the end of <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1ab515ef592f62a554219fdd87bd1813da">Open()</link>.  </para>
+</listitem>
+            <listitem><para>override void <link linkend="_class_p_c_1_1_u_i_1_1_inventory_menu_1a09d9bfe472eb138ed63d30f53e8c1ac4">CloseExtension</link> ()</para>
+
+<para>Gets called at the end of <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1a740632961fbc2e3f0b5ca82006f097ba">Close()</link>.  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_inventory_menu_1aa63321d2f7ce377eef6ee1cf61395cba"/>static <link linkend="_class_p_c_1_1_u_i_1_1_container_base">ContainerBase</link> <emphasis role="strong">CurrentContainer</emphasis><computeroutput> [set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_inventory_menu_1a8c9ea745b5d7d1609908de2baa48dbd3"/>static <link linkend="_class_p_c_1_1_u_i_1_1_inventory_menu">InventoryMenu</link> <emphasis role="strong">instance</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_inventory_menu_1a8442ca63517b4cadc06ff2b5d70ce4c4"/><link linkend="_class_p_c_1_1_u_i_1_1_container_base">ContainerBase</link> <emphasis role="strong">_currentContainer</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_inventory_menu_1a757fe2f7fa196818a32a0d6cbab42d5c"/><link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link> <emphasis role="strong">_currentItemSource</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_inventory_menu_1ad3faa8afc3efd50e0be4a2080b58e3d9"/>void <emphasis role="strong">Update</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_inventory_menu_1a2672c33f4c3959e0680ef92b796766d1"/>void <emphasis role="strong">ClampCurrentItemToCursor</emphasis> ()</para>
+
+<para>Clamps the current item to the cursor position.  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_p_c_1_1_u_i_1_1_inventory_menu_1ad782cf6d156aedb2685160697ef60907">TryPickingUpItem</link> (Vector2Int cellIndex)</para>
+
+<para>Tries to pick up an item from the current container.  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_p_c_1_1_u_i_1_1_inventory_menu_1a72dc4135d97e4cad66cec16e093773a5">TryReleasingItem</link> (Vector2Int cellIndex)</para>
+
+<para>Tries to release the current item to the current container.  </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_inventory_menu_1aec1f53cd729d91fa74749e3fcae093ff"/>void <emphasis role="strong">TryRotatingItem</emphasis> ()</para>
+
+<para>Tries to rotate the current item.  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_inventory_menu_1a32641e6215c2a72882aa3e6e469a613e"/><link linkend="_class_p_c_1_1_u_i_1_1_container_base">ContainerBase</link> <emphasis role="strong">h_currentContainer</emphasis> = null</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_inventory_menu_1a0116ed4169482afa37d98b0922549174"/><link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link> <emphasis role="strong">h_currentItemSource</emphasis> = null</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_inventory_menu_1a8423cd1066a0ec4132e808f3f0b408d4"/><link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link> <emphasis role="strong">_currentItemCopy</emphasis> = null</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_inventory_menu_1a0576c5f38fbe95a4eff388f62deb3ee7"/>GameObject <emphasis role="strong">_stash</emphasis> = null</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_inventory_menu_1a3da0781065af9dad9f54fd441193389a"/>static List&lt; string &gt; <emphasis role="strong">_hierarchyPaths</emphasis> = new List&lt;string&gt;()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_inventory_menu_1aef8f36bdff7561f84c8e65cc1b65d92d"/>static <link linkend="_class_p_c_1_1_u_i_1_1_inventory_menu">InventoryMenu</link> <emphasis role="strong">h_instance</emphasis> = null</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_inventory_menu_1a9abf1e8dc5ef949fc33ef6a4e1820aa9"/><section>
+    <title>AwakeExtension()</title>
+<indexterm><primary>AwakeExtension</primary><secondary>PC.UI.InventoryMenu</secondary></indexterm>
+<indexterm><primary>PC.UI.InventoryMenu</primary><secondary>AwakeExtension</secondary></indexterm>
+<para><computeroutput>override void PC.UI.InventoryMenu.AwakeExtension ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1ae8a88ab2eceb67a6ceae7c473f662cc9">PC.UI.MenuBase</link>.</para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_inventory_menu_1a09d9bfe472eb138ed63d30f53e8c1ac4"/><section>
+    <title>CloseExtension()</title>
+<indexterm><primary>CloseExtension</primary><secondary>PC.UI.InventoryMenu</secondary></indexterm>
+<indexterm><primary>PC.UI.InventoryMenu</primary><secondary>CloseExtension</secondary></indexterm>
+<para><computeroutput>override void PC.UI.InventoryMenu.CloseExtension ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1a44ec7793a3d577ebae49fb0de23894a4">PC.UI.MenuBase</link>.</para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_inventory_menu_1ae2732d10591f7b5be08a3c776456c111"/><section>
+    <title>OpenExtension()</title>
+<indexterm><primary>OpenExtension</primary><secondary>PC.UI.InventoryMenu</secondary></indexterm>
+<indexterm><primary>PC.UI.InventoryMenu</primary><secondary>OpenExtension</secondary></indexterm>
+<para><computeroutput>override void PC.UI.InventoryMenu.OpenExtension ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1a1c5968ebb647ea20f3f075f05b2ee166">PC.UI.MenuBase</link>.</para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_inventory_menu_1ad782cf6d156aedb2685160697ef60907"/><section>
+    <title>TryPickingUpItem()</title>
+<indexterm><primary>TryPickingUpItem</primary><secondary>PC.UI.InventoryMenu</secondary></indexterm>
+<indexterm><primary>PC.UI.InventoryMenu</primary><secondary>TryPickingUpItem</secondary></indexterm>
+<para><computeroutput>void PC.UI.InventoryMenu.TryPickingUpItem (Vector2Int cellIndex)<computeroutput>[private]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>cellIndex</entry><entry>
+<para>The cell index of the item to pick up.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_inventory_menu_1a72dc4135d97e4cad66cec16e093773a5"/><section>
+    <title>TryReleasingItem()</title>
+<indexterm><primary>TryReleasingItem</primary><secondary>PC.UI.InventoryMenu</secondary></indexterm>
+<indexterm><primary>PC.UI.InventoryMenu</primary><secondary>TryReleasingItem</secondary></indexterm>
+<para><computeroutput>void PC.UI.InventoryMenu.TryReleasingItem (Vector2Int cellIndex)<computeroutput>[private]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>cellIndex</entry><entry>
+<para>The cell index to release the item to.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

@@ -1,0 +1,65 @@
+.TH "PC.Entities.PlayerAnimatorController" 3 "Fri Dec 9 2022" "Project Calamity" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PC.Entities.PlayerAnimatorController \- This class is responsible for controlling the player's animations\&. For our purposes, it simply regularly updates the variables used by the animator to determine which animation to play\&.   
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "static InputActions \fBinputActions\fP\fC [get]\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBStart\fP ()"
+.br
+.ti -1c
+.RI "void \fBUpdate\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Animator \fB_animator\fP = null"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "const int \fBUNARMED\fP = 0"
+.br
+.ti -1c
+.RI "const int \fBASSAULT_RIFLE\fP = 1"
+.br
+.ti -1c
+.RI "const int \fBBEAM_GUN\fP = 2"
+.br
+.ti -1c
+.RI "const int \fBGATLIN_GUN\fP = 3"
+.br
+.ti -1c
+.RI "const int \fBMISSLE_LAUNCHER\fP = 4"
+.br
+.ti -1c
+.RI "const int \fBIDLE\fP = 0"
+.br
+.ti -1c
+.RI "const int \fBWALKING\fP = 1"
+.br
+.ti -1c
+.RI "const int \fBRUNNING\fP = 2"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Project Calamity from the source code\&.

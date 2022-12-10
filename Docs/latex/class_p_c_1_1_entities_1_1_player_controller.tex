@@ -1,0 +1,50 @@
+\hypertarget{class_p_c_1_1_entities_1_1_player_controller}{}\doxysection{PC.\+Entities.\+Player\+Controller Class Reference}
+\label{class_p_c_1_1_entities_1_1_player_controller}\index{PC.Entities.PlayerController@{PC.Entities.PlayerController}}
+
+
+Defines functionality and attributes specific to our player character.   
+
+
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_entities_1_1_player_controller_aef483dc2ff4f21c101b199bd5b250bc3}\label{class_p_c_1_1_entities_1_1_player_controller_aef483dc2ff4f21c101b199bd5b250bc3}} 
+override void {\bfseries Look} ()
+\begin{DoxyCompactList}\small\item\em Turns the Player object along x mouse input and turns camera along y mouse input.  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_p_c_1_1_entities_1_1_player_controller_abd46e614678f2b57e36c9fee71db550d}\label{class_p_c_1_1_entities_1_1_player_controller_abd46e614678f2b57e36c9fee71db550d}} 
+override void {\bfseries Move} ()
+\begin{DoxyCompactList}\small\item\em Moves the Player object by input from user and also applies gravity.  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_p_c_1_1_entities_1_1_player_controller_acd4369fc3fee9814e3bca195fc224adf}\label{class_p_c_1_1_entities_1_1_player_controller_acd4369fc3fee9814e3bca195fc224adf}} 
+override void {\bfseries Setup\+Input} ()
+\begin{DoxyCompactList}\small\item\em Initializes the Input\+Actions object, which handles all input from the user.  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_p_c_1_1_entities_1_1_player_controller_a838a93923fe93e526c67eddb3d2321e7}\label{class_p_c_1_1_entities_1_1_player_controller_a838a93923fe93e526c67eddb3d2321e7}} 
+override void {\bfseries Check\+For\+Interactions} ()
+\begin{DoxyCompactList}\small\item\em Displays interaction message if player is close enough to a terminal  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_p_c_1_1_entities_1_1_player_controller_aa463ff1945449dde002deb8b4ecc1b88}\label{class_p_c_1_1_entities_1_1_player_controller_aa463ff1945449dde002deb8b4ecc1b88}} 
+override void {\bfseries Interact} ()
+\begin{DoxyCompactList}\small\item\em Triggers menu when interacting with player management stations  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_c_1_1_entities_1_1_player_controller_a9756f5d831305699b1adaff234f69795}{On\+Animator\+IK}} (int layer\+Index)
+\begin{DoxyCompactList}\small\item\em Modifies player animations to adjust hand position on weapon via inverse kinematics  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_entities_1_1_player_controller_a669f755605ab690da89a8cf0ea510a4e}\label{class_p_c_1_1_entities_1_1_player_controller_a669f755605ab690da89a8cf0ea510a4e}} 
+void {\bfseries Equip\+Primary\+Firearm} ()
+\begin{DoxyCompactList}\small\item\em Equips the player\textquotesingle{}s primary firearm from their inventory  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_p_c_1_1_entities_1_1_player_controller_ab7e24b01a19382ce8773e842f962e933}\label{class_p_c_1_1_entities_1_1_player_controller_ab7e24b01a19382ce8773e842f962e933}} 
+void {\bfseries Equip\+Secondary\+Firearm} ()
+\begin{DoxyCompactList}\small\item\em Equips the player\textquotesingle{}s secondary firearm from their inventory  \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_p_c_1_1_entities_1_1_player_controller_a9756f5d831305699b1adaff234f69795}\label{class_p_c_1_1_entities_1_1_player_controller_a9756f5d831305699b1adaff234f69795}} 
+\index{PC.Entities.PlayerController@{PC.Entities.PlayerController}!OnAnimatorIK@{OnAnimatorIK}}
+\index{OnAnimatorIK@{OnAnimatorIK}!PC.Entities.PlayerController@{PC.Entities.PlayerController}}
+\doxysubsubsection{\texorpdfstring{OnAnimatorIK()}{OnAnimatorIK()}}
+{\footnotesize\ttfamily void PC.\+Entities.\+Player\+Controller.\+On\+Animator\+IK (\begin{DoxyParamCaption}\item[{int}]{layer\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em layer\+Index} & Index of layer on which the IK solver is called.\\
+\hline
+\end{DoxyParams}

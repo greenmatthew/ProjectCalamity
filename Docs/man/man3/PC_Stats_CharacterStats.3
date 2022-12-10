@@ -1,0 +1,31 @@
+.TH "PC.Stats.CharacterStats" 3 "Fri Dec 9 2022" "Project Calamity" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PC.Stats.CharacterStats \- This class is used to store general stats and damage behavior common to all game characters\&.   
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBTakeDamage\fP ()"
+.br
+.RI "The general damage function\&. This is called by other scripts any time the relevant entity needs to lose health points\&.  "
+.ti -1c
+.RI "virtual void \fBDie\fP ()"
+.br
+.RI "Logs an entities death to the console\&. Specific death behavior and animations will be defined in scripts specific to a character\&.  "
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void PC\&.Stats\&.CharacterStats\&.Die ()\fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBPC\&.Stats\&.EnemyStats\fP, and \fBPC\&.Stats\&.PlayerStats\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Project Calamity from the source code\&.

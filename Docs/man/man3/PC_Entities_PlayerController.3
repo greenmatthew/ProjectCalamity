@@ -1,0 +1,64 @@
+.TH "PC.Entities.PlayerController" 3 "Fri Dec 9 2022" "Project Calamity" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PC.Entities.PlayerController \- Defines functionality and attributes specific to our player character\&.   
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "override void \fBLook\fP ()"
+.br
+.RI "Turns the Player object along x mouse input and turns camera along y mouse input\&.  "
+.ti -1c
+.RI "override void \fBMove\fP ()"
+.br
+.RI "Moves the Player object by input from user and also applies gravity\&.  "
+.ti -1c
+.RI "override void \fBSetupInput\fP ()"
+.br
+.RI "Initializes the InputActions object, which handles all input from the user\&.  "
+.ti -1c
+.RI "override void \fBCheckForInteractions\fP ()"
+.br
+.RI "Displays interaction message if player is close enough to a terminal  "
+.ti -1c
+.RI "override void \fBInteract\fP ()"
+.br
+.RI "Triggers menu when interacting with player management stations  "
+.ti -1c
+.RI "void \fBOnAnimatorIK\fP (int layerIndex)"
+.br
+.RI "Modifies player animations to adjust hand position on weapon via inverse kinematics  "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBEquipPrimaryFirearm\fP ()"
+.br
+.RI "Equips the player's primary firearm from their inventory  "
+.ti -1c
+.RI "void \fBEquipSecondaryFirearm\fP ()"
+.br
+.RI "Equips the player's secondary firearm from their inventory  "
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "void PC\&.Entities\&.PlayerController\&.OnAnimatorIK (int layerIndex)\fC [protected]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIlayerIndex\fP Index of layer on which the IK solver is called\&.
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Project Calamity from the source code\&.

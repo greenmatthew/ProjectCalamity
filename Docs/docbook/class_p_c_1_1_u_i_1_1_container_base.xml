@@ -1,0 +1,567 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_c_1_1_u_i_1_1_container_base" xml:lang="en-US">
+<title>PC.UI.ContainerBase Class Reference</title>
+<indexterm><primary>PC.UI.ContainerBase</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_p_c_1_1_u_i_1_1_container_base_1afe4704a130ba0640f57f794274462918">OnPointerEnter</link> (PointerEventData eventData)</para>
+
+<para>Is called upon a cursor entering the container&apos;s bounds.  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_p_c_1_1_u_i_1_1_container_base_1a1d2d1b518269067039ddbbc81029f727">OnPointerExit</link> (PointerEventData eventData)</para>
+
+<para>Is called upon a cursor exiting the container&apos;s bounds.  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_p_c_1_1_u_i_1_1_container_base_1a50c1fbd373a027cc3270a6387eb72925">SetItemParent</link> (RectTransform itemRectTransform)</para>
+
+<para>Sets the parent of an item to the content parent object of this container.  </para>
+</listitem>
+            <listitem><para>virtual Vector2Int <link linkend="_class_p_c_1_1_u_i_1_1_container_base_1ad6bfe911d6a6200aa74f5c40977354f6">GetCellIndex</link> (Vector2 mousePos)</para>
+
+<para>Gets the cell index relative to the container using the given mouse position.  </para>
+</listitem>
+            <listitem><para><link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link> <link linkend="_class_p_c_1_1_u_i_1_1_container_base_1a953a554917656cc5b1aa3603d56b302f">GetItemAt</link> (Vector2Int cellIndex)</para>
+
+<para>Gets the item at the given cell index.  </para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_class_p_c_1_1_u_i_1_1_container_base_1a1cfa23ad215e3238e552e9174501670e">RemoveItemAt</link> (Vector2Int cellIndex)</para>
+
+<para>Removes the item at a given cellIndex from the container.  </para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_class_p_c_1_1_u_i_1_1_container_base_1a3082416b69c71572c22657058fc061e4">PlaceItemAt</link> (<link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link> item, Vector2Int cellIndex)</para>
+
+<para>Places an item at a given cellIndex in the container.  </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link> <link linkend="_class_p_c_1_1_u_i_1_1_container_base_1a1e966a7c01cb75bb76ab47a340cd7695">TakeItemAt</link> (Vector2Int cellIndex)</para>
+
+<para>Takes an item from a container  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_p_c_1_1_u_i_1_1_container_base_1a6ca390330f9af2555c05a523c925d182">TransferItem</link> (Vector2Int sourceCellIndex, <link linkend="_class_p_c_1_1_u_i_1_1_container">Container</link> targetContainer, Vector2Int targetCellIndex)</para>
+
+<para>Transfers an item from one container to another.  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1aebc07d32c56472d4b00008cf19679ea9"/>virtual void <emphasis role="strong">Awake</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1a7a999cc492c9cd58f9a6eb8e510ea63c"/>virtual void <emphasis role="strong">Start</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1a40f2800b37e5b4b4035353385415c5c1"/>void <emphasis role="strong">InitContents</emphasis> ()</para>
+
+<para>Initializes the contents of the container.  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_p_c_1_1_u_i_1_1_container_base_1a7fa2bc0a4e9aa799f9eaf13681227ecf">InitContents</link> (Vector2 size)</para>
+
+<para>Initializes the contents of the container.  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_p_c_1_1_u_i_1_1_container_base_1ab8615f3477dc24efae610a57532cf60b">InitBackground</link> (Vector2 size)</para>
+
+<para>Initializes the background of the container.  </para>
+</listitem>
+            <listitem><para><link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link> <link linkend="_class_p_c_1_1_u_i_1_1_container_base_1a1dca6d437410e57a832be4d1a3294065">GetCell</link> (Vector2Int cellIndex)</para>
+
+<para>Check the contents of the container.  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_p_c_1_1_u_i_1_1_container_base_1abca75939df9c5a9319530cd842b93404">SetCell</link> (Vector2Int cellIndex, <link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link> item)</para>
+
+<para>Sets the contents of the container.  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_p_c_1_1_u_i_1_1_container_base_1aaaf54e7840ddf65265125e121b3aa937">EmptyCell</link> (Vector2Int cellIndex)</para>
+
+<para>Sets the cell at the given index to null.  </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1a74e23bb3e173acb102bd068c5e18d874"/>bool <emphasis role="strong">IsCellOutOfRange</emphasis> (Vector2Int cellIndex)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1a6984e1b88957cf175f5a6186ce8b35d3"/>bool <emphasis role="strong">IsCellEmpty</emphasis> (Vector2Int cellIndex)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1ae042f0ad8d7a7faaa09178b0bf44e229"/>bool <emphasis role="strong">IsCellEmptyExcludingSelfOrCopy</emphasis> (<link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link> item, Vector2Int cellIndex)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1aaa0495a291625472f1356df5dc4e34f2"/>bool <emphasis role="strong">IsCellOccupied</emphasis> (Vector2Int cellIndex)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1ac6538671629a42442dfa85a9e258a132"/>bool <emphasis role="strong">IsCellOccupiedExcludingSelfOrCopy</emphasis> (<link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link> item, Vector2Int cellIndex)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1afee0ab0f233c6b1851cde78be1e8eec9"/>bool <emphasis role="strong">IsCellOccupiedBySelfOrCopy</emphasis> (<link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link> item, Vector2Int cellIndex)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1a6eac0730604b04ce6a8f4f1c90bb60b5"/>bool <emphasis role="strong">IsCellOccupiedNotBySelfOrCopy</emphasis> (<link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link> item, Vector2Int cellIndex)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1a18f8db08bc26a134d04c7637c4da66af"/>RectTransform <emphasis role="strong">_contentsParent</emphasis> = null</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1aec515b5b0217e4130c45d54be4e2e374"/>int <emphasis role="strong">cellWidth</emphasis> = 10</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1a261f53f12e1d3a95dd3b2294df303c99"/>int <emphasis role="strong">cellHeight</emphasis> = 10</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1aa3844d443888b8f32e1a6cd263a228c6"/>RectTransform <emphasis role="strong">_rectTransform</emphasis> = null</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1aea6f771dbca9ed46e9cf0691f39df807"/>RectTransform <emphasis role="strong">_anchor</emphasis> = null</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1a9967cf21e007295f076e8f6fb05ff804"/>RectTransform <emphasis role="strong">_cellBackgroundPrefab</emphasis> = null</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1acaac28fe3c5f01593934afa4cd70cdae"/>RectTransform <emphasis role="strong">_cellBackgroundParent</emphasis> = null</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1abcd6c86e88cbe287ee8c1901d2e84fac"/>Vector2 <emphasis role="strong">_mousePos</emphasis> = Vector2.zero</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1a02b4216e2f603580c9960b1bff1af192"/>Vector2 <emphasis role="strong">_currentPosition</emphasis> = Vector2.zero</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1a4e2c37c0ef4e4d1a758271d9fcc32772"/>Vector2Int <emphasis role="strong">_currentCellIndex</emphasis> = Vector2Int.zero</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1a410cf15f6e8b0950587c51886e992cab"/>RectTransform <emphasis role="strong">ContentsParent</emphasis><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1a8744bd11760c77f15de0fe7267f6890a"/><link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link>[,] <emphasis role="strong">_contents</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1a5ef66d88350ed645b0dfcc79598ae68e"/><link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link>[,] <emphasis role="strong">h_contents</emphasis> = null</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1aaaf54e7840ddf65265125e121b3aa937"/><section>
+    <title>EmptyCell()</title>
+<indexterm><primary>EmptyCell</primary><secondary>PC.UI.ContainerBase</secondary></indexterm>
+<indexterm><primary>PC.UI.ContainerBase</primary><secondary>EmptyCell</secondary></indexterm>
+<para><computeroutput>void PC.UI.ContainerBase.EmptyCell (Vector2Int cellIndex)<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>cellIndex</entry><entry>
+<para>The cell index you want to set to null.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1a1dca6d437410e57a832be4d1a3294065"/><section>
+    <title>GetCell()</title>
+<indexterm><primary>GetCell</primary><secondary>PC.UI.ContainerBase</secondary></indexterm>
+<indexterm><primary>PC.UI.ContainerBase</primary><secondary>GetCell</secondary></indexterm>
+<para><computeroutput><link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link> PC.UI.ContainerBase.GetCell (Vector2Int cellIndex)<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>cellIndex</entry><entry>
+<para>The cell index you want to check.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The item at the given cell index if an item was present or null if there was no item.</para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1ad6bfe911d6a6200aa74f5c40977354f6"/><section>
+    <title>GetCellIndex()</title>
+<indexterm><primary>GetCellIndex</primary><secondary>PC.UI.ContainerBase</secondary></indexterm>
+<indexterm><primary>PC.UI.ContainerBase</primary><secondary>GetCellIndex</secondary></indexterm>
+<para><computeroutput>virtual Vector2Int PC.UI.ContainerBase.GetCellIndex (Vector2 mousePos)<computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>mousePos</entry><entry>
+<para>Position of the mouse.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Cell index relative to the container.</para>
+</formalpara>
+</para>
+<para>
+Reimplemented in <link linkend="_class_p_c_1_1_u_i_1_1_slot_1a3abc378767113733e274cfda6cc927a8">PC.UI.Slot</link>.</para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1a953a554917656cc5b1aa3603d56b302f"/><section>
+    <title>GetItemAt()</title>
+<indexterm><primary>GetItemAt</primary><secondary>PC.UI.ContainerBase</secondary></indexterm>
+<indexterm><primary>PC.UI.ContainerBase</primary><secondary>GetItemAt</secondary></indexterm>
+<para><computeroutput><link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link> PC.UI.ContainerBase.GetItemAt (Vector2Int cellIndex)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>cellIndex</entry><entry>
+<para>The cell index you want to check.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The item at the given cell index if an item was present or null if there was no item.</para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1ab8615f3477dc24efae610a57532cf60b"/><section>
+    <title>InitBackground()</title>
+<indexterm><primary>InitBackground</primary><secondary>PC.UI.ContainerBase</secondary></indexterm>
+<indexterm><primary>PC.UI.ContainerBase</primary><secondary>InitBackground</secondary></indexterm>
+<para><computeroutput>void PC.UI.ContainerBase.InitBackground (Vector2 size)<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>size</entry><entry>
+<para>The area of the background.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1a7fa2bc0a4e9aa799f9eaf13681227ecf"/><section>
+    <title>InitContents()</title>
+<indexterm><primary>InitContents</primary><secondary>PC.UI.ContainerBase</secondary></indexterm>
+<indexterm><primary>PC.UI.ContainerBase</primary><secondary>InitContents</secondary></indexterm>
+<para><computeroutput>void PC.UI.ContainerBase.InitContents (Vector2 size)<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>size</entry><entry>
+<para>The area of the contents.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1afe4704a130ba0640f57f794274462918"/><section>
+    <title>OnPointerEnter()</title>
+<indexterm><primary>OnPointerEnter</primary><secondary>PC.UI.ContainerBase</secondary></indexterm>
+<indexterm><primary>PC.UI.ContainerBase</primary><secondary>OnPointerEnter</secondary></indexterm>
+<para><computeroutput>void PC.UI.ContainerBase.OnPointerEnter (PointerEventData eventData)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>eventData</entry><entry>
+<para>The event data of the pointer.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1a1d2d1b518269067039ddbbc81029f727"/><section>
+    <title>OnPointerExit()</title>
+<indexterm><primary>OnPointerExit</primary><secondary>PC.UI.ContainerBase</secondary></indexterm>
+<indexterm><primary>PC.UI.ContainerBase</primary><secondary>OnPointerExit</secondary></indexterm>
+<para><computeroutput>void PC.UI.ContainerBase.OnPointerExit (PointerEventData eventData)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>eventData</entry><entry>
+<para>The event data of the pointer.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1a3082416b69c71572c22657058fc061e4"/><section>
+    <title>PlaceItemAt()</title>
+<indexterm><primary>PlaceItemAt</primary><secondary>PC.UI.ContainerBase</secondary></indexterm>
+<indexterm><primary>PC.UI.ContainerBase</primary><secondary>PlaceItemAt</secondary></indexterm>
+<para><computeroutput>virtual bool PC.UI.ContainerBase.PlaceItemAt (<link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link> item, Vector2Int cellIndex)<computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>item</entry><entry>
+<para>The item you want to place.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>cellIndex</entry><entry>
+<para>The cell index you want to place the item at.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Returns true if the operation was successful, otherwise false.</para>
+</formalpara>
+</para>
+<para>
+Reimplemented in <link linkend="_class_p_c_1_1_u_i_1_1_slot_1ab832866c460e2d656298c394ff41e7e6">PC.UI.Slot</link>.</para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1a1cfa23ad215e3238e552e9174501670e"/><section>
+    <title>RemoveItemAt()</title>
+<indexterm><primary>RemoveItemAt</primary><secondary>PC.UI.ContainerBase</secondary></indexterm>
+<indexterm><primary>PC.UI.ContainerBase</primary><secondary>RemoveItemAt</secondary></indexterm>
+<para><computeroutput>virtual bool PC.UI.ContainerBase.RemoveItemAt (Vector2Int cellIndex)<computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>cellIndex</entry><entry>
+<para>The cell index of the item you want to remove.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Returns true if the operation was successful, otherwise false.</para>
+</formalpara>
+</para>
+<para>
+Reimplemented in <link linkend="_class_p_c_1_1_u_i_1_1_slot_1a0b81350b90c01ea52399ba9d488b828f">PC.UI.Slot</link>.</para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1abca75939df9c5a9319530cd842b93404"/><section>
+    <title>SetCell()</title>
+<indexterm><primary>SetCell</primary><secondary>PC.UI.ContainerBase</secondary></indexterm>
+<indexterm><primary>PC.UI.ContainerBase</primary><secondary>SetCell</secondary></indexterm>
+<para><computeroutput>void PC.UI.ContainerBase.SetCell (Vector2Int cellIndex, <link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link> item)<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>cellIndex</entry><entry>
+<para>The cell index you want to store an item at.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>item</entry><entry>
+<para>The item you want to store.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1a50c1fbd373a027cc3270a6387eb72925"/><section>
+    <title>SetItemParent()</title>
+<indexterm><primary>SetItemParent</primary><secondary>PC.UI.ContainerBase</secondary></indexterm>
+<indexterm><primary>PC.UI.ContainerBase</primary><secondary>SetItemParent</secondary></indexterm>
+<para><computeroutput>void PC.UI.ContainerBase.SetItemParent (RectTransform itemRectTransform)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>itemRectTransform</entry><entry>
+<para>The given item you want to set the parent of.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1a1e966a7c01cb75bb76ab47a340cd7695"/><section>
+    <title>TakeItemAt()</title>
+<indexterm><primary>TakeItemAt</primary><secondary>PC.UI.ContainerBase</secondary></indexterm>
+<indexterm><primary>PC.UI.ContainerBase</primary><secondary>TakeItemAt</secondary></indexterm>
+<para><computeroutput>virtual <link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link> PC.UI.ContainerBase.TakeItemAt (Vector2Int cellIndex)<computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>cellIndex</entry><entry>
+<para>The cell index of the item you want to take from the container.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The item taken from the container</para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_container_base_1a6ca390330f9af2555c05a523c925d182"/><section>
+    <title>TransferItem()</title>
+<indexterm><primary>TransferItem</primary><secondary>PC.UI.ContainerBase</secondary></indexterm>
+<indexterm><primary>PC.UI.ContainerBase</primary><secondary>TransferItem</secondary></indexterm>
+<para><computeroutput>void PC.UI.ContainerBase.TransferItem (Vector2Int sourceCellIndex, <link linkend="_class_p_c_1_1_u_i_1_1_container">Container</link> targetContainer, Vector2Int targetCellIndex)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>sourceCellIndex</entry><entry>
+<para>The cell index of the item you want to transfer.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>targetContainer</entry><entry>
+<para>The container you want to transfer the item to.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>targetCellIndex</entry><entry>
+<para>The cell index you want to transfer the item to.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

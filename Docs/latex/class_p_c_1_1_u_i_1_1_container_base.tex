@@ -1,0 +1,309 @@
+\hypertarget{class_p_c_1_1_u_i_1_1_container_base}{}\doxysection{PC.\+UI.\+Container\+Base Class Reference}
+\label{class_p_c_1_1_u_i_1_1_container_base}\index{PC.UI.ContainerBase@{PC.UI.ContainerBase}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_container_base_afe4704a130ba0640f57f794274462918}{On\+Pointer\+Enter}} (Pointer\+Event\+Data event\+Data)
+\begin{DoxyCompactList}\small\item\em Is called upon a cursor entering the container\textquotesingle{}s bounds.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_container_base_a1d2d1b518269067039ddbbc81029f727}{On\+Pointer\+Exit}} (Pointer\+Event\+Data event\+Data)
+\begin{DoxyCompactList}\small\item\em Is called upon a cursor exiting the container\textquotesingle{}s bounds.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_container_base_a50c1fbd373a027cc3270a6387eb72925}{Set\+Item\+Parent}} (Rect\+Transform item\+Rect\+Transform)
+\begin{DoxyCompactList}\small\item\em Sets the parent of an item to the content parent object of this container.  \end{DoxyCompactList}\item 
+virtual Vector2\+Int \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_container_base_ad6bfe911d6a6200aa74f5c40977354f6}{Get\+Cell\+Index}} (Vector2 mouse\+Pos)
+\begin{DoxyCompactList}\small\item\em Gets the cell index relative to the container using the given mouse position.  \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_p_c_1_1_u_i_1_1_item}{Item}} \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_container_base_a953a554917656cc5b1aa3603d56b302f}{Get\+Item\+At}} (Vector2\+Int cell\+Index)
+\begin{DoxyCompactList}\small\item\em Gets the item at the given cell index.  \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_container_base_a1cfa23ad215e3238e552e9174501670e}{Remove\+Item\+At}} (Vector2\+Int cell\+Index)
+\begin{DoxyCompactList}\small\item\em Removes the item at a given cell\+Index from the container.  \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_container_base_a3082416b69c71572c22657058fc061e4}{Place\+Item\+At}} (\mbox{\hyperlink{class_p_c_1_1_u_i_1_1_item}{Item}} item, Vector2\+Int cell\+Index)
+\begin{DoxyCompactList}\small\item\em Places an item at a given cell\+Index in the container.  \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_item}{Item}} \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_container_base_a1e966a7c01cb75bb76ab47a340cd7695}{Take\+Item\+At}} (Vector2\+Int cell\+Index)
+\begin{DoxyCompactList}\small\item\em Takes an item from a container  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_container_base_a6ca390330f9af2555c05a523c925d182}{Transfer\+Item}} (Vector2\+Int source\+Cell\+Index, \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_container}{Container}} target\+Container, Vector2\+Int target\+Cell\+Index)
+\begin{DoxyCompactList}\small\item\em Transfers an item from one container to another.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_aebc07d32c56472d4b00008cf19679ea9}\label{class_p_c_1_1_u_i_1_1_container_base_aebc07d32c56472d4b00008cf19679ea9}} 
+virtual void {\bfseries Awake} ()
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_a7a999cc492c9cd58f9a6eb8e510ea63c}\label{class_p_c_1_1_u_i_1_1_container_base_a7a999cc492c9cd58f9a6eb8e510ea63c}} 
+virtual void {\bfseries Start} ()
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_a40f2800b37e5b4b4035353385415c5c1}\label{class_p_c_1_1_u_i_1_1_container_base_a40f2800b37e5b4b4035353385415c5c1}} 
+void {\bfseries Init\+Contents} ()
+\begin{DoxyCompactList}\small\item\em Initializes the contents of the container.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_container_base_a7fa2bc0a4e9aa799f9eaf13681227ecf}{Init\+Contents}} (Vector2 size)
+\begin{DoxyCompactList}\small\item\em Initializes the contents of the container.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_container_base_ab8615f3477dc24efae610a57532cf60b}{Init\+Background}} (Vector2 size)
+\begin{DoxyCompactList}\small\item\em Initializes the background of the container.  \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_p_c_1_1_u_i_1_1_item}{Item}} \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_container_base_a1dca6d437410e57a832be4d1a3294065}{Get\+Cell}} (Vector2\+Int cell\+Index)
+\begin{DoxyCompactList}\small\item\em Check the contents of the container.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_container_base_abca75939df9c5a9319530cd842b93404}{Set\+Cell}} (Vector2\+Int cell\+Index, \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_item}{Item}} item)
+\begin{DoxyCompactList}\small\item\em Sets the contents of the container.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_container_base_aaaf54e7840ddf65265125e121b3aa937}{Empty\+Cell}} (Vector2\+Int cell\+Index)
+\begin{DoxyCompactList}\small\item\em Sets the cell at the given index to null.  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_a74e23bb3e173acb102bd068c5e18d874}\label{class_p_c_1_1_u_i_1_1_container_base_a74e23bb3e173acb102bd068c5e18d874}} 
+bool {\bfseries Is\+Cell\+Out\+Of\+Range} (Vector2\+Int cell\+Index)
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_a6984e1b88957cf175f5a6186ce8b35d3}\label{class_p_c_1_1_u_i_1_1_container_base_a6984e1b88957cf175f5a6186ce8b35d3}} 
+bool {\bfseries Is\+Cell\+Empty} (Vector2\+Int cell\+Index)
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_ae042f0ad8d7a7faaa09178b0bf44e229}\label{class_p_c_1_1_u_i_1_1_container_base_ae042f0ad8d7a7faaa09178b0bf44e229}} 
+bool {\bfseries Is\+Cell\+Empty\+Excluding\+Self\+Or\+Copy} (\mbox{\hyperlink{class_p_c_1_1_u_i_1_1_item}{Item}} item, Vector2\+Int cell\+Index)
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_aaa0495a291625472f1356df5dc4e34f2}\label{class_p_c_1_1_u_i_1_1_container_base_aaa0495a291625472f1356df5dc4e34f2}} 
+bool {\bfseries Is\+Cell\+Occupied} (Vector2\+Int cell\+Index)
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_ac6538671629a42442dfa85a9e258a132}\label{class_p_c_1_1_u_i_1_1_container_base_ac6538671629a42442dfa85a9e258a132}} 
+bool {\bfseries Is\+Cell\+Occupied\+Excluding\+Self\+Or\+Copy} (\mbox{\hyperlink{class_p_c_1_1_u_i_1_1_item}{Item}} item, Vector2\+Int cell\+Index)
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_afee0ab0f233c6b1851cde78be1e8eec9}\label{class_p_c_1_1_u_i_1_1_container_base_afee0ab0f233c6b1851cde78be1e8eec9}} 
+bool {\bfseries Is\+Cell\+Occupied\+By\+Self\+Or\+Copy} (\mbox{\hyperlink{class_p_c_1_1_u_i_1_1_item}{Item}} item, Vector2\+Int cell\+Index)
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_a6eac0730604b04ce6a8f4f1c90bb60b5}\label{class_p_c_1_1_u_i_1_1_container_base_a6eac0730604b04ce6a8f4f1c90bb60b5}} 
+bool {\bfseries Is\+Cell\+Occupied\+Not\+By\+Self\+Or\+Copy} (\mbox{\hyperlink{class_p_c_1_1_u_i_1_1_item}{Item}} item, Vector2\+Int cell\+Index)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_a18f8db08bc26a134d04c7637c4da66af}\label{class_p_c_1_1_u_i_1_1_container_base_a18f8db08bc26a134d04c7637c4da66af}} 
+Rect\+Transform {\bfseries \+\_\+contents\+Parent} = null
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_aec515b5b0217e4130c45d54be4e2e374}\label{class_p_c_1_1_u_i_1_1_container_base_aec515b5b0217e4130c45d54be4e2e374}} 
+int {\bfseries cell\+Width} = 10
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_a261f53f12e1d3a95dd3b2294df303c99}\label{class_p_c_1_1_u_i_1_1_container_base_a261f53f12e1d3a95dd3b2294df303c99}} 
+int {\bfseries cell\+Height} = 10
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_aa3844d443888b8f32e1a6cd263a228c6}\label{class_p_c_1_1_u_i_1_1_container_base_aa3844d443888b8f32e1a6cd263a228c6}} 
+Rect\+Transform {\bfseries \+\_\+rect\+Transform} = null
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_aea6f771dbca9ed46e9cf0691f39df807}\label{class_p_c_1_1_u_i_1_1_container_base_aea6f771dbca9ed46e9cf0691f39df807}} 
+Rect\+Transform {\bfseries \+\_\+anchor} = null
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_a9967cf21e007295f076e8f6fb05ff804}\label{class_p_c_1_1_u_i_1_1_container_base_a9967cf21e007295f076e8f6fb05ff804}} 
+Rect\+Transform {\bfseries \+\_\+cell\+Background\+Prefab} = null
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_acaac28fe3c5f01593934afa4cd70cdae}\label{class_p_c_1_1_u_i_1_1_container_base_acaac28fe3c5f01593934afa4cd70cdae}} 
+Rect\+Transform {\bfseries \+\_\+cell\+Background\+Parent} = null
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_abcd6c86e88cbe287ee8c1901d2e84fac}\label{class_p_c_1_1_u_i_1_1_container_base_abcd6c86e88cbe287ee8c1901d2e84fac}} 
+Vector2 {\bfseries \+\_\+mouse\+Pos} = Vector2.\+zero
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_a02b4216e2f603580c9960b1bff1af192}\label{class_p_c_1_1_u_i_1_1_container_base_a02b4216e2f603580c9960b1bff1af192}} 
+Vector2 {\bfseries \+\_\+current\+Position} = Vector2.\+zero
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_a4e2c37c0ef4e4d1a758271d9fcc32772}\label{class_p_c_1_1_u_i_1_1_container_base_a4e2c37c0ef4e4d1a758271d9fcc32772}} 
+Vector2\+Int {\bfseries \+\_\+current\+Cell\+Index} = Vector2\+Int.\+zero
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_a410cf15f6e8b0950587c51886e992cab}\label{class_p_c_1_1_u_i_1_1_container_base_a410cf15f6e8b0950587c51886e992cab}} 
+Rect\+Transform {\bfseries Contents\+Parent}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_a8744bd11760c77f15de0fe7267f6890a}\label{class_p_c_1_1_u_i_1_1_container_base_a8744bd11760c77f15de0fe7267f6890a}} 
+\mbox{\hyperlink{class_p_c_1_1_u_i_1_1_item}{Item}}\mbox{[},\mbox{]} {\bfseries \+\_\+contents}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_a5ef66d88350ed645b0dfcc79598ae68e}\label{class_p_c_1_1_u_i_1_1_container_base_a5ef66d88350ed645b0dfcc79598ae68e}} 
+\mbox{\hyperlink{class_p_c_1_1_u_i_1_1_item}{Item}}\mbox{[},\mbox{]} {\bfseries h\+\_\+contents} = null
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_aaaf54e7840ddf65265125e121b3aa937}\label{class_p_c_1_1_u_i_1_1_container_base_aaaf54e7840ddf65265125e121b3aa937}} 
+\index{PC.UI.ContainerBase@{PC.UI.ContainerBase}!EmptyCell@{EmptyCell}}
+\index{EmptyCell@{EmptyCell}!PC.UI.ContainerBase@{PC.UI.ContainerBase}}
+\doxysubsubsection{\texorpdfstring{EmptyCell()}{EmptyCell()}}
+{\footnotesize\ttfamily void PC.\+UI.\+Container\+Base.\+Empty\+Cell (\begin{DoxyParamCaption}\item[{Vector2\+Int}]{cell\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell\+Index} & The cell index you want to set to null.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_a1dca6d437410e57a832be4d1a3294065}\label{class_p_c_1_1_u_i_1_1_container_base_a1dca6d437410e57a832be4d1a3294065}} 
+\index{PC.UI.ContainerBase@{PC.UI.ContainerBase}!GetCell@{GetCell}}
+\index{GetCell@{GetCell}!PC.UI.ContainerBase@{PC.UI.ContainerBase}}
+\doxysubsubsection{\texorpdfstring{GetCell()}{GetCell()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_item}{Item}} PC.\+UI.\+Container\+Base.\+Get\+Cell (\begin{DoxyParamCaption}\item[{Vector2\+Int}]{cell\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell\+Index} & The cell index you want to check.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The item at the given cell index if an item was present or null if there was no item.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_ad6bfe911d6a6200aa74f5c40977354f6}\label{class_p_c_1_1_u_i_1_1_container_base_ad6bfe911d6a6200aa74f5c40977354f6}} 
+\index{PC.UI.ContainerBase@{PC.UI.ContainerBase}!GetCellIndex@{GetCellIndex}}
+\index{GetCellIndex@{GetCellIndex}!PC.UI.ContainerBase@{PC.UI.ContainerBase}}
+\doxysubsubsection{\texorpdfstring{GetCellIndex()}{GetCellIndex()}}
+{\footnotesize\ttfamily virtual Vector2\+Int PC.\+UI.\+Container\+Base.\+Get\+Cell\+Index (\begin{DoxyParamCaption}\item[{Vector2}]{mouse\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em mouse\+Pos} & Position of the mouse.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cell index relative to the container.
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_slot_a3abc378767113733e274cfda6cc927a8}{PC.\+UI.\+Slot}}.
+
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_a953a554917656cc5b1aa3603d56b302f}\label{class_p_c_1_1_u_i_1_1_container_base_a953a554917656cc5b1aa3603d56b302f}} 
+\index{PC.UI.ContainerBase@{PC.UI.ContainerBase}!GetItemAt@{GetItemAt}}
+\index{GetItemAt@{GetItemAt}!PC.UI.ContainerBase@{PC.UI.ContainerBase}}
+\doxysubsubsection{\texorpdfstring{GetItemAt()}{GetItemAt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_item}{Item}} PC.\+UI.\+Container\+Base.\+Get\+Item\+At (\begin{DoxyParamCaption}\item[{Vector2\+Int}]{cell\+Index }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell\+Index} & The cell index you want to check.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The item at the given cell index if an item was present or null if there was no item.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_ab8615f3477dc24efae610a57532cf60b}\label{class_p_c_1_1_u_i_1_1_container_base_ab8615f3477dc24efae610a57532cf60b}} 
+\index{PC.UI.ContainerBase@{PC.UI.ContainerBase}!InitBackground@{InitBackground}}
+\index{InitBackground@{InitBackground}!PC.UI.ContainerBase@{PC.UI.ContainerBase}}
+\doxysubsubsection{\texorpdfstring{InitBackground()}{InitBackground()}}
+{\footnotesize\ttfamily void PC.\+UI.\+Container\+Base.\+Init\+Background (\begin{DoxyParamCaption}\item[{Vector2}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The area of the background.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_a7fa2bc0a4e9aa799f9eaf13681227ecf}\label{class_p_c_1_1_u_i_1_1_container_base_a7fa2bc0a4e9aa799f9eaf13681227ecf}} 
+\index{PC.UI.ContainerBase@{PC.UI.ContainerBase}!InitContents@{InitContents}}
+\index{InitContents@{InitContents}!PC.UI.ContainerBase@{PC.UI.ContainerBase}}
+\doxysubsubsection{\texorpdfstring{InitContents()}{InitContents()}}
+{\footnotesize\ttfamily void PC.\+UI.\+Container\+Base.\+Init\+Contents (\begin{DoxyParamCaption}\item[{Vector2}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The area of the contents.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_afe4704a130ba0640f57f794274462918}\label{class_p_c_1_1_u_i_1_1_container_base_afe4704a130ba0640f57f794274462918}} 
+\index{PC.UI.ContainerBase@{PC.UI.ContainerBase}!OnPointerEnter@{OnPointerEnter}}
+\index{OnPointerEnter@{OnPointerEnter}!PC.UI.ContainerBase@{PC.UI.ContainerBase}}
+\doxysubsubsection{\texorpdfstring{OnPointerEnter()}{OnPointerEnter()}}
+{\footnotesize\ttfamily void PC.\+UI.\+Container\+Base.\+On\+Pointer\+Enter (\begin{DoxyParamCaption}\item[{Pointer\+Event\+Data}]{event\+Data }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Data} & The event data of the pointer.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_a1d2d1b518269067039ddbbc81029f727}\label{class_p_c_1_1_u_i_1_1_container_base_a1d2d1b518269067039ddbbc81029f727}} 
+\index{PC.UI.ContainerBase@{PC.UI.ContainerBase}!OnPointerExit@{OnPointerExit}}
+\index{OnPointerExit@{OnPointerExit}!PC.UI.ContainerBase@{PC.UI.ContainerBase}}
+\doxysubsubsection{\texorpdfstring{OnPointerExit()}{OnPointerExit()}}
+{\footnotesize\ttfamily void PC.\+UI.\+Container\+Base.\+On\+Pointer\+Exit (\begin{DoxyParamCaption}\item[{Pointer\+Event\+Data}]{event\+Data }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Data} & The event data of the pointer.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_a3082416b69c71572c22657058fc061e4}\label{class_p_c_1_1_u_i_1_1_container_base_a3082416b69c71572c22657058fc061e4}} 
+\index{PC.UI.ContainerBase@{PC.UI.ContainerBase}!PlaceItemAt@{PlaceItemAt}}
+\index{PlaceItemAt@{PlaceItemAt}!PC.UI.ContainerBase@{PC.UI.ContainerBase}}
+\doxysubsubsection{\texorpdfstring{PlaceItemAt()}{PlaceItemAt()}}
+{\footnotesize\ttfamily virtual bool PC.\+UI.\+Container\+Base.\+Place\+Item\+At (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_p_c_1_1_u_i_1_1_item}{Item}}}]{item,  }\item[{Vector2\+Int}]{cell\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & The item you want to place.\\
+\hline
+{\em cell\+Index} & The cell index you want to place the item at.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the operation was successful, otherwise false.
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_slot_ab832866c460e2d656298c394ff41e7e6}{PC.\+UI.\+Slot}}.
+
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_a1cfa23ad215e3238e552e9174501670e}\label{class_p_c_1_1_u_i_1_1_container_base_a1cfa23ad215e3238e552e9174501670e}} 
+\index{PC.UI.ContainerBase@{PC.UI.ContainerBase}!RemoveItemAt@{RemoveItemAt}}
+\index{RemoveItemAt@{RemoveItemAt}!PC.UI.ContainerBase@{PC.UI.ContainerBase}}
+\doxysubsubsection{\texorpdfstring{RemoveItemAt()}{RemoveItemAt()}}
+{\footnotesize\ttfamily virtual bool PC.\+UI.\+Container\+Base.\+Remove\+Item\+At (\begin{DoxyParamCaption}\item[{Vector2\+Int}]{cell\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell\+Index} & The cell index of the item you want to remove.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the operation was successful, otherwise false.
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_slot_a0b81350b90c01ea52399ba9d488b828f}{PC.\+UI.\+Slot}}.
+
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_abca75939df9c5a9319530cd842b93404}\label{class_p_c_1_1_u_i_1_1_container_base_abca75939df9c5a9319530cd842b93404}} 
+\index{PC.UI.ContainerBase@{PC.UI.ContainerBase}!SetCell@{SetCell}}
+\index{SetCell@{SetCell}!PC.UI.ContainerBase@{PC.UI.ContainerBase}}
+\doxysubsubsection{\texorpdfstring{SetCell()}{SetCell()}}
+{\footnotesize\ttfamily void PC.\+UI.\+Container\+Base.\+Set\+Cell (\begin{DoxyParamCaption}\item[{Vector2\+Int}]{cell\+Index,  }\item[{\mbox{\hyperlink{class_p_c_1_1_u_i_1_1_item}{Item}}}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell\+Index} & The cell index you want to store an item at.\\
+\hline
+{\em item} & The item you want to store.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_a50c1fbd373a027cc3270a6387eb72925}\label{class_p_c_1_1_u_i_1_1_container_base_a50c1fbd373a027cc3270a6387eb72925}} 
+\index{PC.UI.ContainerBase@{PC.UI.ContainerBase}!SetItemParent@{SetItemParent}}
+\index{SetItemParent@{SetItemParent}!PC.UI.ContainerBase@{PC.UI.ContainerBase}}
+\doxysubsubsection{\texorpdfstring{SetItemParent()}{SetItemParent()}}
+{\footnotesize\ttfamily void PC.\+UI.\+Container\+Base.\+Set\+Item\+Parent (\begin{DoxyParamCaption}\item[{Rect\+Transform}]{item\+Rect\+Transform }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em item\+Rect\+Transform} & The given item you want to set the parent of.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_a1e966a7c01cb75bb76ab47a340cd7695}\label{class_p_c_1_1_u_i_1_1_container_base_a1e966a7c01cb75bb76ab47a340cd7695}} 
+\index{PC.UI.ContainerBase@{PC.UI.ContainerBase}!TakeItemAt@{TakeItemAt}}
+\index{TakeItemAt@{TakeItemAt}!PC.UI.ContainerBase@{PC.UI.ContainerBase}}
+\doxysubsubsection{\texorpdfstring{TakeItemAt()}{TakeItemAt()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_item}{Item}} PC.\+UI.\+Container\+Base.\+Take\+Item\+At (\begin{DoxyParamCaption}\item[{Vector2\+Int}]{cell\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell\+Index} & The cell index of the item you want to take from the container.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The item taken from the container
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_container_base_a6ca390330f9af2555c05a523c925d182}\label{class_p_c_1_1_u_i_1_1_container_base_a6ca390330f9af2555c05a523c925d182}} 
+\index{PC.UI.ContainerBase@{PC.UI.ContainerBase}!TransferItem@{TransferItem}}
+\index{TransferItem@{TransferItem}!PC.UI.ContainerBase@{PC.UI.ContainerBase}}
+\doxysubsubsection{\texorpdfstring{TransferItem()}{TransferItem()}}
+{\footnotesize\ttfamily void PC.\+UI.\+Container\+Base.\+Transfer\+Item (\begin{DoxyParamCaption}\item[{Vector2\+Int}]{source\+Cell\+Index,  }\item[{\mbox{\hyperlink{class_p_c_1_1_u_i_1_1_container}{Container}}}]{target\+Container,  }\item[{Vector2\+Int}]{target\+Cell\+Index }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em source\+Cell\+Index} & The cell index of the item you want to transfer.\\
+\hline
+{\em target\+Container} & The container you want to transfer the item to.\\
+\hline
+{\em target\+Cell\+Index} & The cell index you want to transfer the item to.\\
+\hline
+\end{DoxyParams}

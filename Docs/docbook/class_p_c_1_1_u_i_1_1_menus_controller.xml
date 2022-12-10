@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_c_1_1_u_i_1_1_menus_controller" xml:lang="en-US">
+<title>PC.UI.MenusController Class Reference</title>
+<indexterm><primary>PC.UI.MenusController</primary></indexterm>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_menus_controller_1a54e32b6b093281adb6798f74df53e589"/>static <link linkend="_class_p_c_1_1_u_i_1_1_pause_menu">PauseMenu</link> <emphasis role="strong">PauseMenu</emphasis><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_menus_controller_1a9750c08ebed2420cdc16be9658e72754"/>static <link linkend="_class_p_c_1_1_u_i_1_1_inventory_menu">InventoryMenu</link> <emphasis role="strong">InventoryMenu</emphasis><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_menus_controller_1ae75b73eb064573bf7e5625c606905490"/>static <link linkend="_class_p_c_1_1_u_i_1_1_dev_console_menu">DevConsoleMenu</link> <emphasis role="strong">DevConsoleMenu</emphasis><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_menus_controller_1acea12eed0ca2a6c3a8b19d6173661a21"/>static <link linkend="_class_p_c_1_1_u_i_1_1_map_menu">MapMenu</link> <emphasis role="strong">MapMenu</emphasis><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_menus_controller_1ac710e37cf7b964c3090fa8c9663669ab"/>static <link linkend="_class_p_c_1_1_u_i_1_1_p_m_s_menu">PMSMenu</link> <emphasis role="strong">PMSMenu</emphasis><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_menus_controller_1a18caebada17990e466b0874e504a2d59"/>void <emphasis role="strong">Awake</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_menus_controller_1aeac3f3bdd7464c11c4fc394ec70a6695"/><link linkend="_class_p_c_1_1_u_i_1_1_pause_menu">PauseMenu</link> <emphasis role="strong">_pauseMenu</emphasis> = null</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_menus_controller_1af445ab9370f4aebc76ea925233fa09c3"/><link linkend="_class_p_c_1_1_u_i_1_1_inventory_menu">InventoryMenu</link> <emphasis role="strong">_inventoryMenu</emphasis> = null</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_menus_controller_1aa8f98e097c4feeb24450247d9e950ca7"/><link linkend="_class_p_c_1_1_u_i_1_1_dev_console_menu">DevConsoleMenu</link> <emphasis role="strong">_devConsoleMenu</emphasis> = null</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_menus_controller_1a27792e5686524fae685790613f756172"/><link linkend="_class_p_c_1_1_u_i_1_1_map_menu">MapMenu</link> <emphasis role="strong">_mapMenu</emphasis> = null</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_menus_controller_1ac56ca2f365e3c993b3a64e4ef463a335"/><link linkend="_class_p_c_1_1_u_i_1_1_p_m_s_menu">PMSMenu</link> <emphasis role="strong">_pmsMenu</emphasis> = null</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_menus_controller_1a6ca4fa0aab16629a498bd36a14250500"/>static <link linkend="_class_p_c_1_1_u_i_1_1_menus_controller">MenusController</link> <emphasis role="strong">_instance</emphasis> = null</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

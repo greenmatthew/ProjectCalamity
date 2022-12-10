@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_c_1_1_u_i_1_1_p_m_s_base" xml:lang="en-US">
+<title>PC.UI.PMSBase Class Reference</title>
+<indexterm><primary>PC.UI.PMSBase</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_p_m_s_base_1ac30c057254af1a995ebf9598093c928e"/>QuestsModule <emphasis role="strong">QuestsModule</emphasis> = null</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_p_m_s_base_1afa2cb7810c9641e4e6cd728f06b23d47"/>CraftingModule <emphasis role="strong">CraftingModule</emphasis> = null</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_p_m_s_base_1ae30e4dedb68ebdb791322ba57e2518e6"/>SuitModule <emphasis role="strong">SuitModule</emphasis> = null</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_p_m_s_base_1ad58afd64e79a1e1b6521e325488179fb"/>WeaponUpgradingModule <emphasis role="strong">WeaponUpgradingModule</emphasis> = null</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -1,0 +1,28 @@
+\hypertarget{class_p_c_1_1_stats_1_1_character_stats}{}\doxysection{PC.\+Stats.\+Character\+Stats Class Reference}
+\label{class_p_c_1_1_stats_1_1_character_stats}\index{PC.Stats.CharacterStats@{PC.Stats.CharacterStats}}
+
+
+This class is used to store general stats and damage behavior common to all game characters.   
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_stats_1_1_character_stats_adf381679b61e65aa1bc320d35f92e666}\label{class_p_c_1_1_stats_1_1_character_stats_adf381679b61e65aa1bc320d35f92e666}} 
+void {\bfseries Take\+Damage} ()
+\begin{DoxyCompactList}\small\item\em The general damage function. This is called by other scripts any time the relevant entity needs to lose health points.  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_p_c_1_1_stats_1_1_character_stats_a6c3192bd5552f52b8bb430c2f5c223b5}{Die}} ()
+\begin{DoxyCompactList}\small\item\em Logs an entities death to the console. Specific death behavior and animations will be defined in scripts specific to a character.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_p_c_1_1_stats_1_1_character_stats_a6c3192bd5552f52b8bb430c2f5c223b5}\label{class_p_c_1_1_stats_1_1_character_stats_a6c3192bd5552f52b8bb430c2f5c223b5}} 
+\index{PC.Stats.CharacterStats@{PC.Stats.CharacterStats}!Die@{Die}}
+\index{Die@{Die}!PC.Stats.CharacterStats@{PC.Stats.CharacterStats}}
+\doxysubsubsection{\texorpdfstring{Die()}{Die()}}
+{\footnotesize\ttfamily virtual void PC.\+Stats.\+Character\+Stats.\+Die (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_p_c_1_1_stats_1_1_enemy_stats_a16ad48d7c0ebfe63c3d5c905d5763ce6}{PC.\+Stats.\+Enemy\+Stats}}, and \mbox{\hyperlink{class_p_c_1_1_stats_1_1_player_stats_a03f6ce675eff3b01dbca2cd6d13c0a7e}{PC.\+Stats.\+Player\+Stats}}.
+

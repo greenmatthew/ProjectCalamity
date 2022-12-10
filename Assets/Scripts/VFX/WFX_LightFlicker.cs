@@ -9,6 +9,9 @@ using System.Collections;
 
 namespace PC.VFX
 {
+    /// <summary>
+    /// Controls the flickering of the light for the muzzle flash.
+    /// </summary>
     [RequireComponent(typeof(Light))]
     public class WFX_LightFlicker : MonoBehaviour
     {

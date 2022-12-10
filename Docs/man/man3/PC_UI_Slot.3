@@ -1,0 +1,115 @@
+.TH "PC.UI.Slot" 3 "Fri Dec 9 2022" "Project Calamity" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PC.UI.Slot
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "override Vector2Int \fBGetCellIndex\fP (Vector2 mousePos)"
+.br
+.RI "Gets the cell index relative to the container using the given mouse position\&.  "
+.ti -1c
+.RI "override bool \fBRemoveItemAt\fP (Vector2Int cellIndex)"
+.br
+.RI "Removes the item at a given cellIndex from the container\&.  "
+.ti -1c
+.RI "override bool \fBPlaceItemAt\fP (\fBItem\fP item, Vector2Int cellIndex)"
+.br
+.RI "Places an item at a given cellIndex in the container\&.  "
+.ti -1c
+.RI "\fBItem\fP \fBGetItem\fP ()"
+.br
+.RI "Retrieves the item inside the slot\&.  "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "override void \fBStart\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBItemType\&.Value\fP \fBi_allowedType\fP = ItemType\&.Value\&.NONE"
+.br
+.ti -1c
+.RI "\fBItemType\fP \fB_allowedType\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Member Function Documentation"
+.PP 
+.SS "override Vector2Int PC\&.UI\&.Slot\&.GetCellIndex (Vector2 mousePos)\fC [virtual]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fImousePos\fP Position of the mouse\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Cell index relative to the container\&.
+.RE
+.PP
+
+.PP
+Reimplemented from \fBPC\&.UI\&.ContainerBase\fP\&.
+.SS "\fBItem\fP PC\&.UI\&.Slot\&.GetItem ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+Returns the item inside the slot\&.
+.RE
+.PP
+
+.SS "override bool PC\&.UI\&.Slot\&.PlaceItemAt (\fBItem\fP item, Vector2Int cellIndex)\fC [virtual]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIitem\fP The item you want to place\&.
+.br
+\fIcellIndex\fP The cell index you want to place the item at\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns true if the operation was successful, otherwise false\&.
+.RE
+.PP
+
+.PP
+Reimplemented from \fBPC\&.UI\&.ContainerBase\fP\&.
+.SS "override bool PC\&.UI\&.Slot\&.RemoveItemAt (Vector2Int cellIndex)\fC [virtual]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIcellIndex\fP The cell index of the item you want to remove\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns true if the operation was successful, otherwise false\&.
+.RE
+.PP
+
+.PP
+Reimplemented from \fBPC\&.UI\&.ContainerBase\fP\&.
+.SS "override void PC\&.UI\&.Slot\&.Start ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBPC\&.UI\&.ContainerBase\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Project Calamity from the source code\&.

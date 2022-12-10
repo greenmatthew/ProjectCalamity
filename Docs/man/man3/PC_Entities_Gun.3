@@ -1,0 +1,45 @@
+.TH "PC.Entities.Gun" 3 "Fri Dec 9 2022" "Project Calamity" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PC.Entities.Gun \- Defines the general behavior of the player's gun\&.   
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "async void \fBReload\fP (InputAction\&.CallbackContext obj)"
+.br
+.RI "Reloads the gun's magazine  "
+.ti -1c
+.RI "async void \fBShoot\fP (InputAction\&.CallbackContext obj)"
+.br
+.RI "Deals with all functionality related shooting\&. Includes audio, muzzle flash, recoil, raycast shooting and target damage\&.  "
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "async void PC\&.Entities\&.Gun\&.Reload (InputAction\&.CallbackContext obj)\fC [private]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIobj\fP Context for the InputActions asset\&. Passed automatically after Reload is subscribed to the relevant input\&. 
+.RE
+.PP
+
+.SS "async void PC\&.Entities\&.Gun\&.Shoot (InputAction\&.CallbackContext obj)\fC [private]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIobj\fP Context for the InputActions asset\&. Passed automatically after Shoot is subscribed to the relevant input\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Project Calamity from the source code\&.

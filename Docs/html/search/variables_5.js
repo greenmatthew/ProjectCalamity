@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['firerate_0',['FireRate',['../class_p_c_1_1_entities_1_1_gun_s_o.html#a8d3a654773ccba343c4f447353b3ba86',1,'PC::Entities::GunSO']]]
+  ['player_0',['player',['../class_p_c_1_1_entities_1_1_player_manager.html#a48784b71d3c93f8f78663646ef8ed3af',1,'PC::Entities::PlayerManager']]]
 ];

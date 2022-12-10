@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_c_1_1_input_1_1_input_module" xml:lang="en-US">
+<title>PC.Input.InputModule Class Reference</title>
+<indexterm><primary>PC.Input.InputModule</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_input_1_1_input_module_1a55afd9b34ab708792c8d98d120f4f80d"/>override void <emphasis role="strong">Process</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_input_1_1_input_module_1a4ca3cdd54c73ee580b1f3d72caeddd18"/>override void <emphasis role="strong">Awake</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_input_1_1_input_module_1a6ee0b162aa8976c6a74e38f929867eaf"/>static <link linkend="_class_p_c_1_1_input_1_1_input_module">InputModule</link> <emphasis role="strong">instance</emphasis><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_input_1_1_input_module_1a6b3f0426bd233203917e22ca60b4df78"/>static InputActions <emphasis role="strong">InputActions</emphasis><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_input_1_1_input_module_1ad2accabfbcf38282f57b201582c216ed"/>static InputActions <emphasis role="strong">h_inputActions</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_input_1_1_input_module_1a2040d2543be01852d25d7dd9b6bc9531"/>static bool <emphasis role="strong">_awakeCalledFlag</emphasis> = false</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_input_1_1_input_module_1a899620965a91989c714bc7f878418a94"/>static <link linkend="_class_p_c_1_1_input_1_1_input_module">InputModule</link> <emphasis role="strong">_instance</emphasis> = null</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

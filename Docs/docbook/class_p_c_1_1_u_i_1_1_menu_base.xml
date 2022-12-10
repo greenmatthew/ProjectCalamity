@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_c_1_1_u_i_1_1_menu_base" xml:lang="en-US">
+<title>PC.UI.MenuBase Class Reference</title>
+<indexterm><primary>PC.UI.MenuBase</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_menu_base_1ab515ef592f62a554219fdd87bd1813da"/>void <emphasis role="strong">Open</emphasis> ()</para>
+
+<para>DO NOT OVERRIDE/HIDE <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1ab515ef592f62a554219fdd87bd1813da">MenuBase.Open()</link> USING THE NEW OR OVERRIDE KEYWORDS!!! Override the <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1a1c5968ebb647ea20f3f075f05b2ee166">OpenExtension()</link> function instead. Opens the menu. Closes all other menus. Enables base menu input while disabling all others. Unlocks the cursor. Calls <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1a1c5968ebb647ea20f3f075f05b2ee166">OpenExtension()</link> at end end of this function. <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1a1c5968ebb647ea20f3f075f05b2ee166">OpenExtension()</link> by default does nothing. Needs to be overriden if you want to add to the functionality of <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1ab515ef592f62a554219fdd87bd1813da">Open()</link>.  </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_menu_base_1a740632961fbc2e3f0b5ca82006f097ba"/>void <emphasis role="strong">Close</emphasis> ()</para>
+
+<para>DO NOT OVERRIDE/HIDE <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1a740632961fbc2e3f0b5ca82006f097ba">MenuBase.Close()</link> USING THE NEW OR OVERRIDE KEYWORDS!!! Override the <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1a44ec7793a3d577ebae49fb0de23894a4">CloseExtension()</link> function instead. Closes the menu. Locks the cursor. Calls <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1a44ec7793a3d577ebae49fb0de23894a4">CloseExtension()</link> at end end of this function. <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1a44ec7793a3d577ebae49fb0de23894a4">CloseExtension()</link> by default does nothing. Needs to be overriden if you want to add to the functionality of <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1a740632961fbc2e3f0b5ca82006f097ba">Close()</link>. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_menu_base_1ab4ef75b27a80470f8857f4792cc8b4e3"/>void <emphasis role="strong">Awake</emphasis> ()</para>
+
+<para>DO NOT HIDE/OVERRIDE THIS FUNCTION USING THE NEW OR OVERRIDE KEYWORDS!!! Override the <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1ae8a88ab2eceb67a6ceae7c473f662cc9">AwakeExtension()</link> function instead.  </para>
+</listitem>
+            <listitem><para>abstract void <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1ae8a88ab2eceb67a6ceae7c473f662cc9">AwakeExtension</link> ()</para>
+
+<para>DO NOT HIDE/OVERRIDE <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1ab4ef75b27a80470f8857f4792cc8b4e3">MenuBase.Awake()</link> USING THE NEW OR OVERRIDE KEYWORDS!!! <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1ae8a88ab2eceb67a6ceae7c473f662cc9">AwakeExtension()</link> is called at the end of <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1ab4ef75b27a80470f8857f4792cc8b4e3">MenuBase.Awake()</link>. If you need any code to run in MonoBehaviour.Awake() put it inside <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1ae8a88ab2eceb67a6ceae7c473f662cc9">AwakeExtension()</link>.  </para>
+</listitem>
+            <listitem><para>abstract void <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1a1c5968ebb647ea20f3f075f05b2ee166">OpenExtension</link> ()</para>
+
+<para>Gets called at the end of <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1ab515ef592f62a554219fdd87bd1813da">Open()</link>.  </para>
+</listitem>
+            <listitem><para>abstract void <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1a44ec7793a3d577ebae49fb0de23894a4">CloseExtension</link> ()</para>
+
+<para>Gets called at the end of <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1a740632961fbc2e3f0b5ca82006f097ba">Close()</link>.  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_menu_base_1a21f72b1e300972c0e7058cab103c9814"/>static InputActions <emphasis role="strong">_inputActions</emphasis><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_menu_base_1afa80ca615fd088b0b6b65de005ef7247"/>void <emphasis role="strong">Disable</emphasis> ()</para>
+
+<para>Hides the menu from the scene.  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_menu_base_1a96f7810ed8aed31b0843e3a726d90ad2"/>static void <emphasis role="strong">DisableAll</emphasis> ()</para>
+
+<para>Hides ALL menus from the scene.  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_menu_base_1acf113921e285c7240e44bb5f01bdd8ca"/>static readonly List&lt; <link linkend="_class_p_c_1_1_u_i_1_1_menu_base">MenuBase</link> &gt; <emphasis role="strong">menus</emphasis> = new List&lt;<link linkend="_class_p_c_1_1_u_i_1_1_menu_base">MenuBase</link>&gt;()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_menu_base_1ae8a88ab2eceb67a6ceae7c473f662cc9"/><section>
+    <title>AwakeExtension()</title>
+<indexterm><primary>AwakeExtension</primary><secondary>PC.UI.MenuBase</secondary></indexterm>
+<indexterm><primary>PC.UI.MenuBase</primary><secondary>AwakeExtension</secondary></indexterm>
+<para><computeroutput>abstract void PC.UI.MenuBase.AwakeExtension ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Implemented in <link linkend="_class_p_c_1_1_u_i_1_1_dev_console_menu_1a64cb2b95ef669ff2d9371cee3eb6f20f">PC.UI.DevConsoleMenu</link>, <link linkend="_class_p_c_1_1_u_i_1_1_inventory_menu_1a9abf1e8dc5ef949fc33ef6a4e1820aa9">PC.UI.InventoryMenu</link>, <link linkend="_class_p_c_1_1_u_i_1_1_map_menu_1adac90afe0be8d6b850a0480a5d8cc82a">PC.UI.MapMenu</link>, <link linkend="_class_p_c_1_1_u_i_1_1_pause_menu_1aaf2a805fbe59d5c005a6c0f92ce74b92">PC.UI.PauseMenu</link>, <link linkend="_class_p_c_1_1_u_i_1_1_player_management_station_menu_1adb7b19e0d4d9360a050cc3548d225c9f">PC.UI.PlayerManagementStationMenu</link>, and <link linkend="_class_p_c_1_1_u_i_1_1_p_m_s_menu_1ae7402cf708a5a006429a825dc78cf1de">PC.UI.PMSMenu</link>.</para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_menu_base_1a44ec7793a3d577ebae49fb0de23894a4"/><section>
+    <title>CloseExtension()</title>
+<indexterm><primary>CloseExtension</primary><secondary>PC.UI.MenuBase</secondary></indexterm>
+<indexterm><primary>PC.UI.MenuBase</primary><secondary>CloseExtension</secondary></indexterm>
+<para><computeroutput>abstract void PC.UI.MenuBase.CloseExtension ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Implemented in <link linkend="_class_p_c_1_1_u_i_1_1_dev_console_menu_1afb4d723b531f2393e287d38eb7d9dd8a">PC.UI.DevConsoleMenu</link>, <link linkend="_class_p_c_1_1_u_i_1_1_inventory_menu_1a09d9bfe472eb138ed63d30f53e8c1ac4">PC.UI.InventoryMenu</link>, <link linkend="_class_p_c_1_1_u_i_1_1_map_menu_1ac60f83edc6f84d8c0fef4bf3628df1e1">PC.UI.MapMenu</link>, <link linkend="_class_p_c_1_1_u_i_1_1_pause_menu_1a82d348bcc9f60d26c08591cc491a53a4">PC.UI.PauseMenu</link>, <link linkend="_class_p_c_1_1_u_i_1_1_player_management_station_menu_1af037e2f27519b7bffaa6d27d0110914d">PC.UI.PlayerManagementStationMenu</link>, and <link linkend="_class_p_c_1_1_u_i_1_1_p_m_s_menu_1ade809c16fb3872e32294dde73d310022">PC.UI.PMSMenu</link>.</para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_menu_base_1a1c5968ebb647ea20f3f075f05b2ee166"/><section>
+    <title>OpenExtension()</title>
+<indexterm><primary>OpenExtension</primary><secondary>PC.UI.MenuBase</secondary></indexterm>
+<indexterm><primary>PC.UI.MenuBase</primary><secondary>OpenExtension</secondary></indexterm>
+<para><computeroutput>abstract void PC.UI.MenuBase.OpenExtension ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Implemented in <link linkend="_class_p_c_1_1_u_i_1_1_dev_console_menu_1acb8231396e05aff72885f01a3ad594c9">PC.UI.DevConsoleMenu</link>, <link linkend="_class_p_c_1_1_u_i_1_1_inventory_menu_1ae2732d10591f7b5be08a3c776456c111">PC.UI.InventoryMenu</link>, <link linkend="_class_p_c_1_1_u_i_1_1_map_menu_1a902262f06d4b13f9cb5c9f6b3dd4e630">PC.UI.MapMenu</link>, <link linkend="_class_p_c_1_1_u_i_1_1_pause_menu_1aa6233b674054aac4fdebe96f0a3836c3">PC.UI.PauseMenu</link>, <link linkend="_class_p_c_1_1_u_i_1_1_player_management_station_menu_1a60c1adeac28bb631468630c3b8efe001">PC.UI.PlayerManagementStationMenu</link>, and <link linkend="_class_p_c_1_1_u_i_1_1_p_m_s_menu_1ab696a93cba0b783b63d650aed6fc84d4">PC.UI.PMSMenu</link>.</para>
+</section>
+</section>
+</section>

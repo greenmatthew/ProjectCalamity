@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_c_1_1_u_i_1_1_p_m_s_menu" xml:lang="en-US">
+<title>PC.UI.PMSMenu Class Reference</title>
+<indexterm><primary>PC.UI.PMSMenu</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_p_c_1_1_u_i_1_1_p_m_s_menu_1aa627df8050fcec14c4bafa0da186e1e0">Init</link> (<link linkend="_class_p_c_1_1_u_i_1_1_beta_p_m_s">BetaPMS</link> PMS)</para>
+
+<para>Initializes the menu with the given betaPMS.  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_p_c_1_1_u_i_1_1_p_m_s_menu_1ab8362432334f39ac71a486a9a8ce1c10">Init</link> (<link linkend="_class_p_c_1_1_u_i_1_1_alpha_p_m_s">AlphaPMS</link> PMS)</para>
+
+<para>Initializes the menu with the given alphaPMS.  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>override void <link linkend="_class_p_c_1_1_u_i_1_1_p_m_s_menu_1ae7402cf708a5a006429a825dc78cf1de">AwakeExtension</link> ()</para>
+
+<para>DO NOT HIDE/OVERRIDE <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1ab4ef75b27a80470f8857f4792cc8b4e3">MenuBase.Awake()</link> USING THE NEW OR OVERRIDE KEYWORDS!!! <link linkend="_class_p_c_1_1_u_i_1_1_p_m_s_menu_1ae7402cf708a5a006429a825dc78cf1de">AwakeExtension()</link> is called at the end of <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1ab4ef75b27a80470f8857f4792cc8b4e3">MenuBase.Awake()</link>. If you need any code to run in MonoBehaviour.Awake() put it inside <link linkend="_class_p_c_1_1_u_i_1_1_p_m_s_menu_1ae7402cf708a5a006429a825dc78cf1de">AwakeExtension()</link>.  </para>
+</listitem>
+            <listitem><para>override void <link linkend="_class_p_c_1_1_u_i_1_1_p_m_s_menu_1ab696a93cba0b783b63d650aed6fc84d4">OpenExtension</link> ()</para>
+
+<para>Gets called at the end of <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1ab515ef592f62a554219fdd87bd1813da">Open()</link>.  </para>
+</listitem>
+            <listitem><para>override void <link linkend="_class_p_c_1_1_u_i_1_1_p_m_s_menu_1ade809c16fb3872e32294dde73d310022">CloseExtension</link> ()</para>
+
+<para>Gets called at the end of <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1a740632961fbc2e3f0b5ca82006f097ba">Close()</link>.  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_p_m_s_menu_1a720e1dcf5fbd9044472a75c45b68248e"/>TMP_Text <emphasis role="strong">_label</emphasis> = null</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_p_m_s_menu_1a6319ab5b728fc4eec8cafa5695a9ac63"/>Button <emphasis role="strong">_questsModuleButton</emphasis> = null</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_p_m_s_menu_1a34cf83a448c03b3cafb7102bc026d7c4"/>Button <emphasis role="strong">_marketModuleButton</emphasis> = null</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_p_m_s_menu_1a090b2b8ebb77cccd13ef17881de7d147"/>Button <emphasis role="strong">_stashModuleButton</emphasis> = null</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_p_m_s_menu_1afce52e9e72d88dfdad15f01eb7fbafec"/>Button <emphasis role="strong">_craftingModuleButton</emphasis> = null</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_p_m_s_menu_1a88a05bb17c79ef111db3de7e0ef85939"/>Button <emphasis role="strong">_suitModuleButton</emphasis> = null</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_p_m_s_menu_1a75f5080aa90b5823639e4207c26083ba"/>Button <emphasis role="strong">_weaponUpgradingModuleButton</emphasis> = null</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_p_m_s_menu_1a84d5f2bf701bdb13fda68d425172337f"/>Button <emphasis role="strong">_transportationModuleButton</emphasis> = null</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_p_m_s_menu_1aa168e4b5ff47bb8d052b95d695bf4d21"/>Button <emphasis role="strong">_memoryModuleButton</emphasis> = null</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_p_m_s_menu_1ae7402cf708a5a006429a825dc78cf1de"/><section>
+    <title>AwakeExtension()</title>
+<indexterm><primary>AwakeExtension</primary><secondary>PC.UI.PMSMenu</secondary></indexterm>
+<indexterm><primary>PC.UI.PMSMenu</primary><secondary>AwakeExtension</secondary></indexterm>
+<para><computeroutput>override void PC.UI.PMSMenu.AwakeExtension ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1ae8a88ab2eceb67a6ceae7c473f662cc9">PC.UI.MenuBase</link>.</para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_p_m_s_menu_1ade809c16fb3872e32294dde73d310022"/><section>
+    <title>CloseExtension()</title>
+<indexterm><primary>CloseExtension</primary><secondary>PC.UI.PMSMenu</secondary></indexterm>
+<indexterm><primary>PC.UI.PMSMenu</primary><secondary>CloseExtension</secondary></indexterm>
+<para><computeroutput>override void PC.UI.PMSMenu.CloseExtension ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1a44ec7793a3d577ebae49fb0de23894a4">PC.UI.MenuBase</link>.</para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_p_m_s_menu_1ab8362432334f39ac71a486a9a8ce1c10"/><section>
+    <title>Init()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Init</primary><secondary>PC.UI.PMSMenu</secondary></indexterm>
+<indexterm><primary>PC.UI.PMSMenu</primary><secondary>Init</secondary></indexterm>
+<para><computeroutput>void PC.UI.PMSMenu.Init (<link linkend="_class_p_c_1_1_u_i_1_1_alpha_p_m_s">AlphaPMS</link> PMS)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>PMS</entry><entry>
+<para>The alphaPMS to initialize the menu with.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_p_m_s_menu_1aa627df8050fcec14c4bafa0da186e1e0"/><section>
+    <title>Init()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Init</primary><secondary>PC.UI.PMSMenu</secondary></indexterm>
+<indexterm><primary>PC.UI.PMSMenu</primary><secondary>Init</secondary></indexterm>
+<para><computeroutput>void PC.UI.PMSMenu.Init (<link linkend="_class_p_c_1_1_u_i_1_1_beta_p_m_s">BetaPMS</link> PMS)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>PMS</entry><entry>
+<para>The betaPMS to initialize the menu with.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_p_m_s_menu_1ab696a93cba0b783b63d650aed6fc84d4"/><section>
+    <title>OpenExtension()</title>
+<indexterm><primary>OpenExtension</primary><secondary>PC.UI.PMSMenu</secondary></indexterm>
+<indexterm><primary>PC.UI.PMSMenu</primary><secondary>OpenExtension</secondary></indexterm>
+<para><computeroutput>override void PC.UI.PMSMenu.OpenExtension ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1a1c5968ebb647ea20f3f075f05b2ee166">PC.UI.MenuBase</link>.</para>
+</section>
+</section>
+</section>

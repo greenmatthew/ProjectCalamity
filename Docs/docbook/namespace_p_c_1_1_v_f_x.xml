@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_p_c_1_1_v_f_x" xml:lang="en-US">
+<title>PC.VFX Namespace Reference</title>
+<indexterm><primary>PC.VFX</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_p_c_1_1_v_f_x_1_1_w_f_x___light_flicker">WFX_LightFlicker</link></para>
+
+<para>Controls the flickering of the light for the muzzle flash.  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Rapidly sets a light on/off.</para>
+
+<para>(c) 2015, Jean Moreno </para>
+</section>
+</section>

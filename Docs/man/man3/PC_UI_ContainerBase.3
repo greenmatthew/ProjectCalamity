@@ -1,0 +1,330 @@
+.TH "PC.UI.ContainerBase" 3 "Fri Dec 9 2022" "Project Calamity" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PC.UI.ContainerBase
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBOnPointerEnter\fP (PointerEventData eventData)"
+.br
+.RI "Is called upon a cursor entering the container's bounds\&.  "
+.ti -1c
+.RI "void \fBOnPointerExit\fP (PointerEventData eventData)"
+.br
+.RI "Is called upon a cursor exiting the container's bounds\&.  "
+.ti -1c
+.RI "void \fBSetItemParent\fP (RectTransform itemRectTransform)"
+.br
+.RI "Sets the parent of an item to the content parent object of this container\&.  "
+.ti -1c
+.RI "virtual Vector2Int \fBGetCellIndex\fP (Vector2 mousePos)"
+.br
+.RI "Gets the cell index relative to the container using the given mouse position\&.  "
+.ti -1c
+.RI "\fBItem\fP \fBGetItemAt\fP (Vector2Int cellIndex)"
+.br
+.RI "Gets the item at the given cell index\&.  "
+.ti -1c
+.RI "virtual bool \fBRemoveItemAt\fP (Vector2Int cellIndex)"
+.br
+.RI "Removes the item at a given cellIndex from the container\&.  "
+.ti -1c
+.RI "virtual bool \fBPlaceItemAt\fP (\fBItem\fP item, Vector2Int cellIndex)"
+.br
+.RI "Places an item at a given cellIndex in the container\&.  "
+.ti -1c
+.RI "virtual \fBItem\fP \fBTakeItemAt\fP (Vector2Int cellIndex)"
+.br
+.RI "Takes an item from a container  "
+.ti -1c
+.RI "void \fBTransferItem\fP (Vector2Int sourceCellIndex, \fBContainer\fP targetContainer, Vector2Int targetCellIndex)"
+.br
+.RI "Transfers an item from one container to another\&.  "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBAwake\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBStart\fP ()"
+.br
+.ti -1c
+.RI "void \fBInitContents\fP ()"
+.br
+.RI "Initializes the contents of the container\&.  "
+.ti -1c
+.RI "void \fBInitContents\fP (Vector2 size)"
+.br
+.RI "Initializes the contents of the container\&.  "
+.ti -1c
+.RI "void \fBInitBackground\fP (Vector2 size)"
+.br
+.RI "Initializes the background of the container\&.  "
+.ti -1c
+.RI "\fBItem\fP \fBGetCell\fP (Vector2Int cellIndex)"
+.br
+.RI "Check the contents of the container\&.  "
+.ti -1c
+.RI "void \fBSetCell\fP (Vector2Int cellIndex, \fBItem\fP item)"
+.br
+.RI "Sets the contents of the container\&.  "
+.ti -1c
+.RI "void \fBEmptyCell\fP (Vector2Int cellIndex)"
+.br
+.RI "Sets the cell at the given index to null\&.  "
+.ti -1c
+.RI "bool \fBIsCellOutOfRange\fP (Vector2Int cellIndex)"
+.br
+.ti -1c
+.RI "bool \fBIsCellEmpty\fP (Vector2Int cellIndex)"
+.br
+.ti -1c
+.RI "bool \fBIsCellEmptyExcludingSelfOrCopy\fP (\fBItem\fP item, Vector2Int cellIndex)"
+.br
+.ti -1c
+.RI "bool \fBIsCellOccupied\fP (Vector2Int cellIndex)"
+.br
+.ti -1c
+.RI "bool \fBIsCellOccupiedExcludingSelfOrCopy\fP (\fBItem\fP item, Vector2Int cellIndex)"
+.br
+.ti -1c
+.RI "bool \fBIsCellOccupiedBySelfOrCopy\fP (\fBItem\fP item, Vector2Int cellIndex)"
+.br
+.ti -1c
+.RI "bool \fBIsCellOccupiedNotBySelfOrCopy\fP (\fBItem\fP item, Vector2Int cellIndex)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "RectTransform \fB_contentsParent\fP = null"
+.br
+.ti -1c
+.RI "int \fBcellWidth\fP = 10"
+.br
+.ti -1c
+.RI "int \fBcellHeight\fP = 10"
+.br
+.ti -1c
+.RI "RectTransform \fB_rectTransform\fP = null"
+.br
+.ti -1c
+.RI "RectTransform \fB_anchor\fP = null"
+.br
+.ti -1c
+.RI "RectTransform \fB_cellBackgroundPrefab\fP = null"
+.br
+.ti -1c
+.RI "RectTransform \fB_cellBackgroundParent\fP = null"
+.br
+.ti -1c
+.RI "Vector2 \fB_mousePos\fP = Vector2\&.zero"
+.br
+.ti -1c
+.RI "Vector2 \fB_currentPosition\fP = Vector2\&.zero"
+.br
+.ti -1c
+.RI "Vector2Int \fB_currentCellIndex\fP = Vector2Int\&.zero"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "RectTransform \fBContentsParent\fP\fC [get]\fP"
+.br
+.ti -1c
+.RI "\fBItem\fP[,] \fB_contents\fP\fC [get, set]\fP"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBItem\fP[,] \fBh_contents\fP = null"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "void PC\&.UI\&.ContainerBase\&.EmptyCell (Vector2Int cellIndex)\fC [protected]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIcellIndex\fP The cell index you want to set to null\&.
+.RE
+.PP
+
+.SS "\fBItem\fP PC\&.UI\&.ContainerBase\&.GetCell (Vector2Int cellIndex)\fC [protected]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIcellIndex\fP The cell index you want to check\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The item at the given cell index if an item was present or null if there was no item\&.
+.RE
+.PP
+
+.SS "virtual Vector2Int PC\&.UI\&.ContainerBase\&.GetCellIndex (Vector2 mousePos)\fC [virtual]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fImousePos\fP Position of the mouse\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Cell index relative to the container\&.
+.RE
+.PP
+
+.PP
+Reimplemented in \fBPC\&.UI\&.Slot\fP\&.
+.SS "\fBItem\fP PC\&.UI\&.ContainerBase\&.GetItemAt (Vector2Int cellIndex)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIcellIndex\fP The cell index you want to check\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The item at the given cell index if an item was present or null if there was no item\&.
+.RE
+.PP
+
+.SS "void PC\&.UI\&.ContainerBase\&.InitBackground (Vector2 size)\fC [protected]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIsize\fP The area of the background\&.
+.RE
+.PP
+
+.SS "void PC\&.UI\&.ContainerBase\&.InitContents (Vector2 size)\fC [protected]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIsize\fP The area of the contents\&.
+.RE
+.PP
+
+.SS "void PC\&.UI\&.ContainerBase\&.OnPointerEnter (PointerEventData eventData)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIeventData\fP The event data of the pointer\&.
+.RE
+.PP
+
+.SS "void PC\&.UI\&.ContainerBase\&.OnPointerExit (PointerEventData eventData)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIeventData\fP The event data of the pointer\&.
+.RE
+.PP
+
+.SS "virtual bool PC\&.UI\&.ContainerBase\&.PlaceItemAt (\fBItem\fP item, Vector2Int cellIndex)\fC [virtual]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIitem\fP The item you want to place\&.
+.br
+\fIcellIndex\fP The cell index you want to place the item at\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns true if the operation was successful, otherwise false\&.
+.RE
+.PP
+
+.PP
+Reimplemented in \fBPC\&.UI\&.Slot\fP\&.
+.SS "virtual bool PC\&.UI\&.ContainerBase\&.RemoveItemAt (Vector2Int cellIndex)\fC [virtual]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIcellIndex\fP The cell index of the item you want to remove\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns true if the operation was successful, otherwise false\&.
+.RE
+.PP
+
+.PP
+Reimplemented in \fBPC\&.UI\&.Slot\fP\&.
+.SS "void PC\&.UI\&.ContainerBase\&.SetCell (Vector2Int cellIndex, \fBItem\fP item)\fC [protected]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIcellIndex\fP The cell index you want to store an item at\&.
+.br
+\fIitem\fP The item you want to store\&.
+.RE
+.PP
+
+.SS "void PC\&.UI\&.ContainerBase\&.SetItemParent (RectTransform itemRectTransform)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIitemRectTransform\fP The given item you want to set the parent of\&.
+.RE
+.PP
+
+.SS "virtual \fBItem\fP PC\&.UI\&.ContainerBase\&.TakeItemAt (Vector2Int cellIndex)\fC [virtual]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIcellIndex\fP The cell index of the item you want to take from the container\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The item taken from the container
+.RE
+.PP
+
+.SS "void PC\&.UI\&.ContainerBase\&.TransferItem (Vector2Int sourceCellIndex, \fBContainer\fP targetContainer, Vector2Int targetCellIndex)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIsourceCellIndex\fP The cell index of the item you want to transfer\&.
+.br
+\fItargetContainer\fP The container you want to transfer the item to\&.
+.br
+\fItargetCellIndex\fP The cell index you want to transfer the item to\&.
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Project Calamity from the source code\&.

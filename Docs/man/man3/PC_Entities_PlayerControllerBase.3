@@ -1,0 +1,45 @@
+.TH "PC.Entities.PlayerControllerBase" 3 "Fri Dec 9 2022" "Project Calamity" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PC.Entities.PlayerControllerBase \- Defined functionality and attributes common to all player controllers such as ground checking and translating inputs to movement information\&.   
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "Vector3 \fBGetMovement\fP ()"
+.br
+.RI "Retrieves the player's current movement vector  "
+.ti -1c
+.RI "bool \fBGroundedCheck\fP ()"
+.br
+.RI "Checks if the player is grounded  "
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "Vector3 PC\&.Entities\&.PlayerControllerBase\&.GetMovement ()\fC [private]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+Movement vector already adjusted for speed 
+.RE
+.PP
+
+.SS "bool PC\&.Entities\&.PlayerControllerBase\&.GroundedCheck ()\fC [private]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+True if the player is touching the ground, otherwise false\&.
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Project Calamity from the source code\&.

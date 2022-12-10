@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_c_1_1_u_i_1_1_dev_console_menu" xml:lang="en-US">
+<title>PC.UI.DevConsoleMenu Class Reference</title>
+<indexterm><primary>PC.UI.DevConsoleMenu</primary></indexterm>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>override void <link linkend="_class_p_c_1_1_u_i_1_1_dev_console_menu_1a64cb2b95ef669ff2d9371cee3eb6f20f">AwakeExtension</link> ()</para>
+
+<para>DO NOT HIDE/OVERRIDE <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1ab4ef75b27a80470f8857f4792cc8b4e3">MenuBase.Awake()</link> USING THE NEW OR OVERRIDE KEYWORDS!!! <link linkend="_class_p_c_1_1_u_i_1_1_dev_console_menu_1a64cb2b95ef669ff2d9371cee3eb6f20f">AwakeExtension()</link> is called at the end of <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1ab4ef75b27a80470f8857f4792cc8b4e3">MenuBase.Awake()</link>. If you need any code to run in MonoBehaviour.Awake() put it inside <link linkend="_class_p_c_1_1_u_i_1_1_dev_console_menu_1a64cb2b95ef669ff2d9371cee3eb6f20f">AwakeExtension()</link>.  </para>
+</listitem>
+            <listitem><para>override void <link linkend="_class_p_c_1_1_u_i_1_1_dev_console_menu_1acb8231396e05aff72885f01a3ad594c9">OpenExtension</link> ()</para>
+
+<para>Gets called at the end of <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1ab515ef592f62a554219fdd87bd1813da">Open()</link>.  </para>
+</listitem>
+            <listitem><para>override void <link linkend="_class_p_c_1_1_u_i_1_1_dev_console_menu_1afb4d723b531f2393e287d38eb7d9dd8a">CloseExtension</link> ()</para>
+
+<para>Gets called at the end of <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1a740632961fbc2e3f0b5ca82006f097ba">Close()</link>.  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_dev_console_menu_1a10d6b6f81afc00be9340b2a546d25b6d"/>void <emphasis role="strong">Update</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_dev_console_menu_1a8f924577d63de68a675bb9ada161dfe8"/>RectTransform <emphasis role="strong">_content</emphasis> = null</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_dev_console_menu_1a54b86880c91018ca9fbe676314cbbe68"/>RectTransform <emphasis role="strong">_logItemPrefab</emphasis> = null</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_dev_console_menu_1a64cb2b95ef669ff2d9371cee3eb6f20f"/><section>
+    <title>AwakeExtension()</title>
+<indexterm><primary>AwakeExtension</primary><secondary>PC.UI.DevConsoleMenu</secondary></indexterm>
+<indexterm><primary>PC.UI.DevConsoleMenu</primary><secondary>AwakeExtension</secondary></indexterm>
+<para><computeroutput>override void PC.UI.DevConsoleMenu.AwakeExtension ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1ae8a88ab2eceb67a6ceae7c473f662cc9">PC.UI.MenuBase</link>.</para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_dev_console_menu_1afb4d723b531f2393e287d38eb7d9dd8a"/><section>
+    <title>CloseExtension()</title>
+<indexterm><primary>CloseExtension</primary><secondary>PC.UI.DevConsoleMenu</secondary></indexterm>
+<indexterm><primary>PC.UI.DevConsoleMenu</primary><secondary>CloseExtension</secondary></indexterm>
+<para><computeroutput>override void PC.UI.DevConsoleMenu.CloseExtension ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1a44ec7793a3d577ebae49fb0de23894a4">PC.UI.MenuBase</link>.</para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_dev_console_menu_1acb8231396e05aff72885f01a3ad594c9"/><section>
+    <title>OpenExtension()</title>
+<indexterm><primary>OpenExtension</primary><secondary>PC.UI.DevConsoleMenu</secondary></indexterm>
+<indexterm><primary>PC.UI.DevConsoleMenu</primary><secondary>OpenExtension</secondary></indexterm>
+<para><computeroutput>override void PC.UI.DevConsoleMenu.OpenExtension ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_class_p_c_1_1_u_i_1_1_menu_base_1a1c5968ebb647ea20f3f075f05b2ee166">PC.UI.MenuBase</link>.</para>
+</section>
+</section>
+</section>

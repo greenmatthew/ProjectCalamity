@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="en-US">
+    <info>
+    <title>Project Calamity</title>
+    </info>
+<chapter>
+    <title>Project Calamity</title>
+    <xi:include href="mainpage.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Namespace Documentation</title>
+<xi:include href="namespace_p_c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_p_c_1_1_combat.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_p_c_1_1_entities.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_p_c_1_1_input.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_p_c_1_1_stats.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_p_c_1_1_u_i.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_p_c_1_1_v_f_x.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Class Documentation</title>
+    <xi:include href="class_p_c_1_1_u_i_1_1_alpha_p_m_s.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_u_i_1_1_beta_p_m_s.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_p_c_1_1_u_i_1_1_button_action.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_combat_1_1_character_combat.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_stats_1_1_character_stats.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_u_i_1_1_container.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_u_i_1_1_container_base.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_u_i_1_1_dev_console_menu.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_combat_1_1_enemy_animation_controller.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_combat_1_1_enemy_combat.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_entities_1_1_enemy_controller.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_stats_1_1_enemy_stats.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_entities_1_1_gun.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_entities_1_1_gun_s_o.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_u_i_1_1_horizontal_layout_group_handler.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_input_1_1_input_module.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_u_i_1_1_interactable.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_u_i_1_1_inventory_menu.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_u_i_1_1_item.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_u_i_1_1_item_container_info.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_u_i_1_1_item_s_o.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_u_i_1_1_item_type.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_u_i_1_1_item_types.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_u_i_1_1_layout_maintain_preferred_height.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_u_i_1_1_map_menu.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_u_i_1_1_menu_base.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_u_i_1_1_menus_controller.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_u_i_1_1_pause_menu.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_entities_1_1_player_animator_controller.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_combat_1_1_player_combat.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_entities_1_1_player_controller.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_entities_1_1_player_controller_base.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_u_i_1_1_player_management_station_menu.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_entities_1_1_player_manager.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_stats_1_1_player_stats.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_u_i_1_1_p_m_s_base.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_u_i_1_1_p_m_s_menu.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_u_i_1_1_popup_window.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_u_i_1_1_scroll_rect_no_mouse_drag.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_u_i_1_1_slot.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_stats_1_1_stat.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_combat_1_1_touch_sensor.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_u_i_1_1_vertical_layout_group_handler.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_p_c_1_1_v_f_x_1_1_w_f_x___light_flicker.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

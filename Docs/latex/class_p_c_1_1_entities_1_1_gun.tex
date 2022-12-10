@@ -1,0 +1,39 @@
+\hypertarget{class_p_c_1_1_entities_1_1_gun}{}\doxysection{PC.\+Entities.\+Gun Class Reference}
+\label{class_p_c_1_1_entities_1_1_gun}\index{PC.Entities.Gun@{PC.Entities.Gun}}
+
+
+Defines the general behavior of the player\textquotesingle{}s gun.   
+
+
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+async void \mbox{\hyperlink{class_p_c_1_1_entities_1_1_gun_aa63b006ee50385dd6c6d599a0d9b9dd4}{Reload}} (Input\+Action.\+Callback\+Context obj)
+\begin{DoxyCompactList}\small\item\em Reloads the gun\textquotesingle{}s magazine  \end{DoxyCompactList}\item 
+async void \mbox{\hyperlink{class_p_c_1_1_entities_1_1_gun_a5eddc434706d71046a700c2630384f8e}{Shoot}} (Input\+Action.\+Callback\+Context obj)
+\begin{DoxyCompactList}\small\item\em Deals with all functionality related shooting. Includes audio, muzzle flash, recoil, raycast shooting and target damage.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_p_c_1_1_entities_1_1_gun_aa63b006ee50385dd6c6d599a0d9b9dd4}\label{class_p_c_1_1_entities_1_1_gun_aa63b006ee50385dd6c6d599a0d9b9dd4}} 
+\index{PC.Entities.Gun@{PC.Entities.Gun}!Reload@{Reload}}
+\index{Reload@{Reload}!PC.Entities.Gun@{PC.Entities.Gun}}
+\doxysubsubsection{\texorpdfstring{Reload()}{Reload()}}
+{\footnotesize\ttfamily async void PC.\+Entities.\+Gun.\+Reload (\begin{DoxyParamCaption}\item[{Input\+Action.\+Callback\+Context}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Context for the Input\+Actions asset. Passed automatically after Reload is subscribed to the relevant input. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_p_c_1_1_entities_1_1_gun_a5eddc434706d71046a700c2630384f8e}\label{class_p_c_1_1_entities_1_1_gun_a5eddc434706d71046a700c2630384f8e}} 
+\index{PC.Entities.Gun@{PC.Entities.Gun}!Shoot@{Shoot}}
+\index{Shoot@{Shoot}!PC.Entities.Gun@{PC.Entities.Gun}}
+\doxysubsubsection{\texorpdfstring{Shoot()}{Shoot()}}
+{\footnotesize\ttfamily async void PC.\+Entities.\+Gun.\+Shoot (\begin{DoxyParamCaption}\item[{Input\+Action.\+Callback\+Context}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Context for the Input\+Actions asset. Passed automatically after Shoot is subscribed to the relevant input. \\
+\hline
+\end{DoxyParams}

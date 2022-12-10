@@ -1,0 +1,211 @@
+.TH "PC.UI.ItemType" 3 "Fri Dec 9 2022" "Project Calamity" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PC.UI.ItemType
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBValue\fP : System\&.UInt32 "
+.br
+.RI "The type of an item\&.  "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBbelongsTo\fP (\fBItemType\fP item)"
+.br
+.RI "Checks if a type belongs to another type\&.  "
+.ti -1c
+.RI "override bool \fBEquals\fP (object a)"
+.br
+.RI "Checks if an enum Type is equal to an instance of an \fBItemType\fP\&.  "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static implicit \fBoperator uint\fP (\fBItemType\fP item)"
+.br
+.RI "Implcitly converts an \fBItemType\fP to a uint\&.  "
+.ti -1c
+.RI "static bool \fBoperator==\fP (\fBItemType\fP a, \fBItemType\fP b)"
+.br
+.RI "Checks if an instance of an \fBItemType\fP is equal to another instance of an \fBItemType\fP\&.  "
+.ti -1c
+.RI "static bool \fBoperator==\fP (\fBItemType\fP a, \fBValue\fP b)"
+.br
+.RI "Checks if an instance of an \fBItemType\fP is equal to an enum Type\&.  "
+.ti -1c
+.RI "static bool \fBoperator!=\fP (\fBItemType\fP a, \fBItemType\fP b)"
+.br
+.RI "Checks if two instances of \fBItemType\fP are equal\&.  "
+.ti -1c
+.RI "static bool \fBoperator!=\fP (\fBItemType\fP a, \fBValue\fP b)"
+.br
+.RI "Checks if a enum Type is not equal to a instance of an \fBItemType\fP\&.  "
+.ti -1c
+.RI "static \fBItemType\fP \fBLookup\fP (\fBValue\fP value)"
+.br
+.RI "Returns the type of an item\&.  "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "uint \fBdata\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "string \fBdataAsHex\fP\fC [get]\fP"
+.br
+.ti -1c
+.RI "byte \fBlayer1\fP\fC [get]\fP"
+.br
+.ti -1c
+.RI "byte \fBlayer2\fP\fC [get]\fP"
+.br
+.ti -1c
+.RI "byte \fBlayer3\fP\fC [get]\fP"
+.br
+.ti -1c
+.RI "byte \fBlayer4\fP\fC [get]\fP"
+.br
+.ti -1c
+.RI "int \fBlastLayerIndex\fP\fC [get]\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBItemType\fP (\fBValue\fP val)"
+.br
+.in -1c
+.SS "Static Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static Dictionary< \fBValue\fP, \fBItemType\fP > \fBInitLookup\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint \fBh_data\fP = 0x00000000"
+.br
+.ti -1c
+.RI "byte[] \fBlayers\fP = new byte[4]"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "const uint \fBLAYER_1_MASK\fP = 0xFF000000"
+.br
+.ti -1c
+.RI "const uint \fBLAYER_2_MASK\fP = 0x00FF0000"
+.br
+.ti -1c
+.RI "const uint \fBLAYER_3_MASK\fP = 0x0000FF00"
+.br
+.ti -1c
+.RI "const uint \fBLAYER_4_MASK\fP = 0x000000FF"
+.br
+.ti -1c
+.RI "static readonly Dictionary< \fBValue\fP, \fBItemType\fP > \fBdict\fP = InitLookup()"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "bool PC\&.UI\&.ItemType\&.belongsTo (\fBItemType\fP item)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIitem\fP The type to check\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the type belongs to the other type, else false\&.
+.RE
+.PP
+
+.SS "override bool PC\&.UI\&.ItemType\&.Equals (object a)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIa\fP The value of the item\&.
+.RE
+.PP
+
+.SS "static \fBItemType\fP PC\&.UI\&.ItemType\&.Lookup (\fBValue\fP value)\fC [static]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP The value of the item\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The type of the item\&.
+.RE
+.PP
+
+.SS "static bool PC\&.UI\&.ItemType\&.operator!= (\fBItemType\fP a, \fBItemType\fP b)\fC [static]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIa\fP The first given instance of the \fBItemType\fP\&.
+.br
+\fIb\fP The second given instance of the \fBItemType\fP\&.
+.RE
+.PP
+
+.SS "static bool PC\&.UI\&.ItemType\&.operator!= (\fBItemType\fP a, \fBValue\fP b)\fC [static]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIa\fP The given enum type\&.
+.br
+\fIb\fP The given instance of the \fBItemType\fP\&.
+.RE
+.PP
+
+.SS "static bool PC\&.UI\&.ItemType\&.operator== (\fBItemType\fP a, \fBItemType\fP b)\fC [static]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIa\fP The first given instance of the \fBItemType\fP\&.
+.br
+\fIb\fP The second given instance of the \fBItemType\fP\&.
+.RE
+.PP
+
+.SS "static bool PC\&.UI\&.ItemType\&.operator== (\fBItemType\fP a, \fBValue\fP b)\fC [static]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIa\fP The given instance of the \fBItemType\fP\&.
+.br
+\fIb\fP The given enum type\&.
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Project Calamity from the source code\&.

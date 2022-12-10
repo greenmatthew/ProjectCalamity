@@ -1,0 +1,83 @@
+.TH "PC.UI.ItemContainerInfo" 3 "Fri Dec 9 2022" "Project Calamity" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PC.UI.ItemContainerInfo
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBItemContainerInfo\fP \fBCreate\fP (\fBContainer\fP container, Vector2Int index)"
+.br
+.RI "Creates an \fBItemContainerInfo\fP object containing info about a given item's state in its source container  "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "\fBItem\fP \fBitem\fP = null\fC [get, private set]\fP"
+.br
+.ti -1c
+.RI "Vector2Int \fBsourceIndex\fP = Vector2Int\&.zero\fC [get, private set]\fP"
+.br
+.ti -1c
+.RI "\fBContainer\fP \fBsourceContainer\fP = null\fC [get, private set]\fP"
+.br
+.ti -1c
+.RI "RectTransform \fBrectTransform\fP = null\fC [get, private set]\fP"
+.br
+.ti -1c
+.RI "bool \fBwasRotated\fP = false\fC [get, private set]\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBItemContainerInfo\fP (\fBContainer\fP currentContainer, Vector2Int currentIndex)"
+.br
+.RI "Constructor for the \fBItemContainerInfo\fP class  "
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "PC\&.UI\&.ItemContainerInfo\&.ItemContainerInfo (\fBContainer\fP currentContainer, Vector2Int currentIndex)\fC [private]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIcontainer\fP The source container the item is currently in
+.br
+\fIindex\fP The source index of the item in the source container
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+An \fBItemContainerInfo\fP object containing info about the item's state in its source container
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static \fBItemContainerInfo\fP PC\&.UI\&.ItemContainerInfo\&.Create (\fBContainer\fP container, Vector2Int index)\fC [static]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIcontainer\fP The source container the item is currently in
+.br
+\fIindex\fP The source index of the item in the source container
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+An \fBItemContainerInfo\fP object containing info about the item's state in its source container
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Project Calamity from the source code\&.

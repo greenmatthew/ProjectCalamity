@@ -1,0 +1,176 @@
+.TH "PC.UI.Item" 3 "Fri Dec 9 2022" "Project Calamity" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PC.UI.Item
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBItem\fP \fBInit\fP (\fBItemSO\fP itemSO)"
+.br
+.RI "Initializes the item\&.  "
+.ti -1c
+.RI "void \fBSetContainer\fP (\fBContainerBase\fP container, Vector2Int originCellIndex)"
+.br
+.RI "Caches the container the item is currently in\&. Sets the item's parent to the given container's content GameObject\&. Sets the item's position to the given cell index relative to the container's content GameObject\&.  "
+.ti -1c
+.RI "void \fBRemoveContainer\fP ()"
+.br
+.RI "Removes the item's container reference and sets its parent to null\&.  "
+.ti -1c
+.RI "Vector2Int \fBGetOriginCellIndex\fP ()"
+.br
+.RI "Gets the origin cell index of the item, relative to its container's content 2D array\&.  "
+.ti -1c
+.RI "void \fBRotate\fP ()"
+.br
+.RI "Rotates the item or rather toggles the item's rotation between 0 and 90 degrees Useful for packing items together more efficiently  "
+.ti -1c
+.RI "\fBItem\fP \fBMakeCopy\fP ()"
+.br
+.RI "Duplicates the item as another item\&.  "
+.ti -1c
+.RI "bool \fBTransferTo\fP (\fBContainerBase\fP container, Vector2Int cellIndex)"
+.br
+.RI "Transfers the item to a given container at a given cell index\&.  "
+.ti -1c
+.RI "void \fBDestroy\fP ()"
+.br
+.RI "Destroys the item\&.  "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBisRotated\fP = false"
+.br
+.ti -1c
+.RI "uint \fBcellWidth\fP"
+.br
+.ti -1c
+.RI "uint \fBcellHeight\fP"
+.br
+.ti -1c
+.RI "RectTransform \fBRectTransform\fP = null"
+.br
+.ti -1c
+.RI "\fBItemType\fP \fBtype\fP"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "Vector2Int \fBOriginCellIndex\fP\fC [get]\fP"
+.br
+.ti -1c
+.RI "\fBItem\fP \fBCopy\fP\fC [get]\fP"
+.br
+.ti -1c
+.RI "\fBItem\fP \fBSource\fP\fC [get]\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBAwake\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetSize\fP ()"
+.br
+.RI "Sets the RectTransform size of the item based on the cellWidth and cellHeight  "
+.ti -1c
+.RI "void \fBSetImages\fP ()"
+.br
+.RI "Sets the item's images based on the item's \fBItemSO\fP\&.  "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBItemSO\fP \fB_itemSO\fP = null"
+.br
+.ti -1c
+.RI "\fBContainerBase\fP \fB_currentContainer\fP = null"
+.br
+.ti -1c
+.RI "Image \fB_backgroundImage\fP"
+.br
+.ti -1c
+.RI "Image \fB_contentImage\fP"
+.br
+.ti -1c
+.RI "TMP_Text \fB_nicknameLabel\fP"
+.br
+.ti -1c
+.RI "RectTransform \fB_contentRectTransform\fP = null"
+.br
+.ti -1c
+.RI "Vector2Int \fB_originCellIndex\fP = Vector2Int\&.zero"
+.br
+.ti -1c
+.RI "\fBItem\fP \fB_copy\fP = null"
+.br
+.ti -1c
+.RI "\fBItem\fP \fB_source\fP = null"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "Vector2Int PC\&.UI\&.Item\&.GetOriginCellIndex ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+The origin cell index of the item\&.
+.RE
+.PP
+
+.SS "\fBItem\fP PC\&.UI\&.Item\&.Init (\fBItemSO\fP itemSO)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIitemSO\fP The itemSO to set the item's details to\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The item\&.
+.RE
+.PP
+
+.SS "\fBItem\fP PC\&.UI\&.Item\&.MakeCopy ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+The duplicate item\&.
+.RE
+.PP
+
+.SS "bool PC\&.UI\&.Item\&.TransferTo (\fBContainerBase\fP container, Vector2Int cellIndex)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIcontainer\fP The container to transfer the item to\&.
+.br
+\fIcellIndex\fP The cell index to transfer the item to\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the transfer was successful, false otherwise\&.
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Project Calamity from the source code\&.

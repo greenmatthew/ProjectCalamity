@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_p_c_1_1_u_i" xml:lang="en-US">
+<title>PC.UI Namespace Reference</title>
+<indexterm><primary>PC.UI</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_p_c_1_1_u_i_1_1_alpha_p_m_s">AlphaPMS</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_u_i_1_1_beta_p_m_s">BetaPMS</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_p_c_1_1_u_i_1_1_button_action">ButtonAction</link></para>
+</listitem>
+            <listitem><para>class <emphasis role="strong">Constants</emphasis></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_u_i_1_1_container">Container</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_u_i_1_1_container_base">ContainerBase</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_u_i_1_1_dev_console_menu">DevConsoleMenu</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_u_i_1_1_horizontal_layout_group_handler">HorizontalLayoutGroupHandler</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_u_i_1_1_interactable">Interactable</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_u_i_1_1_inventory_menu">InventoryMenu</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_u_i_1_1_item_container_info">ItemContainerInfo</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_u_i_1_1_item_s_o">ItemSO</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_u_i_1_1_item_types">ItemTypes</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_u_i_1_1_layout_maintain_preferred_height">LayoutMaintainPreferredHeight</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_u_i_1_1_map_menu">MapMenu</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_u_i_1_1_menu_base">MenuBase</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_u_i_1_1_menus_controller">MenusController</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_u_i_1_1_pause_menu">PauseMenu</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_u_i_1_1_player_management_station_menu">PlayerManagementStationMenu</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_u_i_1_1_p_m_s_base">PMSBase</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_u_i_1_1_p_m_s_menu">PMSMenu</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_u_i_1_1_popup_window">PopupWindow</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_u_i_1_1_scroll_rect_no_mouse_drag">ScrollRectNoMouseDrag</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_u_i_1_1_slot">Slot</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_p_c_1_1_u_i_1_1_vertical_layout_group_handler">VerticalLayoutGroupHandler</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

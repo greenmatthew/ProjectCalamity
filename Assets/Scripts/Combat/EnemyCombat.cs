@@ -2,13 +2,14 @@ using UnityEngine;
 using PC.Stats;
 
 /*!
- * \file index.html
- * \brief This page introduces a new horror video game.
+ * \mainpage 
  *
- * The game is set in a dark and eerie abandoned hospital, where the player must
- * navigate through twisted corridors and haunted rooms to uncover the secrets of
- * the hospital and survive the night. With immersive graphics and intense gameplay,
- * this game is sure to keep players on the edge of their seats.
+ *   Dead Space and the Alien franchise were pioneers in the sci-fi horror game genre with the last of these
+ *   games being Alien Isolation released in 2014. There have been several titles of the same ilk released
+ *   since then, but none have reached the same level of popularity. \n In an effort to reclaim and reinterpret
+ *   the magic of the originals and take advantage of this hole in the market, a new slate of space station
+ *   horror shooters were announced at the 2022 Summer Game Fest event. Our team used this 
+ *   this opportunity to develop our own demo in the genre.
  *
  * \warning This game is not suitable for children or those who are easily scared.
  */

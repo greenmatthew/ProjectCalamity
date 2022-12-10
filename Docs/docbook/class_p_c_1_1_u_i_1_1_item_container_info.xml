@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_c_1_1_u_i_1_1_item_container_info" xml:lang="en-US">
+<title>PC.UI.ItemContainerInfo Class Reference</title>
+<indexterm><primary>PC.UI.ItemContainerInfo</primary></indexterm>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_class_p_c_1_1_u_i_1_1_item_container_info">ItemContainerInfo</link> <link linkend="_class_p_c_1_1_u_i_1_1_item_container_info_1a5bb92f788e03048e02d5a187fa025d4f">Create</link> (<link linkend="_class_p_c_1_1_u_i_1_1_container">Container</link> container, Vector2Int index)</para>
+
+<para>Creates an <link linkend="_class_p_c_1_1_u_i_1_1_item_container_info">ItemContainerInfo</link> object containing info about a given item&apos;s state in its source container  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_container_info_1a4e797b613472fa7649cff441df0d9a50"/><link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link> <emphasis role="strong">item</emphasis> = null<computeroutput> [get, private set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_container_info_1ad5931db72f68aab7f9346b4570511f9d"/>Vector2Int <emphasis role="strong">sourceIndex</emphasis> = Vector2Int.zero<computeroutput> [get, private set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_container_info_1ae9e5d417e3e3e6b427de2674cd90d6cb"/><link linkend="_class_p_c_1_1_u_i_1_1_container">Container</link> <emphasis role="strong">sourceContainer</emphasis> = null<computeroutput> [get, private set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_container_info_1a1a5668dc2faa7b734731eb45a32eca57"/>RectTransform <emphasis role="strong">rectTransform</emphasis> = null<computeroutput> [get, private set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_container_info_1a892c8a4b89b513060689c2ebcd12204e"/>bool <emphasis role="strong">wasRotated</emphasis> = false<computeroutput> [get, private set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_p_c_1_1_u_i_1_1_item_container_info_1afa1e9ef1c5bbd2d8f88da2c8322e68b4">ItemContainerInfo</link> (<link linkend="_class_p_c_1_1_u_i_1_1_container">Container</link> currentContainer, Vector2Int currentIndex)</para>
+
+<para>Constructor for the <link linkend="_class_p_c_1_1_u_i_1_1_item_container_info">ItemContainerInfo</link> class  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_item_container_info_1afa1e9ef1c5bbd2d8f88da2c8322e68b4"/><section>
+    <title>ItemContainerInfo()</title>
+<indexterm><primary>ItemContainerInfo</primary><secondary>PC.UI.ItemContainerInfo</secondary></indexterm>
+<indexterm><primary>PC.UI.ItemContainerInfo</primary><secondary>ItemContainerInfo</secondary></indexterm>
+<para><computeroutput>PC.UI.ItemContainerInfo.ItemContainerInfo (<link linkend="_class_p_c_1_1_u_i_1_1_container">Container</link> currentContainer, Vector2Int currentIndex)<computeroutput>[private]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>container</entry><entry>
+<para>The source container the item is currently in</para>
+</entry>
+                            </row>
+                            <row>
+<entry>index</entry><entry>
+<para>The source index of the item in the source container</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>An <link linkend="_class_p_c_1_1_u_i_1_1_item_container_info">ItemContainerInfo</link> object containing info about the item&apos;s state in its source container</para>
+</formalpara>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_item_container_info_1a5bb92f788e03048e02d5a187fa025d4f"/><section>
+    <title>Create()</title>
+<indexterm><primary>Create</primary><secondary>PC.UI.ItemContainerInfo</secondary></indexterm>
+<indexterm><primary>PC.UI.ItemContainerInfo</primary><secondary>Create</secondary></indexterm>
+<para><computeroutput>static <link linkend="_class_p_c_1_1_u_i_1_1_item_container_info">ItemContainerInfo</link> PC.UI.ItemContainerInfo.Create (<link linkend="_class_p_c_1_1_u_i_1_1_container">Container</link> container, Vector2Int index)<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>container</entry><entry>
+<para>The source container the item is currently in</para>
+</entry>
+                            </row>
+                            <row>
+<entry>index</entry><entry>
+<para>The source index of the item in the source container</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>An <link linkend="_class_p_c_1_1_u_i_1_1_item_container_info">ItemContainerInfo</link> object containing info about the item&apos;s state in its source container</para>
+</formalpara>
+</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,154 @@
+.TH "PC.UI.PopupWindow" 3 "Fri Dec 9 2022" "Project Calamity" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PC.UI.PopupWindow
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static GameObject \fBCreate\fP (GameObject parent, string title, string message, \fBButtonAction\fP buttonAction, params \fBButtonAction\fP[] additionalButtonActions)"
+.br
+.RI "Create a popup window\&.  "
+.ti -1c
+.RI "static GameObject \fBCreate\fP (GameObject parent, float width, float height, string title, string message, \fBButtonAction\fP buttonAction, params \fBButtonAction\fP[] additionalButtonActions)"
+.br
+.RI "Create a popup window\&.  "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBAddButton\fP (\fBButtonAction\fP buttonAction)"
+.br
+.RI "Add a button to this popup window\&.  "
+.ti -1c
+.RI "void \fBInit\fP (float width, float height, string title, string message, \fBButtonAction\fP buttonAction, params \fBButtonAction\fP[] additionalButtonActions)"
+.br
+.RI "Initialize the popup window\&.  "
+.ti -1c
+.RI "void \fBClose\fP ()"
+.br
+.RI "Close the popup window\&.  "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "TMP_Text \fB_title\fP"
+.br
+.ti -1c
+.RI "TMP_Text \fB_message\fP"
+.br
+.ti -1c
+.RI "Transform \fB_buttonPrefab\fP"
+.br
+.ti -1c
+.RI "Transform \fB_buttonContent\fP"
+.br
+.ti -1c
+.RI "readonly List< Button > \fB_buttons\fP = new List<Button>()"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "const string \fB_popupWindowPrefabPath\fP = 'Prefabs/UI/PR_PopupWindow'"
+.br
+.ti -1c
+.RI "const float \fB_defaultPopupWindowWidth\fP = 300f"
+.br
+.ti -1c
+.RI "const float \fB_defaultPopupWindowHeight\fP = 200f"
+.br
+.ti -1c
+.RI "const float \fB_minPopupWindowWidth\fP = 100f"
+.br
+.ti -1c
+.RI "const float \fB_minPopupWindowHeight\fP = 75f"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "void PC\&.UI\&.PopupWindow\&.AddButton (\fBButtonAction\fP buttonAction)\fC [private]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIbuttonAction\fP The label and action to perform when the button is clicked\&.
+.RE
+.PP
+
+.SS "static GameObject PC\&.UI\&.PopupWindow\&.Create (GameObject parent, float width, float height, string title, string message, \fBButtonAction\fP buttonAction, params \fBButtonAction\fP[] additionalButtonActions)\fC [static]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP The parent transform to attach the popup window to\&.
+.br
+\fIwidth\fP The desired width of the popup window\&.
+.br
+\fIheight\fP The desired height of the popup window\&.
+.br
+\fItitle\fP The title of the popup window\&.
+.br
+\fImessage\fP The message of the popup window\&.
+.br
+\fIbuttonAction\fP The required single button of the popup window\&.
+.br
+\fIadditionalButtonActions\fP The optional multiple buttons of the popup window\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The GameObject created with the given parameters\&.
+.RE
+.PP
+
+.SS "static GameObject PC\&.UI\&.PopupWindow\&.Create (GameObject parent, string title, string message, \fBButtonAction\fP buttonAction, params \fBButtonAction\fP[] additionalButtonActions)\fC [static]\fP"
+<param name='parent'The parent transform to attach the popup window to\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fItitle\fP The title of the popup window\&.
+.br
+\fImessage\fP The message of the popup window\&.
+.br
+\fIbuttonAction\fP The required single button of the popup window\&.
+.br
+\fIadditionalButtonActions\fP The optional multiple buttons of the popup window\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The GameObject created with the given parameters\&.
+.RE
+.PP
+
+.SS "void PC\&.UI\&.PopupWindow\&.Init (float width, float height, string title, string message, \fBButtonAction\fP buttonAction, params \fBButtonAction\fP[] additionalButtonActions)\fC [private]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIwidth\fP The desired width of the popup window\&.
+.br
+\fIheight\fP The desired height of the popup window\&.
+.br
+\fItitle\fP The title of the popup window\&.
+.br
+\fImessage\fP The message of the popup window\&.
+.br
+\fIbuttonAction\fP The required single button of the popup window\&.
+.br
+\fIadditionalButtonActions\fP The optional multiple buttons of the popup window\&.
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Project Calamity from the source code\&.

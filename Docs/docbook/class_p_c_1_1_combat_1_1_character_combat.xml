@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_c_1_1_combat_1_1_character_combat" xml:lang="en-US">
+<title>PC.Combat.CharacterCombat Class Reference</title>
+<indexterm><primary>PC.Combat.CharacterCombat</primary></indexterm>
+<para>
+
+<para>Defined the combat behavior specific to the player character.  </para>
+ 
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_p_c_1_1_combat_1_1_character_combat_1a0d31ee1e7679fe3753555fe7976138a5">Attack</link> (<link linkend="_class_p_c_1_1_stats_1_1_character_stats">CharacterStats</link> targetStats)</para>
+
+<para>Attack the target. This is called when the player&apos;s gun gets a hit on a damageable object.  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_p_c_1_1_combat_1_1_character_combat_1a0d31ee1e7679fe3753555fe7976138a5"/><section>
+    <title>Attack()</title>
+<indexterm><primary>Attack</primary><secondary>PC.Combat.CharacterCombat</secondary></indexterm>
+<indexterm><primary>PC.Combat.CharacterCombat</primary><secondary>Attack</secondary></indexterm>
+<para><computeroutput>void PC.Combat.CharacterCombat.Attack (<link linkend="_class_p_c_1_1_stats_1_1_character_stats">CharacterStats</link> targetStats)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>targetStats</entry><entry>
+<para>The stats object for the target being hit. This controls the amount of damage it recieves. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_c_1_1_entities_1_1_player_controller_base" xml:lang="en-US">
+<title>PC.Entities.PlayerControllerBase Class Reference</title>
+<indexterm><primary>PC.Entities.PlayerControllerBase</primary></indexterm>
+<para>
+
+<para>Defined functionality and attributes common to all player controllers such as ground checking and translating inputs to movement information.  </para>
+ 
+</para>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>Vector3 <link linkend="_class_p_c_1_1_entities_1_1_player_controller_base_1aa6c6ccbb0a4e5363e198fe7078c3c46d">GetMovement</link> ()</para>
+
+<para>Retrieves the player&apos;s current movement vector  </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_p_c_1_1_entities_1_1_player_controller_base_1a001497b418dd424bbaafbaeafbb7bcd4">GroundedCheck</link> ()</para>
+
+<para>Checks if the player is grounded  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_p_c_1_1_entities_1_1_player_controller_base_1aa6c6ccbb0a4e5363e198fe7078c3c46d"/><section>
+    <title>GetMovement()</title>
+<indexterm><primary>GetMovement</primary><secondary>PC.Entities.PlayerControllerBase</secondary></indexterm>
+<indexterm><primary>PC.Entities.PlayerControllerBase</primary><secondary>GetMovement</secondary></indexterm>
+<para><computeroutput>Vector3 PC.Entities.PlayerControllerBase.GetMovement ( )<computeroutput>[private]</computeroutput></computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>Movement vector already adjusted for speed </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_p_c_1_1_entities_1_1_player_controller_base_1a001497b418dd424bbaafbaeafbb7bcd4"/><section>
+    <title>GroundedCheck()</title>
+<indexterm><primary>GroundedCheck</primary><secondary>PC.Entities.PlayerControllerBase</secondary></indexterm>
+<indexterm><primary>PC.Entities.PlayerControllerBase</primary><secondary>GroundedCheck</secondary></indexterm>
+<para><computeroutput>bool PC.Entities.PlayerControllerBase.GroundedCheck ( )<computeroutput>[private]</computeroutput></computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>True if the player is touching the ground, otherwise false.</para>
+</formalpara>
+</para>
+</section>
+</section>
+</section>

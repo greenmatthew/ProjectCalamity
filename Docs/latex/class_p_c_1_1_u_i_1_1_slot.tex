@@ -1,0 +1,106 @@
+\hypertarget{class_p_c_1_1_u_i_1_1_slot}{}\doxysection{PC.\+UI.\+Slot Class Reference}
+\label{class_p_c_1_1_u_i_1_1_slot}\index{PC.UI.Slot@{PC.UI.Slot}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override Vector2\+Int \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_slot_a3abc378767113733e274cfda6cc927a8}{Get\+Cell\+Index}} (Vector2 mouse\+Pos)
+\begin{DoxyCompactList}\small\item\em Gets the cell index relative to the container using the given mouse position.  \end{DoxyCompactList}\item 
+override bool \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_slot_a0b81350b90c01ea52399ba9d488b828f}{Remove\+Item\+At}} (Vector2\+Int cell\+Index)
+\begin{DoxyCompactList}\small\item\em Removes the item at a given cell\+Index from the container.  \end{DoxyCompactList}\item 
+override bool \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_slot_ab832866c460e2d656298c394ff41e7e6}{Place\+Item\+At}} (\mbox{\hyperlink{class_p_c_1_1_u_i_1_1_item}{Item}} item, Vector2\+Int cell\+Index)
+\begin{DoxyCompactList}\small\item\em Places an item at a given cell\+Index in the container.  \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_p_c_1_1_u_i_1_1_item}{Item}} \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_slot_aec453f6ef3310b29ee788ffd82354c6b}{Get\+Item}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the item inside the slot.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_slot_a30a95af9a207749322d3000d79fa1c58}{Start}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_slot_a03e76c6f13875a444bd15b9f2c87ce1d}\label{class_p_c_1_1_u_i_1_1_slot_a03e76c6f13875a444bd15b9f2c87ce1d}} 
+\mbox{\hyperlink{class_p_c_1_1_u_i_1_1_item_type_af67a6245e6371310618ed7d7a0d96081}{Item\+Type.\+Value}} {\bfseries i\+\_\+allowed\+Type} = Item\+Type.\+Value.\+NONE
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_slot_a797039ddf42cf4d4e47ee582c607cd41}\label{class_p_c_1_1_u_i_1_1_slot_a797039ddf42cf4d4e47ee582c607cd41}} 
+\mbox{\hyperlink{class_p_c_1_1_u_i_1_1_item_type}{Item\+Type}} {\bfseries \+\_\+allowed\+Type}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_slot_a3abc378767113733e274cfda6cc927a8}\label{class_p_c_1_1_u_i_1_1_slot_a3abc378767113733e274cfda6cc927a8}} 
+\index{PC.UI.Slot@{PC.UI.Slot}!GetCellIndex@{GetCellIndex}}
+\index{GetCellIndex@{GetCellIndex}!PC.UI.Slot@{PC.UI.Slot}}
+\doxysubsubsection{\texorpdfstring{GetCellIndex()}{GetCellIndex()}}
+{\footnotesize\ttfamily override Vector2\+Int PC.\+UI.\+Slot.\+Get\+Cell\+Index (\begin{DoxyParamCaption}\item[{Vector2}]{mouse\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em mouse\+Pos} & Position of the mouse.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cell index relative to the container.
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_container_base_ad6bfe911d6a6200aa74f5c40977354f6}{PC.\+UI.\+Container\+Base}}.
+
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_slot_aec453f6ef3310b29ee788ffd82354c6b}\label{class_p_c_1_1_u_i_1_1_slot_aec453f6ef3310b29ee788ffd82354c6b}} 
+\index{PC.UI.Slot@{PC.UI.Slot}!GetItem@{GetItem}}
+\index{GetItem@{GetItem}!PC.UI.Slot@{PC.UI.Slot}}
+\doxysubsubsection{\texorpdfstring{GetItem()}{GetItem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_item}{Item}} PC.\+UI.\+Slot.\+Get\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Returns the item inside the slot.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_slot_ab832866c460e2d656298c394ff41e7e6}\label{class_p_c_1_1_u_i_1_1_slot_ab832866c460e2d656298c394ff41e7e6}} 
+\index{PC.UI.Slot@{PC.UI.Slot}!PlaceItemAt@{PlaceItemAt}}
+\index{PlaceItemAt@{PlaceItemAt}!PC.UI.Slot@{PC.UI.Slot}}
+\doxysubsubsection{\texorpdfstring{PlaceItemAt()}{PlaceItemAt()}}
+{\footnotesize\ttfamily override bool PC.\+UI.\+Slot.\+Place\+Item\+At (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_p_c_1_1_u_i_1_1_item}{Item}}}]{item,  }\item[{Vector2\+Int}]{cell\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & The item you want to place.\\
+\hline
+{\em cell\+Index} & The cell index you want to place the item at.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the operation was successful, otherwise false.
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_container_base_a3082416b69c71572c22657058fc061e4}{PC.\+UI.\+Container\+Base}}.
+
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_slot_a0b81350b90c01ea52399ba9d488b828f}\label{class_p_c_1_1_u_i_1_1_slot_a0b81350b90c01ea52399ba9d488b828f}} 
+\index{PC.UI.Slot@{PC.UI.Slot}!RemoveItemAt@{RemoveItemAt}}
+\index{RemoveItemAt@{RemoveItemAt}!PC.UI.Slot@{PC.UI.Slot}}
+\doxysubsubsection{\texorpdfstring{RemoveItemAt()}{RemoveItemAt()}}
+{\footnotesize\ttfamily override bool PC.\+UI.\+Slot.\+Remove\+Item\+At (\begin{DoxyParamCaption}\item[{Vector2\+Int}]{cell\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell\+Index} & The cell index of the item you want to remove.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the operation was successful, otherwise false.
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_container_base_a1cfa23ad215e3238e552e9174501670e}{PC.\+UI.\+Container\+Base}}.
+
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_slot_a30a95af9a207749322d3000d79fa1c58}\label{class_p_c_1_1_u_i_1_1_slot_a30a95af9a207749322d3000d79fa1c58}} 
+\index{PC.UI.Slot@{PC.UI.Slot}!Start@{Start}}
+\index{Start@{Start}!PC.UI.Slot@{PC.UI.Slot}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily override void PC.\+UI.\+Slot.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_container_base}{PC.\+UI.\+Container\+Base}}.
+

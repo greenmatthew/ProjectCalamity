@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_c_1_1_u_i_1_1_container" xml:lang="en-US">
+<title>PC.UI.Container Class Reference</title>
+<indexterm><primary>PC.UI.Container</primary></indexterm>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>override void <link linkend="_class_p_c_1_1_u_i_1_1_container_1a13cefd68f2397ca9783268ff1ac4c8d2">Start</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_container_1af592fcde307e71d3c18fd39a570692f6"/><link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link> <emphasis role="strong">_itemPrefab</emphasis> = null</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_container_1a08c61b0cdf842d850f11394287ecce52"/><link linkend="_class_p_c_1_1_u_i_1_1_item_s_o">ItemSO</link>[] <emphasis role="strong">_items</emphasis> = null</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_container_1ad3117de95c903f2cd7069fb43eb8f84a"/>Vector2Int[] <emphasis role="strong">_itemPositions</emphasis> = null</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_container_1a13cefd68f2397ca9783268ff1ac4c8d2"/><section>
+    <title>Start()</title>
+<indexterm><primary>Start</primary><secondary>PC.UI.Container</secondary></indexterm>
+<indexterm><primary>PC.UI.Container</primary><secondary>Start</secondary></indexterm>
+<para><computeroutput>override void PC.UI.Container.Start ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented from <link linkend="_class_p_c_1_1_u_i_1_1_container_base">PC.UI.ContainerBase</link>.</para>
+</section>
+</section>
+</section>

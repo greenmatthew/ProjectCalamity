@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_c_1_1_entities_1_1_player_controller" xml:lang="en-US">
+<title>PC.Entities.PlayerController Class Reference</title>
+<indexterm><primary>PC.Entities.PlayerController</primary></indexterm>
+<para>
+
+<para>Defines functionality and attributes specific to our player character.  </para>
+ 
+</para>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_entities_1_1_player_controller_1aef483dc2ff4f21c101b199bd5b250bc3"/>override void <emphasis role="strong">Look</emphasis> ()</para>
+
+<para>Turns the Player object along x mouse input and turns camera along y mouse input.  </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_entities_1_1_player_controller_1abd46e614678f2b57e36c9fee71db550d"/>override void <emphasis role="strong">Move</emphasis> ()</para>
+
+<para>Moves the Player object by input from user and also applies gravity.  </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_entities_1_1_player_controller_1acd4369fc3fee9814e3bca195fc224adf"/>override void <emphasis role="strong">SetupInput</emphasis> ()</para>
+
+<para>Initializes the InputActions object, which handles all input from the user.  </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_entities_1_1_player_controller_1a838a93923fe93e526c67eddb3d2321e7"/>override void <emphasis role="strong">CheckForInteractions</emphasis> ()</para>
+
+<para>Displays interaction message if player is close enough to a terminal  </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_entities_1_1_player_controller_1aa463ff1945449dde002deb8b4ecc1b88"/>override void <emphasis role="strong">Interact</emphasis> ()</para>
+
+<para>Triggers menu when interacting with player management stations  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_p_c_1_1_entities_1_1_player_controller_1a9756f5d831305699b1adaff234f69795">OnAnimatorIK</link> (int layerIndex)</para>
+
+<para>Modifies player animations to adjust hand position on weapon via inverse kinematics  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_entities_1_1_player_controller_1a669f755605ab690da89a8cf0ea510a4e"/>void <emphasis role="strong">EquipPrimaryFirearm</emphasis> ()</para>
+
+<para>Equips the player&apos;s primary firearm from their inventory  </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_entities_1_1_player_controller_1ab7e24b01a19382ce8773e842f962e933"/>void <emphasis role="strong">EquipSecondaryFirearm</emphasis> ()</para>
+
+<para>Equips the player&apos;s secondary firearm from their inventory  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_p_c_1_1_entities_1_1_player_controller_1a9756f5d831305699b1adaff234f69795"/><section>
+    <title>OnAnimatorIK()</title>
+<indexterm><primary>OnAnimatorIK</primary><secondary>PC.Entities.PlayerController</secondary></indexterm>
+<indexterm><primary>PC.Entities.PlayerController</primary><secondary>OnAnimatorIK</secondary></indexterm>
+<para><computeroutput>void PC.Entities.PlayerController.OnAnimatorIK (int layerIndex)<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>layerIndex</entry><entry>
+<para>Index of layer on which the IK solver is called.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_c_1_1_u_i_1_1_item" xml:lang="en-US">
+<title>PC.UI.Item Class Reference</title>
+<indexterm><primary>PC.UI.Item</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link> <link linkend="_class_p_c_1_1_u_i_1_1_item_1a024adfb07e33f8629aece025418e23b0">Init</link> (<link linkend="_class_p_c_1_1_u_i_1_1_item_s_o">ItemSO</link> itemSO)</para>
+
+<para>Initializes the item.  </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_1a9a07e25df561ea72981d0f8e3e4e7241"/>void <emphasis role="strong">SetContainer</emphasis> (<link linkend="_class_p_c_1_1_u_i_1_1_container_base">ContainerBase</link> container, Vector2Int originCellIndex)</para>
+
+<para>Caches the container the item is currently in. Sets the item&apos;s parent to the given container&apos;s content GameObject. Sets the item&apos;s position to the given cell index relative to the container&apos;s content GameObject.  </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_1ac6cc8db0e3c96d9f01ddeb7b0b6a88a0"/>void <emphasis role="strong">RemoveContainer</emphasis> ()</para>
+
+<para>Removes the item&apos;s container reference and sets its parent to null.  </para>
+</listitem>
+            <listitem><para>Vector2Int <link linkend="_class_p_c_1_1_u_i_1_1_item_1ae1af45216cdb288e92fd12a8b5743e3d">GetOriginCellIndex</link> ()</para>
+
+<para>Gets the origin cell index of the item, relative to its container&apos;s content 2D array.  </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_1a2eb0169e3245c43973645b3a55fad9ae"/>void <emphasis role="strong">Rotate</emphasis> ()</para>
+
+<para>Rotates the item or rather toggles the item&apos;s rotation between 0 and 90 degrees Useful for packing items together more efficiently  </para>
+</listitem>
+            <listitem><para><link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link> <link linkend="_class_p_c_1_1_u_i_1_1_item_1ab5288061245472b8e9b3095e48830780">MakeCopy</link> ()</para>
+
+<para>Duplicates the item as another item.  </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_p_c_1_1_u_i_1_1_item_1afdeb0a73f8a0a374df6c49bdd8d9a875">TransferTo</link> (<link linkend="_class_p_c_1_1_u_i_1_1_container_base">ContainerBase</link> container, Vector2Int cellIndex)</para>
+
+<para>Transfers the item to a given container at a given cell index.  </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_1abdeadb49243048cecae222a8f78c05a1"/>void <emphasis role="strong">Destroy</emphasis> ()</para>
+
+<para>Destroys the item.  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_1abfccdb4d962b8daaf04fa0c8c162cd39"/>bool <emphasis role="strong">isRotated</emphasis> = false</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_1af55a3b13b95112d8b90c51caad531c12"/>uint <emphasis role="strong">cellWidth</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_1abc8ad166a341e7e655f37dc8916626c1"/>uint <emphasis role="strong">cellHeight</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_1ab635d8fb5fdbe58fc8822016b42b39a1"/>RectTransform <emphasis role="strong">RectTransform</emphasis> = null</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_1a644749f21259f1e377bc1fb161267a6a"/><link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link> <emphasis role="strong">type</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_1ab1fb2500685064fab4c2a67d74e6f22a"/>Vector2Int <emphasis role="strong">OriginCellIndex</emphasis><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_1ad6f616e7e6f913ae1698f9bc947bae8b"/><link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link> <emphasis role="strong">Copy</emphasis><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_1aacf12dd5eb5123993e2eb4759f59cb15"/><link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link> <emphasis role="strong">Source</emphasis><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_1a04bf18ffba8e0b8fda8ee8edc6065be4"/>void <emphasis role="strong">Awake</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_1a37832eebc645f70cb3c197496755439a"/>void <emphasis role="strong">SetSize</emphasis> ()</para>
+
+<para>Sets the RectTransform size of the item based on the cellWidth and cellHeight  </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_1a8abc9cddb2ef880b8e4903be221e2536"/>void <emphasis role="strong">SetImages</emphasis> ()</para>
+
+<para>Sets the item&apos;s images based on the item&apos;s <link linkend="_class_p_c_1_1_u_i_1_1_item_s_o">ItemSO</link>.  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_1ac06c8e0af026aced34f2fe433e31df98"/><link linkend="_class_p_c_1_1_u_i_1_1_item_s_o">ItemSO</link> <emphasis role="strong">_itemSO</emphasis> = null</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_1aa895968d8c9e1c3721e50fa969e380f7"/><link linkend="_class_p_c_1_1_u_i_1_1_container_base">ContainerBase</link> <emphasis role="strong">_currentContainer</emphasis> = null</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_1aa95c8659a8978205ef7ebba429ed0311"/>Image <emphasis role="strong">_backgroundImage</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_1aeda1a241ed91edd8b2e6ba041fdae2b3"/>Image <emphasis role="strong">_contentImage</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_1a322a55d087cc46ab762a32c15b9dd948"/>TMP_Text <emphasis role="strong">_nicknameLabel</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_1ad39eaa1a5320b673b5780150b53d9cfa"/>RectTransform <emphasis role="strong">_contentRectTransform</emphasis> = null</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_1acf21c9a8e534b6fd9a331046ff37784d"/>Vector2Int <emphasis role="strong">_originCellIndex</emphasis> = Vector2Int.zero</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_1afc2fb702adb4da89935b9de9e09cb3fe"/><link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link> <emphasis role="strong">_copy</emphasis> = null</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_1a0932e6e352cee63630fa8656e6e15936"/><link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link> <emphasis role="strong">_source</emphasis> = null</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_item_1ae1af45216cdb288e92fd12a8b5743e3d"/><section>
+    <title>GetOriginCellIndex()</title>
+<indexterm><primary>GetOriginCellIndex</primary><secondary>PC.UI.Item</secondary></indexterm>
+<indexterm><primary>PC.UI.Item</primary><secondary>GetOriginCellIndex</secondary></indexterm>
+<para><computeroutput>Vector2Int PC.UI.Item.GetOriginCellIndex ( )</computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>The origin cell index of the item.</para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_item_1a024adfb07e33f8629aece025418e23b0"/><section>
+    <title>Init()</title>
+<indexterm><primary>Init</primary><secondary>PC.UI.Item</secondary></indexterm>
+<indexterm><primary>PC.UI.Item</primary><secondary>Init</secondary></indexterm>
+<para><computeroutput><link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link> PC.UI.Item.Init (<link linkend="_class_p_c_1_1_u_i_1_1_item_s_o">ItemSO</link> itemSO)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>itemSO</entry><entry>
+<para>The itemSO to set the item&apos;s details to.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The item.</para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_item_1ab5288061245472b8e9b3095e48830780"/><section>
+    <title>MakeCopy()</title>
+<indexterm><primary>MakeCopy</primary><secondary>PC.UI.Item</secondary></indexterm>
+<indexterm><primary>PC.UI.Item</primary><secondary>MakeCopy</secondary></indexterm>
+<para><computeroutput><link linkend="_class_p_c_1_1_u_i_1_1_item">Item</link> PC.UI.Item.MakeCopy ( )</computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>The duplicate item.</para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_item_1afdeb0a73f8a0a374df6c49bdd8d9a875"/><section>
+    <title>TransferTo()</title>
+<indexterm><primary>TransferTo</primary><secondary>PC.UI.Item</secondary></indexterm>
+<indexterm><primary>PC.UI.Item</primary><secondary>TransferTo</secondary></indexterm>
+<para><computeroutput>bool PC.UI.Item.TransferTo (<link linkend="_class_p_c_1_1_u_i_1_1_container_base">ContainerBase</link> container, Vector2Int cellIndex)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>container</entry><entry>
+<para>The container to transfer the item to.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>cellIndex</entry><entry>
+<para>The cell index to transfer the item to.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the transfer was successful, false otherwise.</para>
+</formalpara>
+</para>
+</section>
+</section>
+</section>

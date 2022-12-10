@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_c_1_1_entities_1_1_gun" xml:lang="en-US">
+<title>PC.Entities.Gun Class Reference</title>
+<indexterm><primary>PC.Entities.Gun</primary></indexterm>
+<para>
+
+<para>Defines the general behavior of the player&apos;s gun.  </para>
+ 
+</para>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>async void <link linkend="_class_p_c_1_1_entities_1_1_gun_1aa63b006ee50385dd6c6d599a0d9b9dd4">Reload</link> (InputAction.CallbackContext obj)</para>
+
+<para>Reloads the gun&apos;s magazine  </para>
+</listitem>
+            <listitem><para>async void <link linkend="_class_p_c_1_1_entities_1_1_gun_1a5eddc434706d71046a700c2630384f8e">Shoot</link> (InputAction.CallbackContext obj)</para>
+
+<para>Deals with all functionality related shooting. Includes audio, muzzle flash, recoil, raycast shooting and target damage.  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_p_c_1_1_entities_1_1_gun_1aa63b006ee50385dd6c6d599a0d9b9dd4"/><section>
+    <title>Reload()</title>
+<indexterm><primary>Reload</primary><secondary>PC.Entities.Gun</secondary></indexterm>
+<indexterm><primary>PC.Entities.Gun</primary><secondary>Reload</secondary></indexterm>
+<para><computeroutput>async void PC.Entities.Gun.Reload (InputAction.CallbackContext obj)<computeroutput>[private]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>obj</entry><entry>
+<para>Context for the InputActions asset. Passed automatically after Reload is subscribed to the relevant input. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_p_c_1_1_entities_1_1_gun_1a5eddc434706d71046a700c2630384f8e"/><section>
+    <title>Shoot()</title>
+<indexterm><primary>Shoot</primary><secondary>PC.Entities.Gun</secondary></indexterm>
+<indexterm><primary>PC.Entities.Gun</primary><secondary>Shoot</secondary></indexterm>
+<para><computeroutput>async void PC.Entities.Gun.Shoot (InputAction.CallbackContext obj)<computeroutput>[private]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>obj</entry><entry>
+<para>Context for the InputActions asset. Passed automatically after Shoot is subscribed to the relevant input. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

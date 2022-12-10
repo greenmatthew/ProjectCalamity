@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_c_1_1_u_i_1_1_layout_maintain_preferred_height" xml:lang="en-US">
+<title>PC.UI.LayoutMaintainPreferredHeight Class Reference</title>
+<indexterm><primary>PC.UI.LayoutMaintainPreferredHeight</primary></indexterm>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_layout_maintain_preferred_height_1ae59dbc86a70fc5358420617500a3b362"/>void <emphasis role="strong">Awake</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_layout_maintain_preferred_height_1a070c34786ee38ea9b7dd0dd114f0f100"/>void <emphasis role="strong">Update</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_layout_maintain_preferred_height_1a9ad01a3b221e44b295f7faa7a730ccd3"/>RectTransform <emphasis role="strong">_rectTransform</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_layout_maintain_preferred_height_1a1c8c37678a658d3e3f178e2b405b544f"/>HorizontalOrVerticalLayoutGroup <emphasis role="strong">_layoutGroup</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_layout_maintain_preferred_height_1a5e7be304f59d37336e3eb4da462e4adf"/>float <emphasis role="strong">_preferredHeight</emphasis> = 0f</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

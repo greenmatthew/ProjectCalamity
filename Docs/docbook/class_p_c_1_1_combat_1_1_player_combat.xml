@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_c_1_1_combat_1_1_player_combat" xml:lang="en-US">
+<title>PC.Combat.PlayerCombat Class Reference</title>
+<indexterm><primary>PC.Combat.PlayerCombat</primary></indexterm>
+<para>
+
+<para>Defines the combat behavior specific to our player.  </para>
+ 
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_p_c_1_1_combat_1_1_player_combat_1a70eb6aecab28c5b831db0aef621dad82">AttackTarget</link> (RaycastHit hit)</para>
+
+<para>Finds the stats component of the target object and uses it to apply damage. This is called from Gun.cs  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_p_c_1_1_combat_1_1_player_combat_1a70eb6aecab28c5b831db0aef621dad82"/><section>
+    <title>AttackTarget()</title>
+<indexterm><primary>AttackTarget</primary><secondary>PC.Combat.PlayerCombat</secondary></indexterm>
+<indexterm><primary>PC.Combat.PlayerCombat</primary><secondary>AttackTarget</secondary></indexterm>
+<para><computeroutput>void PC.Combat.PlayerCombat.AttackTarget (RaycastHit hit)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>hit</entry><entry>
+<para>The target object his by the gun&apos;s raycast. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

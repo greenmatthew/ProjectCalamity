@@ -1,0 +1,340 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_c_1_1_u_i_1_1_item_type" xml:lang="en-US">
+<title>PC.UI.ItemType Class Reference</title>
+<indexterm><primary>PC.UI.ItemType</primary></indexterm>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_type_1af67a6245e6371310618ed7d7a0d96081"/>enum <link linkend="_class_p_c_1_1_u_i_1_1_item_type_1af67a6245e6371310618ed7d7a0d96081">Value</link> : System.UInt32 </para>
+
+<para>The type of an item.  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_p_c_1_1_u_i_1_1_item_type_1a9f699606239f4cea9769975424140a20">belongsTo</link> (<link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link> item)</para>
+
+<para>Checks if a type belongs to another type.  </para>
+</listitem>
+            <listitem><para>override bool <link linkend="_class_p_c_1_1_u_i_1_1_item_type_1a833b8195ee65e7fe3dbf208442475590">Equals</link> (object a)</para>
+
+<para>Checks if an enum Type is equal to an instance of an <link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link>.  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_type_1a59688d1005efbc747161341f93cbb77d"/>static implicit <emphasis role="strong">operator uint</emphasis> (<link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link> item)</para>
+
+<para>Implcitly converts an <link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link> to a uint.  </para>
+</listitem>
+            <listitem><para>static bool <link linkend="_class_p_c_1_1_u_i_1_1_item_type_1aa1e3e7fac8febf87aafb9b5b86f5fcf2">operator==</link> (<link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link> a, <link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link> b)</para>
+
+<para>Checks if an instance of an <link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link> is equal to another instance of an <link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link>.  </para>
+</listitem>
+            <listitem><para>static bool <link linkend="_class_p_c_1_1_u_i_1_1_item_type_1a738e0f3f9e462854e99c049ec6a54480">operator==</link> (<link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link> a, <link linkend="_class_p_c_1_1_u_i_1_1_item_type_1af67a6245e6371310618ed7d7a0d96081">Value</link> b)</para>
+
+<para>Checks if an instance of an <link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link> is equal to an enum Type.  </para>
+</listitem>
+            <listitem><para>static bool <link linkend="_class_p_c_1_1_u_i_1_1_item_type_1a45568249ead3f4aeddde3727458b6dbe">operator!=</link> (<link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link> a, <link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link> b)</para>
+
+<para>Checks if two instances of <link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link> are equal.  </para>
+</listitem>
+            <listitem><para>static bool <link linkend="_class_p_c_1_1_u_i_1_1_item_type_1ab243b611f44b98b00bb226fdc45bd182">operator!=</link> (<link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link> a, <link linkend="_class_p_c_1_1_u_i_1_1_item_type_1af67a6245e6371310618ed7d7a0d96081">Value</link> b)</para>
+
+<para>Checks if a enum Type is not equal to a instance of an <link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link>.  </para>
+</listitem>
+            <listitem><para>static <link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link> <link linkend="_class_p_c_1_1_u_i_1_1_item_type_1a1ac8e4cfe61bcab47f9e58384846b1c4">Lookup</link> (<link linkend="_class_p_c_1_1_u_i_1_1_item_type_1af67a6245e6371310618ed7d7a0d96081">Value</link> value)</para>
+
+<para>Returns the type of an item.  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_type_1ac6b7898ea6816108f0e06837a130ebdb"/>uint <emphasis role="strong">data</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_type_1ad7456d613fb58d34a5ba8bb2b112d93d"/>string <emphasis role="strong">dataAsHex</emphasis><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_type_1a987ef519a9e8c5c3ac12f8c11f2d83e0"/>byte <emphasis role="strong">layer1</emphasis><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_type_1a1db7f2df115eb7279cf13dae76c21edf"/>byte <emphasis role="strong">layer2</emphasis><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_type_1aa22b2bc1df3e14dd24aa2c12dc6acd9c"/>byte <emphasis role="strong">layer3</emphasis><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_type_1a9074c39413b8f2dcb59e4944116bfab8"/>byte <emphasis role="strong">layer4</emphasis><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_type_1a4f0775ce1b465402ad21fbfaba505fc2"/>int <emphasis role="strong">lastLayerIndex</emphasis><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_type_1a08f21346e43ffb6e88d4a57d6f78664f"/><emphasis role="strong">ItemType</emphasis> (<link linkend="_class_p_c_1_1_u_i_1_1_item_type_1af67a6245e6371310618ed7d7a0d96081">Value</link> val)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_type_1a8918a85f01391c42b81e2842e48a0bba"/>static Dictionary&lt; <link linkend="_class_p_c_1_1_u_i_1_1_item_type_1af67a6245e6371310618ed7d7a0d96081">Value</link>, <link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link> &gt; <emphasis role="strong">InitLookup</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_type_1acd3f42bf6405027120530a84e5987b6a"/>uint <emphasis role="strong">h_data</emphasis> = 0x00000000</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_type_1abb4b157e043db27fc32979e1c22434e4"/>byte[] <emphasis role="strong">layers</emphasis> = new byte[4]</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_type_1a228e3622ab0804c4ac2380a96ae5515a"/>const uint <emphasis role="strong">LAYER_1_MASK</emphasis> = 0xFF000000</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_type_1ac6e5cd35a343ffb161b4b2e5a9d4561a"/>const uint <emphasis role="strong">LAYER_2_MASK</emphasis> = 0x00FF0000</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_type_1acb6c197598900df7a2f2bbce2cdced5e"/>const uint <emphasis role="strong">LAYER_3_MASK</emphasis> = 0x0000FF00</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_type_1a90bbc2e36fe220ec55b7b372404a79b8"/>const uint <emphasis role="strong">LAYER_4_MASK</emphasis> = 0x000000FF</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_type_1a8ec8995085e282955d75476af14b1648"/>static readonly Dictionary&lt; <link linkend="_class_p_c_1_1_u_i_1_1_item_type_1af67a6245e6371310618ed7d7a0d96081">Value</link>, <link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link> &gt; <emphasis role="strong">dict</emphasis> = InitLookup()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_item_type_1a9f699606239f4cea9769975424140a20"/><section>
+    <title>belongsTo()</title>
+<indexterm><primary>belongsTo</primary><secondary>PC.UI.ItemType</secondary></indexterm>
+<indexterm><primary>PC.UI.ItemType</primary><secondary>belongsTo</secondary></indexterm>
+<para><computeroutput>bool PC.UI.ItemType.belongsTo (<link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link> item)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>item</entry><entry>
+<para>The type to check.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the type belongs to the other type, else false.</para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_item_type_1a833b8195ee65e7fe3dbf208442475590"/><section>
+    <title>Equals()</title>
+<indexterm><primary>Equals</primary><secondary>PC.UI.ItemType</secondary></indexterm>
+<indexterm><primary>PC.UI.ItemType</primary><secondary>Equals</secondary></indexterm>
+<para><computeroutput>override bool PC.UI.ItemType.Equals (object a)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>a</entry><entry>
+<para>The value of the item.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_item_type_1a1ac8e4cfe61bcab47f9e58384846b1c4"/><section>
+    <title>Lookup()</title>
+<indexterm><primary>Lookup</primary><secondary>PC.UI.ItemType</secondary></indexterm>
+<indexterm><primary>PC.UI.ItemType</primary><secondary>Lookup</secondary></indexterm>
+<para><computeroutput>static <link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link> PC.UI.ItemType.Lookup (<link linkend="_class_p_c_1_1_u_i_1_1_item_type_1af67a6245e6371310618ed7d7a0d96081">Value</link> value)<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>value</entry><entry>
+<para>The value of the item.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The type of the item.</para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_item_type_1a45568249ead3f4aeddde3727458b6dbe"/><section>
+    <title>operator!=()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator!=</primary><secondary>PC.UI.ItemType</secondary></indexterm>
+<indexterm><primary>PC.UI.ItemType</primary><secondary>operator!=</secondary></indexterm>
+<para><computeroutput>static bool PC.UI.ItemType.operator!= (<link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link> a, <link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link> b)<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>a</entry><entry>
+<para>The first given instance of the <link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link>.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>b</entry><entry>
+<para>The second given instance of the <link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link>.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_item_type_1ab243b611f44b98b00bb226fdc45bd182"/><section>
+    <title>operator!=()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator!=</primary><secondary>PC.UI.ItemType</secondary></indexterm>
+<indexterm><primary>PC.UI.ItemType</primary><secondary>operator!=</secondary></indexterm>
+<para><computeroutput>static bool PC.UI.ItemType.operator!= (<link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link> a, <link linkend="_class_p_c_1_1_u_i_1_1_item_type_1af67a6245e6371310618ed7d7a0d96081">Value</link> b)<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>a</entry><entry>
+<para>The given enum type.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>b</entry><entry>
+<para>The given instance of the <link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link>.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_item_type_1aa1e3e7fac8febf87aafb9b5b86f5fcf2"/><section>
+    <title>operator==()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator==</primary><secondary>PC.UI.ItemType</secondary></indexterm>
+<indexterm><primary>PC.UI.ItemType</primary><secondary>operator==</secondary></indexterm>
+<para><computeroutput>static bool PC.UI.ItemType.operator== (<link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link> a, <link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link> b)<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>a</entry><entry>
+<para>The first given instance of the <link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link>.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>b</entry><entry>
+<para>The second given instance of the <link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link>.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_item_type_1a738e0f3f9e462854e99c049ec6a54480"/><section>
+    <title>operator==()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator==</primary><secondary>PC.UI.ItemType</secondary></indexterm>
+<indexterm><primary>PC.UI.ItemType</primary><secondary>operator==</secondary></indexterm>
+<para><computeroutput>static bool PC.UI.ItemType.operator== (<link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link> a, <link linkend="_class_p_c_1_1_u_i_1_1_item_type_1af67a6245e6371310618ed7d7a0d96081">Value</link> b)<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>a</entry><entry>
+<para>The given instance of the <link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link>.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>b</entry><entry>
+<para>The given enum type.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

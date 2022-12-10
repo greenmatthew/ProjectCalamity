@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_c_1_1_entities_1_1_player_animator_controller" xml:lang="en-US">
+<title>PC.Entities.PlayerAnimatorController Class Reference</title>
+<indexterm><primary>PC.Entities.PlayerAnimatorController</primary></indexterm>
+<para>
+
+<para>This class is responsible for controlling the player&apos;s animations. For our purposes, it simply regularly updates the variables used by the animator to determine which animation to play.  </para>
+ 
+</para>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_entities_1_1_player_animator_controller_1a319610c7f775952570013f3b9279a1bd"/>static InputActions <emphasis role="strong">inputActions</emphasis><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_entities_1_1_player_animator_controller_1a45652caa1c71fcc200eb3e26a7f57fb9"/>void <emphasis role="strong">Start</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_entities_1_1_player_animator_controller_1a8a0221e2f3e79199396e132393c4d513"/>void <emphasis role="strong">Update</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_entities_1_1_player_animator_controller_1af9cd89000339ba6043f0616ff7ea1951"/>Animator <emphasis role="strong">_animator</emphasis> = null</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_entities_1_1_player_animator_controller_1a6d46414e67531d6ae81b94c843682d6d"/>const int <emphasis role="strong">UNARMED</emphasis> = 0</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_entities_1_1_player_animator_controller_1a30111ea424fb7f159ce1338295e13dcd"/>const int <emphasis role="strong">ASSAULT_RIFLE</emphasis> = 1</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_entities_1_1_player_animator_controller_1ae04b64ae0b3521140f0fe093236d9c36"/>const int <emphasis role="strong">BEAM_GUN</emphasis> = 2</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_entities_1_1_player_animator_controller_1ad014611010f6d0ed747c3c375d59e5e7"/>const int <emphasis role="strong">GATLIN_GUN</emphasis> = 3</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_entities_1_1_player_animator_controller_1aedb939cb1f812858bb732c60d6f68492"/>const int <emphasis role="strong">MISSLE_LAUNCHER</emphasis> = 4</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_entities_1_1_player_animator_controller_1aa35a51ea209089f4a22bd98dc2757a04"/>const int <emphasis role="strong">IDLE</emphasis> = 0</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_entities_1_1_player_animator_controller_1ad0fe2819175faad74db36a2b0d9f57e7"/>const int <emphasis role="strong">WALKING</emphasis> = 1</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_entities_1_1_player_animator_controller_1ac63ce408a8639ab24282cf8a1fda83d4"/>const int <emphasis role="strong">RUNNING</emphasis> = 2</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

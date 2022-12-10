@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_c_1_1_u_i_1_1_scroll_rect_no_mouse_drag" xml:lang="en-US">
+<title>PC.UI.ScrollRectNoMouseDrag Class Reference</title>
+<indexterm><primary>PC.UI.ScrollRectNoMouseDrag</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_scroll_rect_no_mouse_drag_1ad08f2066875c1ff2eef24bd2adaeedb7"/>override void <emphasis role="strong">OnBeginDrag</emphasis> (PointerEventData eventData)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_scroll_rect_no_mouse_drag_1a15ba23455e59f17a57b492cca56962d7"/>override void <emphasis role="strong">OnDrag</emphasis> (PointerEventData eventData)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_scroll_rect_no_mouse_drag_1a3ba5764d2f02eb575c4ac0f8e5a72a6e"/>override void <emphasis role="strong">OnEndDrag</emphasis> (PointerEventData eventData)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

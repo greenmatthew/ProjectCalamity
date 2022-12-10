@@ -1,0 +1,88 @@
+.TH "PC.UI.MenuBase" 3 "Fri Dec 9 2022" "Project Calamity" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PC.UI.MenuBase
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBOpen\fP ()"
+.br
+.RI "DO NOT OVERRIDE/HIDE \fBMenuBase\&.Open()\fP USING THE NEW OR OVERRIDE KEYWORDS!!! Override the \fBOpenExtension()\fP function instead\&. Opens the menu\&. Closes all other menus\&. Enables base menu input while disabling all others\&. Unlocks the cursor\&. Calls \fBOpenExtension()\fP at end end of this function\&. \fBOpenExtension()\fP by default does nothing\&. Needs to be overriden if you want to add to the functionality of \fBOpen()\fP\&.  "
+.ti -1c
+.RI "void \fBClose\fP ()"
+.br
+.RI "DO NOT OVERRIDE/HIDE \fBMenuBase\&.Close()\fP USING THE NEW OR OVERRIDE KEYWORDS!!! Override the \fBCloseExtension()\fP function instead\&. Closes the menu\&. Locks the cursor\&. Calls \fBCloseExtension()\fP at end end of this function\&. \fBCloseExtension()\fP by default does nothing\&. Needs to be overriden if you want to add to the functionality of \fBClose()\fP\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBAwake\fP ()"
+.br
+.RI "DO NOT HIDE/OVERRIDE THIS FUNCTION USING THE NEW OR OVERRIDE KEYWORDS!!! Override the \fBAwakeExtension()\fP function instead\&.  "
+.ti -1c
+.RI "abstract void \fBAwakeExtension\fP ()"
+.br
+.RI "DO NOT HIDE/OVERRIDE \fBMenuBase\&.Awake()\fP USING THE NEW OR OVERRIDE KEYWORDS!!! \fBAwakeExtension()\fP is called at the end of \fBMenuBase\&.Awake()\fP\&. If you need any code to run in MonoBehaviour\&.Awake() put it inside \fBAwakeExtension()\fP\&.  "
+.ti -1c
+.RI "abstract void \fBOpenExtension\fP ()"
+.br
+.RI "Gets called at the end of \fBOpen()\fP\&.  "
+.ti -1c
+.RI "abstract void \fBCloseExtension\fP ()"
+.br
+.RI "Gets called at the end of \fBClose()\fP\&.  "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "static InputActions \fB_inputActions\fP\fC [get]\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBDisable\fP ()"
+.br
+.RI "Hides the menu from the scene\&.  "
+.in -1c
+.SS "Static Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBDisableAll\fP ()"
+.br
+.RI "Hides ALL menus from the scene\&.  "
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static readonly List< \fBMenuBase\fP > \fBmenus\fP = new List<\fBMenuBase\fP>()"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "abstract void PC\&.UI\&.MenuBase\&.AwakeExtension ()\fC [protected]\fP, \fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBPC\&.UI\&.DevConsoleMenu\fP, \fBPC\&.UI\&.InventoryMenu\fP, \fBPC\&.UI\&.MapMenu\fP, \fBPC\&.UI\&.PauseMenu\fP, \fBPC\&.UI\&.PlayerManagementStationMenu\fP, and \fBPC\&.UI\&.PMSMenu\fP\&.
+.SS "abstract void PC\&.UI\&.MenuBase\&.CloseExtension ()\fC [protected]\fP, \fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBPC\&.UI\&.DevConsoleMenu\fP, \fBPC\&.UI\&.InventoryMenu\fP, \fBPC\&.UI\&.MapMenu\fP, \fBPC\&.UI\&.PauseMenu\fP, \fBPC\&.UI\&.PlayerManagementStationMenu\fP, and \fBPC\&.UI\&.PMSMenu\fP\&.
+.SS "abstract void PC\&.UI\&.MenuBase\&.OpenExtension ()\fC [protected]\fP, \fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBPC\&.UI\&.DevConsoleMenu\fP, \fBPC\&.UI\&.InventoryMenu\fP, \fBPC\&.UI\&.MapMenu\fP, \fBPC\&.UI\&.PauseMenu\fP, \fBPC\&.UI\&.PlayerManagementStationMenu\fP, and \fBPC\&.UI\&.PMSMenu\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Project Calamity from the source code\&.

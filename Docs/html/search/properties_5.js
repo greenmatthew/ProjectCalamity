@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['enabled_0',['enabled',['../struct_p_c_1_1_input_1_1_input_actions_1_1_player_actions.html#ac93359c5519df6ff68ba99ef8bc43eb8',1,'PC.Input.InputActions.PlayerActions.enabled()'],['../struct_p_c_1_1_input_1_1_input_actions_1_1_menu_actions.html#a4f53b9f9f0c9c88d50d48c53a750d8df',1,'PC.Input.InputActions.MenuActions.enabled()'],['../struct_p_c_1_1_input_1_1_input_actions_1_1_inventory_menu_actions.html#a62d07c3a5574275a58642cf92d000606',1,'PC.Input.InputActions.InventoryMenuActions.enabled()'],['../struct_p_c_1_1_input_1_1_input_actions_1_1_dev_console_menu_actions.html#a621e214115aeac6a6c0a3b3bbc8e99b8',1,'PC.Input.InputActions.DevConsoleMenuActions.enabled()'],['../struct_p_c_1_1_input_1_1_input_actions_1_1_map_menu_actions.html#a53b18cb204d4f85450ccecf3d1dfdd07',1,'PC.Input.InputActions.MapMenuActions.enabled()'],['../struct_p_c_1_1_input_1_1_input_actions_1_1_p_m_s_menu_actions.html#ad23c00f540b7fb742b878184d608d17f',1,'PC.Input.InputActions.PMSMenuActions.enabled()']]],
-  ['equipprimaryfirearm_1',['EquipPrimaryFirearm',['../struct_p_c_1_1_input_1_1_input_actions_1_1_player_actions.html#a39374d08862f2592d514f0b76907891d',1,'PC::Input::InputActions::PlayerActions']]],
-  ['equipsecondaryfirearm_2',['EquipSecondaryFirearm',['../struct_p_c_1_1_input_1_1_input_actions_1_1_player_actions.html#a970f678f57215f6ab965b307e2efee07',1,'PC::Input::InputActions::PlayerActions']]]
+  ['mapmenu_0',['MapMenu',['../class_p_c_1_1_u_i_1_1_menus_controller.html#acea12eed0ca2a6c3a8b19d6173661a21',1,'PC::UI::MenusController']]]
 ];

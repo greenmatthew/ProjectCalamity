@@ -1,0 +1,138 @@
+\hypertarget{class_p_c_1_1_u_i_1_1_popup_window}{}\doxysection{PC.\+UI.\+Popup\+Window Class Reference}
+\label{class_p_c_1_1_u_i_1_1_popup_window}\index{PC.UI.PopupWindow@{PC.UI.PopupWindow}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Game\+Object \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_popup_window_a55b25712eff00c4b2aa360c8c909269d}{Create}} (Game\+Object parent, string title, string message, \mbox{\hyperlink{struct_p_c_1_1_u_i_1_1_button_action}{Button\+Action}} button\+Action, params \mbox{\hyperlink{struct_p_c_1_1_u_i_1_1_button_action}{Button\+Action}}\mbox{[}$\,$\mbox{]} additional\+Button\+Actions)
+\begin{DoxyCompactList}\small\item\em Create a popup window.  \end{DoxyCompactList}\item 
+static Game\+Object \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_popup_window_a44ab909f5df0518b86a8153c6d2df2c4}{Create}} (Game\+Object parent, float width, float height, string title, string message, \mbox{\hyperlink{struct_p_c_1_1_u_i_1_1_button_action}{Button\+Action}} button\+Action, params \mbox{\hyperlink{struct_p_c_1_1_u_i_1_1_button_action}{Button\+Action}}\mbox{[}$\,$\mbox{]} additional\+Button\+Actions)
+\begin{DoxyCompactList}\small\item\em Create a popup window.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_popup_window_ae40acafd1693507c1c77106c96e3d2a1}{Add\+Button}} (\mbox{\hyperlink{struct_p_c_1_1_u_i_1_1_button_action}{Button\+Action}} button\+Action)
+\begin{DoxyCompactList}\small\item\em Add a button to this popup window.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_c_1_1_u_i_1_1_popup_window_a34706c5839f0e354a95cae597618ac20}{Init}} (float width, float height, string title, string message, \mbox{\hyperlink{struct_p_c_1_1_u_i_1_1_button_action}{Button\+Action}} button\+Action, params \mbox{\hyperlink{struct_p_c_1_1_u_i_1_1_button_action}{Button\+Action}}\mbox{[}$\,$\mbox{]} additional\+Button\+Actions)
+\begin{DoxyCompactList}\small\item\em Initialize the popup window.  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_popup_window_a0dfda4422f069a5c690e26a5a4f8e193}\label{class_p_c_1_1_u_i_1_1_popup_window_a0dfda4422f069a5c690e26a5a4f8e193}} 
+void {\bfseries Close} ()
+\begin{DoxyCompactList}\small\item\em Close the popup window.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_popup_window_ae273fbb0449bc96b1cc90a6d6c757ec2}\label{class_p_c_1_1_u_i_1_1_popup_window_ae273fbb0449bc96b1cc90a6d6c757ec2}} 
+TMP\+\_\+\+Text {\bfseries \+\_\+title}
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_popup_window_ad4ae5d6563ffd47522fb68f72cdf7b97}\label{class_p_c_1_1_u_i_1_1_popup_window_ad4ae5d6563ffd47522fb68f72cdf7b97}} 
+TMP\+\_\+\+Text {\bfseries \+\_\+message}
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_popup_window_a16b41ee082730eca71271fe1f04140a0}\label{class_p_c_1_1_u_i_1_1_popup_window_a16b41ee082730eca71271fe1f04140a0}} 
+Transform {\bfseries \+\_\+button\+Prefab}
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_popup_window_a461e8a42f076c6fbaf07df48ba837875}\label{class_p_c_1_1_u_i_1_1_popup_window_a461e8a42f076c6fbaf07df48ba837875}} 
+Transform {\bfseries \+\_\+button\+Content}
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_popup_window_a8870385aa60abd5383724a6fc9eacc98}\label{class_p_c_1_1_u_i_1_1_popup_window_a8870385aa60abd5383724a6fc9eacc98}} 
+readonly List$<$ Button $>$ {\bfseries \+\_\+buttons} = new List$<$Button$>$()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_popup_window_a9f90e1af59e0fd8a0f6dc82d08e0c143}\label{class_p_c_1_1_u_i_1_1_popup_window_a9f90e1af59e0fd8a0f6dc82d08e0c143}} 
+const string {\bfseries \+\_\+popup\+Window\+Prefab\+Path} = \char`\"{}Prefabs/UI/PR\+\_\+\+Popup\+Window\char`\"{}
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_popup_window_a43af9f2eab909e1bbfa18a7d28f93c8c}\label{class_p_c_1_1_u_i_1_1_popup_window_a43af9f2eab909e1bbfa18a7d28f93c8c}} 
+const float {\bfseries \+\_\+default\+Popup\+Window\+Width} = 300f
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_popup_window_a7a0e09fa9780ee55710544de346f7556}\label{class_p_c_1_1_u_i_1_1_popup_window_a7a0e09fa9780ee55710544de346f7556}} 
+const float {\bfseries \+\_\+default\+Popup\+Window\+Height} = 200f
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_popup_window_a914868a98b55120e2d75d2201bad6868}\label{class_p_c_1_1_u_i_1_1_popup_window_a914868a98b55120e2d75d2201bad6868}} 
+const float {\bfseries \+\_\+min\+Popup\+Window\+Width} = 100f
+\item 
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_popup_window_ab50f3be7aebc64fa27af530e9a3ba218}\label{class_p_c_1_1_u_i_1_1_popup_window_ab50f3be7aebc64fa27af530e9a3ba218}} 
+const float {\bfseries \+\_\+min\+Popup\+Window\+Height} = 75f
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_popup_window_ae40acafd1693507c1c77106c96e3d2a1}\label{class_p_c_1_1_u_i_1_1_popup_window_ae40acafd1693507c1c77106c96e3d2a1}} 
+\index{PC.UI.PopupWindow@{PC.UI.PopupWindow}!AddButton@{AddButton}}
+\index{AddButton@{AddButton}!PC.UI.PopupWindow@{PC.UI.PopupWindow}}
+\doxysubsubsection{\texorpdfstring{AddButton()}{AddButton()}}
+{\footnotesize\ttfamily void PC.\+UI.\+Popup\+Window.\+Add\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_p_c_1_1_u_i_1_1_button_action}{Button\+Action}}}]{button\+Action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em button\+Action} & The label and action to perform when the button is clicked.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_popup_window_a44ab909f5df0518b86a8153c6d2df2c4}\label{class_p_c_1_1_u_i_1_1_popup_window_a44ab909f5df0518b86a8153c6d2df2c4}} 
+\index{PC.UI.PopupWindow@{PC.UI.PopupWindow}!Create@{Create}}
+\index{Create@{Create}!PC.UI.PopupWindow@{PC.UI.PopupWindow}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static Game\+Object PC.\+UI.\+Popup\+Window.\+Create (\begin{DoxyParamCaption}\item[{Game\+Object}]{parent,  }\item[{float}]{width,  }\item[{float}]{height,  }\item[{string}]{title,  }\item[{string}]{message,  }\item[{\mbox{\hyperlink{struct_p_c_1_1_u_i_1_1_button_action}{Button\+Action}}}]{button\+Action,  }\item[{params \mbox{\hyperlink{struct_p_c_1_1_u_i_1_1_button_action}{Button\+Action}}\mbox{[}$\,$\mbox{]}}]{additional\+Button\+Actions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent transform to attach the popup window to.\\
+\hline
+{\em width} & The desired width of the popup window.\\
+\hline
+{\em height} & The desired height of the popup window.\\
+\hline
+{\em title} & The title of the popup window.\\
+\hline
+{\em message} & The message of the popup window.\\
+\hline
+{\em button\+Action} & The required single button of the popup window.\\
+\hline
+{\em additional\+Button\+Actions} & The optional multiple buttons of the popup window.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Game\+Object created with the given parameters.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_popup_window_a55b25712eff00c4b2aa360c8c909269d}\label{class_p_c_1_1_u_i_1_1_popup_window_a55b25712eff00c4b2aa360c8c909269d}} 
+\index{PC.UI.PopupWindow@{PC.UI.PopupWindow}!Create@{Create}}
+\index{Create@{Create}!PC.UI.PopupWindow@{PC.UI.PopupWindow}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static Game\+Object PC.\+UI.\+Popup\+Window.\+Create (\begin{DoxyParamCaption}\item[{Game\+Object}]{parent,  }\item[{string}]{title,  }\item[{string}]{message,  }\item[{\mbox{\hyperlink{struct_p_c_1_1_u_i_1_1_button_action}{Button\+Action}}}]{button\+Action,  }\item[{params \mbox{\hyperlink{struct_p_c_1_1_u_i_1_1_button_action}{Button\+Action}}\mbox{[}$\,$\mbox{]}}]{additional\+Button\+Actions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\texorpdfstring{$<$}{<}param name=\char`\"{}parent\char`\"{}The parent transform to attach the popup window to.
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & The title of the popup window.\\
+\hline
+{\em message} & The message of the popup window.\\
+\hline
+{\em button\+Action} & The required single button of the popup window.\\
+\hline
+{\em additional\+Button\+Actions} & The optional multiple buttons of the popup window.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Game\+Object created with the given parameters.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_p_c_1_1_u_i_1_1_popup_window_a34706c5839f0e354a95cae597618ac20}\label{class_p_c_1_1_u_i_1_1_popup_window_a34706c5839f0e354a95cae597618ac20}} 
+\index{PC.UI.PopupWindow@{PC.UI.PopupWindow}!Init@{Init}}
+\index{Init@{Init}!PC.UI.PopupWindow@{PC.UI.PopupWindow}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void PC.\+UI.\+Popup\+Window.\+Init (\begin{DoxyParamCaption}\item[{float}]{width,  }\item[{float}]{height,  }\item[{string}]{title,  }\item[{string}]{message,  }\item[{\mbox{\hyperlink{struct_p_c_1_1_u_i_1_1_button_action}{Button\+Action}}}]{button\+Action,  }\item[{params \mbox{\hyperlink{struct_p_c_1_1_u_i_1_1_button_action}{Button\+Action}}\mbox{[}$\,$\mbox{]}}]{additional\+Button\+Actions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The desired width of the popup window.\\
+\hline
+{\em height} & The desired height of the popup window.\\
+\hline
+{\em title} & The title of the popup window.\\
+\hline
+{\em message} & The message of the popup window.\\
+\hline
+{\em button\+Action} & The required single button of the popup window.\\
+\hline
+{\em additional\+Button\+Actions} & The optional multiple buttons of the popup window.\\
+\hline
+\end{DoxyParams}

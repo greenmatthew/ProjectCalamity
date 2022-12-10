@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_c_1_1_u_i_1_1_horizontal_layout_group_handler" xml:lang="en-US">
+<title>PC.UI.HorizontalLayoutGroupHandler Class Reference</title>
+<indexterm><primary>PC.UI.HorizontalLayoutGroupHandler</primary></indexterm>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_horizontal_layout_group_handler_1a20aba22b0eb4c700f8db2e6cb209b1e7"/>void <emphasis role="strong">Awake</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_horizontal_layout_group_handler_1a9a8a097de568a15ed3c05a395b4bf084"/>void <emphasis role="strong">Update</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_horizontal_layout_group_handler_1ad3f0c1ee198f9b4a0fa7ab605a7c2889"/>RectTransform <emphasis role="strong">_rectTransform</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_horizontal_layout_group_handler_1a192a20cd4f825750f94d110fff725fb9"/>List&lt; RectTransform &gt; <emphasis role="strong">_children</emphasis> = new List&lt;RectTransform&gt;()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

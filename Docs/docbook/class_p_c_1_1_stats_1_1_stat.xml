@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_c_1_1_stats_1_1_stat" xml:lang="en-US">
+<title>PC.Stats.Stat Class Reference</title>
+<indexterm><primary>PC.Stats.Stat</primary></indexterm>
+<para>
+
+<para>Base class for all stats used to track character parameters.  </para>
+ 
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_class_p_c_1_1_stats_1_1_stat_1a43cebdd9e387f33ca10b1f6295e5c9ed">GetValue</link> ()</para>
+
+<para>Getter for the stat value.  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_stats_1_1_stat_1ac46b3346104381f225d517448e60983f"/>int <emphasis role="strong">_baseValue</emphasis> = 0</para>
+
+<para>The base value of the stat.  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_p_c_1_1_stats_1_1_stat_1a43cebdd9e387f33ca10b1f6295e5c9ed"/><section>
+    <title>GetValue()</title>
+<indexterm><primary>GetValue</primary><secondary>PC.Stats.Stat</secondary></indexterm>
+<indexterm><primary>PC.Stats.Stat</primary><secondary>GetValue</secondary></indexterm>
+<para><computeroutput>int PC.Stats.Stat.GetValue ( )</computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>integer stat value </para>
+</formalpara>
+</para>
+</section>
+</section>
+</section>

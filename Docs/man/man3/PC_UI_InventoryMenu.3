@@ -1,0 +1,133 @@
+.TH "PC.UI.InventoryMenu" 3 "Fri Dec 9 2022" "Project Calamity" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PC.UI.InventoryMenu
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBOpenWithStash\fP ()"
+.br
+.RI "Opens the inventory with the stash on the right\&. So you can transfer items between the stash and the inventory\&.  "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "override void \fBAwakeExtension\fP ()"
+.br
+.RI "DO NOT HIDE/OVERRIDE \fBMenuBase\&.Awake()\fP USING THE NEW OR OVERRIDE KEYWORDS!!! \fBAwakeExtension()\fP is called at the end of \fBMenuBase\&.Awake()\fP\&. If you need any code to run in MonoBehaviour\&.Awake() put it inside \fBAwakeExtension()\fP\&.  "
+.ti -1c
+.RI "override void \fBOpenExtension\fP ()"
+.br
+.RI "Gets called at the end of \fBOpen()\fP\&.  "
+.ti -1c
+.RI "override void \fBCloseExtension\fP ()"
+.br
+.RI "Gets called at the end of \fBClose()\fP\&.  "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "static \fBContainerBase\fP \fBCurrentContainer\fP\fC [set]\fP"
+.br
+.ti -1c
+.RI "static \fBInventoryMenu\fP \fBinstance\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "\fBContainerBase\fP \fB_currentContainer\fP\fC [get, set]\fP"
+.br
+.ti -1c
+.RI "\fBItem\fP \fB_currentItemSource\fP\fC [get, set]\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBUpdate\fP ()"
+.br
+.ti -1c
+.RI "void \fBClampCurrentItemToCursor\fP ()"
+.br
+.RI "Clamps the current item to the cursor position\&.  "
+.ti -1c
+.RI "void \fBTryPickingUpItem\fP (Vector2Int cellIndex)"
+.br
+.RI "Tries to pick up an item from the current container\&.  "
+.ti -1c
+.RI "void \fBTryReleasingItem\fP (Vector2Int cellIndex)"
+.br
+.RI "Tries to release the current item to the current container\&.  "
+.ti -1c
+.RI "void \fBTryRotatingItem\fP ()"
+.br
+.RI "Tries to rotate the current item\&.  "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBContainerBase\fP \fBh_currentContainer\fP = null"
+.br
+.ti -1c
+.RI "\fBItem\fP \fBh_currentItemSource\fP = null"
+.br
+.ti -1c
+.RI "\fBItem\fP \fB_currentItemCopy\fP = null"
+.br
+.ti -1c
+.RI "GameObject \fB_stash\fP = null"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static List< string > \fB_hierarchyPaths\fP = new List<string>()"
+.br
+.ti -1c
+.RI "static \fBInventoryMenu\fP \fBh_instance\fP = null"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "override void PC\&.UI\&.InventoryMenu\&.AwakeExtension ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBPC\&.UI\&.MenuBase\fP\&.
+.SS "override void PC\&.UI\&.InventoryMenu\&.CloseExtension ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBPC\&.UI\&.MenuBase\fP\&.
+.SS "override void PC\&.UI\&.InventoryMenu\&.OpenExtension ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBPC\&.UI\&.MenuBase\fP\&.
+.SS "void PC\&.UI\&.InventoryMenu\&.TryPickingUpItem (Vector2Int cellIndex)\fC [private]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIcellIndex\fP The cell index of the item to pick up\&.
+.RE
+.PP
+
+.SS "void PC\&.UI\&.InventoryMenu\&.TryReleasingItem (Vector2Int cellIndex)\fC [private]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIcellIndex\fP The cell index to release the item to\&.
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Project Calamity from the source code\&.

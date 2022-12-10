@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_c_1_1_u_i_1_1_item_types" xml:lang="en-US">
+<title>PC.UI.ItemTypes Class Reference</title>
+<indexterm><primary>PC.UI.ItemTypes</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_p_c_1_1_u_i_1_1_item_types_1a1dc65ec6f91abccd843e3319cd50cf08">belongsTo</link> (<link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link> item)</para>
+
+<para>Checks if a type belongs to a list of types.  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_u_i_1_1_item_types_1a4847f8aa2b7d043d6cf3ae2100bead14"/>List&lt; <link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link> &gt; <emphasis role="strong">types</emphasis> = new List&lt;<link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link>&gt;()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_p_c_1_1_u_i_1_1_item_types_1a1dc65ec6f91abccd843e3319cd50cf08"/><section>
+    <title>belongsTo()</title>
+<indexterm><primary>belongsTo</primary><secondary>PC.UI.ItemTypes</secondary></indexterm>
+<indexterm><primary>PC.UI.ItemTypes</primary><secondary>belongsTo</secondary></indexterm>
+<para><computeroutput>bool PC.UI.ItemTypes.belongsTo (<link linkend="_class_p_c_1_1_u_i_1_1_item_type">ItemType</link> item)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>item</entry><entry>
+<para>The type to check.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the type belongs to the list of types, else false.</para>
+</formalpara>
+</para>
+</section>
+</section>
+</section>

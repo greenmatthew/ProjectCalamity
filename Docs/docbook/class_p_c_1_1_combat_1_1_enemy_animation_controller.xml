@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_c_1_1_combat_1_1_enemy_animation_controller" xml:lang="en-US">
+<title>PC.Combat.EnemyAnimationController Class Reference</title>
+<indexterm><primary>PC.Combat.EnemyAnimationController</primary></indexterm>
+<para>
+
+<para>Controls how the enemy animations react to information in the environment.  </para>
+ 
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_p_c_1_1_combat_1_1_enemy_animation_controller_1ae0d1baff6ac03c0656451b7e6e216966"/>void <emphasis role="strong">Die</emphasis> ()</para>
+
+<para>Plays the enemy death animation when the animator has recorded the enemy as dead. The animator gets this information from the enemy controller.  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>
