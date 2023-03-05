@@ -130,6 +130,7 @@ Work needed to bring the game to a minimum viable product as it falls short of t
 - Add in harvestable items around the map.
 - Add in the quest module to the PMS system. We have a quest system it just is not accessible currently.
 - Optimize the graphics, using LODs, and other techniques.
+- Add ability to save and load different game states to be able save progress.
 
 While that seems like a whole lot just to get to an MVP, we have most of the code already done for it and the code we don't have already should be easy to implement. The hardest issue would be optimization as we have never done it before.
 
