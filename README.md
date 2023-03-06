@@ -119,6 +119,11 @@ There are different types of AI used by the different enemies in the game with d
 ![Project Calamity Enemies 1](https://www.matthewgreen.gg/project_calamity/enemies_1.png)
 
 ## Conclusion #
+While Senior Design is two whole semesters, the first semester is nearly all documentation and planning, then the second is actually working on the project but also more documentation. While we understand the value of documentation we felt the planning and documentation was awkward and mostly a waste of time, because it had general engineering focus. The class did not feel suited for making a video game even though it was an allowed option. This cost us a lot of valuable development time.
+
+We also faced many other problems, such as scope creep, all but one team member had experience using Unity and C#, and underestimating our final semester’s workloads and other responsibilities impact on how much we could get done. These aforementioned issues lead to the final build of the game being a shell of what it was supposed to be and short of a minimum viable product. It was missing many of the planned features and the that were implemented were only partially functional.
+
+We certainly learned the importance of keeping a project scope small and incrementally adding to the scope as features are finished, not before. As well as the importance of being truthful to ourselves on our skills and amount of work we can complete. In fact, this is the whole point of Senior Design; to learn about project pitfalls before enter industry.
 
 ## Future Work #
 Work needed to bring the game to a minimum viable product as it falls short of that.
