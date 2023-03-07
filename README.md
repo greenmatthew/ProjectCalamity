@@ -11,17 +11,17 @@
 ## Content #
 - [Purpose](#purpose)
 - [Summary](#summary)
-  - [Demo Video](#)
+  - Demo Video
 - [Story](#story)
 - [Setting](#setting)
-  - [Environment Screenshots](#)
+  - Environment Screenshots
 - [Player Management Station (PMS)](#player-management-station-pms)
-  - [PMS Screenshots](#)
+  - PMS Screenshots
 - [Inventory System](#inventory-system)
-  - [Inventory Screenshots](#)
+  - Inventory Screenshots
 - [Health System](#health-system)
 - [Combat](#combat)
-  - [Enemies Screenshots](#)
+  - Enemies Screenshots
 - [Conclusion](#conclusion)
 - [Future Work](#future-work)
 
