@@ -29,7 +29,7 @@
 This is a video game project made for the 2022 Summer & Fall semester CSE Senior Design I & II courses at the University of Texas at Arlington.
 
 ## Summary
-This is a sci-fi horror tactical FPS role playing game where you take control of a bounty hunter who has crash landed on a mining colony planet, filled with horrific and violent alien creatures and people trying to kill you. Collect and craft items to help you survive and finish quests as you undercover the story of this planet and its humanoid inhabitants and their secret plans.
+This is a sci-fi horror tactical FPS role playing game, made in Unity, where you take control of a bounty hunter who has crash landed on a mining colony planet, filled with horrific and violent alien creatures and people trying to kill you. Collect and craft items to help you survive and finish quests as you undercover the story of this planet and its humanoid inhabitants and their secret plans.
 
 Highly inspired by other games of the same genres, most notably the Dead Space franchise and others like it such as the Resident Evil franchise and The Callisto Protocol for the setting, horror atmosphere, and some parts of the gameplay. Then the gameplay being further enhanced with small parts borrowed from other games: Dark Souls franchise, Subnautica, Chernobylite, Escape From Tarkov, and SWAT4.
 
