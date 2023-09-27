@@ -36,7 +36,7 @@ namespace PC.Entities
         protected const float _jumpHeight = 1f;
 
         protected const float _interactionDistance = 2f;
-        
+
 
         #endregion Consts Fields
 
@@ -69,16 +69,16 @@ namespace PC.Entities
         protected Vector2 _look;
         protected float _xRotation = 0f;
         protected Vector3 _move;
-        
+
         protected float _lastMovementSpeed = 0f;
         protected Vector3 _lastGroundedMove = Vector3.zero;
-		protected Vector3 _velocity = Vector3.zero;
+        protected Vector3 _velocity = Vector3.zero;
 
         protected float MovementSpeed
-		{
-			get
-			{
-				float speed;
+        {
+            get
+            {
+                float speed;
                 if (_isGrounded)
                 {
                     if (_inputActions.Player.Sprint.phase == InputActionPhase.Performed)
@@ -91,14 +91,14 @@ namespace PC.Entities
                 {
                     speed = _lastMovementSpeed;
                 }
-				
-				return speed;
-			}
-		}
+
+                return speed;
+            }
+        }
 
         // Jumping Drag Diagnostic Variables
-		protected float _startingJumpAngle = 0f;
-		protected float _endingJumpAngle = 0f;
+        protected float _startingJumpAngle = 0f;
+        protected float _endingJumpAngle = 0f;
 
         protected bool _isGrounded;
         protected bool _isMoving;
@@ -113,24 +113,24 @@ namespace PC.Entities
 
         #endregion Fields
 
-//----------------------------------------------------------------------------------------------------------------------
+        //----------------------------------------------------------------------------------------------------------------------
 
         #region Methods
-    
+
         #region Public Methods
         #endregion public Methods
 
         #region Protected Methods
 
         protected virtual void Start()
-		{
-			Cursor.lockState = CursorLockMode.Locked;
+        {
+            Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
 
             SetupInput();
-		}
+        }
 
-        protected bool Performed (InputActionPhase phase) => phase == InputActionPhase.Performed;
+        protected bool Performed(InputActionPhase phase) => phase == InputActionPhase.Performed;
 
         protected abstract void SetupInput();
         protected abstract void Look();
@@ -143,14 +143,14 @@ namespace PC.Entities
         #region Private Methods
 
         private void Awake()
-		{
+        {
             _characterController = GetComponent<CharacterController>();
             if (_characterController == null)
                 Debug.LogError("PlayerController: CharacterController not found!");
 
             if (_head == null)
                 Debug.LogError("PlayerController: Head transform is null!");
-            
+
             _camera = _head.GetComponentInChildren<Camera>();
             if (_camera == null)
                 Debug.LogError("PlayerController: Camera is null!");
@@ -158,30 +158,30 @@ namespace PC.Entities
             _body = transform;
             if (_body == null)
                 Debug.LogError("PlayerController: Body transform is null!");
-            
+
             if (_feet == null)
                 Debug.LogError("PlayerController: Feet transform is null!");
 
             if (_groundCheck == null)
                 Debug.LogError("PlayerController: Ground check Transform not found!");
-            
+
             _feetAudioSource = _feet.GetComponent<AudioSource>();
             if (_feetAudioSource == null)
                 Debug.LogError("PlayerController: Feet AudioSource is null!");
-		}
+        }
 
-		private void Update()
-		{
+        private void Update()
+        {
             _look = _inputActions.Player.Look.ReadValue<Vector2>() * PC.Settings.Mouse.Sensitivity * Time.deltaTime;
             _move = GetMovement();
             _isMoving = _move != Vector3.zero && _velocity != _idleVelocity;
             _isGrounded = GroundedCheck();
 
             Look();
-			Move();
+            Move();
 
             CheckForInteractions();
-		}
+        }
         // \endcond
 
         /// <summary>
@@ -202,7 +202,7 @@ namespace PC.Entities
         {
             // Check if the player's y velocity is at idle velocity
             bool cond = _velocity.y <= 0f;
-            
+
             if (Performed(_inputActions.Player.Movement.phase))
             {
                 if (Performed(_inputActions.Player.Sprint.phase))
@@ -251,12 +251,12 @@ namespace PC.Entities
 
             return h_isGrounded;
         }
-    
+
         #endregion Private Methods
 
         #endregion Methods
 
-//----------------------------------------------------------------------------------------------------------------------
+        //----------------------------------------------------------------------------------------------------------------------
 
         #region Enums, Structs, Classes
         #endregion Enums, Structs, Classes
