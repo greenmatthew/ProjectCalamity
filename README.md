@@ -35,10 +35,6 @@ Highly inspired by other games of the same genres, most notably the Dead Space f
 
 *** ***Notice: Many of the originally planned features are missing or incomplete. Which is explained about in the conclusion section near the bottom. However, I will still describe these features below and state their status in the final build of the game.*** ***
 
-https://user-images.githubusercontent.com/45467733/223000314-d6c8441f-412b-4bd8-bc7d-292791805a3f.mp4
-
-Project Calamity Demo Video: Recorded by one of my team members for the project Will Kembel. If the video is not showing try the [original YouTube upload](https://youtu.be/olbn0plXHug).
-
 <p align="center">
     <a href="https://youtu.be/JKdABwatEUQ">
         <img
